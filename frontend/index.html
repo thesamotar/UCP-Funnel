@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gemini</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Gemini <span id="model-chip" class="model-chip">…</span></div>
+    <div class="avatar">U</div>
+  </header>
+
+  <div id="key-banner" class="key-banner hidden">
+    <span>Paste a Gemini (<code>AIza...</code>) or Claude (<code>sk-ant-...</code>) API key to power the chat:</span>
+    <input id="key-input" type="password" placeholder="AIza... or sk-ant-..." />
+    <button id="key-save">Save</button>
+  </div>
+
+  <main id="chat" class="chat">
+    <div id="greeting" class="greeting">
+      <h1><span class="grad">Hello</span></h1>
+      <p>How can I help you today?</p>
+    </div>
+    <div id="messages" class="messages"></div>
+  </main>
+
+  <footer class="composer-wrap">
+    <div id="connector-popover" class="popover hidden">
+      <div class="popover-title">Connectors</div>
+      <button class="connector-row" data-connector="tataneu">
+        <span class="connector-icon">T</span>
+        <span class="connector-meta">
+          <span class="connector-name">Tata Neu</span>
+          <span class="connector-desc">Shop across Tata brands — BigBasket, Croma &amp; more</span>
+        </span>
+        <span id="tataneu-check" class="connector-check hidden">✓</span>
+      </button>
+      <div class="connector-row disabled">
+        <span class="connector-icon dim">D</span>
+        <span class="connector-meta">
+          <span class="connector-name">Google Drive</span>
+          <span class="connector-desc">Not available in this demo</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="composer">
+      <button id="plus-btn" class="plus-btn" title="Connectors">+</button>
+      <div id="active-chip" class="active-chip hidden">
+        <span class="chip-icon">T</span> Tata Neu
+        <button id="chip-remove" title="Disconnect">×</button>
+      </div>
+      <textarea id="prompt" rows="1" placeholder="Ask anything"></textarea>
+      <button id="send-btn" class="send-btn" title="Send">➤</button>
+    </div>
+    <div class="disclaimer">Chat demo (Gemini or Claude) · Tata Neu connector routes shopping queries through the UCP node</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

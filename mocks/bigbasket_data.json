@@ -1,0 +1,33 @@
+{
+  "products": [
+    {"sku_id": "BB-40000111", "desc": "Amul Taaza Toned Milk", "brand": "Amul", "cat": "dairy", "pack_size": "1 L", "mrp": 74, "sp": 71, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000111.jpg"},
+    {"sku_id": "BB-40000112", "desc": "Amul Gold Full Cream Milk", "brand": "Amul", "cat": "dairy", "pack_size": "500 ml", "mrp": 38, "sp": 37, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000112.jpg"},
+    {"sku_id": "BB-40000113", "desc": "Nandini Homogenised Cow Milk", "brand": "Nandini", "cat": "dairy", "pack_size": "1 L", "mrp": 60, "sp": 58, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000113.jpg"},
+    {"sku_id": "BB-40000120", "desc": "Amul Butter Pasteurised", "brand": "Amul", "cat": "dairy", "pack_size": "500 g", "mrp": 305, "sp": 299, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000120.jpg"},
+    {"sku_id": "BB-40000121", "desc": "Amul Fresh Paneer", "brand": "Amul", "cat": "dairy", "pack_size": "200 g", "mrp": 95, "sp": 92, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000121.jpg"},
+    {"sku_id": "BB-40000122", "desc": "Nestle a+ Curd", "brand": "Nestle", "cat": "dairy", "pack_size": "400 g", "mrp": 75, "sp": 70, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000122.jpg"},
+    {"sku_id": "BB-40000130", "desc": "Fresho Farm Eggs - Brown", "brand": "Fresho", "cat": "eggs", "pack_size": "12 pcs", "mrp": 120, "sp": 108, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000130.jpg"},
+    {"sku_id": "BB-40000131", "desc": "Modern White Sandwich Bread", "brand": "Modern", "cat": "bakery", "pack_size": "400 g", "mrp": 45, "sp": 43, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000131.jpg"},
+    {"sku_id": "BB-40000132", "desc": "Britannia 100% Whole Wheat Bread", "brand": "Britannia", "cat": "bakery", "pack_size": "450 g", "mrp": 55, "sp": 52, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000132.jpg"},
+    {"sku_id": "BB-40000140", "desc": "Aashirvaad Shudh Chakki Atta", "brand": "Aashirvaad", "cat": "staples", "pack_size": "5 kg", "mrp": 295, "sp": 262, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000140.jpg"},
+    {"sku_id": "BB-40000141", "desc": "India Gate Basmati Rice - Feast Rozzana", "brand": "India Gate", "cat": "staples", "pack_size": "5 kg", "mrp": 495, "sp": 439, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000141.jpg"},
+    {"sku_id": "BB-40000142", "desc": "Tata Sampann Unpolished Toor Dal", "brand": "Tata Sampann", "cat": "staples", "pack_size": "1 kg", "mrp": 210, "sp": 185, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000142.jpg"},
+    {"sku_id": "BB-40000143", "desc": "Fortune Sunlite Refined Sunflower Oil", "brand": "Fortune", "cat": "staples", "pack_size": "1 L", "mrp": 165, "sp": 152, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000143.jpg"},
+    {"sku_id": "BB-40000144", "desc": "Tata Salt Iodised", "brand": "Tata", "cat": "staples", "pack_size": "1 kg", "mrp": 30, "sp": 28, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000144.jpg"},
+    {"sku_id": "BB-40000145", "desc": "Madhur Pure Sugar", "brand": "Madhur", "cat": "staples", "pack_size": "1 kg", "mrp": 55, "sp": 49, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000145.jpg"},
+    {"sku_id": "BB-40000150", "desc": "Tata Tea Premium Leaf Tea", "brand": "Tata Tea", "cat": "beverages", "pack_size": "500 g", "mrp": 310, "sp": 285, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000150.jpg"},
+    {"sku_id": "BB-40000151", "desc": "Nescafe Classic Instant Coffee", "brand": "Nescafe", "cat": "beverages", "pack_size": "100 g", "mrp": 335, "sp": 310, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000151.jpg"},
+    {"sku_id": "BB-40000152", "desc": "Real Fruit Power Mixed Fruit Juice", "brand": "Real", "cat": "beverages", "pack_size": "1 L", "mrp": 130, "sp": 115, "availability": "O", "img": "https://cdn.bigbasket.local/p/40000152.jpg"},
+    {"sku_id": "BB-40000160", "desc": "Maggi 2-Minute Masala Noodles", "brand": "Maggi", "cat": "snacks", "pack_size": "560 g (8 pack)", "mrp": 112, "sp": 105, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000160.jpg"},
+    {"sku_id": "BB-40000161", "desc": "Parle-G Gold Biscuits", "brand": "Parle", "cat": "snacks", "pack_size": "1 kg", "mrp": 140, "sp": 128, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000161.jpg"},
+    {"sku_id": "BB-40000162", "desc": "Lay's India's Magic Masala Chips", "brand": "Lay's", "cat": "snacks", "pack_size": "115 g", "mrp": 50, "sp": 47, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000162.jpg"},
+    {"sku_id": "BB-40000170", "desc": "Fresho Banana Robusta", "brand": "Fresho", "cat": "fruits & vegetables", "pack_size": "1 kg", "mrp": 60, "sp": 48, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000170.jpg"},
+    {"sku_id": "BB-40000171", "desc": "Fresho Onion", "brand": "Fresho", "cat": "fruits & vegetables", "pack_size": "1 kg", "mrp": 45, "sp": 38, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000171.jpg"},
+    {"sku_id": "BB-40000172", "desc": "Fresho Tomato Hybrid", "brand": "Fresho", "cat": "fruits & vegetables", "pack_size": "1 kg", "mrp": 50, "sp": 42, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000172.jpg"},
+    {"sku_id": "BB-40000173", "desc": "Fresho Potato", "brand": "Fresho", "cat": "fruits & vegetables", "pack_size": "2 kg", "mrp": 90, "sp": 76, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000173.jpg"},
+    {"sku_id": "BB-40000174", "desc": "Fresho Apple Shimla", "brand": "Fresho", "cat": "fruits & vegetables", "pack_size": "1 kg", "mrp": 220, "sp": 189, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000174.jpg"},
+    {"sku_id": "BB-40000180", "desc": "Surf Excel Matic Front Load Liquid Detergent", "brand": "Surf Excel", "cat": "household", "pack_size": "2 L", "mrp": 520, "sp": 450, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000180.jpg"},
+    {"sku_id": "BB-40000181", "desc": "Dettol Original Handwash Refill", "brand": "Dettol", "cat": "household", "pack_size": "750 ml", "mrp": 165, "sp": 140, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000181.jpg"},
+    {"sku_id": "BB-40000182", "desc": "Vim Dishwash Liquid Gel Lemon", "brand": "Vim", "cat": "household", "pack_size": "750 ml", "mrp": 199, "sp": 176, "availability": "A", "img": "https://cdn.bigbasket.local/p/40000182.jpg"}
+  ]
+}
