@@ -73,13 +73,102 @@ async def croma_search(intent: dict) -> tuple[dict, list[dict]]:
     return params, items
 
 
+# --- cart / order / payment adapters ----------------------------------------
+# Each retailer exposes a different native flow; these normalize it to:
+#   cart_create() -> native cart id
+#   cart_add(cart_id, native_id, qty) -> native cart snapshot
+#   place_order(cart_id) -> {"order_id", "amount"}
+#   pay(order_id) -> {"payment_id", "status", "method"}
+
+class RetailerError(Exception):
+    pass
+
+
+def _bb_ok(data: dict) -> dict:
+    if data.get("status") != "success":
+        raise RetailerError(f"bigbasket: {data.get('message', 'unknown error')}")
+    return data
+
+
+def _croma_ok(data: dict) -> dict:
+    if data.get("status") not in (200, 201):
+        raise RetailerError(f"croma: {data.get('message', 'unknown error')}")
+    return data
+
+
+async def bigbasket_cart_create() -> str:
+    async with httpx.AsyncClient(timeout=10) as client:
+        resp = await client.post(f"{BIGBASKET_URL}/bb/api/v1/cart.create")
+        return _bb_ok(resp.json())["cart_id"]
+
+
+async def bigbasket_cart_add(cart_id: str, native_id: str, qty: int) -> dict:
+    async with httpx.AsyncClient(timeout=10) as client:
+        resp = await client.post(f"{BIGBASKET_URL}/bb/api/v1/cart.add",
+                                 json={"cart_id": cart_id, "sku_id": native_id, "qty": qty})
+        return _bb_ok(resp.json())["cart"]
+
+
+async def bigbasket_place_order(cart_id: str) -> dict:
+    async with httpx.AsyncClient(timeout=10) as client:
+        resp = await client.post(f"{BIGBASKET_URL}/bb/api/v1/order.place", json={"cart_id": cart_id})
+        order = _bb_ok(resp.json())["order"]
+        return {"order_id": order["order_id"], "amount": order["amount"]}
+
+
+async def bigbasket_pay(order_id: str) -> dict:
+    async with httpx.AsyncClient(timeout=10) as client:
+        resp = await client.post(f"{BIGBASKET_URL}/bb/api/v1/payment.process",
+                                 json={"order_id": order_id, "method": "tataneu_upi"})
+        payment = _bb_ok(resp.json())["payment"]
+        return {"payment_id": payment["txn_id"], "status": payment["payment_status"],
+                "method": payment["method"]}
+
+
+async def croma_cart_create() -> str:
+    async with httpx.AsyncClient(timeout=10) as client:
+        resp = await client.post(f"{CROMA_URL}/croma/api/v2/cart")
+        return _croma_ok(resp.json())["cart"]["cartId"]
+
+
+async def croma_cart_add(cart_id: str, native_id: str, qty: int) -> dict:
+    async with httpx.AsyncClient(timeout=10) as client:
+        resp = await client.post(f"{CROMA_URL}/croma/api/v2/cart/{cart_id}/entries",
+                                 json={"productCode": native_id, "quantity": qty})
+        return _croma_ok(resp.json())["cart"]
+
+
+async def croma_place_order(cart_id: str) -> dict:
+    async with httpx.AsyncClient(timeout=10) as client:
+        resp = await client.post(f"{CROMA_URL}/croma/api/v2/orders", json={"cartId": cart_id})
+        order = _croma_ok(resp.json())["order"]
+        return {"order_id": order["orderId"], "amount": order["totalPrice"]["value"]}
+
+
+async def croma_pay(order_id: str) -> dict:
+    async with httpx.AsyncClient(timeout=10) as client:
+        resp = await client.post(f"{CROMA_URL}/croma/api/v2/payments",
+                                 json={"orderId": order_id, "paymentMode": "TATANEU_CARD"})
+        payment = _croma_ok(resp.json())["payment"]
+        return {"payment_id": payment["paymentId"], "status": payment["transactionStatus"],
+                "method": payment["paymentMode"]}
+
+
 ADAPTERS = {
     "bigbasket": {
         "search": bigbasket_search,
+        "cart_create": bigbasket_cart_create,
+        "cart_add": bigbasket_cart_add,
+        "place_order": bigbasket_place_order,
+        "pay": bigbasket_pay,
         "description": "BigBasket — groceries, fresh produce, dairy, staples, snacks, household supplies",
     },
     "croma": {
         "search": croma_search,
+        "cart_create": croma_cart_create,
+        "cart_add": croma_cart_add,
+        "place_order": croma_place_order,
+        "pay": croma_pay,
         "description": "Croma — electronics and appliances: refrigerators, TVs, washing machines, laptops, phones, audio, ACs",
     },
 }

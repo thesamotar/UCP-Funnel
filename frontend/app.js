@@ -244,6 +244,9 @@ async function executeTool(name, args) {
   if (name === "checkout") {
     const { ok, data } = await post("/ucp/v1/checkout", {});
     note(ok ? `🎉 Order <b>${data.order_id}</b> placed · ₹${data.total.amount.toLocaleString("en-IN")} · +${data.neu_coins_earned} NeuCoins` : `checkout failed: ${data.detail}`);
+    if (ok) for (const ro of data.retailer_orders || []) {
+      note(`↳ ${ro.retailer} order <b>${ro.order_id}</b> · ₹${ro.amount.toLocaleString("en-IN")} · payment <b>${ro.payment.status}</b> (${ro.payment.payment_id} via ${ro.payment.method})`);
+    }
     return data;
   }
   return { error: `unknown tool ${name}` };

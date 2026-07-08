@@ -1,69 +1,204 @@
-# Tata Node — Agentic Commerce Wrapper (48h demo)
+# Tata Node — Agentic Commerce Wrapper (UCP Funnel)
 
-A UCP (Universal Commerce Protocol)-shaped API that sits between an LLM shopping
-agent and Tata e-commerce backends, so an agent can **search → cart → checkout**
-instead of scraping.
+## What this is
+
+Imagine you're chatting with an AI assistant and you say *"buy me a fridge over
+200 litres for under ₹30,000."* Today the assistant can't really *do* that — at
+best it scrapes a website and hopes the layout hasn't changed. **This project is
+the missing piece in the middle:** a single "node" API that sits between the AI
+and Tata's shops (BigBasket for groceries, Croma for electronics) and lets the AI
+**search → add to cart → pay** using one clean, universal language instead of
+scraping.
+
+That universal language is **UCP** (Universal Commerce Protocol). The AI only ever
+learns *one* vocabulary; the node does the messy work of translating each request
+into whatever format each individual shop actually speaks, and translating the
+replies back.
+
+**In plain terms:**
+- The **AI shopping agent** (a Gemini-style chat window) is the customer's mouth.
+- The **Tata Node** is a universal translator + concierge.
+- The **mock shops** (BigBasket, Croma) are the actual stores, each with its own
+  quirky in-house API — exactly like real retailers, which never agree on
+  formats.
+
+**In technical terms:** a FastAPI "wrapper" service exposes UCP-shaped endpoints
+(`/ucp/v1/search`, `/ucp/v1/cart/items`, `/ucp/v1/checkout`). Internally it runs an
+LLM-driven routing + enrichment pipeline for search, and per-retailer adapters that
+speak each backend's native REST/RPC dialect for cart, order, and payment. Two
+standalone FastAPI mocks stand in for the real BigBasket and Croma backends.
+
+This is a **48-hour demo**, not production — it favours a working end-to-end slice
+over completeness, and keeps dependencies minimal.
 
 ```
-Gemini-replica chat  ──►  Tata UCP node (:8000)  ──►  mock BigBasket (:9001)
- (+ Tata Neu connector)     receive → translate           groceries, 28 SKUs
-                            → enhance → respond      ──►  mock Croma (:9002)
-                                                          electronics, 25 SKUs
+Chat frontend (Gemini or Claude)         ← the AI shopping agent
+        │  UCP requests
+        ▼
+Tata Neu UCP node  (:8000)               ← the universal translator
+   search → route → enrich → respond
+   cart / order / payment  → adapters
+        │                    │
+        ▼ native APIs        ▼ native APIs
+  Mock BigBasket (:9001)   Mock Croma (:9002)   ← the actual stores
+  RPC · snake_case         REST · camelCase
+  28 grocery SKUs          25 electronics SKUs
 ```
 
-## Run it
+> A deeper component-by-component breakdown lives in
+> [`ARCHITECTURE.md`](ARCHITECTURE.md).
+
+---
+
+## Setup
+
+**Requirements:** Python 3.11+, and one LLM API key (either a Claude key
+`sk-ant-...` **or** a Gemini key `AIza...`). Node.js is optional (only used if you
+want to re-run the JS syntax check).
 
 ```bash
 cd "Tata Node"
-python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
-export ANTHROPIC_API_KEY=sk-ant-...  # OR export GEMINI_API_KEY=AIza...
-./run.sh                             # then open http://localhost:8000
+
+# 1. Create a virtualenv and install dependencies
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+
+# 2. Provide ONE LLM key (either works — the app auto-detects which)
+export ANTHROPIC_API_KEY=sk-ant-...     # OR:
+export GEMINI_API_KEY=AIza...
+#   (a .env file in this folder is also picked up automatically)
+
+# 3. Start all three services (mock shops + node + frontend)
+./run.sh
+
+# 4. Open the demo
+#    http://localhost:8000
 ```
 
-**Either LLM key works** — the wrapper and the frontend auto-detect whichever
-is set (`.env` file also works). With a Claude key the chat runs on
-`claude-opus-4-8` and the node enriches missing fields via Claude's web-search
-tool; with a Gemini key it uses `gemini-2.5-flash` + Google Search grounding.
-If both are set, `LLM_PROVIDER=anthropic|gemini` picks the wrapper's brain and
-you can paste either key in the UI banner (auto-detected by prefix).
+`run.sh` launches three processes: **mock BigBasket** on `:9001`, **mock Croma** on
+`:9002`, and the **Tata Neu node** (which also serves the chat UI) on `:8000`.
 
-Without any key the node still runs — routing and enrichment fall back to
-deterministic heuristics — but the chat frontend needs a key (it will ask for
-one in a banner and keep it in localStorage).
+**Which brain runs where.** Both the node's internal reasoning *and* the chat
+frontend accept either key:
+- A **Claude** key → chat runs on `claude-opus-4-8`; the node enriches missing
+  product fields via Claude's web-search tool.
+- A **Gemini** key → chat runs on `gemini-2.5-flash` + Google Search grounding.
+- If both are set, `LLM_PROVIDER=anthropic|gemini` picks the node's brain, and you
+  can paste either key into the UI banner (it detects the provider by prefix).
+- With **no key at all**, everything still runs — routing and enrichment fall back
+  to deterministic keyword heuristics — but the chat window itself needs a key.
 
-## The demo script
+### Demo script (the 60-second walkthrough)
 
-1. Open http://localhost:8000 — a Gemini-replica chat.
-2. Ask something with the connector **off** → plain Gemini, no shopping powers.
-3. Click **+** next to the input → select **Tata Neu** in the connector popover.
-4. Ask: *"I want to buy a refrigerator of 200L+ capacity under ₹30,000."*
-   - the chat LLM (Claude or Gemini) emits a `search_tata_catalog` tool call
-   - the node's **translate** stage (its own LLM call) routes it to **Croma**
-     and builds Croma's native request (`text`, `maxPrice`, `minCapacityLitres`)
-   - the **enhance** stage notices Croma returned `color: null` on some models
-     and fills `color_options` via the LLM's web-search tool
-   - the **respond** stage normalizes everything to UCP items; the UI shows
-     product cards plus the pipeline trace
+1. Open http://localhost:8000 and paste your key in the banner.
+2. Ask something with the connector **off** → plain chat, no shopping powers.
+3. Click the **+** next to the input → select **Tata Neu** in the connector popup.
+4. Ask: *"I want a refrigerator of 200L+ capacity under ₹30,000."*
+   → routed to **Croma**, product cards appear, missing colours filled in by the
+   node, and the pipeline trace shows each stage.
 5. Ask: *"order 2 litres of milk"* → same tool, routed to **BigBasket** instead.
-6. *"Add the LG fridge to my cart"* → `add_to_cart`, then *"check out"* →
-   `checkout` returns a mock order with NeuCoins.
-7. Deselect Tata Neu from the + menu → prompts go back to plain Gemini.
+6. *"Add the LG fridge and the milk to my cart, then check out."*
+   → the node opens a real cart at *each* shop, places an order at each, pays at
+   each, and returns one combined confirmation with NeuCoins.
+7. Deselect Tata Neu → prompts go back to plain chat.
 
-## Pieces
+---
 
-| Path | What |
+## Project layout
+
+| Path | What it is |
 |---|---|
-| `wrapper/main.py` | UCP node: `/ucp/v1/search`, `/ucp/v1/cart(...)`, `/ucp/v1/checkout`; serves the frontend |
-| `wrapper/pipeline.py` | The 4-stage search pipeline with per-stage trace |
-| `wrapper/adapters.py` | BigBasket + Croma adapters (native request building + UCP normalization). New retailer = new entry here |
-| `wrapper/llm.py` | Provider-agnostic LLM client — Claude (Anthropic SDK) or Gemini (REST) — with graceful fallback without a key |
-| `mocks/bigbasket_api.py` | Mock BigBasket: `POST /bb/api/v1/product.search`, snake_case, `sp`/`mrp` |
-| `mocks/croma_api.py` | Mock Croma: `GET /croma/api/v2/products/search`, camelCase, nested envelope, some `color: null` on purpose |
-| `frontend/` | Gemini-replica UI, + connector popover, function-calling loop |
+| `frontend/` | Gemini-replica chat UI; + connector menu; dual-provider (Gemini/Claude) tool-calling loop |
+| `wrapper/main.py` | The UCP node: `/ucp/v1/search`, `/ucp/v1/cart/...`, `/ucp/v1/checkout`; also serves the frontend |
+| `wrapper/pipeline.py` | The 4-stage search pipeline (receive → translate → enhance → respond) with per-stage trace |
+| `wrapper/adapters.py` | One entry per retailer — search + cart + order + payment, each in the retailer's native dialect. **Adding a Tata brand = adding one entry here** |
+| `wrapper/llm.py` | Provider-agnostic LLM client (Claude via Anthropic SDK, or Gemini via REST) with graceful fallback |
+| `mocks/bigbasket_api.py` | Mock BigBasket — RPC style, snake_case, `sp`/`mrp` pricing, `cart.create`/`order.place`/`payment.process` |
+| `mocks/croma_api.py` | Mock Croma — REST style, camelCase, nested price objects, `POST /cart`/`/orders`/`/payments`; some `color: null` on purpose |
+| `ARCHITECTURE.md` | Full architecture write-up with diagrams and both end-to-end flows |
+
+---
+
+## Changelog
+
+### v0.1 — Search slice (2026-07-07)
+
+**In plain terms:** built the whole skeleton and got *search* working end to end —
+you can ask the AI for a product, it figures out which shop sells it, asks that
+shop, tidies up the answer (even filling in details the shop forgot to send, like
+colour options), and shows you neat product cards.
+
+**What landed, technically:**
+- **Two mock retailer services** (FastAPI) with deliberately *different* API
+  conventions so the translation layer has something real to do:
+  BigBasket (POST search, snake_case, `sp`/`mrp`) and Croma (GET search with query
+  params, camelCase, nested `searchResult` envelope). ~28 grocery + ~25 electronics
+  SKUs. A few Croma products ship `specs.color = null` on purpose.
+- **The UCP node** with a **4-stage search pipeline**:
+  1. *receive* — validate/normalise the incoming UCP request.
+  2. *translate* — an LLM decides which retailer handles the query and extracts
+     structured parameters (search term, max price, capacity…); the matching
+     adapter builds the retailer's native request.
+  3. *enhance* — fields the retailer left blank (e.g. Croma colour options) are
+     filled in via the LLM's web-search / grounding, tagged `enhanced_fields`.
+  4. *respond* — everything normalised into one UCP item shape, with a per-stage
+     timing trace returned for transparency.
+- **Provider-agnostic LLM client** — works with **either a Claude key or a Gemini
+  key**, auto-selected by which is present (`LLM_PROVIDER` breaks ties). Falls back
+  to deterministic keyword routing/enrichment when no key is set, so the demo never
+  hard-fails.
+- **Gemini-replica chat frontend** with a ChatGPT-style **+ connector menu**.
+  Selecting **Tata Neu** routes every prompt through the node with tool
+  declarations (`search_tata_catalog`, `add_to_cart`, `view_cart`, `checkout`);
+  deselecting returns to plain chat. The UI detects a Gemini (`AIza…`) or Claude
+  (`sk-ant-…`) key by prefix and calls the right API directly from the browser
+  (Claude uses the official browser-access header).
+- Cart and checkout existed but were **in-memory stubs** at this stage — no real
+  retailer round-trip yet.
+
+### v0.2 — Commerce slice: cart, orders & payments (2026-07-08)
+
+**In plain terms:** made buying *actually happen*. Before, "add to cart" and
+"checkout" were faked inside the node. Now each shop has its own real cart, order,
+and payment counter — and when you check out, the node walks up to *each* shop
+separately, places your order there, pays there, and hands you one combined
+receipt. If you've got a fridge from Croma and milk from BigBasket in the same
+cart, that's two real orders and two real payments, stitched into a single
+confirmation.
+
+**What landed, technically:**
+- **Full commerce APIs on both mocks**, each in its own realistic dialect:
+  - *BigBasket* — RPC verbs: `cart.create` → `cart.add` → `order.place` →
+    `payment.process`; ids like `BBORD-…` / `BBTXN-…`; `{"status":"success"}`
+    envelopes; guards for out-of-stock, missing cart, empty cart, double-pay.
+  - *Croma* — RESTful resources: `POST /cart` → `POST /cart/{id}/entries` →
+    `POST /orders` → `POST /payments`; ids like `CRMORD-…` / `CRMPAY-…`; numeric
+    status codes; order status `PAYMENT_PENDING → CONFIRMED`.
+- **Cart/order/payment adapters in the node** that normalise each retailer's flow
+  to a common shape (`cart_create` → `cart_add` → `place_order` → `pay`), so the
+  node's logic never has to know a retailer's quirks.
+- **The node's cart & checkout now delegate to real retailer calls** instead of
+  faking them:
+  - `add_to_cart` lazily opens a **native cart at the item's own retailer** and
+    adds the item there; the UCP cart mirrors it. A single UCP cart can therefore
+    hold open carts at multiple shops at once.
+  - `checkout` places one **native order + payment per retailer** and returns a
+    consolidated confirmation (`retailer_orders[]`, each with its native order id
+    and payment receipt, plus a grand total and NeuCoins).
+  - Retailer-side failures (e.g. out of stock) surface as clean `502`s with the
+    native message.
+- **Frontend** now renders the per-retailer order/payment breakdown under the
+  combined confirmation.
+- **`ARCHITECTURE.md`** added — a full write-up of the components, the two
+  end-to-end flows (search, and cart→checkout), and the demo-grade shortcuts.
+
+---
 
 ## Demo-grade shortcuts (deliberate)
 
-- One in-memory cart, no sessions/auth; catalog cache backs `add_to_cart`.
-- `/api/config` hands the server's LLM keys to the browser — localhost only.
-- Checkout is a mock: no payment, order lives in memory.
-- Cart/checkout bypass the 4-stage pipeline (it's built for search, per scope).
+- One in-memory UCP cart; the mocks keep their own in-memory carts/orders.
+  Everything resets on restart. No sessions or auth.
+- `/api/config` hands the server's LLM keys to the browser — **localhost only**.
+- Payments are mock counters — no real gateway, no money moves.
+- Only *search* runs the 4-stage pipeline (that's the scoped focus); cart/checkout
+  are direct adapter calls.

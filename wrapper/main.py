@@ -14,14 +14,16 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from . import llm
+from .adapters import ADAPTERS, RetailerError
 from .pipeline import run_search_pipeline
 
 app = FastAPI(title="Tata Neu UCP Node")
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
-# demo-grade in-memory state: one cart, plus an index of every item any
-# search has returned so cart ops can resolve ids without re-querying retailers
-CART: dict = {"items": []}
+# demo-grade in-memory state: one UCP cart mirroring one native cart per
+# retailer, plus an index of every item any search has returned so cart ops
+# can resolve ids without re-querying retailers
+CART: dict = {"items": [], "native_carts": {}}  # native_carts: retailer -> native cart id
 CATALOG_CACHE: dict[str, dict] = {}
 ORDERS: list[dict] = []
 
@@ -59,10 +61,21 @@ async def ucp_search(body: SearchBody):
 
 
 @app.post("/ucp/v1/cart/items")
-def add_to_cart(body: CartItemBody):
+async def add_to_cart(body: CartItemBody):
     item = CATALOG_CACHE.get(body.item_id)
     if not item:
         raise HTTPException(status_code=404, detail=f"unknown item_id {body.item_id!r} — search for it first")
+    retailer = item["source"]["retailer"]
+    adapter = ADAPTERS[retailer]
+    try:
+        # lazily open a native cart at the retailer, then add natively
+        if retailer not in CART["native_carts"]:
+            CART["native_carts"][retailer] = await adapter["cart_create"]()
+            print(f"[cart] opened native {retailer} cart {CART['native_carts'][retailer]}")
+        await adapter["cart_add"](CART["native_carts"][retailer], item["source"]["native_id"], body.quantity)
+    except RetailerError as exc:
+        raise HTTPException(status_code=502, detail=str(exc))
+    # mirror into the UCP-level cart
     for line in CART["items"]:
         if line["item"]["id"] == body.item_id:
             line["quantity"] += body.quantity
@@ -79,27 +92,40 @@ def get_cart():
         "ucp_version": "0.1",
         "type": "cart",
         "items": CART["items"],
+        "native_carts": CART["native_carts"],
         "total": {"amount": total, "currency": "INR"},
     }
 
 
 @app.post("/ucp/v1/checkout")
-def checkout():
+async def checkout():
     if not CART["items"]:
         raise HTTPException(status_code=400, detail="cart is empty")
     cart = get_cart()
+    # place one native order + payment per retailer that has items
+    retailer_orders = []
+    for retailer, native_cart_id in CART["native_carts"].items():
+        adapter = ADAPTERS[retailer]
+        try:
+            placed = await adapter["place_order"](native_cart_id)
+            payment = await adapter["pay"](placed["order_id"])
+        except RetailerError as exc:
+            raise HTTPException(status_code=502, detail=str(exc))
+        print(f"[checkout] {retailer} order {placed['order_id']} paid via {payment['payment_id']}")
+        retailer_orders.append({"retailer": retailer, **placed, "payment": payment})
     order = {
         "ucp_version": "0.1",
         "type": "order_confirmation",
         "order_id": f"TATA-{uuid.uuid4().hex[:8].upper()}",
+        "retailer_orders": retailer_orders,
         "items": cart["items"],
         "total": cart["total"],
-        "payment": {"method": "TataNeu HDFC Card (mock)", "status": "authorized"},
         "neu_coins_earned": int(cart["total"]["amount"] * 0.05),
         "estimated_delivery": "2-4 days",
     }
     ORDERS.append(order)
     CART["items"] = []
+    CART["native_carts"] = {}
     return order
 
 
