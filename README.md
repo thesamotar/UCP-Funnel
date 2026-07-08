@@ -113,8 +113,8 @@ frontend accept either key:
 | `wrapper/pipeline.py` | The 4-stage search pipeline (receive → translate → enhance → respond) with per-stage trace |
 | `wrapper/adapters.py` | One entry per retailer — search + cart + order + payment, each in the retailer's native dialect. **Adding a Tata brand = adding one entry here** |
 | `wrapper/llm.py` | Provider-agnostic LLM client (Claude via Anthropic SDK, or Gemini via REST) with graceful fallback |
-| `mocks/bigbasket_api.py` | Mock BigBasket — RPC style, snake_case, `sp`/`mrp` pricing, `cart.create`/`order.place`/`payment.process` |
-| `mocks/croma_api.py` | Mock Croma — REST style, camelCase, nested price objects, `POST /cart`/`/orders`/`/payments`; some `color: null` on purpose |
+| `mocks/bigbasket/` | Mock BigBasket — RPC style, snake_case, `sp`/`mrp` pricing. Routes split per operation: `search.py`, `cart.py`, `order.py`, `payment.py`, wired up in `app.py` (shared state in `store.py`) |
+| `mocks/croma/` | Mock Croma — REST style, camelCase, nested price objects; some `color: null` on purpose. Same per-operation split: `search.py` / `cart.py` / `order.py` / `payment.py` / `app.py` / `store.py` |
 | `ARCHITECTURE.md` | Full architecture write-up with diagrams and both end-to-end flows |
 
 ---
@@ -191,6 +191,30 @@ confirmation.
   combined confirmation.
 - **`ARCHITECTURE.md`** added — a full write-up of the components, the two
   end-to-end flows (search, and cart→checkout), and the demo-grade shortcuts.
+
+### v0.3 — Mock restructure + env-based keys (2026-07-09)
+
+**In plain terms:** housekeeping, no behaviour change. Each mock shop used to be
+one long file; now every shop is its own folder with a separate file per action
+(search, cart, order, payment), so it's obvious where each API lives. Also moved
+API keys out of the homepage box and into a `.env` file you fill in once.
+
+**What landed, technically:**
+- **Split each mock into a package** — `mocks/bigbasket/` and `mocks/croma/`,
+  each with one module per operation (`search.py`, `cart.py`, `order.py`,
+  `payment.py`) exposing a FastAPI `APIRouter`, assembled in `app.py`. Shared
+  catalog data and in-memory cart/order state moved to a per-service `store.py`;
+  each `*_data.json` moved into its folder as `data.json`. **All URL paths are
+  unchanged**, so the node and adapters are unaffected.
+- `run.sh` uvicorn targets updated to `mocks.bigbasket.app:app` /
+  `mocks.croma.app:app`; old `mocks/bigbasket_api.py` and `mocks/croma_api.py`
+  removed.
+- **`.env` support** — `run.sh` already sources `.env`; added a committed
+  `.env.example` template (`ANTHROPIC_API_KEY` / `GEMINI_API_KEY`) so keys live in
+  a gitignored `.env` instead of being pasted on the homepage. The frontend reads
+  them via `/api/config` on load.
+- Verified end to end after the move: direct search on both mocks, and the full
+  cart → order → payment flow on each retailer.
 
 ---
 
