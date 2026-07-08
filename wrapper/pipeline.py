@@ -15,47 +15,7 @@ import time
 
 from . import llm
 from .adapters import ADAPTERS
-
-# --- deterministic fallbacks (used when no GEMINI_API_KEY is set) ---------
-
-BIGBASKET_HINTS = {
-    "milk", "bread", "egg", "eggs", "atta", "rice", "dal", "oil", "sugar", "salt",
-    "tea", "coffee", "butter", "paneer", "curd", "biscuit", "snack", "chips",
-    "banana", "onion", "tomato", "potato", "apple", "fruit", "vegetable",
-    "grocery", "groceries", "detergent", "handwash", "dishwash", "noodles", "juice",
-}
-CROMA_HINTS = {
-    "refrigerator", "fridge", "tv", "television", "laptop", "phone", "smartphone",
-    "mobile", "washing", "machine", "ac", "conditioner", "headphone", "headphones",
-    "earbuds", "speaker", "electronics", "appliance", "macbook", "samsung", "lg",
-}
-
-FALLBACK_COLORS = {
-    "refrigerator": ["Shiny Steel", "Elegant Inox", "Ebony Black"],
-    "television": ["Black"],
-    "washing machine": ["White", "Silver"],
-    "laptop": ["Silver", "Grey"],
-    "audio": ["Black", "Blue"],
-    "air conditioner": ["White"],
-    "smartphone": ["Black", "Blue", "Silver"],
-}
-
-
-def _fallback_route(query: str, constraints: dict) -> dict:
-    words = query.lower().split()
-    bb = sum(1 for w in words if w.strip(".,") in BIGBASKET_HINTS)
-    cr = sum(1 for w in words if w.strip(".,") in CROMA_HINTS)
-    return {
-        "retailer": "bigbasket" if bb > cr else "croma",
-        "search_term": query,
-        "max_price": constraints.get("max_price"),
-        "min_price": constraints.get("min_price"),
-        "category": None,
-        "brand": None,
-        "min_capacity_litres": None,
-        "reasoning": "keyword fallback (no LLM key configured)",
-    }
-
+from .fallback import fallback_colors, fallback_route  # [FALLBACK] delete with wrapper/fallback/
 
 # --- stages ----------------------------------------------------------------
 
@@ -91,7 +51,8 @@ Return ONLY a JSON object:
 }}"""
     intent = await llm.generate_json(prompt)
     if not isinstance(intent, dict) or intent.get("retailer") not in ADAPTERS:
-        intent = _fallback_route(request["query"], request["constraints"])
+        # [FALLBACK] no/unusable LLM routing — delete this block with wrapper/fallback/
+        intent = fallback_route(request["query"], request["constraints"])
     # agent-supplied constraints win if the LLM dropped them
     for k in ("max_price", "min_price"):
         if intent.get(k) is None and request["constraints"].get(k) is not None:
@@ -131,11 +92,12 @@ Return ONLY a JSON object mapping each product id to an array of 1-3 color names
                 it["attributes"]["color_options"] = [str(c) for c in colors[:3]]
                 filled_via_llm.add(it["id"])
 
-    # deterministic fallback for anything the LLM didn't cover
+    # [FALLBACK] deterministic colors for anything the LLM didn't cover —
+    # delete this block with wrapper/fallback/
     for it in gaps:
         if it["id"] not in filled_via_llm:
             cat = it["attributes"].get("category", "")
-            it["attributes"]["color_options"] = FALLBACK_COLORS.get(cat, ["Black"])
+            it["attributes"]["color_options"] = fallback_colors(cat)
 
     for it in gaps:
         it["attributes"].pop("color", None)

@@ -113,6 +113,7 @@ frontend accept either key:
 | `wrapper/routes/` | One module per action exposing an `APIRouter`: `config.py`, `search.py`, `cart.py`, `checkout.py` |
 | `wrapper/state.py` | Shared in-memory node state (UCP cart, catalog cache, orders) + the cart-view helper |
 | `wrapper/pipeline.py` | The 4-stage search pipeline (receive → translate → enhance → respond) with per-stage trace |
+| `wrapper/fallback/` | Deterministic no-LLM fallbacks (keyword routing + canned colors), isolated so the whole folder can be deleted once the LLM path is reliable — see its README |
 | `wrapper/adapters.py` | One entry per retailer — search + cart + order + payment, each in the retailer's native dialect. **Adding a Tata brand = adding one entry here** |
 | `wrapper/llm.py` | Provider-agnostic LLM client (Claude via Anthropic SDK, or Gemini via REST) with graceful fallback |
 | `mocks/bigbasket/` | Mock BigBasket — RPC style, snake_case, `sp`/`mrp` pricing. Routes split per operation: `search.py`, `cart.py`, `order.py`, `payment.py`, wired up in `app.py` (shared state in `store.py`) |
@@ -240,6 +241,26 @@ just wires them together. No behaviour change.
 - Verified end to end after the move: config, search (populates the cache),
   add-to-cart, cart view, checkout (per-retailer order + payment, then cart
   cleared), the unknown-item 404 guard, and the frontend still served at `/`.
+
+### v0.5 — Isolate the no-LLM fallbacks (2026-07-09)
+
+**In plain terms:** the demo has deterministic stand-ins so it runs even with no
+API key — keyword-based shop routing and canned color options. Those were mixed
+into the pipeline; they're now quarantined in one folder you can delete in a
+single move once the real LLM path is reliable.
+
+**What landed, technically:**
+- **New `wrapper/fallback/` package** holding every deterministic fallback:
+  `routing.py` (`fallback_route()` + the BigBasket/Croma keyword hint tables) and
+  `colors.py` (`fallback_colors()` + the canned `FALLBACK_COLORS` table). Its
+  `README.md` documents the exact removal steps.
+- **`pipeline.py` now imports from it** at three spots, each tagged `# [FALLBACK]`:
+  the import, the translate-stage routing fallback, and the enhance-stage color
+  fallback. Nothing else references the package, so removal = `rm -rf
+  wrapper/fallback` + deleting those three marked lines/blocks.
+- Behaviour unchanged. Verified with no working key (placeholder): grocery query
+  keyword-routes to BigBasket, electronics to Croma (reason "keyword fallback"),
+  and Croma color gaps fill from the canned table.
 
 ---
 
