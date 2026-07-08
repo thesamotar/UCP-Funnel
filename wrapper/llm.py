@@ -19,7 +19,7 @@ import re
 import httpx
 
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
-ANTHROPIC_MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-opus-4-8")
+ANTHROPIC_MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-3-5-sonnet-latest")
 GEMINI_API_BASE = "https://generativelanguage.googleapis.com/v1beta/models"
 
 _JSON_BLOCK = re.compile(r"\{.*\}|\[.*\]", re.S)

@@ -10,7 +10,7 @@
 const GEMINI_BASE = "https://generativelanguage.googleapis.com/v1beta/models";
 const ANTHROPIC_BASE = "https://api.anthropic.com/v1/messages";
 let GEMINI_MODEL = "gemini-2.5-flash";
-let ANTHROPIC_MODEL = "claude-opus-4-8";
+let ANTHROPIC_MODEL = "claude-3-5-sonnet-latest"; // fallback only; real value comes from /api/config (.env)
 
 const KEYS = { gemini: "", anthropic: "" };
 let providerName = null; // "gemini" | "anthropic"
