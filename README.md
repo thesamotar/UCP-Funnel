@@ -109,7 +109,9 @@ frontend accept either key:
 | Path | What it is |
 |---|---|
 | `frontend/` | Gemini-replica chat UI; + connector menu; dual-provider (Gemini/Claude) tool-calling loop |
-| `wrapper/main.py` | The UCP node: `/ucp/v1/search`, `/ucp/v1/cart/...`, `/ucp/v1/checkout`; also serves the frontend |
+| `wrapper/main.py` | Assembles the UCP node: includes the action routers and mounts the frontend |
+| `wrapper/routes/` | One module per action exposing an `APIRouter`: `config.py`, `search.py`, `cart.py`, `checkout.py` |
+| `wrapper/state.py` | Shared in-memory node state (UCP cart, catalog cache, orders) + the cart-view helper |
 | `wrapper/pipeline.py` | The 4-stage search pipeline (receive → translate → enhance → respond) with per-stage trace |
 | `wrapper/adapters.py` | One entry per retailer — search + cart + order + payment, each in the retailer's native dialect. **Adding a Tata brand = adding one entry here** |
 | `wrapper/llm.py` | Provider-agnostic LLM client (Claude via Anthropic SDK, or Gemini via REST) with graceful fallback |
@@ -215,6 +217,29 @@ API keys out of the homepage box and into a `.env` file you fill in once.
   them via `/api/config` on load.
 - Verified end to end after the move: direct search on both mocks, and the full
   cart → order → payment flow on each retailer.
+
+### v0.4 — Wrapper restructure (2026-07-09)
+
+**In plain terms:** same housekeeping, now for the node itself. Every UCP API
+used to live in one `main.py`; each action is now its own file, and `main.py`
+just wires them together. No behaviour change.
+
+**What landed, technically:**
+- **Split the UCP node's endpoints into `wrapper/routes/`** — one module per
+  action, each exposing a FastAPI `APIRouter`: `config.py` (`/api/config`),
+  `search.py` (`/ucp/v1/search`), `cart.py` (`/ucp/v1/cart/items` + `/ucp/v1/cart`),
+  `checkout.py` (`/ucp/v1/checkout`).
+- **Shared in-memory state moved to `wrapper/state.py`** — the UCP cart, catalog
+  cache, and orders list, plus the `cart_view()` helper that add-to-cart, cart
+  view, and checkout all reuse. Modules import these by reference and only mutate
+  their contents, so they stay in sync.
+- **`main.py` is now just an assembler** — includes the four routers and mounts
+  the frontend; `pipeline.py` / `adapters.py` / `llm.py` are unchanged. Route
+  paths and `wrapper.main:app` are unchanged, so `run.sh` and the frontend are
+  unaffected.
+- Verified end to end after the move: config, search (populates the cache),
+  add-to-cart, cart view, checkout (per-retailer order + payment, then cart
+  cleared), the unknown-item 404 guard, and the frontend still served at `/`.
 
 ---
 
