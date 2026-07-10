@@ -4,7 +4,7 @@ import uuid
 from fastapi import APIRouter
 from pydantic import BaseModel
 
-from .store import CARTS, DATA, cart_summary
+from .store import CARTS, DATA, cart_summary, persist_cart
 
 router = APIRouter()
 
@@ -20,14 +20,15 @@ class CartGetRequest(BaseModel):
 
 
 @router.post("/bb/api/v1/cart.create")
-def cart_create():
+async def cart_create():
     cart_id = f"BBCART-{uuid.uuid4().hex[:8].upper()}"
     CARTS[cart_id] = {"cart_id": cart_id, "items": []}
+    await persist_cart(CARTS[cart_id])
     return {"status": "success", "cart_id": cart_id}
 
 
 @router.post("/bb/api/v1/cart.add")
-def cart_add(req: CartAddRequest):
+async def cart_add(req: CartAddRequest):
     cart = CARTS.get(req.cart_id)
     if not cart:
         return {"status": "error", "message": "cart not found"}
@@ -45,6 +46,7 @@ def cart_add(req: CartAddRequest):
             "sku_id": req.sku_id, "desc": product["desc"],
             "unit_sp": product["sp"], "qty": req.qty,
         })
+    await persist_cart(cart)
     return {"status": "success", "cart": cart_summary(cart)}
 
 

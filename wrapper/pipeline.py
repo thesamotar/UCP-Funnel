@@ -17,7 +17,7 @@ import json
 import time
 
 from . import llm
-from .adapters import ADAPTERS
+from .adapters import REGISTRY
 
 
 class PipelineError(RuntimeError):
@@ -35,9 +35,15 @@ async def stage_receive(payload: dict) -> dict:
 
 
 async def stage_translate(request: dict) -> dict:
-    retailer_menu = "\n".join(f"- {name}: {a['description']}" for name, a in ADAPTERS.items())
+    retailer_menu = "\n".join(f"- {name}: {a.description}" for name, a in REGISTRY.items())
+    retailer_enum = " | ".join(f'"{name}"' for name in REGISTRY)
+    # every connector's extra structured params (the hint says when they apply)
+    extra_fields = "".join(
+        f',\n  "{field}": {hint}'
+        for a in REGISTRY.values() for field, hint in a.intent_fields.items()
+    )
     prompt = f"""You are the routing brain of the Tata Neu commerce node. A shopping query must be
-routed to exactly one Tata retailer backend and translated into structured search parameters.
+routed to exactly one retailer backend and translated into structured search parameters.
 
 Retailers:
 {retailer_menu}
@@ -47,20 +53,19 @@ Extra constraints from the agent: {json.dumps(request['constraints'])}
 
 Return ONLY a JSON object:
 {{
-  "retailer": "bigbasket" | "croma",
+  "retailer": {retailer_enum},
   "search_term": "<short keyword search term for the retailer's catalog, e.g. 'refrigerator double door'>",
   "max_price": <number or null, in INR>,
   "min_price": <number or null>,
   "category": <string or null, e.g. "refrigerator", "dairy">,
-  "brand": <string or null>,
-  "min_capacity_litres": <number or null, only for fridges when the user gives a capacity like 200L+>,
+  "brand": <string or null>{extra_fields},
   "reasoning": "<one short sentence>"
 }}"""
     try:
         intent = await llm.generate_json(prompt)
     except llm.LLMError as exc:
         raise PipelineError(f"query routing failed: {exc}") from exc
-    if not isinstance(intent, dict) or intent.get("retailer") not in ADAPTERS:
+    if not isinstance(intent, dict) or intent.get("retailer") not in REGISTRY:
         raise PipelineError(f"LLM routed to an unknown retailer: {str(intent)[:120]}")
     # agent-supplied constraints win if the LLM dropped them
     for k in ("max_price", "min_price"):
@@ -70,28 +75,30 @@ Return ONLY a JSON object:
 
 
 async def stage_call_retailer(intent: dict) -> tuple[dict, list[dict]]:
-    adapter = ADAPTERS[intent["retailer"]]
-    return await adapter["search"](intent)
+    return await REGISTRY[intent["retailer"]].search(intent)
 
 
 async def stage_enhance(intent: dict, items: list[dict]) -> list[str]:
-    """Fill blank attributes in-place; returns list of enhanced item ids."""
-    # only Croma models carry a color field; groceries have no gap to fill
-    gaps = [
-        it for it in items
-        if it["source"]["retailer"] == "croma" and not it["attributes"].get("color")
-    ]
+    """Fill blank attributes in-place; returns list of enhanced item ids.
+
+    Driven by each adapter's enhance_spec: which attribute may come back
+    blank, what to look up, and what to write the answer as."""
+    adapter = REGISTRY[intent["retailer"]]
+    spec = adapter.enhance_spec
+    if not spec:
+        return []
+    gaps = [it for it in items if not it["attributes"].get(spec["field"])]
     if not gaps:
         return []
 
     listing = "\n".join(f'- "{it["id"]}": {it["title"]}' for it in gaps)
-    prompt = f"""These products from an Indian electronics retailer are missing their color options.
-Look up (or infer from your knowledge of these real products) the colors each model is sold in, in India.
+    prompt = f"""These products from an Indian retailer are missing a field: {spec["field"]}.
+Look up (or infer from your knowledge of these real products) {spec["ask"]}.
 
 {listing}
 
-Return ONLY a JSON object mapping each product id to an array of 1-3 color names, e.g.
-{{"CRM-301202": ["Shiny Steel", "Ebony Sheen"]}}"""
+Return ONLY a JSON object mapping each product id to an array of 1-3 values, e.g.
+{spec["example"]}"""
     try:
         result = await llm.generate_json(prompt, use_search=True)
     except llm.LLMError as exc:
@@ -101,11 +108,11 @@ Return ONLY a JSON object mapping each product id to an array of 1-3 color names
 
     filled = []
     for it in gaps:
-        colors = result.get(it["id"]) if isinstance(result, dict) else None
-        if isinstance(colors, list) and colors:
-            it["attributes"]["color_options"] = [str(c) for c in colors[:3]]
-            it["attributes"].pop("color", None)
-            it["enhanced_fields"] = ["color_options"]
+        values = result.get(it["id"]) if isinstance(result, dict) else None
+        if isinstance(values, list) and values:
+            it["attributes"][spec["fill_as"]] = [str(v) for v in values[:3]]
+            it["attributes"].pop(spec["field"], None)
+            it["enhanced_fields"] = [spec["fill_as"]]
             filled.append(it["id"])
     return filled
 

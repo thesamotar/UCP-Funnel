@@ -1,8 +1,8 @@
-"""GET /api/config — hand the browser the model names the wrapper uses.
+"""GET /api/config — public boot config for the frontend.
 
-The server's API keys are only included when EXPOSE_CONFIG_KEYS=1 (a localhost
-demo convenience). On a public deployment leave it unset — visitors paste
-their own key into the UI banner instead.
+Hands the browser the Supabase project URL + anon (publishable) key so
+supabase-js can run login, and the model name for the header chip. No LLM
+keys ever leave the server — chat goes through POST /api/chat.
 """
 import os
 
@@ -15,10 +15,9 @@ router = APIRouter()
 
 @router.get("/api/config")
 def config():
-    expose = os.environ.get("EXPOSE_CONFIG_KEYS", "").lower() in ("1", "true", "yes")
     return {
-        "gemini_key": os.environ.get("GEMINI_API_KEY", "") if expose else "",
-        "anthropic_key": os.environ.get("ANTHROPIC_API_KEY", "") if expose else "",
-        "gemini_model": llm.GEMINI_MODEL,
-        "anthropic_model": llm.ANTHROPIC_MODEL,
+        "supabase_url": os.environ.get("SUPABASE_URL", ""),
+        "supabase_anon_key": os.environ.get("SUPABASE_ANON_KEY", ""),
+        "provider": llm.provider(),
+        "model": llm.ANTHROPIC_MODEL if llm.provider() == "anthropic" else llm.GEMINI_MODEL,
     }

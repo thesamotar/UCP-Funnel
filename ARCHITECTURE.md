@@ -2,41 +2,45 @@
 
 ## The one-paragraph version
 
-There is **one node API** (the "Tata Neu UCP node", FastAPI on **:8000**). An LLM
-shopping agent (the chat frontend) never talks to retailers directly — it calls the
-node's UCP-shaped endpoints (`/ucp/v1/search`, `/ucp/v1/cart/...`, `/ucp/v1/checkout`).
-Inside the node, a single **adapter registry** knows every Tata retailer backend. For
-each request, the node decides which retailer should handle it (an LLM call for search
+There is **one node API** (the "Tata Neu UCP node", FastAPI on **:8000**). Users sign
+in with **Supabase Auth** (email/password); every call carries their JWT, and carts
+and orders are per-user rows in **Supabase Postgres**. An LLM shopping agent (the chat
+frontend) never talks to retailers — or the LLM provider — directly: chat goes through
+the node's `POST /api/chat` proxy (ONE server-side key for all accounts), and shopping
+goes through the node's UCP-shaped endpoints (`/ucp/v1/search`, `/ucp/v1/cart/...`,
+`/ucp/v1/checkout`, `/ucp/v1/orders`). Inside the node, a **connector registry**
+(loaded from the `connectors` table at startup) knows every attached backend. For each
+request, the node decides which retailer should handle it (an LLM call for search
 routing; the item's origin for cart/checkout), translates the request into that
-retailer's *native* API format, calls the mock retailer service over HTTP
-(**BigBasket :9001**, **Croma :9002**), and normalizes the native response back into
-one universal UCP shape.
+retailer's *native* API format, calls the retailer service over HTTP
+(**mock BigBasket :9001**, **mock Croma :9002** — later: real digieca/ashiyana APIs),
+and normalizes the native response back into one universal UCP shape.
 
 ```
-┌─────────────────────────┐
-│  Chat frontend (:8000/) │  Gemini-replica UI · Gemini OR Claude key
-│  LLM + tool declarations│  tools: search_tata_catalog, add_to_cart,
-└───────────┬─────────────┘         view_cart, checkout
-            │  UCP requests (JSON over HTTP, same origin)
+┌───────────────────────────┐
+│  Chat frontend (:8000/)   │  Gemini-replica UI · Supabase login (JWT)
+│  tool-execution loop only │  tools: search_tata_catalog, add_to_cart,
+└───────────┬───────────────┘         view_cart, checkout
+            │  /api/chat (LLM proxy) + UCP requests · Bearer JWT
             ▼
-┌───────────────────────────────────────────────────────┐
-│  Tata Neu UCP node  (wrapper/, FastAPI :8000)         │
-│                                                       │
-│  /ucp/v1/search ──► 4-stage pipeline                  │
-│     receive ─► translate ─► enhance ─► respond        │
-│                  │ (LLM routes to a retailer)         │
-│  /ucp/v1/cart/items ─► adapter cart_create/cart_add   │
-│  /ucp/v1/checkout ───► adapter place_order + pay      │
-│                                                       │
-│  adapters.py — one entry per retailer:                │
-│    search · cart_create · cart_add · place_order · pay│
-└──────────┬──────────────────────────┬─────────────────┘
-           │ native HTTP              │ native HTTP
-           ▼                          ▼
-┌─────────────────────┐    ┌──────────────────────────┐
-│ Mock BigBasket:9001 │    │ Mock Croma :9002         │
+┌────────────────────────────────────────────────────────┐     ┌────────────────────┐
+│  Tata Neu UCP node  (wrapper/, FastAPI :8000)          │────►│ Supabase Postgres  │
+│                                                        │     │  auth.users        │
+│  /api/chat ─► llm.chat() — server-side key, streaming  │     │  user_carts/orders │
+│  /ucp/v1/search ──► 4-stage pipeline                   │     │  catalog_cache     │
+│     receive ─► translate ─► enhance ─► respond         │     │  connectors        │
+│                  │ (LLM routes to a connector)         │     │  bigbasket_* /     │
+│  /ucp/v1/cart/items ─► adapter cart_create/cart_add    │     │  croma_* ("their   │
+│  /ucp/v1/checkout ───► adapter place_order + pay       │     │  own databases")   │
+│                                                        │     └─────────▲──────────┘
+│  adapters/ — RetailerAdapter class per backend,        │               │
+│  registry loaded from the connectors table             │               │
+└──────────┬──────────────────────┬──────────────────────┘               │
+           │ native HTTP          │ native HTTP                          │
+           ▼                      ▼                                      │
+┌─────────────────────┐    ┌──────────────────────────┐   catalogs + native
+│ Mock BigBasket:9001 │    │ Mock Croma :9002         │   carts/orders ────┘
 │ RPC-style, snake    │    │ REST-style, camelCase    │
-│ 28 grocery SKUs     │    │ 25 electronics SKUs      │
 │ cart.create/.add    │    │ POST /cart, /entries     │
 │ order.place         │    │ POST /orders             │
 │ payment.process     │    │ POST /payments           │
@@ -46,24 +50,30 @@ one universal UCP shape.
 ## Components
 
 ### 1. Chat frontend (`frontend/`)
-Static HTML/JS served by the node at `/`. A Gemini-replica chat that works with
-either a **Gemini** key (`AIza...`) or a **Claude** key (`sk-ant-...`) — detected by
-prefix, called directly from the browser. When the **Tata Neu connector** is selected
-from the **+** popover, every prompt is sent to the LLM together with four tool
-declarations. Tool calls are executed against the node's UCP endpoints; results are
-fed back to the LLM and rendered as product cards / order notes. Deselecting the
-connector returns to plain chat.
+Static HTML/JS served by the node at `/`. A Gemini-replica chat gated by a
+**Supabase login overlay** (supabase-js, config from `/api/config`). The browser
+never holds an LLM key: each turn goes to `POST /api/chat` with the user's JWT.
+When the **Tata Neu connector** is selected from the **+** popover, the node adds
+four tool declarations server-side; tool calls come back to the browser and are
+executed against the node's UCP endpoints (same JWT — that's what makes carts
+per-user); results are fed back to the LLM and rendered as product cards (with
+images from the catalog) / order notes. Deselecting the connector returns to
+plain chat.
 
 ### 2. Tata Neu UCP node (`wrapper/`) — the core
-- **`main.py`** — the UCP surface:
+- **`main.py`** — assembles the app and loads the connector registry at startup.
+  The surface (all `/ucp/*` and `/api/chat` require `Authorization: Bearer <jwt>`,
+  verified by `auth.py` against the Supabase secret/JWKS):
 
   | Endpoint | What it does |
   |---|---|
+  | `POST /api/chat` | LLM proxy — server-side key, streaming, tool declarations live here |
   | `POST /ucp/v1/search` | Runs the 4-stage search pipeline |
-  | `POST /ucp/v1/cart/items` | Adds an item; opens/uses a **native cart at the item's retailer** |
-  | `GET /ucp/v1/cart` | UCP cart view + which native carts are open |
+  | `POST /ucp/v1/cart/items` | Adds an item to **the caller's** cart; opens/uses a native cart at the item's retailer |
+  | `GET /ucp/v1/cart` | The caller's UCP cart view + which native carts are open |
   | `POST /ucp/v1/checkout` | Places a **native order + payment per retailer**, returns one consolidated confirmation |
-  | `GET /api/config` | Hands the browser the model names — plus the server's keys only when `EXPOSE_CONFIG_KEYS=1` (localhost convenience) |
+  | `GET /ucp/v1/orders` | The caller's past confirmations |
+  | `GET /api/config` | Public boot config: Supabase URL + anon key, model name. Never LLM keys |
 
 - **`pipeline.py`** — the 4-stage search pipeline, each stage traced (timings are
   returned in the response for inspection; the UI shows a friendly loader instead):
@@ -74,14 +84,23 @@ connector returns to plain chat.
   3. **enhance** — fields the retailer left blank (e.g. Croma's `color: null`) are
      filled via the LLM's web-search tool, marked `enhanced_fields`
   4. **respond** — everything normalized into UCP items
-- **`adapters.py`** — the retailer registry. **Adding a Tata brand = adding one
-  entry** with five functions: `search`, `cart_create`, `cart_add`, `place_order`,
-  `pay`. Each function speaks the retailer's native dialect and returns a
-  normalized shape.
+- **`adapters/`** — the connector layer. `base.py` defines the
+  `RetailerAdapter` contract: `search` (required), `cart_create` / `cart_add` /
+  `place_order` / `pay` (optional — search-only backends get a clean `501` from
+  the cart routes), plus declarative `intent_fields` (extra structured search
+  params fed into the translate prompt) and `enhance_spec` (which blank field
+  the enhance stage may fill, and how). `registry.py` reads the enabled rows
+  from the Supabase `connectors` table at startup and instantiates each row's
+  `adapter_path` class with its `base_url` + `auth` (secret values come from
+  env vars named in the row — never stored in the DB).
+  **Attaching a backend (digieca, ashiyana, …) = one adapter file + one row.**
 - **`llm.py`** — provider-agnostic LLM client (Anthropic SDK or Gemini REST).
   Hard per-call timeouts; any failure raises `LLMError` — no fallbacks. The
   pipeline treats translate as essential (fails the search with a clear error)
-  and enhance as optional (items ship unenriched).
+  and enhance as optional (items ship unenriched). `chat()` runs the /api/chat
+  turns (history + tool declarations, streaming).
+- **`auth.py` / `db.py`** — the Supabase JWT dependency and the shared
+  service-role client.
 
 ### 3. Mock retailer backends (`mocks/`)
 Two standalone FastAPI services with deliberately **different** API conventions, to
@@ -115,13 +134,16 @@ prove the adapter layer earns its keep:
 4. Node returns one consolidated UCP confirmation: `TATA-…` with
    `retailer_orders[]`, grand total, NeuCoins
 
-## State (demo-grade, in-memory)
+## State (Supabase Postgres)
 
-- **Node**: one UCP cart (`items` + `native_carts` map), a catalog cache of every
-  item any search returned (so `add_to_cart` can resolve ids), past orders.
-- **Mocks**: their own `CARTS` / `ORDERS` dicts — the node holds no retailer
-  internals, exactly like production would.
-- No sessions/auth; everything resets on restart.
+- **Node**: `user_carts` (one row per user: `items` + `native_carts` map),
+  `user_orders` (past confirmations), and `catalog_cache` — every item any
+  search returned, global, so `add_to_cart` can resolve ids across restarts.
+- **Mocks**: each retailer has its **own tables** (`bigbasket_products/_carts/
+  _orders`, `croma_*`) as if it ran its own database. Routers keep in-memory
+  dicts as a cache, loaded at startup and written through on every mutation —
+  the node holds no retailer internals, exactly like production would.
+- Everything survives free-tier restarts; auth is Supabase (JWT per request).
 
 ## What "UCP-shaped" means here
 

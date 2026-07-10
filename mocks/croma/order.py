@@ -4,7 +4,7 @@ import uuid
 from fastapi import APIRouter
 from pydantic import BaseModel
 
-from .store import CARTS, ORDERS, cart_view
+from .store import CARTS, ORDERS, cart_view, drop_cart, persist_order
 
 router = APIRouter()
 
@@ -15,7 +15,7 @@ class OrderRequest(BaseModel):
 
 
 @router.post("/croma/api/v2/orders")
-def place_order(req: OrderRequest):
+async def place_order(req: OrderRequest):
     cart = CARTS.get(req.cartId)
     if not cart:
         return {"order": None, "status": 404, "message": "cart not found"}
@@ -31,6 +31,8 @@ def place_order(req: OrderRequest):
         "orderStatus": "PAYMENT_PENDING",
     }
     CARTS.pop(req.cartId)
+    await persist_order(ORDERS[order_id])
+    await drop_cart(req.cartId)
     return {"order": ORDERS[order_id], "status": 201}
 
 

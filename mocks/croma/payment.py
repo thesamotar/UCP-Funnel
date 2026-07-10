@@ -4,7 +4,7 @@ import uuid
 from fastapi import APIRouter
 from pydantic import BaseModel
 
-from .store import ORDERS
+from .store import ORDERS, persist_order
 
 router = APIRouter()
 
@@ -15,7 +15,7 @@ class PaymentRequest(BaseModel):
 
 
 @router.post("/croma/api/v2/payments")
-def process_payment(req: PaymentRequest):
+async def process_payment(req: PaymentRequest):
     order = ORDERS.get(req.orderId)
     if not order:
         return {"payment": None, "status": 404, "message": "order not found"}
@@ -25,4 +25,5 @@ def process_payment(req: PaymentRequest):
     order["orderStatus"] = "CONFIRMED"
     order["payment"] = {"paymentId": payment_id, "paymentMode": req.paymentMode,
                         "transactionStatus": "CHARGED", "amount": order["totalPrice"]}
+    await persist_order(order)
     return {"payment": order["payment"], "status": 200}

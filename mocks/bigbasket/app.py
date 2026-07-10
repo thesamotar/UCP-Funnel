@@ -9,11 +9,21 @@ Routes are split by operation into sibling modules (search, cart, order,
 payment); this module just assembles them into one app.
 Run: uvicorn mocks.bigbasket.app:app --port 9001
 """
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
 
-from . import cart, order, payment, search
+from . import cart, order, payment, search, store
 
-app = FastAPI(title="Mock BigBasket API")
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # catalog + surviving carts/orders come from BigBasket's own Supabase tables
+    await store.load()
+    yield
+
+
+app = FastAPI(title="Mock BigBasket API", lifespan=lifespan)
 app.include_router(search.router)
 app.include_router(cart.router)
 app.include_router(order.router)

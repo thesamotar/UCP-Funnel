@@ -7,11 +7,12 @@ default 100s — enough for an LLM web-search enhance pass, never infinite).
 import asyncio
 import os
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 
+from ..auth import current_user
 from ..pipeline import PipelineError, run_search_pipeline
-from ..state import CATALOG_CACHE
+from ..state import cache_items
 
 SEARCH_DEADLINE_S = float(os.environ.get("SEARCH_DEADLINE_S", "100"))
 
@@ -24,7 +25,7 @@ class SearchBody(BaseModel):
 
 
 @router.post("/ucp/v1/search")
-async def ucp_search(body: SearchBody):
+async def ucp_search(body: SearchBody, user_id: str = Depends(current_user)):
     try:
         result = await asyncio.wait_for(run_search_pipeline(body.model_dump()), SEARCH_DEADLINE_S)
     except ValueError as exc:
@@ -36,6 +37,5 @@ async def ucp_search(body: SearchBody):
             status_code=504,
             detail=f"search exceeded the {SEARCH_DEADLINE_S:.0f}s deadline and was aborted",
         )
-    for item in result["items"]:
-        CATALOG_CACHE[item["id"]] = item
+    await cache_items(result["items"])
     return result

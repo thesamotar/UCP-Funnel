@@ -52,9 +52,9 @@ Tata Neu UCP node  (:8000)               ← the universal translator
 
 ## Setup
 
-**Requirements:** Python 3.11+, and one LLM API key (either a Claude key
-`sk-ant-...` **or** a Gemini key `AIza...`). Node.js is optional (only used if you
-want to re-run the JS syntax check).
+**Requirements:** Python 3.11+, one LLM API key (either a Claude key
+`sk-ant-...` **or** a Gemini key `AIza...`), and a free
+[Supabase](https://supabase.com) project (database + auth).
 
 ```bash
 cd "Tata Node"
@@ -63,39 +63,54 @@ cd "Tata Node"
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 
-# 2. Provide ONE LLM key (either works — the app auto-detects which)
-export ANTHROPIC_API_KEY=sk-ant-...     # OR:
-export GEMINI_API_KEY=AIza...
-#   (a .env file in this folder is also picked up automatically)
+# 2. Create the Supabase project (one-time)
+#    - dashboard → New project (free tier)
+#    - SQL Editor → paste db/schema.sql → Run
+#    - Authentication → Sign In / Providers → Email → disable "Confirm email"
+#      (demo convenience; leave on if you don't mind the confirmation step)
+#    - Project Settings → API: copy the URL + anon key + service_role key
 
-# 3. Start all three services (mock shops + node + frontend)
+# 3. Fill .env (copy .env.example): ONE LLM key + the Supabase values
+cp .env.example .env   # then edit
+
+# 4. Seed the retailer catalogs + connector registry into Supabase (one-time,
+#    re-run after editing mocks/*/data.json — see db/data_sourcing_mock.md)
+set -a; source .env; set +a
+.venv/bin/python -m db.seed
+
+# 5. Start all three services (mock shops + node + frontend)
 ./run.sh
 
-# 4. Open the demo
+# 6. Open the demo and create an account
 #    http://localhost:8000
 ```
 
 `run.sh` launches three processes: **mock BigBasket** on `:9001`, **mock Croma** on
 `:9002`, and the **Tata Neu node** (which also serves the chat UI) on `:8000`.
 
-**Which brain runs where.** Both the node's internal reasoning *and* the chat
-frontend accept either key:
+**One brain, server-side.** A single server-side key powers everything for every
+signed-in account — the browser never sees an LLM key; chat goes through
+`POST /api/chat`:
 - A **Claude** key → chat and node run on `ANTHROPIC_MODEL` (default
   `claude-sonnet-5`); the node enriches missing product fields via Claude's
   web-search tool.
 - A **Gemini** key → chat and node run on `GEMINI_MODEL` (default
   `gemini-2.5-flash`) + Google Search grounding.
-- If both are set, `LLM_PROVIDER=anthropic|gemini` picks the node's brain, and you
-  can paste either key into the UI banner (it detects the provider by prefix).
+- If both are set, `LLM_PROVIDER=anthropic|gemini` picks.
 - A key is **required** — there is no non-LLM fallback. If the LLM can't be
   reached, search fails fast with a clear error instead of pretending to work.
-- Every LLM call has a hard timeout (`LLM_TIMEOUT_S`, default 25s; search-grounded
-  enrichment gets `LLM_SEARCH_TIMEOUT_S`, default 45s), and the whole search
-  pipeline runs under one deadline (`SEARCH_DEADLINE_S`, default 100s → `504`).
+- Every LLM call has a hard timeout (`LLM_TIMEOUT_S` 25s; search-grounded
+  enrichment `LLM_SEARCH_TIMEOUT_S` 45s; chat turns `LLM_CHAT_TIMEOUT_S` 60s),
+  and the whole search pipeline runs under one deadline (`SEARCH_DEADLINE_S`,
+  default 100s → `504`).
+
+**Accounts.** Supabase Auth (email/password). Every UCP call carries the user's
+JWT; carts and orders are per-user and persist in Postgres across restarts.
+Product catalogs are public.
 
 ### Demo script (the 60-second walkthrough)
 
-1. Open http://localhost:8000 and paste your key in the banner.
+1. Open http://localhost:8000 and sign in (or create an account).
 2. Ask something with the connector **off** → plain chat, no shopping powers.
 3. Click the **+** next to the input → select **Tata Neu** in the connector popup.
 4. Ask: *"I want a refrigerator of 200L+ capacity under ₹30,000."*
@@ -113,15 +128,18 @@ frontend accept either key:
 
 | Path | What it is |
 |---|---|
-| `frontend/` | Gemini-replica chat UI; + connector menu; dual-provider (Gemini/Claude) tool-calling loop |
-| `wrapper/main.py` | Assembles the UCP node: includes the action routers and mounts the frontend |
-| `wrapper/routes/` | One module per action exposing an `APIRouter`: `config.py`, `search.py`, `cart.py`, `checkout.py` |
-| `wrapper/state.py` | Shared in-memory node state (UCP cart, catalog cache, orders) + the cart-view helper |
-| `wrapper/pipeline.py` | The 4-stage search pipeline (receive → translate → enhance → respond) with per-stage trace |
-| `wrapper/adapters.py` | One entry per retailer — search + cart + order + payment, each in the retailer's native dialect. **Adding a Tata brand = adding one entry here** |
-| `wrapper/llm.py` | Provider-agnostic LLM client (Claude via Anthropic SDK, or Gemini via REST) — hard per-call timeouts, failures raise `LLMError` |
-| `mocks/bigbasket/` | Mock BigBasket — RPC style, snake_case, `sp`/`mrp` pricing. Routes split per operation: `search.py`, `cart.py`, `order.py`, `payment.py`, wired up in `app.py` (shared state in `store.py`) |
-| `mocks/croma/` | Mock Croma — REST style, camelCase, nested price objects; some `color: null` on purpose. Same per-operation split: `search.py` / `cart.py` / `order.py` / `payment.py` / `app.py` / `store.py` |
+| `frontend/` | Gemini-replica chat UI: Supabase login, connector menu, tool-calling loop against the node (LLM via `/api/chat`) |
+| `wrapper/main.py` | Assembles the UCP node: loads the connector registry at startup, includes the action routers, mounts the frontend |
+| `wrapper/routes/` | One module per action exposing an `APIRouter`: `config.py`, `chat.py` (LLM proxy), `search.py`, `cart.py`, `checkout.py` |
+| `wrapper/state.py` | Per-user node state in Supabase (carts, orders) + the global catalog cache and cart-view helper |
+| `wrapper/auth.py` | `current_user` dependency — verifies the Supabase JWT on every UCP/chat call |
+| `wrapper/db.py` | Shared async Supabase client (service-role key) |
+| `wrapper/pipeline.py` | The 4-stage search pipeline (receive → translate → enhance → respond), registry-driven, with per-stage trace |
+| `wrapper/adapters/` | `base.py` (the `RetailerAdapter` contract), one adapter class per backend (`bigbasket.py`, `croma.py`), `registry.py` (loads enabled connectors from the DB). **Attaching an API = one adapter file + one `connectors` row** |
+| `wrapper/llm.py` | Provider-agnostic LLM client (Claude via Anthropic SDK, or Gemini via REST) — hard per-call timeouts, failures raise `LLMError`; `chat()` powers `/api/chat` |
+| `db/` | `schema.sql` (all Supabase tables + RLS), `seed.py` (catalogs + connector registry), `data_sourcing_mock.md` (how to fill mock data & images) |
+| `mocks/bigbasket/` | Mock BigBasket — RPC style, snake_case, `sp`/`mrp` pricing. Routes split per operation: `search.py`, `cart.py`, `order.py`, `payment.py`, wired up in `app.py`; `store.py` loads its own Supabase tables (`bigbasket_*`) |
+| `mocks/croma/` | Mock Croma — REST style, camelCase, nested price objects; some `color: null` on purpose. Same split; `store.py` loads `croma_*` tables |
 | `ARCHITECTURE.md` | Full architecture write-up with diagrams and both end-to-end flows |
 
 ---
@@ -300,18 +318,58 @@ traces); you now see a spinner with friendly status texts while the node works.
   `EXPOSE_CONFIG_KEYS=1` (kept on in the local `.env`), and a `render.yaml`
   Blueprint deploys the whole demo as one free-tier Render web service.
 
+### v0.7 — Supabase database, user accounts & the connector registry (2026-07-11)
+
+**In plain terms:** the demo grew a real memory and a front door. Product
+catalogs, carts, and orders now live in a proper database (Supabase Postgres)
+instead of files and RAM — so nothing is lost when the free-tier server naps.
+You sign in with an email and password, and *your* cart is yours: two people
+shopping at once no longer share a basket. And the node's shop list is no
+longer hard-coded — new backends (digieca, ashiyana…) plug in with one small
+adapter file and one database row.
+
+**What landed, technically:**
+- **Supabase Postgres** (`db/schema.sql`, seeded by `db/seed.py`): per-retailer
+  "own databases" (`bigbasket_products/_carts/_orders`, `croma_*`) that only the
+  mocks touch, plus the node's tables — `user_carts`, `user_orders` (per-user),
+  `catalog_cache` (global id→item resolution), and `connectors` (the registry).
+  RLS on everything; only the `_products` tables are publicly readable.
+- **Supabase Auth**: email/password login in the frontend (supabase-js); every
+  UCP/chat call carries the session JWT, verified server-side (`wrapper/auth.py`,
+  HS256 secret or JWKS — no per-request network hop). Carts/orders keyed by user.
+- **LLM proxy** (`POST /api/chat`): the browser no longer calls
+  Anthropic/Gemini directly with a pasted key — ONE server-side key powers all
+  accounts; tool declarations and the system prompt moved server-side. Anthropic
+  calls stream with wall-clock caps, same as the pipeline. `EXPOSE_CONFIG_KEYS`
+  is gone.
+- **Connector registry** (`wrapper/adapters/`): `RetailerAdapter` base class
+  (search required; cart/order/payment optional — search-only backends get a
+  clean `501`), per-backend adapter classes, and a registry loaded from the
+  `connectors` table at startup. Adapters declare their own extra intent params
+  and enhance rules, so `pipeline.py` has zero retailer-specific code.
+  **Attaching a new API = one adapter file + one DB row.**
+- **Mocks are DB-backed**: catalogs load from each retailer's `_products` table
+  at startup (no more `data.json` at runtime — it's the seed source); carts and
+  orders write through to `_carts`/`_orders`, so native state survives restarts
+  mid-session.
+- **Frontend**: a full-page branded sign-in (feature panel, password
+  visibility toggle, animated backdrop) gates the chat — the app shell only
+  renders once supabase-js has a session; sign-out returns to the login page.
+  Product cards now show real images (`image_url` seeded per category, emoji
+  fallback); `GET /ucp/v1/orders` lists the signed-in user's past orders.
+
 ---
 
 ## Demo-grade shortcuts (deliberate)
 
-- One in-memory UCP cart; the mocks keep their own in-memory carts/orders.
-  Everything resets on restart. No sessions or auth.
-- `/api/config` hands the server's LLM keys to the browser **only when
-  `EXPOSE_CONFIG_KEYS=1`** (set in the local `.env`; leave unset on a public
-  deployment — visitors paste their own key instead).
 - Payments are mock counters — no real gateway, no money moves.
 - Only *search* runs the 4-stage pipeline (that's the scoped focus); cart/checkout
   are direct adapter calls.
+- The chat proxy trusts the browser's tool-execution loop (tools run client-side
+  against the node with the user's own JWT).
+- One shared LLM key serves all accounts — no per-user quotas/limits.
+- Mock product images are one representative photo per category (see
+  `db/data_sourcing_mock.md` for upgrading to per-product images).
 
 ---
 
@@ -322,15 +380,19 @@ tier** — the best free fit here because the demo is three processes, and a
 Render web service is a full container that can run all of them (the mocks stay
 on container-private ports; only the node binds the public `$PORT`).
 
-1. Push the repo to GitHub.
-2. Render dashboard → **New → Blueprint** → pick the repo.
-3. Set `ANTHROPIC_API_KEY` (or `GEMINI_API_KEY`) when prompted. Do **not** set
-   `EXPOSE_CONFIG_KEYS` — on a public URL, visitors paste their own chat key.
-4. Open `https://tata-node.onrender.com` (or whatever name Render assigns).
+1. Create the Supabase project, run `db/schema.sql`, and seed (Setup steps 2–4).
+2. Push the repo to GitHub.
+3. Render dashboard → **New → Blueprint** → pick the repo.
+4. Fill the secrets when prompted: `ANTHROPIC_API_KEY` (or `GEMINI_API_KEY`),
+   `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, and
+   optionally `SUPABASE_JWT_SECRET`.
+5. Open `https://tata-node.onrender.com` (or whatever name Render assigns) and
+   create an account.
 
-Free-tier caveats: the service spins down after ~15 min idle (first request
-cold-starts in ~1 min), and all state is in-memory anyway — a restart resets
-carts/orders, which is fine for a demo. Alternatives that also work: Hugging
-Face Spaces (Docker, no spin-down, needs a small Dockerfile) or Railway
-(trial credit, not permanently free). Vercel/Netlify don't fit — they're
-serverless and can't run the three long-lived processes.
+Free-tier caveats: the Render service spins down after ~15 min idle (first
+request cold-starts in ~1 min) — but users, carts, orders, and catalogs live in
+Supabase, so nothing is lost. Supabase's free tier pauses the project after
+~1 week with no traffic; resume it from the dashboard. Alternatives that also
+work: Hugging Face Spaces (Docker, no spin-down, needs a small Dockerfile) or
+Railway (trial credit, not permanently free). Vercel/Netlify don't fit —
+they're serverless and can't run the three long-lived processes.

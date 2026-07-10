@@ -7,18 +7,30 @@ checkout), with shared in-memory state in wrapper/state.py; this module just
 assembles them and mounts the frontend.
 Run: uvicorn wrapper.main:app --port 8000
 """
+from contextlib import asynccontextmanager
 from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from .routes import cart, checkout, config, search
+from .adapters import load_registry
+from .routes import cart, chat, checkout, config, search
 
-app = FastAPI(title="Tata Neu UCP Node")
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # populate the connector registry from Supabase; fails loudly if the DB
+    # is unreachable or unseeded — the node is useless without connectors
+    await load_registry()
+    yield
+
+
+app = FastAPI(title="Tata Neu UCP Node", lifespan=lifespan)
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
 app.include_router(config.router)
+app.include_router(chat.router)
 app.include_router(search.router)
 app.include_router(cart.router)
 app.include_router(checkout.router)

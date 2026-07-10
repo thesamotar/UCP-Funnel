@@ -4,7 +4,7 @@ import uuid
 from fastapi import APIRouter
 from pydantic import BaseModel
 
-from .store import CARTS, DATA, cart_view
+from .store import CARTS, DATA, cart_view, persist_cart
 
 router = APIRouter()
 
@@ -15,14 +15,15 @@ class CartEntryRequest(BaseModel):
 
 
 @router.post("/croma/api/v2/cart")
-def create_cart():
+async def create_cart():
     cart_id = f"CRMCART-{uuid.uuid4().hex[:8].upper()}"
     CARTS[cart_id] = {"cartId": cart_id, "entries": []}
+    await persist_cart(CARTS[cart_id])
     return {"cart": cart_view(CARTS[cart_id]), "status": 201}
 
 
 @router.post("/croma/api/v2/cart/{cart_id}/entries")
-def add_entry(cart_id: str, req: CartEntryRequest):
+async def add_entry(cart_id: str, req: CartEntryRequest):
     cart = CARTS.get(cart_id)
     if not cart:
         return {"cart": None, "status": 404, "message": "cart not found"}
@@ -40,6 +41,7 @@ def add_entry(cart_id: str, req: CartEntryRequest):
             "productCode": req.productCode, "name": product["name"],
             "unitPrice": product["price"]["sellingPrice"], "quantity": req.quantity,
         })
+    await persist_cart(cart)
     return {"cart": cart_view(cart), "status": 200}
 
 

@@ -4,7 +4,7 @@ import uuid
 from fastapi import APIRouter
 from pydantic import BaseModel
 
-from .store import CARTS, ORDERS, cart_summary
+from .store import CARTS, ORDERS, cart_summary, drop_cart, persist_order
 
 router = APIRouter()
 
@@ -16,7 +16,7 @@ class OrderPlaceRequest(BaseModel):
 
 
 @router.post("/bb/api/v1/order.place")
-def order_place(req: OrderPlaceRequest):
+async def order_place(req: OrderPlaceRequest):
     cart = CARTS.get(req.cart_id)
     if not cart:
         return {"status": "error", "message": "cart not found"}
@@ -34,6 +34,8 @@ def order_place(req: OrderPlaceRequest):
         "payment_status": "PENDING",
     }
     CARTS.pop(req.cart_id)
+    await persist_order(ORDERS[order_id])
+    await drop_cart(req.cart_id)
     return {"status": "success", "order": ORDERS[order_id]}
 
 

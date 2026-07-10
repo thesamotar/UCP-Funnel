@@ -3,61 +3,174 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gemini</title>
+  <title>Tata Neu · AI Shopping Assistant</title>
+  <meta name="description" content="AI-powered shopping assistant for Tata Neu — shop across BigBasket, Croma, and more with natural language." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand">Gemini <span id="model-chip" class="model-chip">…</span></div>
-    <div class="avatar">U</div>
-  </header>
 
-  <div id="key-banner" class="key-banner hidden">
-    <span>Paste a Gemini (<code>AIza...</code>) or Claude (<code>sk-ant-...</code>) API key to power the chat:</span>
-    <input id="key-input" type="password" placeholder="AIza... or sk-ant-..." />
-    <button id="key-save">Save</button>
+  <!-- ═══════════ LOGIN PAGE (full-page, shown when signed out) ═══════════ -->
+  <div id="auth-page" class="auth-page">
+    <!-- animated background orbs -->
+    <div class="auth-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <div class="auth-container">
+      <!-- left: branding panel -->
+      <div class="auth-brand-panel">
+        <div class="auth-brand-logo">
+          <span class="auth-brand-icon">T</span>
+        </div>
+        <h1 class="auth-brand-title">Tata Neu</h1>
+        <p class="auth-brand-tagline">AI Shopping Assistant</p>
+        <div class="auth-brand-features">
+          <div class="auth-feature">
+            <span class="auth-feature-icon">🛒</span>
+            <div>
+              <div class="auth-feature-title">Shop with AI</div>
+              <div class="auth-feature-desc">Natural language search across Tata brands</div>
+            </div>
+          </div>
+          <div class="auth-feature">
+            <span class="auth-feature-icon">⚡</span>
+            <div>
+              <div class="auth-feature-title">Instant Checkout</div>
+              <div class="auth-feature-desc">Add to cart & order — all through chat</div>
+            </div>
+          </div>
+          <div class="auth-feature">
+            <span class="auth-feature-icon">🏪</span>
+            <div>
+              <div class="auth-feature-title">Multiple Stores</div>
+              <div class="auth-feature-desc">BigBasket, Croma, and more in one place</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- right: sign-in form -->
+      <div class="auth-form-panel">
+        <div class="auth-card">
+          <div class="auth-card-header">
+            <h2 id="auth-title" class="auth-card-title">Welcome back</h2>
+            <p class="auth-card-sub">Sign in to continue to your account</p>
+          </div>
+
+          <form id="auth-form" class="auth-form" autocomplete="on">
+            <div class="auth-input-group">
+              <label for="auth-email" class="auth-label">Email address</label>
+              <div class="auth-input-wrap">
+                <svg class="auth-input-icon" viewBox="0 0 20 20" fill="currentColor" width="18" height="18">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                </svg>
+                <input id="auth-email" type="email" placeholder="you@example.com" autocomplete="email" required />
+              </div>
+            </div>
+
+            <div class="auth-input-group">
+              <label for="auth-password" class="auth-label">Password</label>
+              <div class="auth-input-wrap">
+                <svg class="auth-input-icon" viewBox="0 0 20 20" fill="currentColor" width="18" height="18">
+                  <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                </svg>
+                <input id="auth-password" type="password" placeholder="Enter your password" autocomplete="current-password" required />
+                <button type="button" id="pw-toggle" class="pw-toggle" title="Show password" aria-label="Toggle password visibility">
+                  <svg id="pw-eye-show" viewBox="0 0 20 20" fill="currentColor" width="18" height="18">
+                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <svg id="pw-eye-hide" class="hidden" viewBox="0 0 20 20" fill="currentColor" width="18" height="18">
+                    <path fill-rule="evenodd" d="M3.707 2.293a1 1 0 00-1.414 1.414l14 14a1 1 0 001.414-1.414l-1.473-1.473A10.014 10.014 0 0019.542 10C18.268 5.943 14.478 3 10 3a9.958 9.958 0 00-4.512 1.074l-1.78-1.781zm4.261 4.26l1.514 1.515a2.003 2.003 0 012.45 2.45l1.514 1.514a4 4 0 00-5.478-5.478z" clip-rule="evenodd"/>
+                    <path d="M12.454 16.697L9.75 13.992a4 4 0 01-3.742-3.741L2.335 6.578A9.98 9.98 0 00.458 10c1.274 4.057 5.065 7 9.542 7 .847 0 1.669-.105 2.454-.303z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div id="auth-error" class="auth-error hidden"></div>
+
+            <button type="submit" id="auth-submit" class="auth-submit-btn">
+              <span id="auth-submit-text">Sign in</span>
+              <svg id="auth-spinner" class="auth-spinner hidden" viewBox="0 0 24 24" width="20" height="20">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="31.4 31.4" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </form>
+
+          <div class="auth-divider">
+            <span>or</span>
+          </div>
+
+          <div class="auth-switch">
+            <span id="auth-switch-text">Don't have an account?</span>
+            <a href="#" id="auth-toggle">Create one</a>
+          </div>
+        </div>
+
+        <p class="auth-footer">Protected by Supabase Auth · Your data is encrypted</p>
+      </div>
+    </div>
   </div>
 
-  <main id="chat" class="chat">
-    <div id="greeting" class="greeting">
-      <h1><span class="grad">Hello</span></h1>
-      <p>How can I help you today?</p>
-    </div>
-    <div id="messages" class="messages"></div>
-  </main>
-
-  <footer class="composer-wrap">
-    <div id="connector-popover" class="popover hidden">
-      <div class="popover-title">Connectors</div>
-      <button class="connector-row" data-connector="tataneu">
-        <span class="connector-icon">T</span>
-        <span class="connector-meta">
-          <span class="connector-name">Tata Neu</span>
-          <span class="connector-desc">Shop across Tata brands — BigBasket, Croma &amp; more</span>
-        </span>
-        <span id="tataneu-check" class="connector-check hidden">✓</span>
-      </button>
-      <div class="connector-row disabled">
-        <span class="connector-icon dim">D</span>
-        <span class="connector-meta">
-          <span class="connector-name">Google Drive</span>
-          <span class="connector-desc">Not available in this demo</span>
-        </span>
+  <!-- ═══════════ CHAT APP (shown when signed in) ═══════════ -->
+  <div id="app-shell" class="app-shell hidden">
+    <header class="topbar">
+      <div class="brand">Gemini <span id="model-chip" class="model-chip">…</span></div>
+      <div class="account">
+        <button id="signout-btn" class="signout-btn">Sign out</button>
+        <div id="avatar" class="avatar">·</div>
       </div>
-    </div>
+    </header>
 
-    <div class="composer">
-      <button id="plus-btn" class="plus-btn" title="Connectors">+</button>
-      <div id="active-chip" class="active-chip hidden">
-        <span class="chip-icon">T</span> Tata Neu
-        <button id="chip-remove" title="Disconnect">×</button>
+    <main id="chat" class="chat">
+      <div id="greeting" class="greeting">
+        <h1><span class="grad">Hello</span></h1>
+        <p>How can I help you today?</p>
       </div>
-      <textarea id="prompt" rows="1" placeholder="Ask anything"></textarea>
-      <button id="send-btn" class="send-btn" title="Send">➤</button>
-    </div>
-    <div class="disclaimer">Chat demo (Gemini or Claude) · Tata Neu connector routes shopping queries through the UCP node</div>
-  </footer>
+      <div id="messages" class="messages"></div>
+    </main>
 
+    <footer class="composer-wrap">
+      <div id="connector-popover" class="popover hidden">
+        <div class="popover-title">Connectors</div>
+        <button class="connector-row" data-connector="tataneu">
+          <span class="connector-icon">T</span>
+          <span class="connector-meta">
+            <span class="connector-name">Tata Neu</span>
+            <span class="connector-desc">Shop across Tata brands — BigBasket, Croma &amp; more</span>
+          </span>
+          <span id="tataneu-check" class="connector-check hidden">✓</span>
+        </button>
+        <div class="connector-row disabled">
+          <span class="connector-icon dim">D</span>
+          <span class="connector-meta">
+            <span class="connector-name">Google Drive</span>
+            <span class="connector-desc">Not available in this demo</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="composer">
+        <button id="plus-btn" class="plus-btn" title="Connectors">+</button>
+        <div id="active-chip" class="active-chip hidden">
+          <span class="chip-icon">T</span> Tata Neu
+          <button id="chip-remove" title="Disconnect">×</button>
+        </div>
+        <textarea id="prompt" rows="1" placeholder="Ask anything"></textarea>
+        <button id="send-btn" class="send-btn" title="Send">➤</button>
+      </div>
+      <div class="disclaimer">Chat demo · sign in required · Tata Neu connector routes shopping queries through the UCP node</div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="app.js"></script>
 </body>
 </html>

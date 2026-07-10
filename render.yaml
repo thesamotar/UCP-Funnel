@@ -2,16 +2,16 @@
 # processes. The retailer mocks bind container-private localhost ports
 # (9001/9002); only the UCP node binds Render's public $PORT.
 #
-# Setup: push this repo to GitHub → Render dashboard → New → Blueprint →
-# pick the repo → set ANTHROPIC_API_KEY (or GEMINI_API_KEY) when prompted.
+# Setup:
+#   1. Create a free Supabase project → run db/schema.sql in the SQL editor →
+#      seed it (locally: python -m db.seed with the Supabase env vars set).
+#   2. Push this repo to GitHub → Render dashboard → New → Blueprint →
+#      pick the repo → fill the secrets when prompted.
 #
-# Free-tier caveat: the service spins down after ~15 min idle; the first
-# request after that takes ~1 min to cold-start.
-#
-# Note: EXPOSE_CONFIG_KEYS is deliberately NOT set here — on a public URL
-# visitors paste their own chat key into the UI banner; the server-side key
-# only powers the node's internal routing/enrichment and never reaches the
-# browser.
+# Free-tier caveats: the service spins down after ~15 min idle (first request
+# cold-starts in ~1 min) — carts/orders survive because state lives in
+# Supabase. Supabase's free tier pauses after ~1 week of inactivity; resume it
+# from the dashboard.
 services:
   - type: web
     name: tata-node
@@ -29,3 +29,11 @@ services:
         sync: false          # set in the Render dashboard, never committed
       - key: ANTHROPIC_MODEL
         value: claude-sonnet-5
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false          # public/publishable key — the browser gets it via /api/config
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false          # server-only; bypasses RLS
+      - key: SUPABASE_JWT_SECRET
+        sync: false          # optional — leave empty to verify via JWKS instead

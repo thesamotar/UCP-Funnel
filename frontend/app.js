@@ -1,66 +1,23 @@
 /* Gemini-replica chat with a Tata Neu connector.
- * Works with either LLM provider — paste a Gemini key (AIza...) or a
- * Claude key (sk-ant-...) and the chat routes to that API.
  *
- * Connector OFF  -> plain LLM chat.
- * Connector ON   -> the LLM gets UCP tool declarations; tool calls are
- *                   executed against the Tata node (this same origin).
+ * Auth: Supabase email/password login (supabase-js, config from /api/config).
+ * Every node call carries the session JWT — carts and orders are per-user.
+ * The LLM runs server-side behind POST /api/chat (one shared key for all
+ * accounts); the browser never sees an LLM key.
+ *
+ * Connector OFF  -> plain LLM chat (still via the node proxy).
+ * Connector ON   -> the node adds UCP tool declarations; tool calls come back
+ *                   here and are executed against the node's UCP endpoints.
  */
 
-const GEMINI_BASE = "https://generativelanguage.googleapis.com/v1beta/models";
-const ANTHROPIC_BASE = "https://api.anthropic.com/v1/messages";
-let GEMINI_MODEL = "gemini-2.5-flash";
-let ANTHROPIC_MODEL = "claude-sonnet-5"; // fallback only; real value comes from /api/config (.env)
-
-const KEYS = { gemini: "", anthropic: "" };
-let providerName = null; // "gemini" | "anthropic"
+let sb = null;          // supabase-js client
+let session = null;     // current auth session (null = signed out)
+let authMode = "signin"; // "signin" | "signup"
 let connectorOn = false;
 let history = []; // neutral turns: {role:'user'|'model', text?, toolCalls?, toolResults?}
 let busy = false;
-let callSeq = 0;
 
 const $ = (id) => document.getElementById(id);
-
-// ---------- tool declarations (neutral) ----------
-const TOOL_DEFS = [
-  {
-    name: "search_tata_catalog",
-    description: "Search products across Tata retail brands (BigBasket groceries, Croma electronics). The Tata node routes the query to the right retailer automatically. Use for any shopping/product query.",
-    properties: {
-      query: { type: "string", description: "Natural-language product query, keep the user's constraints in it, e.g. 'refrigerator 200L+ capacity under 30000'" },
-      max_price: { type: "number", description: "Maximum price in INR, if the user stated one" },
-      min_price: { type: "number", description: "Minimum price in INR, if stated" },
-    },
-    required: ["query"],
-  },
-  {
-    name: "add_to_cart",
-    description: "Add a product to the Tata Neu cart. item_id must come from a previous search_tata_catalog result.",
-    properties: {
-      item_id: { type: "string", description: "Product id from search results, e.g. 'CRM-301201'" },
-      quantity: { type: "number", description: "Quantity, default 1" },
-    },
-    required: ["item_id"],
-  },
-  {
-    name: "view_cart",
-    description: "View the current Tata Neu cart contents and total.",
-    properties: {},
-    required: [],
-  },
-  {
-    name: "checkout",
-    description: "Place the order for everything in the Tata Neu cart. Ask the user to confirm before calling this.",
-    properties: {},
-    required: [],
-  },
-];
-
-const SYSTEM_CONNECTED = `You are a helpful assistant with the Tata Neu connector enabled. You can shop across
-Tata brands (BigBasket for groceries, Croma for electronics) via tools. For any product/shopping request, call
-search_tata_catalog. Present results conversationally and concisely — the UI already renders product
-cards, so summarize/recommend rather than listing every spec. Always use ₹ for prices. Refer to
-products by their id (e.g. CRM-301201) when adding to cart. Confirm with the user before checkout.`;
 
 const CATEGORY_EMOJI = {
   refrigerator: "🧊", television: "📺", "washing machine": "🫧", laptop: "💻",
@@ -71,21 +28,36 @@ const CATEGORY_EMOJI = {
 
 // ---------- boot ----------
 (async function boot() {
-  try {
-    const cfg = await (await fetch("/api/config")).json();
-    if (cfg.gemini_model) GEMINI_MODEL = cfg.gemini_model;
-    if (cfg.anthropic_model) ANTHROPIC_MODEL = cfg.anthropic_model;
-    KEYS.gemini = cfg.gemini_key || "";
-    KEYS.anthropic = cfg.anthropic_key || "";
-  } catch { /* wrapper not reachable — localStorage only */ }
-  KEYS.gemini = KEYS.gemini || localStorage.getItem("gemini_key") || "";
-  KEYS.anthropic = KEYS.anthropic || localStorage.getItem("anthropic_key") || "";
-  setProvider(localStorage.getItem("provider"));
+  const cfg = await (await fetch("/api/config")).json();
+  $("model-chip").textContent = cfg.provider === "anthropic"
+    ? `Claude · ${(cfg.model || "").replace("claude-", "")}`
+    : cfg.provider === "gemini" ? `Gemini · ${(cfg.model || "").replace("gemini-", "")}`
+    : "no key";
+  if (!cfg.supabase_url || !cfg.supabase_anon_key) {
+    note("⚠️ Supabase is not configured on the server — set SUPABASE_URL and SUPABASE_ANON_KEY");
+    return;
+  }
+  sb = supabase.createClient(cfg.supabase_url, cfg.supabase_anon_key);
+  sb.auth.onAuthStateChange((_event, s) => { session = s; renderAuth(); });
+  session = (await sb.auth.getSession()).data.session;
+  renderAuth();
 
-  $("key-save").onclick = () => saveKey($("key-input").value.trim());
-  $("key-input").addEventListener("keydown", (e) => {
-    if (e.key === "Enter") saveKey($("key-input").value.trim());
-  });
+  // auth form events
+  $("auth-form").addEventListener("submit", (e) => { e.preventDefault(); submitAuth(); });
+  $("auth-password").addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); submitAuth(); } });
+  $("auth-toggle").onclick = (e) => { e.preventDefault(); setAuthMode(authMode === "signin" ? "signup" : "signin"); };
+  $("signout-btn").onclick = () => sb.auth.signOut();
+
+  // password visibility toggle
+  $("pw-toggle").onclick = () => {
+    const input = $("auth-password");
+    const isPassword = input.type === "password";
+    input.type = isPassword ? "text" : "password";
+    $("pw-eye-show").classList.toggle("hidden", !isPassword);
+    $("pw-eye-hide").classList.toggle("hidden", isPassword);
+  };
+
+  // connector / chat events
   $("plus-btn").onclick = (e) => { e.stopPropagation(); togglePopover(); };
   document.addEventListener("click", (e) => {
     if (!$("connector-popover").contains(e.target)) hidePopover();
@@ -98,40 +70,74 @@ const CATEGORY_EMOJI = {
   });
 })();
 
-function saveKey(key) {
-  if (!key) return;
-  if (key.startsWith("sk-ant-")) {
-    KEYS.anthropic = key;
-    localStorage.setItem("anthropic_key", key);
-    setProvider("anthropic");
-  } else if (key.startsWith("AIza")) {
-    KEYS.gemini = key;
-    localStorage.setItem("gemini_key", key);
-    setProvider("gemini");
-  } else {
-    $("key-input").value = "";
-    $("key-input").placeholder = "Key must start with AIza... (Gemini) or sk-ant-... (Claude)";
-    return;
-  }
-  $("key-input").value = "";
-  $("key-banner").classList.add("hidden");
-}
-
-function setProvider(preferred) {
-  const candidates = [preferred, "anthropic", "gemini"].filter((p) => p && KEYS[p]);
-  providerName = candidates[0] || null;
-  if (providerName) {
-    localStorage.setItem("provider", providerName);
-    $("model-chip").textContent = providerName === "anthropic"
-      ? `Claude · ${ANTHROPIC_MODEL.replace("claude-", "")}`
-      : `Gemini · ${GEMINI_MODEL.replace("gemini-", "")}`;
-    $("key-banner").classList.add("hidden");
-  } else {
-    $("model-chip").textContent = "no key";
-    $("key-banner").classList.remove("hidden");
+// ---------- auth ----------
+function renderAuth() {
+  const signedIn = !!session;
+  // toggle between login page and app shell
+  $("auth-page").classList.toggle("hidden", signedIn);
+  $("app-shell").classList.toggle("hidden", !signedIn);
+  if (signedIn) {
+    $("avatar").textContent = session.user.email[0].toUpperCase();
+    $("avatar").title = session.user.email;
   }
 }
 
+function setAuthMode(mode) {
+  authMode = mode;
+  const isSignin = mode === "signin";
+  $("auth-title").textContent = isSignin ? "Welcome back" : "Create account";
+  document.querySelector(".auth-card-sub").textContent = isSignin
+    ? "Sign in to continue to your account"
+    : "Get started with Tata Neu AI";
+  $("auth-submit-text").textContent = isSignin ? "Sign in" : "Create account";
+  $("auth-toggle").textContent = isSignin ? "Create one" : "Sign in instead";
+  $("auth-switch-text").textContent = isSignin ? "Don't have an account?" : "Already have an account?";
+  $("auth-password").setAttribute("autocomplete", isSignin ? "current-password" : "new-password");
+  authError("");
+}
+
+function authError(text) {
+  $("auth-error").textContent = text;
+  $("auth-error").classList.toggle("hidden", !text);
+}
+
+async function submitAuth() {
+  const email = $("auth-email").value.trim();
+  const password = $("auth-password").value;
+  if (!email || !password) { authError("Email and password are required"); return; }
+  $("auth-submit").disabled = true;
+  $("auth-submit-text").classList.add("hidden");
+  $("auth-spinner").classList.remove("hidden");
+  try {
+    if (authMode === "signin") {
+      const { error } = await sb.auth.signInWithPassword({ email, password });
+      if (error) throw error;
+    } else {
+      const { data, error } = await sb.auth.signUp({ email, password });
+      if (error) throw error;
+      if (!data.session) {
+        authError("Account created — confirm the email we sent you, then sign in.");
+        setAuthMode("signin");
+        return;
+      }
+    }
+    authError("");
+  } catch (err) {
+    authError(err.message || String(err));
+  } finally {
+    $("auth-submit").disabled = false;
+    $("auth-submit-text").classList.remove("hidden");
+    $("auth-spinner").classList.add("hidden");
+  }
+}
+
+async function authHeaders() {
+  const s = (await sb.auth.getSession()).data.session; // refreshed by supabase-js when expiring
+  if (!s) { renderAuth(); throw new Error("Signed out — sign in to continue"); }
+  return { Authorization: `Bearer ${s.access_token}` };
+}
+
+// ---------- connector toggle ----------
 function togglePopover() {
   $("connector-popover").classList.toggle("hidden");
   $("plus-btn").classList.toggle("open");
@@ -164,7 +170,7 @@ function addMsg(role, text, opts = {}) {
   $("greeting")?.remove();
   const div = document.createElement("div");
   div.className = `msg ${role}${connectorOn ? "" : " plain"}`;
-  const who = role === "user" ? "U" : (connectorOn ? "T" : "✦");
+  const who = role === "user" ? ($("avatar").textContent || "U") : (connectorOn ? "T" : "✦");
   div.innerHTML = `<div class="who">${who}</div><div class="bubble${opts.thinking ? " thinking" : ""}"></div>`;
   div.querySelector(".bubble").innerHTML = opts.thinking ? text : md(text);
   $("messages").appendChild(div);
@@ -234,6 +240,16 @@ function renderCards(items) {
       <div class="attrs">${it.id} · ${it.source.retailer}</div>
       <div class="attrs">${attrs}</div>
       ${enhanced}${oos}`;
+    if (it.image && /^https?:\/\//.test(it.image)) {
+      const img = document.createElement("img");
+      img.src = it.image;
+      img.alt = it.title;
+      img.loading = "lazy";
+      img.onerror = () => { img.remove(); }; // broken URL -> back to the emoji
+      const thumb = card.querySelector(".thumb");
+      thumb.classList.add("has-img");
+      thumb.appendChild(img);
+    }
     grid.appendChild(card);
   }
   $("messages").appendChild(grid);
@@ -244,9 +260,10 @@ function renderCards(items) {
 const NODE_TIMEOUT_MS = 110_000; // just above the node's own search deadline
 
 async function executeTool(name, args) {
+  const headers = await authHeaders();
   const post = (url, body) => fetch(url, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", ...headers },
     body: JSON.stringify(body),
     signal: AbortSignal.timeout(NODE_TIMEOUT_MS),
   }).then(async (r) => ({ ok: r.ok, data: await r.json() }));
@@ -267,7 +284,7 @@ async function executeTool(name, args) {
     return data;
   }
   if (name === "view_cart") {
-    return (await fetch("/ucp/v1/cart", { signal: AbortSignal.timeout(NODE_TIMEOUT_MS) })).json();
+    return (await fetch("/ucp/v1/cart", { headers, signal: AbortSignal.timeout(NODE_TIMEOUT_MS) })).json();
   }
   if (name === "checkout") {
     const { ok, data } = await post("/ucp/v1/checkout", {});
@@ -280,114 +297,26 @@ async function executeTool(name, args) {
   return { error: `unknown tool ${name}` };
 }
 
-// ---------- provider adapters ----------
-// Both take the neutral history and return {text, toolCalls: [{id, name, args}]}.
+// ---------- the node's LLM proxy ----------
+const LLM_TIMEOUT_MS = 70_000; // just above the node's own chat deadline
 
-const LLM_TIMEOUT_MS = 60_000; // chat model calls can't wait forever either
-
-async function callGemini() {
-  const contents = [];
-  for (const turn of history) {
-    if (turn.role === "user" && turn.text != null) {
-      contents.push({ role: "user", parts: [{ text: turn.text }] });
-    } else if (turn.role === "model") {
-      const parts = [];
-      if (turn.text) parts.push({ text: turn.text });
-      for (const c of turn.toolCalls || []) parts.push({ functionCall: { name: c.name, args: c.args } });
-      contents.push({ role: "model", parts });
-    } else if (turn.toolResults) {
-      contents.push({
-        role: "user",
-        parts: turn.toolResults.map((r) => ({ functionResponse: { name: r.name, response: { result: r.result } } })),
-      });
-    }
-  }
-  const body = { contents, generationConfig: { temperature: 0.7 } };
-  if (connectorOn) {
-    body.tools = [{
-      functionDeclarations: TOOL_DEFS.map((t) => ({
-        name: t.name,
-        description: t.description,
-        parameters: { type: "OBJECT", properties: t.properties, required: t.required },
-      })),
-    }];
-    body.systemInstruction = { parts: [{ text: SYSTEM_CONNECTED }] };
-  }
-  const resp = await fetch(`${GEMINI_BASE}/${GEMINI_MODEL}:generateContent?key=${KEYS.gemini}`, {
+async function callNode() {
+  const resp = await fetch("/api/chat", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
+    headers: { "Content-Type": "application/json", ...(await authHeaders()) },
+    body: JSON.stringify({ history, connector: connectorOn }),
     signal: AbortSignal.timeout(LLM_TIMEOUT_MS),
   });
-  if (!resp.ok) throw new Error(`Gemini API ${resp.status}: ${(await resp.text()).slice(0, 300)}`);
   const data = await resp.json();
-  const parts = data.candidates?.[0]?.content?.parts || [];
-  return {
-    text: parts.filter((p) => p.text).map((p) => p.text).join(""),
-    toolCalls: parts.filter((p) => p.functionCall)
-      .map((p) => ({ id: `call_${++callSeq}`, name: p.functionCall.name, args: p.functionCall.args || {} })),
-  };
-}
-
-async function callClaude() {
-  const messages = [];
-  for (const turn of history) {
-    if (turn.role === "user" && turn.text != null) {
-      messages.push({ role: "user", content: turn.text });
-    } else if (turn.role === "model") {
-      const content = [];
-      if (turn.text) content.push({ type: "text", text: turn.text });
-      for (const c of turn.toolCalls || []) content.push({ type: "tool_use", id: c.id, name: c.name, input: c.args });
-      messages.push({ role: "assistant", content });
-    } else if (turn.toolResults) {
-      messages.push({
-        role: "user",
-        content: turn.toolResults.map((r) => ({
-          type: "tool_result", tool_use_id: r.id, content: JSON.stringify(r.result),
-        })),
-      });
-    }
-  }
-  const body = { model: ANTHROPIC_MODEL, max_tokens: 8192, messages };
-  if (connectorOn) {
-    body.system = SYSTEM_CONNECTED;
-    body.tools = TOOL_DEFS.map((t) => ({
-      name: t.name,
-      description: t.description,
-      input_schema: { type: "object", properties: t.properties, required: t.required },
-    }));
-  }
-  const resp = await fetch(ANTHROPIC_BASE, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "x-api-key": KEYS.anthropic,
-      "anthropic-version": "2023-06-01",
-      "anthropic-dangerous-direct-browser-access": "true",
-    },
-    body: JSON.stringify(body),
-    signal: AbortSignal.timeout(LLM_TIMEOUT_MS),
-  });
-  if (!resp.ok) throw new Error(`Claude API ${resp.status}: ${(await resp.text()).slice(0, 300)}`);
-  const data = await resp.json();
-  return {
-    text: (data.content || []).filter((b) => b.type === "text").map((b) => b.text).join(""),
-    toolCalls: (data.content || []).filter((b) => b.type === "tool_use")
-      .map((b) => ({ id: b.id, name: b.name, args: b.input || {} })),
-  };
-}
-
-async function callLLM() {
-  if (providerName === "anthropic") return callClaude();
-  if (providerName === "gemini") return callGemini();
-  throw new Error("No API key configured");
+  if (!resp.ok) throw new Error(data.detail || `chat failed (${resp.status})`);
+  return data; // {text, toolCalls: [{id, name, args}]}
 }
 
 // ---------- chat loop ----------
 async function send() {
   const text = $("prompt").value.trim();
   if (!text || busy) return;
-  if (!providerName) { $("key-banner").classList.remove("hidden"); return; }
+  if (!session) { renderAuth(); return; }
   $("prompt").value = "";
   busy = true;
   addMsg("user", text);
@@ -397,7 +326,7 @@ async function send() {
 
   try {
     for (let turn = 0; turn < 6; turn++) {
-      const { text: modelText, toolCalls } = await callLLM();
+      const { text: modelText, toolCalls } = await callNode();
       history.push({ role: "model", text: modelText, toolCalls });
       if (!toolCalls.length) {
         stopLoader();
