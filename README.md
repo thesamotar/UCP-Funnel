@@ -358,6 +358,23 @@ adapter file and one database row.
   Product cards now show real images (`image_url` seeded per category, emoji
   fallback); `GET /ucp/v1/orders` lists the signed-in user's past orders.
 
+### v0.7.1 — Static-asset cache fix (2026-07-11)
+
+**In plain terms:** after the v0.7 login page shipped, a browser that had
+visited the demo before could show a completely broken sign-in screen — no
+styling, dead buttons. The page itself was fine; the browser was pairing the
+*new* HTML with *old* cached CSS/JS. Fixed so browsers always pick up the
+latest files.
+
+**What landed, technically:**
+- The frontend mount now serves everything with `Cache-Control: no-cache`
+  (`NoCacheStaticFiles` in `wrapper/main.py`) — browsers revalidate on every
+  load instead of trusting heuristic freshness, and unchanged files still
+  come back as cheap `304`s via the existing ETags.
+- `index.html` references its assets with versioned URLs (`style.css?v=8`,
+  `app.js?v=8`) so even a browser holding pre-fix cached copies fetches the
+  current files on its next reload. Bump `?v=` to force-refresh assets again.
+
 ---
 
 ## Demo-grade shortcuts (deliberate)

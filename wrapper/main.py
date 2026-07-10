@@ -18,6 +18,17 @@ from .adapters import load_registry
 from .routes import cart, chat, checkout, config, search
 
 
+class NoCacheStaticFiles(StaticFiles):
+    """StaticFiles sends no Cache-Control, so browsers cache heuristically and
+    can serve a stale app.js/style.css against a fresh index.html after a
+    redeploy. no-cache forces revalidation; unchanged files still 304."""
+
+    def file_response(self, *args, **kwargs):
+        response = super().file_response(*args, **kwargs)
+        response.headers["Cache-Control"] = "no-cache"
+        return response
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # populate the connector registry from Supabase; fails loudly if the DB
@@ -36,4 +47,4 @@ app.include_router(cart.router)
 app.include_router(checkout.router)
 
 # serve the demo frontend at / (mounted last so API routes win)
-app.mount("/", StaticFiles(directory=Path(__file__).parent.parent / "frontend", html=True), name="frontend")
+app.mount("/", NoCacheStaticFiles(directory=Path(__file__).parent.parent / "frontend", html=True), name="frontend")
