@@ -1,0 +1,31 @@
+# Render free-tier deploy (Blueprint): ONE web service runs all three
+# processes. The retailer mocks bind container-private localhost ports
+# (9001/9002); only the UCP node binds Render's public $PORT.
+#
+# Setup: push this repo to GitHub → Render dashboard → New → Blueprint →
+# pick the repo → set ANTHROPIC_API_KEY (or GEMINI_API_KEY) when prompted.
+#
+# Free-tier caveat: the service spins down after ~15 min idle; the first
+# request after that takes ~1 min to cold-start.
+#
+# Note: EXPOSE_CONFIG_KEYS is deliberately NOT set here — on a public URL
+# visitors paste their own chat key into the UI banner; the server-side key
+# only powers the node's internal routing/enrichment and never reaches the
+# browser.
+services:
+  - type: web
+    name: tata-node
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: >
+      python -m uvicorn mocks.bigbasket.app:app --port 9001 &
+      python -m uvicorn mocks.croma.app:app --port 9002 &
+      python -m uvicorn wrapper.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: ANTHROPIC_API_KEY
+        sync: false          # set in the Render dashboard, never committed
+      - key: ANTHROPIC_MODEL
+        value: claude-sonnet-5

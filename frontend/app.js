@@ -10,7 +10,7 @@
 const GEMINI_BASE = "https://generativelanguage.googleapis.com/v1beta/models";
 const ANTHROPIC_BASE = "https://api.anthropic.com/v1/messages";
 let GEMINI_MODEL = "gemini-2.5-flash";
-let ANTHROPIC_MODEL = "claude-3-5-sonnet-latest"; // fallback only; real value comes from /api/config (.env)
+let ANTHROPIC_MODEL = "claude-sonnet-5"; // fallback only; real value comes from /api/config (.env)
 
 const KEYS = { gemini: "", anthropic: "" };
 let providerName = null; // "gemini" | "anthropic"
@@ -181,10 +181,35 @@ function note(text) {
   scroll();
 }
 
-function renderTrace(result) {
-  if (!result.trace) return;
-  const steps = result.trace.map((t) => `<span class="stage">${t.stage}</span> ${t.detail} <i>(${t.ms}ms)</i>`).join("<br>");
-  note(`<b>Tata UCP node pipeline</b> → routed to <b>${result.routed_to}</b><br>${steps}`);
+// ---------- loading indicator ----------
+// While the node works we show a spinner with friendly static texts instead
+// of the technical tool-call/pipeline chatter.
+const LOADER_TEXTS = {
+  default: ["Thinking…"],
+  search_tata_catalog: [
+    "Searching across Tata stores…",
+    "Matching products to your request…",
+    "Fetching live product details…",
+    "Almost there…",
+  ],
+  add_to_cart: ["Adding to your cart…"],
+  view_cart: ["Fetching your cart…"],
+  checkout: ["Placing your order…", "Processing payment…", "Preparing your receipt…"],
+};
+
+let loaderTimer = null;
+function setLoader(pendingEl, kind) {
+  const texts = LOADER_TEXTS[kind] || LOADER_TEXTS.default;
+  const bubble = pendingEl.querySelector(".bubble");
+  let i = 0;
+  const show = () => { bubble.innerHTML = `<span class="spin"></span>${texts[i++ % texts.length]}`; };
+  clearInterval(loaderTimer);
+  show();
+  loaderTimer = setInterval(show, 2500);
+}
+function stopLoader() {
+  clearInterval(loaderTimer);
+  loaderTimer = null;
 }
 
 function renderCards(items) {
@@ -216,19 +241,22 @@ function renderCards(items) {
 }
 
 // ---------- tool execution against the Tata node ----------
+const NODE_TIMEOUT_MS = 110_000; // just above the node's own search deadline
+
 async function executeTool(name, args) {
   const post = (url, body) => fetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
+    signal: AbortSignal.timeout(NODE_TIMEOUT_MS),
   }).then(async (r) => ({ ok: r.ok, data: await r.json() }));
 
   if (name === "search_tata_catalog") {
     const constraints = {};
     if (args.max_price != null) constraints.max_price = args.max_price;
     if (args.min_price != null) constraints.min_price = args.min_price;
-    const { data } = await post("/ucp/v1/search", { query: args.query, constraints });
-    renderTrace(data);
+    const { ok, data } = await post("/ucp/v1/search", { query: args.query, constraints });
+    if (!ok) return { error: data.detail || "search failed" };
     renderCards(data.items);
     const { trace, native_request, ...forModel } = data; // keep the model payload lean
     return forModel;
@@ -239,7 +267,7 @@ async function executeTool(name, args) {
     return data;
   }
   if (name === "view_cart") {
-    return (await fetch("/ucp/v1/cart")).json();
+    return (await fetch("/ucp/v1/cart", { signal: AbortSignal.timeout(NODE_TIMEOUT_MS) })).json();
   }
   if (name === "checkout") {
     const { ok, data } = await post("/ucp/v1/checkout", {});
@@ -254,6 +282,8 @@ async function executeTool(name, args) {
 
 // ---------- provider adapters ----------
 // Both take the neutral history and return {text, toolCalls: [{id, name, args}]}.
+
+const LLM_TIMEOUT_MS = 60_000; // chat model calls can't wait forever either
 
 async function callGemini() {
   const contents = [];
@@ -287,6 +317,7 @@ async function callGemini() {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
+    signal: AbortSignal.timeout(LLM_TIMEOUT_MS),
   });
   if (!resp.ok) throw new Error(`Gemini API ${resp.status}: ${(await resp.text()).slice(0, 300)}`);
   const data = await resp.json();
@@ -335,6 +366,7 @@ async function callClaude() {
       "anthropic-dangerous-direct-browser-access": "true",
     },
     body: JSON.stringify(body),
+    signal: AbortSignal.timeout(LLM_TIMEOUT_MS),
   });
   if (!resp.ok) throw new Error(`Claude API ${resp.status}: ${(await resp.text()).slice(0, 300)}`);
   const data = await resp.json();
@@ -360,33 +392,38 @@ async function send() {
   busy = true;
   addMsg("user", text);
   history.push({ role: "user", text });
-  const pending = addMsg("model", "Thinking…", { thinking: true });
+  const pending = addMsg("model", "", { thinking: true });
+  setLoader(pending, "default");
 
   try {
     for (let turn = 0; turn < 6; turn++) {
       const { text: modelText, toolCalls } = await callLLM();
       history.push({ role: "model", text: modelText, toolCalls });
       if (!toolCalls.length) {
+        stopLoader();
         pending.querySelector(".bubble").innerHTML = md(modelText || "(empty response)");
         pending.querySelector(".bubble").classList.remove("thinking");
         break;
       }
-      if (modelText) note(md(modelText));
       const results = [];
       for (const call of toolCalls) {
-        note(`⚙️ <b>${call.name}</b>(${JSON.stringify(call.args)})`);
-        pending.remove(); // tool notes/cards take its place mid-flight
+        setLoader(pending, call.name);
         const result = await executeTool(call.name, call.args);
         results.push({ id: call.id, name: call.name, result });
+        $("messages").appendChild(pending); // keep the loader below the cards/notes
       }
       history.push({ role: "user", toolResults: results });
-      $("messages").appendChild(pending); // re-attach for the next model turn
+      setLoader(pending, "default");
       scroll();
     }
   } catch (err) {
-    pending.querySelector(".bubble").innerHTML = md(`**Error:** ${err.message}`);
+    const message = err.name === "TimeoutError"
+      ? "That took too long, so the request was stopped. Please try again."
+      : err.message;
+    pending.querySelector(".bubble").innerHTML = md(`**Error:** ${message}`);
     pending.querySelector(".bubble").classList.remove("thinking");
   } finally {
+    stopLoader();
     busy = false;
   }
 }

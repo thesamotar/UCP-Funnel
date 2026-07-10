@@ -70,7 +70,6 @@ body {
   border: 1px solid #2f3133; border-radius: 10px; padding: 6px 12px;
   align-self: flex-start; margin-left: 44px; font-family: ui-monospace, monospace;
 }
-.tool-note .stage { color: #8ab4f8; }
 
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; margin: 4px 0 0 44px; }
 .card {
@@ -142,4 +141,11 @@ body {
 .connector-check { color: #81c995; font-size: 16px; }
 
 .thinking { color: var(--muted); font-style: italic; }
+.spin {
+  display: inline-block; width: 13px; height: 13px; margin-right: 9px;
+  border: 2px solid var(--accent); border-top-color: transparent;
+  border-radius: 50%; vertical-align: -2px;
+  animation: spin .8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
 .hidden { display: none !important; }

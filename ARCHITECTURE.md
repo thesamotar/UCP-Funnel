@@ -63,10 +63,10 @@ connector returns to plain chat.
   | `POST /ucp/v1/cart/items` | Adds an item; opens/uses a **native cart at the item's retailer** |
   | `GET /ucp/v1/cart` | UCP cart view + which native carts are open |
   | `POST /ucp/v1/checkout` | Places a **native order + payment per retailer**, returns one consolidated confirmation |
-  | `GET /api/config` | Hands the browser the server's LLM keys/models (localhost demo convenience) |
+  | `GET /api/config` | Hands the browser the model names — plus the server's keys only when `EXPOSE_CONFIG_KEYS=1` (localhost convenience) |
 
 - **`pipeline.py`** — the 4-stage search pipeline, each stage traced (timings are
-  returned in the response and rendered in the UI):
+  returned in the response for inspection; the UI shows a friendly loader instead):
   1. **receive** — validate/normalize the UCP request
   2. **translate** — an LLM (Claude or Gemini, `llm.py`) picks the retailer and
      extracts structured params (search term, max price, capacity...); the adapter
@@ -78,8 +78,10 @@ connector returns to plain chat.
   entry** with five functions: `search`, `cart_create`, `cart_add`, `place_order`,
   `pay`. Each function speaks the retailer's native dialect and returns a
   normalized shape.
-- **`llm.py`** — provider-agnostic LLM client (Anthropic SDK or Gemini REST),
-  deterministic keyword/static fallbacks when no key is set.
+- **`llm.py`** — provider-agnostic LLM client (Anthropic SDK or Gemini REST).
+  Hard per-call timeouts; any failure raises `LLMError` — no fallbacks. The
+  pipeline treats translate as essential (fails the search with a clear error)
+  and enhance as optional (items ship unenriched).
 
 ### 3. Mock retailer backends (`mocks/`)
 Two standalone FastAPI services with deliberately **different** API conventions, to

@@ -2,20 +2,27 @@
 
 receive   — validate/normalize the incoming UCP search request
 translate — an LLM routes the query to the right Tata retailer and extracts
-            structured params; the adapter turns those into a native API call
+            structured params; the adapter turns those into a native API call.
+            Essential: if the LLM fails here, the search fails with a clear
+            error (PipelineError) — there is no keyword fallback.
 enhance   — fields the retailer left blank (e.g. color options) are filled by
-            Gemini (with Google Search grounding when available)
+            the LLM (web-search grounded when available). Optional: if the LLM
+            fails here, items go out unenriched — never canned data.
 respond   — everything is normalized into one UCP-shaped result envelope
 
-Each stage appends to a trace that is returned with the response so the demo
-can show what happened under the hood.
+Each stage appends to a trace that is returned with the response for
+debugging/inspection (the demo UI no longer renders it).
 """
 import json
 import time
 
 from . import llm
 from .adapters import ADAPTERS
-from .fallback import fallback_colors, fallback_route  # [FALLBACK] delete with wrapper/fallback/
+
+
+class PipelineError(RuntimeError):
+    """An essential pipeline stage failed; surface this to the caller."""
+
 
 # --- stages ----------------------------------------------------------------
 
@@ -49,10 +56,12 @@ Return ONLY a JSON object:
   "min_capacity_litres": <number or null, only for fridges when the user gives a capacity like 200L+>,
   "reasoning": "<one short sentence>"
 }}"""
-    intent = await llm.generate_json(prompt)
+    try:
+        intent = await llm.generate_json(prompt)
+    except llm.LLMError as exc:
+        raise PipelineError(f"query routing failed: {exc}") from exc
     if not isinstance(intent, dict) or intent.get("retailer") not in ADAPTERS:
-        # [FALLBACK] no/unusable LLM routing — delete this block with wrapper/fallback/
-        intent = fallback_route(request["query"], request["constraints"])
+        raise PipelineError(f"LLM routed to an unknown retailer: {str(intent)[:120]}")
     # agent-supplied constraints win if the LLM dropped them
     for k in ("max_price", "min_price"):
         if intent.get(k) is None and request["constraints"].get(k) is not None:
@@ -75,7 +84,6 @@ async def stage_enhance(intent: dict, items: list[dict]) -> list[str]:
     if not gaps:
         return []
 
-    filled_via_llm = set()
     listing = "\n".join(f'- "{it["id"]}": {it["title"]}' for it in gaps)
     prompt = f"""These products from an Indian electronics retailer are missing their color options.
 Look up (or infer from your knowledge of these real products) the colors each model is sold in, in India.
@@ -84,25 +92,22 @@ Look up (or infer from your knowledge of these real products) the colors each mo
 
 Return ONLY a JSON object mapping each product id to an array of 1-3 color names, e.g.
 {{"CRM-301202": ["Shiny Steel", "Ebony Sheen"]}}"""
-    result = await llm.generate_json(prompt, use_search=True)
-    if isinstance(result, dict):
-        for it in gaps:
-            colors = result.get(it["id"])
-            if isinstance(colors, list) and colors:
-                it["attributes"]["color_options"] = [str(c) for c in colors[:3]]
-                filled_via_llm.add(it["id"])
+    try:
+        result = await llm.generate_json(prompt, use_search=True)
+    except llm.LLMError as exc:
+        # enhancement is optional — ship the items unenriched
+        print(f"[pipeline] enhance skipped: {exc}")
+        return []
 
-    # [FALLBACK] deterministic colors for anything the LLM didn't cover —
-    # delete this block with wrapper/fallback/
+    filled = []
     for it in gaps:
-        if it["id"] not in filled_via_llm:
-            cat = it["attributes"].get("category", "")
-            it["attributes"]["color_options"] = fallback_colors(cat)
-
-    for it in gaps:
-        it["attributes"].pop("color", None)
-        it["enhanced_fields"] = ["color_options"]
-    return [it["id"] for it in gaps]
+        colors = result.get(it["id"]) if isinstance(result, dict) else None
+        if isinstance(colors, list) and colors:
+            it["attributes"]["color_options"] = [str(c) for c in colors[:3]]
+            it["attributes"].pop("color", None)
+            it["enhanced_fields"] = ["color_options"]
+            filled.append(it["id"])
+    return filled
 
 
 def stage_respond(request: dict, intent: dict, native_req: dict, items: list[dict], trace: list) -> dict:

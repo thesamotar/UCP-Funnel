@@ -80,13 +80,18 @@ export GEMINI_API_KEY=AIza...
 
 **Which brain runs where.** Both the node's internal reasoning *and* the chat
 frontend accept either key:
-- A **Claude** key → chat runs on `claude-opus-4-8`; the node enriches missing
-  product fields via Claude's web-search tool.
-- A **Gemini** key → chat runs on `gemini-2.5-flash` + Google Search grounding.
+- A **Claude** key → chat and node run on `ANTHROPIC_MODEL` (default
+  `claude-sonnet-5`); the node enriches missing product fields via Claude's
+  web-search tool.
+- A **Gemini** key → chat and node run on `GEMINI_MODEL` (default
+  `gemini-2.5-flash`) + Google Search grounding.
 - If both are set, `LLM_PROVIDER=anthropic|gemini` picks the node's brain, and you
   can paste either key into the UI banner (it detects the provider by prefix).
-- With **no key at all**, everything still runs — routing and enrichment fall back
-  to deterministic keyword heuristics — but the chat window itself needs a key.
+- A key is **required** — there is no non-LLM fallback. If the LLM can't be
+  reached, search fails fast with a clear error instead of pretending to work.
+- Every LLM call has a hard timeout (`LLM_TIMEOUT_S`, default 25s; search-grounded
+  enrichment gets `LLM_SEARCH_TIMEOUT_S`, default 45s), and the whole search
+  pipeline runs under one deadline (`SEARCH_DEADLINE_S`, default 100s → `504`).
 
 ### Demo script (the 60-second walkthrough)
 
@@ -113,9 +118,8 @@ frontend accept either key:
 | `wrapper/routes/` | One module per action exposing an `APIRouter`: `config.py`, `search.py`, `cart.py`, `checkout.py` |
 | `wrapper/state.py` | Shared in-memory node state (UCP cart, catalog cache, orders) + the cart-view helper |
 | `wrapper/pipeline.py` | The 4-stage search pipeline (receive → translate → enhance → respond) with per-stage trace |
-| `wrapper/fallback/` | Deterministic no-LLM fallbacks (keyword routing + canned colors), isolated so the whole folder can be deleted once the LLM path is reliable — see its README |
 | `wrapper/adapters.py` | One entry per retailer — search + cart + order + payment, each in the retailer's native dialect. **Adding a Tata brand = adding one entry here** |
-| `wrapper/llm.py` | Provider-agnostic LLM client (Claude via Anthropic SDK, or Gemini via REST) with graceful fallback |
+| `wrapper/llm.py` | Provider-agnostic LLM client (Claude via Anthropic SDK, or Gemini via REST) — hard per-call timeouts, failures raise `LLMError` |
 | `mocks/bigbasket/` | Mock BigBasket — RPC style, snake_case, `sp`/`mrp` pricing. Routes split per operation: `search.py`, `cart.py`, `order.py`, `payment.py`, wired up in `app.py` (shared state in `store.py`) |
 | `mocks/croma/` | Mock Croma — REST style, camelCase, nested price objects; some `color: null` on purpose. Same per-operation split: `search.py` / `cart.py` / `order.py` / `payment.py` / `app.py` / `store.py` |
 | `ARCHITECTURE.md` | Full architecture write-up with diagrams and both end-to-end flows |
@@ -262,13 +266,71 @@ single move once the real LLM path is reliable.
   keyword-routes to BigBasket, electronics to Croma (reason "keyword fallback"),
   and Croma color gaps fill from the canned table.
 
+### v0.6 — LLM-only pipeline, timeouts & clean loading UX (2026-07-10)
+
+**In plain terms:** removed the training wheels and fixed the freeze. The node
+now *always* uses the real LLM — no more canned stand-ins quietly covering for
+it — and nothing can hang forever: every step has a deadline, and if the LLM
+can't answer in time you get a clear error instead of an endless spinner. The
+chat also stopped showing its plumbing (`⚙️ search_tata_catalog(...)`, pipeline
+traces); you now see a spinner with friendly status texts while the node works.
+
+**What landed, technically:**
+- **Root-caused the "stuck" search**: the enhance stage called Anthropic's
+  web-search tool *non-streaming*; those long requests get dropped upstream and
+  the SDK's default timeout is 10 minutes — the pipeline sat silent. (Earlier it
+  only "worked" because failures were swallowed and the fallback filled canned
+  colors.) All Anthropic calls now **stream**, which fixes web search
+  (~35s, verified).
+- **`wrapper/fallback/` deleted** along with its pipeline hooks. `llm.py` no
+  longer swallows errors: failures raise `LLMError`. Translate is essential —
+  failure surfaces as a `502` with the reason; enhance is optional — failure
+  ships items unenriched (never fabricated data). No key configured = clear
+  `502 no LLM key configured`, not a silent heuristic.
+- **Timeout guardrails at every layer**: per-LLM-call (`LLM_TIMEOUT_S` 25s /
+  `LLM_SEARCH_TIMEOUT_S` 45s), whole-pipeline (`SEARCH_DEADLINE_S` 100s → `504`),
+  and browser-side `AbortSignal.timeout` on both the chat-model calls (60s) and
+  node calls (110s) with a friendly "took too long" message.
+- **Frontend hides the machinery**: pipeline trace and tool-call notes are gone
+  (the trace still travels in the API response for debugging); a spinner with
+  rotating static texts ("Searching across Tata stores…", "Placing your
+  order…") shows while tools run. Node errors now reach the model as `{error}`
+  results so it can respond honestly.
+- **Deploy prep**: `/api/config` only exposes server keys when
+  `EXPOSE_CONFIG_KEYS=1` (kept on in the local `.env`), and a `render.yaml`
+  Blueprint deploys the whole demo as one free-tier Render web service.
+
 ---
 
 ## Demo-grade shortcuts (deliberate)
 
 - One in-memory UCP cart; the mocks keep their own in-memory carts/orders.
   Everything resets on restart. No sessions or auth.
-- `/api/config` hands the server's LLM keys to the browser — **localhost only**.
+- `/api/config` hands the server's LLM keys to the browser **only when
+  `EXPOSE_CONFIG_KEYS=1`** (set in the local `.env`; leave unset on a public
+  deployment — visitors paste their own key instead).
 - Payments are mock counters — no real gateway, no money moves.
 - Only *search* runs the 4-stage pipeline (that's the scoped focus); cart/checkout
   are direct adapter calls.
+
+---
+
+## Hosting (free tier)
+
+The repo ships a [`render.yaml`](render.yaml) Blueprint for **Render's free
+tier** — the best free fit here because the demo is three processes, and a
+Render web service is a full container that can run all of them (the mocks stay
+on container-private ports; only the node binds the public `$PORT`).
+
+1. Push the repo to GitHub.
+2. Render dashboard → **New → Blueprint** → pick the repo.
+3. Set `ANTHROPIC_API_KEY` (or `GEMINI_API_KEY`) when prompted. Do **not** set
+   `EXPOSE_CONFIG_KEYS` — on a public URL, visitors paste their own chat key.
+4. Open `https://tata-node.onrender.com` (or whatever name Render assigns).
+
+Free-tier caveats: the service spins down after ~15 min idle (first request
+cold-starts in ~1 min), and all state is in-memory anyway — a restart resets
+carts/orders, which is fine for a demo. Alternatives that also work: Hugging
+Face Spaces (Docker, no spin-down, needs a small Dockerfile) or Railway
+(trial credit, not permanently free). Vercel/Netlify don't fit — they're
+serverless and can't run the three long-lived processes.
