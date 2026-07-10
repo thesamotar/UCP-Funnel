@@ -1,5 +1,7 @@
 # Tata Node — Agentic Commerce Wrapper (UCP Funnel)
 
+**Version 1.0** (2026-07-11) — see the [changelog](#changelog).
+
 ## What this is
 
 Imagine you're chatting with an AI assistant and you say *"buy me a fridge over
@@ -128,7 +130,7 @@ Product catalogs are public.
 
 | Path | What it is |
 |---|---|
-| `frontend/` | Gemini-replica chat UI: Supabase login, connector menu, tool-calling loop against the node (LLM via `/api/chat`) |
+| `frontend/` | Gemini-replica chat UI: Google-style Supabase sign-in, connector menu (Tata Neu logo), tool-calling loop against the node (LLM via `/api/chat`) |
 | `wrapper/main.py` | Assembles the UCP node: loads the connector registry at startup, includes the action routers, mounts the frontend |
 | `wrapper/routes/` | One module per action exposing an `APIRouter`: `config.py`, `chat.py` (LLM proxy), `search.py`, `cart.py`, `checkout.py` |
 | `wrapper/state.py` | Per-user node state in Supabase (carts, orders) + the global catalog cache and cart-view helper |
@@ -374,6 +376,37 @@ latest files.
 - `index.html` references its assets with versioned URLs (`style.css?v=8`,
   `app.js?v=8`) so even a browser holding pre-fix cached copies fetches the
   current files on its next reload. Bump `?v=` to force-refresh assets again.
+
+### v1.0 — Gemini-faithful UI (2026-07-11)
+
+**In plain terms:** the demo now *looks* the part. The whole frontend — sign-in
+page and chat screen — is a faithful copy of the Gemini UI, with one deliberate
+difference: you sign in with an email and password (Supabase) instead of a
+Google account. The one visible tell that this isn't Google's product is the
+Tata Neu connector, which now wears the real Tata Neu logo.
+
+**What landed, technically:**
+- **Sign-in page rebuilt in the Google accounts style**: a single dark rounded
+  card with the Gemini spark mark, "Sign in — Use your Tata Neu account to
+  continue to Gemini", outlined text fields, a text-button "Create account" on
+  the left and a filled blue pill "Sign in" on the right. Replaces the v0.7
+  branded panel (orbs, feature list, purple gradients). Auth logic is
+  unchanged — same Supabase email/password flow, password-visibility toggle,
+  and sign-in/sign-up mode switch.
+- **Gemini dark theme site-wide**: `#131314` background palette, and the site
+  font switched from Inter to **Google Sans** (served by the Google Fonts css2
+  API), so every element — including the connector status notes, which were
+  previously monospace — uses one consistent typeface. Note padding and
+  coloring unchanged.
+- **Chat screen fidelity**: personalized gradient greeting ("Hello, <name>"
+  from the signed-in email), "Ask Gemini" composer placeholder, the model
+  avatar is always the Gemini gradient ✦, and the model-name chip next to the
+  "Gemini" wordmark is gone.
+- **Connectors**: the placeholder Google Drive row is removed; the Tata Neu
+  connector row and active-connector chip show the real Tata Neu logo, served
+  locally from `frontend/tata-neu-logo.png` (no third-party hotlinking).
+- Fixed the stacked (narrow-viewport) sign-in layout not spanning full width;
+  assets bumped to `?v=9`.
 
 ---
 

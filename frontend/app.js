@@ -29,10 +29,6 @@ const CATEGORY_EMOJI = {
 // ---------- boot ----------
 (async function boot() {
   const cfg = await (await fetch("/api/config")).json();
-  $("model-chip").textContent = cfg.provider === "anthropic"
-    ? `Claude · ${(cfg.model || "").replace("claude-", "")}`
-    : cfg.provider === "gemini" ? `Gemini · ${(cfg.model || "").replace("gemini-", "")}`
-    : "no key";
   if (!cfg.supabase_url || !cfg.supabase_anon_key) {
     note("⚠️ Supabase is not configured on the server — set SUPABASE_URL and SUPABASE_ANON_KEY");
     return;
@@ -79,18 +75,21 @@ function renderAuth() {
   if (signedIn) {
     $("avatar").textContent = session.user.email[0].toUpperCase();
     $("avatar").title = session.user.email;
+    const name = session.user.email.split("@")[0];
+    const greetingName = $("greeting-name"); // gone once the first message is sent
+    if (greetingName) greetingName.textContent = `Hello, ${name.charAt(0).toUpperCase()}${name.slice(1)}`;
   }
 }
 
 function setAuthMode(mode) {
   authMode = mode;
   const isSignin = mode === "signin";
-  $("auth-title").textContent = isSignin ? "Welcome back" : "Create account";
+  $("auth-title").textContent = isSignin ? "Sign in" : "Create your account";
   document.querySelector(".auth-card-sub").textContent = isSignin
-    ? "Sign in to continue to your account"
-    : "Get started with Tata Neu AI";
+    ? "Use your Tata Neu account to continue to Gemini"
+    : "Enter an email and password to continue to Gemini";
   $("auth-submit-text").textContent = isSignin ? "Sign in" : "Create account";
-  $("auth-toggle").textContent = isSignin ? "Create one" : "Sign in instead";
+  $("auth-toggle").textContent = isSignin ? "Create account" : "Sign in instead";
   $("auth-switch-text").textContent = isSignin ? "Don't have an account?" : "Already have an account?";
   $("auth-password").setAttribute("autocomplete", isSignin ? "current-password" : "new-password");
   authError("");
@@ -150,7 +149,7 @@ function setConnector(on) {
   connectorOn = on;
   $("tataneu-check").classList.toggle("hidden", !on);
   $("active-chip").classList.toggle("hidden", !on);
-  $("prompt").placeholder = on ? "Ask anything · Tata Neu connected" : "Ask anything";
+  $("prompt").placeholder = on ? "Ask Gemini · Tata Neu connected" : "Ask Gemini";
   note(on ? "Tata Neu connector enabled — shopping queries now route through the Tata UCP node"
           : "Tata Neu connector disabled — back to plain chat");
 }
@@ -169,8 +168,8 @@ function md(text) {
 function addMsg(role, text, opts = {}) {
   $("greeting")?.remove();
   const div = document.createElement("div");
-  div.className = `msg ${role}${connectorOn ? "" : " plain"}`;
-  const who = role === "user" ? ($("avatar").textContent || "U") : (connectorOn ? "T" : "✦");
+  div.className = `msg ${role}`;
+  const who = role === "user" ? ($("avatar").textContent || "U") : "✦";
   div.innerHTML = `<div class="who">${who}</div><div class="bubble${opts.thinking ? " thinking" : ""}"></div>`;
   div.querySelector(".bubble").innerHTML = opts.thinking ? text : md(text);
   $("messages").appendChild(div);
