@@ -48,9 +48,11 @@ TOOL_DEFS = [
         "required": [],
     },
     {
-        "name": "checkout",
-        "description": "Place the order for everything in the Tata Neu cart. "
-                       "Ask the user to confirm before calling this.",
+        "name": "initiate_payment",
+        "description": "Call when the user indicates their order is complete and they are ready to pay "
+                       "(e.g. 'that's all', 'I'm done, let me pay', 'place the order'). Generates a UPI "
+                       "payment QR code for the current cart total; the order is placed automatically "
+                       "once the payment succeeds. Ask the user to confirm before calling this.",
         "properties": {},
         "required": [],
     },
@@ -60,7 +62,11 @@ SYSTEM_CONNECTED = """You are a helpful assistant with the Tata Neu connector en
 Tata brands (BigBasket for groceries, Croma for electronics) via tools. For any product/shopping request, call
 search_tata_catalog. Present results conversationally and concisely — the UI already renders product
 cards, so summarize/recommend rather than listing every spec. Always use ₹ for prices. Refer to
-products by their id (e.g. CRM-301201) when adding to cart. Confirm with the user before checkout."""
+products by their id (e.g. CRM-301201) when adding to cart. When the user says their order is complete
+and they want to pay, confirm the cart total, then call initiate_payment — a UPI QR appears in the chat;
+tell the user to scan it with any UPI app (or open the payment link) and that the order will be placed
+automatically once the payment goes through. Do not claim the order is placed until you are told the
+payment succeeded."""
 
 
 class ChatBody(BaseModel):

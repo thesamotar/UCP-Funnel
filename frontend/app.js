@@ -199,7 +199,7 @@ const LOADER_TEXTS = {
   ],
   add_to_cart: ["Adding to your cart…"],
   view_cart: ["Fetching your cart…"],
-  checkout: ["Placing your order…", "Processing payment…", "Preparing your receipt…"],
+  initiate_payment: ["Totalling your cart…", "Generating your UPI payment QR…"],
 };
 
 let loaderTimer = null;
@@ -285,15 +285,88 @@ async function executeTool(name, args) {
   if (name === "view_cart") {
     return (await fetch("/ucp/v1/cart", { headers, signal: AbortSignal.timeout(NODE_TIMEOUT_MS) })).json();
   }
-  if (name === "checkout") {
-    const { ok, data } = await post("/ucp/v1/checkout", {});
-    note(ok ? `🎉 Order <b>${data.order_id}</b> placed · ₹${data.total.amount.toLocaleString("en-IN")} · +${data.neu_coins_earned} NeuCoins` : `checkout failed: ${data.detail}`);
-    if (ok) for (const ro of data.retailer_orders || []) {
-      note(`↳ ${ro.retailer} order <b>${ro.order_id}</b> · ₹${ro.amount.toLocaleString("en-IN")} · payment <b>${ro.payment.status}</b> (${ro.payment.payment_id} via ${ro.payment.method})`);
+  if (name === "initiate_payment") {
+    const { ok, data } = await post("/ucp/v1/payment/initiate", {});
+    if (!ok) {
+      note(`payment setup failed: ${data.detail}`);
+      return { error: data.detail || "payment setup failed" };
     }
-    return data;
+    renderPaymentCard(data);
+    pollPayment(data);
+    // lean payload for the model — the QR itself stays in the UI
+    return { type: "payment_request", amount: data.amount, currency: data.currency,
+             short_url: data.short_url, status: "awaiting_payment" };
   }
   return { error: `unknown tool ${name}` };
+}
+
+// ---------- UPI payment (Razorpay test mode) ----------
+const PAY_POLL_MS = 3000;
+const PAY_POLL_MAX_MS = 8 * 60_000; // give up after 8 minutes
+
+function renderPaymentCard(pay) {
+  const div = document.createElement("div");
+  div.className = "pay-card";
+  div.id = `pay-${pay.payment_link_id}`;
+  div.innerHTML = `
+    <img class="pay-qr" src="${pay.qr_data_uri}" alt="UPI payment QR" />
+    <div class="pay-meta">
+      <div class="pay-amount">₹${pay.amount.toLocaleString("en-IN")}</div>
+      <div class="pay-hint">Scan with any UPI app to pay</div>
+      <a class="pay-link" href="${pay.short_url}" target="_blank" rel="noopener">or open the payment page ↗</a>
+      <div class="pay-status"><span class="spin"></span>Waiting for payment…</div>
+    </div>`;
+  $("messages").appendChild(div);
+  scroll();
+}
+
+function setPayStatus(plinkId, html, done) {
+  const card = document.getElementById(`pay-${plinkId}`);
+  if (!card) return;
+  card.querySelector(".pay-status").innerHTML = html;
+  if (done) card.classList.add("pay-done");
+}
+
+function pollPayment(pay) {
+  const started = Date.now();
+  const timer = setInterval(async () => {
+    if (Date.now() - started > PAY_POLL_MAX_MS) {
+      clearInterval(timer);
+      setPayStatus(pay.payment_link_id, "⏱️ Payment window expired — say “pay” to get a fresh QR", true);
+      return;
+    }
+    let status;
+    try {
+      const r = await fetch(`/ucp/v1/payment/${pay.payment_link_id}`, { headers: await authHeaders() });
+      if (!r.ok) return; // transient — keep polling
+      status = (await r.json()).status;
+    } catch { return; }
+    if (status === "paid") {
+      clearInterval(timer);
+      setPayStatus(pay.payment_link_id, "✅ Payment received", true);
+      await placeOrderAfterPayment(pay);
+    } else if (status === "cancelled" || status === "expired") {
+      clearInterval(timer);
+      setPayStatus(pay.payment_link_id, `❌ Payment ${status}`, true);
+    }
+  }, PAY_POLL_MS);
+}
+
+async function placeOrderAfterPayment(pay) {
+  const r = await fetch("/ucp/v1/checkout", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", ...(await authHeaders()) },
+    body: JSON.stringify({ payment_link_id: pay.payment_link_id }),
+  });
+  const data = await r.json();
+  if (!r.ok) { note(`checkout failed after payment: ${data.detail}`); return; }
+  note(`🎉 Order <b>${data.order_id}</b> placed · ₹${data.total.amount.toLocaleString("en-IN")} · +${data.neu_coins_earned} NeuCoins`);
+  for (const ro of data.retailer_orders || []) {
+    note(`↳ ${ro.retailer} order <b>${ro.order_id}</b> · ₹${ro.amount.toLocaleString("en-IN")} · payment <b>${ro.payment.status}</b> (${ro.payment.payment_id} via ${ro.payment.method})`);
+  }
+  modelFollowup(`[payment update] The UPI payment of ₹${pay.amount} succeeded and order ${data.order_id} `
+    + `was placed (${(data.retailer_orders || []).length} retailer order(s), ${data.neu_coins_earned} NeuCoins earned, `
+    + `delivery ${data.estimated_delivery}). Give the user a short, warm order confirmation.`);
 }
 
 // ---------- the node's LLM proxy ----------
@@ -317,9 +390,25 @@ async function send() {
   if (!text || busy) return;
   if (!session) { renderAuth(); return; }
   $("prompt").value = "";
-  busy = true;
   addMsg("user", text);
   history.push({ role: "user", text });
+  await runChatLoop();
+}
+
+// A model turn triggered by the app rather than the user (e.g. payment
+// succeeded in the background) — the synthetic turn goes into history for
+// the LLM but is not rendered as a user bubble.
+async function modelFollowup(text) {
+  for (let waited = 0; busy && waited < 30_000; waited += 500) {
+    await new Promise((r) => setTimeout(r, 500)); // let an in-flight turn finish
+  }
+  if (busy) return; // still busy — the notes in the chat already tell the story
+  history.push({ role: "user", text });
+  await runChatLoop();
+}
+
+async function runChatLoop() {
+  busy = true;
   const pending = addMsg("model", "", { thinking: true });
   setLoader(pending, "default");
 

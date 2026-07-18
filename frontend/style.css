@@ -290,3 +290,19 @@ body {
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 .hidden { display: none !important; }
+
+
+/* ═══════════ UPI PAYMENT CARD ═══════════ */
+.pay-card {
+  display: flex; align-items: center; gap: 18px; margin: 6px 0 0 44px;
+  background: var(--surface); border: 1px solid rgba(255,255,255,.06);
+  border-radius: 14px; padding: 14px 18px; max-width: 440px;
+}
+.pay-qr { width: 148px; height: 148px; border-radius: 10px; background: #fff; padding: 4px; }
+.pay-meta { display: flex; flex-direction: column; gap: 6px; }
+.pay-amount { font-size: 24px; font-weight: 500; color: #fff; }
+.pay-hint { font-size: 13px; color: var(--muted); }
+.pay-link { font-size: 12.5px; color: var(--accent); text-decoration: none; }
+.pay-link:hover { text-decoration: underline; }
+.pay-status { font-size: 13px; color: var(--muted); margin-top: 4px; }
+.pay-done .pay-status { color: #81c995; }

@@ -1,6 +1,6 @@
 # Tata Node — Agentic Commerce Wrapper (UCP Funnel)
 
-**Version 1.0** (2026-07-11) — see the [changelog](#changelog).
+**Version 1.1** (2026-07-18) — see the [changelog](#changelog).
 
 ## What this is
 
@@ -39,7 +39,8 @@ Chat frontend (Gemini or Claude)         ← the AI shopping agent
         ▼
 Tata Neu UCP node  (:8000)               ← the universal translator
    search → route → enrich → respond
-   cart / order / payment  → adapters
+   cart / order  → adapters
+   payment → UPI QR via Razorpay (test)
         │                    │
         ▼ native APIs        ▼ native APIs
   Mock BigBasket (:9001)   Mock Croma (:9002)   ← the actual stores
@@ -55,8 +56,10 @@ Tata Neu UCP node  (:8000)               ← the universal translator
 ## Setup
 
 **Requirements:** Python 3.11+, one LLM API key (either a Claude key
-`sk-ant-...` **or** a Gemini key `AIza...`), and a free
-[Supabase](https://supabase.com) project (database + auth).
+`sk-ant-...` **or** a Gemini key `AIza...`), a free
+[Supabase](https://supabase.com) project (database + auth), and free
+[Razorpay](https://dashboard.razorpay.com) **test-mode** API keys (the UPI
+payment step — no KYC needed for test mode).
 
 ```bash
 cd "Tata Node"
@@ -72,18 +75,23 @@ python3 -m venv .venv
 #      (demo convenience; leave on if you don't mind the confirmation step)
 #    - Project Settings → API: copy the URL + anon key + service_role key
 
-# 3. Fill .env (copy .env.example): ONE LLM key + the Supabase values
+# 3. Get Razorpay TEST keys (one-time)
+#    - dashboard.razorpay.com → sign up → toggle Test Mode on (top bar)
+#    - Account & Settings → API Keys → Generate Test Key
+#    - copy the rzp_test_… Key Id and the Key Secret (shown only once)
+
+# 4. Fill .env (copy .env.example): ONE LLM key + Supabase + Razorpay values
 cp .env.example .env   # then edit
 
-# 4. Seed the retailer catalogs + connector registry into Supabase (one-time,
+# 5. Seed the retailer catalogs + connector registry into Supabase (one-time,
 #    re-run after editing mocks/*/data.json — see db/data_sourcing_mock.md)
 set -a; source .env; set +a
 .venv/bin/python -m db.seed
 
-# 5. Start all three services (mock shops + node + frontend)
+# 6. Start all three services (mock shops + node + frontend)
 ./run.sh
 
-# 6. Open the demo and create an account
+# 7. Open the demo and create an account
 #    http://localhost:8000
 ```
 
@@ -110,6 +118,14 @@ signed-in account — the browser never sees an LLM key; chat goes through
 JWT; carts and orders are per-user and persist in Postgres across restarts.
 Product catalogs are public.
 
+**Payments.** When the user says the order is complete, the node creates a
+**Razorpay payment link** (test mode) for the exact cart total and the chat
+shows it as a **scannable UPI QR**. The app polls Razorpay until the link is
+`paid`, then places the retailer orders — checkout **requires** a
+Razorpay-verified payment matching the cart total; there is no mock fallback.
+In test mode, complete the payment via Razorpay's simulated checkout (e.g.
+Netbanking → demo bank → **Success**); no real money moves.
+
 ### Demo script (the 60-second walkthrough)
 
 1. Open http://localhost:8000 and sign in (or create an account).
@@ -119,9 +135,12 @@ Product catalogs are public.
    → routed to **Croma**, product cards appear, missing colours filled in by the
    node, and the pipeline trace shows each stage.
 5. Ask: *"order 2 litres of milk"* → same tool, routed to **BigBasket** instead.
-6. *"Add the LG fridge and the milk to my cart, then check out."*
-   → the node opens a real cart at *each* shop, places an order at each, pays at
-   each, and returns one combined confirmation with NeuCoins.
+6. *"Add the LG fridge and the milk to my cart. That's all — I'm ready to pay."*
+   → a **UPI QR for the exact total** appears in the chat ("Waiting for
+   payment…"). Scan it with a phone or click *open the payment page*, complete
+   the test payment (Netbanking → demo bank → **Success**), and the card flips
+   to "✅ Payment received" — the node then places a real order at *each* shop
+   and the assistant posts one combined confirmation with NeuCoins.
 7. Deselect Tata Neu → prompts go back to plain chat.
 
 ---
@@ -132,13 +151,14 @@ Product catalogs are public.
 |---|---|
 | `frontend/` | Gemini-replica chat UI: Google-style Supabase sign-in, connector menu (Tata Neu logo), tool-calling loop against the node (LLM via `/api/chat`) |
 | `wrapper/main.py` | Assembles the UCP node: loads the connector registry at startup, includes the action routers, mounts the frontend |
-| `wrapper/routes/` | One module per action exposing an `APIRouter`: `config.py`, `chat.py` (LLM proxy), `search.py`, `cart.py`, `checkout.py` |
+| `wrapper/routes/` | One module per action exposing an `APIRouter`: `config.py`, `chat.py` (LLM proxy), `search.py`, `cart.py`, `payment.py` (UPI QR + status polling), `checkout.py` |
 | `wrapper/state.py` | Per-user node state in Supabase (carts, orders) + the global catalog cache and cart-view helper |
 | `wrapper/auth.py` | `current_user` dependency — verifies the Supabase JWT on every UCP/chat call |
 | `wrapper/db.py` | Shared async Supabase client (service-role key) |
 | `wrapper/pipeline.py` | The 4-stage search pipeline (receive → translate → enhance → respond), registry-driven, with per-stage trace |
 | `wrapper/adapters/` | `base.py` (the `RetailerAdapter` contract), one adapter class per backend (`bigbasket.py`, `croma.py`), `registry.py` (loads enabled connectors from the DB). **Attaching an API = one adapter file + one `connectors` row** |
 | `wrapper/llm.py` | Provider-agnostic LLM client (Claude via Anthropic SDK, or Gemini via REST) — hard per-call timeouts, failures raise `LLMError`; `chat()` powers `/api/chat` |
+| `wrapper/razorpay.py` | Razorpay Payment Links client (test mode): create a link for the cart total, poll its status — HTTP basic auth, no webhooks needed |
 | `db/` | `schema.sql` (all Supabase tables + RLS), `seed.py` (catalogs + connector registry), `data_sourcing_mock.md` (how to fill mock data & images) |
 | `mocks/bigbasket/` | Mock BigBasket — RPC style, snake_case, `sp`/`mrp` pricing. Routes split per operation: `search.py`, `cart.py`, `order.py`, `payment.py`, wired up in `app.py`; `store.py` loads its own Supabase tables (`bigbasket_*`) |
 | `mocks/croma/` | Mock Croma — REST style, camelCase, nested price objects; some `color: null` on purpose. Same split; `store.py` loads `croma_*` tables |
@@ -408,11 +428,56 @@ Tata Neu connector, which now wears the real Tata Neu logo.
 - Fixed the stacked (narrow-viewport) sign-in layout not spanning full width;
   assets bumped to `?v=9`.
 
+### v1.1 — Real UPI payment step via Razorpay test mode (2026-07-18)
+
+**In plain terms:** paying is no longer pretend. When you tell the assistant
+your order is complete, a **UPI QR code for the exact cart total** appears
+right in the chat. Scan it (or open the payment page), pay, and the moment the
+money clears the order places itself and the assistant confirms — you never
+click a checkout button. It runs on Razorpay's test mode, so the whole flow is
+real gateway plumbing with no actual money moving.
+
+**What landed, technically:**
+- **Razorpay Payment Links integration** (`wrapper/razorpay.py`): test-mode
+  keys from `.env` (`RAZORPAY_KEY_ID`/`RAZORPAY_KEY_SECRET`), HTTP basic auth,
+  15s timeouts. No webhooks — status is polled, which works locally without a
+  public URL.
+- **New payment routes** (`wrapper/routes/payment.py`):
+  `POST /ucp/v1/payment/initiate` creates a payment link for the caller's cart
+  total and returns it with a server-generated QR (pure-Python `segno`, data
+  URI — the QR encodes the link's `short_url`, so scanning opens Razorpay's
+  checkout on the phone); `GET /ucp/v1/payment/{id}` proxies live status.
+- **Checkout now demands proof of payment**: `POST /ucp/v1/checkout` takes a
+  `payment_link_id`, re-fetches it from Razorpay server-side, and only places
+  retailer orders if the link is `paid` **and** the paid amount matches the
+  current cart total in paise (`409` if the cart changed after the QR was
+  issued, `402` if unpaid, `503` if Razorpay keys aren't configured — per the
+  no-fallback rule, there is no mock-payment path). The confirmation now
+  carries a `upi_payment` block with the Razorpay payment id.
+- **The LLM's `checkout` tool became `initiate_payment`** — the model detects
+  "my order is complete / I want to pay" intent, confirms the total, and
+  triggers the QR; the system prompt forbids claiming the order is placed
+  until payment is confirmed.
+- **Frontend payment card + poller** (`frontend/app.js`): renders the QR,
+  amount, payment-page link, and a live status line; polls every 3s (8-minute
+  cap) and on `paid` flips to "✅ Payment received", calls checkout with the
+  link id, renders the per-retailer confirmation notes, and fires a hidden
+  follow-up turn so the assistant posts the confirmation message itself.
+  Assets bumped to `?v=10`.
+- Verified end to end against live Razorpay test mode: intent → QR →
+  simulated payment on the hosted checkout → poll → order placed → chat
+  confirmation. Test-mode quirk worth knowing: Razorpay's hosted page offers
+  Cards/Netbanking/Wallet on an unactivated test account (UPI as a *method*
+  appears once the account is activated) — the QR/link/poll flow is identical
+  either way.
+
 ---
 
 ## Demo-grade shortcuts (deliberate)
 
-- Payments are mock counters — no real gateway, no money moves.
+- The **customer payment** is a real gateway flow (Razorpay, test mode — no
+  money moves); the **retailer-side** order/payment counters at BigBasket and
+  Croma are still mocks, settled instantly once the Razorpay payment clears.
 - Only *search* runs the 4-stage pipeline (that's the scoped focus); cart/checkout
   are direct adapter calls.
 - The chat proxy trusts the browser's tool-execution loop (tools run client-side
@@ -434,8 +499,9 @@ on container-private ports; only the node binds the public `$PORT`).
 2. Push the repo to GitHub.
 3. Render dashboard → **New → Blueprint** → pick the repo.
 4. Fill the secrets when prompted: `ANTHROPIC_API_KEY` (or `GEMINI_API_KEY`),
-   `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, and
-   optionally `SUPABASE_JWT_SECRET`.
+   `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`,
+   `RAZORPAY_KEY_ID` + `RAZORPAY_KEY_SECRET` (test keys), and optionally
+   `SUPABASE_JWT_SECRET`.
 5. Open `https://tata-node.onrender.com` (or whatever name Render assigns) and
    create an account.
 

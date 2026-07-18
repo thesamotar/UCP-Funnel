@@ -15,7 +15,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
 from .adapters import load_registry
-from .routes import cart, chat, checkout, config, search
+from .routes import cart, chat, checkout, config, payment, search
 
 
 class NoCacheStaticFiles(StaticFiles):
@@ -44,6 +44,7 @@ app.include_router(config.router)
 app.include_router(chat.router)
 app.include_router(search.router)
 app.include_router(cart.router)
+app.include_router(payment.router)
 app.include_router(checkout.router)
 
 # serve the demo frontend at / (mounted last so API routes win)
