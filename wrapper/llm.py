@@ -14,6 +14,8 @@ No fallbacks: every call has a hard timeout, and any failure raises LLMError.
 Anthropic calls always stream (non-streaming long calls get dropped upstream)
 with the wall clock enforced by asyncio.wait_for.
 """
+from __future__ import annotations
+
 import asyncio
 import json
 import os
@@ -21,8 +23,8 @@ import re
 
 import httpx
 
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
-ANTHROPIC_MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-5")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-1.5-flash")
+ANTHROPIC_MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-6")
 GEMINI_API_BASE = "https://generativelanguage.googleapis.com/v1beta/models"
 
 # Hard per-call deadlines (seconds). Search-grounded calls are given longer

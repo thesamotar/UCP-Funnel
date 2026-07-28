@@ -1,0 +1,55 @@
+"""Titan cart operations: create, add entry, get (REST style)."""
+from __future__ import annotations
+
+import uuid
+
+from fastapi import APIRouter
+from pydantic import BaseModel
+
+from .store import CARTS, DATA, cart_view, persist_cart
+
+router = APIRouter()
+
+
+class CartEntryRequest(BaseModel):
+    productCode: str
+    quantity: int = 1
+
+
+@router.post("/titan/api/v2/cart")
+async def create_cart():
+    cart_id = f"TTNCART-{uuid.uuid4().hex[:8].upper()}"
+    CARTS[cart_id] = {"cartId": cart_id, "entries": []}
+    await persist_cart(CARTS[cart_id])
+    return {"cart": cart_view(CARTS[cart_id]), "status": 201}
+
+
+@router.post("/titan/api/v2/cart/{cart_id}/entries")
+async def add_entry(cart_id: str, req: CartEntryRequest):
+    cart = CARTS.get(cart_id)
+    if not cart:
+        return {"cart": None, "status": 404, "message": "cart not found"}
+    product = next((p for p in DATA if p["code"] == req.productCode), None)
+    if not product:
+        return {"cart": None, "status": 404, "message": "product not found"}
+    if not product.get("inStock"):
+        return {"cart": None, "status": 409, "message": "product out of stock"}
+    for entry in cart["entries"]:
+        if entry["productCode"] == req.productCode:
+            entry["quantity"] += req.quantity
+            break
+    else:
+        cart["entries"].append({
+            "productCode": req.productCode, "name": product["name"],
+            "unitPrice": product["price"]["sellingPrice"], "quantity": req.quantity,
+        })
+    await persist_cart(cart)
+    return {"cart": cart_view(cart), "status": 200}
+
+
+@router.get("/titan/api/v2/cart/{cart_id}")
+def get_cart(cart_id: str):
+    cart = CARTS.get(cart_id)
+    if not cart:
+        return {"cart": None, "status": 404, "message": "cart not found"}
+    return {"cart": cart_view(cart), "status": 200}

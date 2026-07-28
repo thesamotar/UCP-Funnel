@@ -1,0 +1,1124 @@
+{
+  "products": [
+    {
+      "code": "ZUD-001",
+      "name": "Zudio T-shirts 1",
+      "brandName": "Zudio",
+      "category": "t-shirts",
+      "price": {
+        "mrp": 543,
+        "sellingPrice": 481
+      },
+      "specs": {
+        "size": "L",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blue_Tshirt.jpg/500px-Blue_Tshirt.jpg"
+    },
+    {
+      "code": "ZUD-002",
+      "name": "Zudio T-shirts 2",
+      "brandName": "Zudio",
+      "category": "t-shirts",
+      "price": {
+        "mrp": 1198,
+        "sellingPrice": 934
+      },
+      "specs": {
+        "size": "M",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blue_Tshirt.jpg/500px-Blue_Tshirt.jpg"
+    },
+    {
+      "code": "ZUD-003",
+      "name": "Zudio T-shirts 3",
+      "brandName": "Zudio",
+      "category": "t-shirts",
+      "price": {
+        "mrp": 1186,
+        "sellingPrice": 1081
+      },
+      "specs": {
+        "size": "S",
+        "color": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blue_Tshirt.jpg/500px-Blue_Tshirt.jpg"
+    },
+    {
+      "code": "ZUD-004",
+      "name": "Zudio T-shirts 4",
+      "brandName": "Zudio",
+      "category": "t-shirts",
+      "price": {
+        "mrp": 954,
+        "sellingPrice": 607
+      },
+      "specs": {
+        "size": "XL",
+        "color": "Red"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blue_Tshirt.jpg/500px-Blue_Tshirt.jpg"
+    },
+    {
+      "code": "ZUD-005",
+      "name": "Zudio T-shirts 5",
+      "brandName": "Zudio",
+      "category": "t-shirts",
+      "price": {
+        "mrp": 1038,
+        "sellingPrice": 782
+      },
+      "specs": {
+        "size": "M",
+        "color": "Red"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blue_Tshirt.jpg/500px-Blue_Tshirt.jpg"
+    },
+    {
+      "code": "ZUD-006",
+      "name": "Zudio T-shirts 6",
+      "brandName": "Zudio",
+      "category": "t-shirts",
+      "price": {
+        "mrp": 794,
+        "sellingPrice": 650
+      },
+      "specs": {
+        "size": "M",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blue_Tshirt.jpg/500px-Blue_Tshirt.jpg"
+    },
+    {
+      "code": "ZUD-007",
+      "name": "Zudio T-shirts 7",
+      "brandName": "Zudio",
+      "category": "t-shirts",
+      "price": {
+        "mrp": 1038,
+        "sellingPrice": 636
+      },
+      "specs": {
+        "size": "S",
+        "color": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blue_Tshirt.jpg/500px-Blue_Tshirt.jpg"
+    },
+    {
+      "code": "ZUD-008",
+      "name": "Zudio Jeans 1",
+      "brandName": "Zudio",
+      "category": "jeans",
+      "price": {
+        "mrp": 496,
+        "sellingPrice": 321
+      },
+      "specs": {
+        "size": "M",
+        "color": "Blue"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Jeans.jpg/500px-Jeans.jpg"
+    },
+    {
+      "code": "ZUD-009",
+      "name": "Zudio Jeans 2",
+      "brandName": "Zudio",
+      "category": "jeans",
+      "price": {
+        "mrp": 728,
+        "sellingPrice": 457
+      },
+      "specs": {
+        "size": "M",
+        "color": "Blue"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Jeans.jpg/500px-Jeans.jpg"
+    },
+    {
+      "code": "ZUD-010",
+      "name": "Zudio Jeans 3",
+      "brandName": "Zudio",
+      "category": "jeans",
+      "price": {
+        "mrp": 696,
+        "sellingPrice": 495
+      },
+      "specs": {
+        "size": "L",
+        "color": "Red"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Jeans.jpg/500px-Jeans.jpg"
+    },
+    {
+      "code": "ZUD-011",
+      "name": "Zudio Jeans 4",
+      "brandName": "Zudio",
+      "category": "jeans",
+      "price": {
+        "mrp": 1330,
+        "sellingPrice": 982
+      },
+      "specs": {
+        "size": "L",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Jeans.jpg/500px-Jeans.jpg"
+    },
+    {
+      "code": "ZUD-012",
+      "name": "Zudio Jeans 5",
+      "brandName": "Zudio",
+      "category": "jeans",
+      "price": {
+        "mrp": 1053,
+        "sellingPrice": 773
+      },
+      "specs": {
+        "size": "S",
+        "color": "Red"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Jeans.jpg/500px-Jeans.jpg"
+    },
+    {
+      "code": "ZUD-013",
+      "name": "Zudio Jeans 6",
+      "brandName": "Zudio",
+      "category": "jeans",
+      "price": {
+        "mrp": 663,
+        "sellingPrice": 564
+      },
+      "specs": {
+        "size": "XL",
+        "color": "Blue"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Jeans.jpg/500px-Jeans.jpg"
+    },
+    {
+      "code": "ZUD-014",
+      "name": "Zudio Jeans 7",
+      "brandName": "Zudio",
+      "category": "jeans",
+      "price": {
+        "mrp": 806,
+        "sellingPrice": 613
+      },
+      "specs": {
+        "size": "XL",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Jeans.jpg/500px-Jeans.jpg"
+    },
+    {
+      "code": "ZUD-015",
+      "name": "Zudio Dresses 1",
+      "brandName": "Zudio",
+      "category": "dresses",
+      "price": {
+        "mrp": 336,
+        "sellingPrice": 219
+      },
+      "specs": {
+        "size": "XL",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Woman_in_a_dress.jpg/500px-Woman_in_a_dress.jpg"
+    },
+    {
+      "code": "ZUD-016",
+      "name": "Zudio Dresses 2",
+      "brandName": "Zudio",
+      "category": "dresses",
+      "price": {
+        "mrp": 1445,
+        "sellingPrice": 1019
+      },
+      "specs": {
+        "size": "XL",
+        "color": "Red"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Woman_in_a_dress.jpg/500px-Woman_in_a_dress.jpg"
+    },
+    {
+      "code": "ZUD-017",
+      "name": "Zudio Dresses 3",
+      "brandName": "Zudio",
+      "category": "dresses",
+      "price": {
+        "mrp": 406,
+        "sellingPrice": 295
+      },
+      "specs": {
+        "size": "L",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Woman_in_a_dress.jpg/500px-Woman_in_a_dress.jpg"
+    },
+    {
+      "code": "ZUD-018",
+      "name": "Zudio Dresses 4",
+      "brandName": "Zudio",
+      "category": "dresses",
+      "price": {
+        "mrp": 1160,
+        "sellingPrice": 1041
+      },
+      "specs": {
+        "size": "M",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Woman_in_a_dress.jpg/500px-Woman_in_a_dress.jpg"
+    },
+    {
+      "code": "ZUD-019",
+      "name": "Zudio Dresses 5",
+      "brandName": "Zudio",
+      "category": "dresses",
+      "price": {
+        "mrp": 1065,
+        "sellingPrice": 723
+      },
+      "specs": {
+        "size": "S",
+        "color": "Blue"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Woman_in_a_dress.jpg/500px-Woman_in_a_dress.jpg"
+    },
+    {
+      "code": "ZUD-020",
+      "name": "Zudio Dresses 6",
+      "brandName": "Zudio",
+      "category": "dresses",
+      "price": {
+        "mrp": 1280,
+        "sellingPrice": 928
+      },
+      "specs": {
+        "size": "M",
+        "color": "Red"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Woman_in_a_dress.jpg/500px-Woman_in_a_dress.jpg"
+    },
+    {
+      "code": "ZUD-021",
+      "name": "Zudio Dresses 7",
+      "brandName": "Zudio",
+      "category": "dresses",
+      "price": {
+        "mrp": 336,
+        "sellingPrice": 278
+      },
+      "specs": {
+        "size": "L",
+        "color": "Blue"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Woman_in_a_dress.jpg/500px-Woman_in_a_dress.jpg"
+    },
+    {
+      "code": "ZUD-022",
+      "name": "Zudio Jackets 1",
+      "brandName": "Zudio",
+      "category": "jackets",
+      "price": {
+        "mrp": 692,
+        "sellingPrice": 525
+      },
+      "specs": {
+        "size": "M",
+        "color": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Leather_jacket.jpg/500px-Leather_jacket.jpg"
+    },
+    {
+      "code": "ZUD-023",
+      "name": "Zudio Jackets 2",
+      "brandName": "Zudio",
+      "category": "jackets",
+      "price": {
+        "mrp": 678,
+        "sellingPrice": 406
+      },
+      "specs": {
+        "size": "M",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Leather_jacket.jpg/500px-Leather_jacket.jpg"
+    },
+    {
+      "code": "ZUD-024",
+      "name": "Zudio Jackets 3",
+      "brandName": "Zudio",
+      "category": "jackets",
+      "price": {
+        "mrp": 1047,
+        "sellingPrice": 756
+      },
+      "specs": {
+        "size": "M",
+        "color": "Red"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Leather_jacket.jpg/500px-Leather_jacket.jpg"
+    },
+    {
+      "code": "ZUD-025",
+      "name": "Zudio Jackets 4",
+      "brandName": "Zudio",
+      "category": "jackets",
+      "price": {
+        "mrp": 377,
+        "sellingPrice": 310
+      },
+      "specs": {
+        "size": "L",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Leather_jacket.jpg/500px-Leather_jacket.jpg"
+    },
+    {
+      "code": "ZUD-026",
+      "name": "Zudio Jackets 5",
+      "brandName": "Zudio",
+      "category": "jackets",
+      "price": {
+        "mrp": 833,
+        "sellingPrice": 673
+      },
+      "specs": {
+        "size": "XL",
+        "color": "Red"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Leather_jacket.jpg/500px-Leather_jacket.jpg"
+    },
+    {
+      "code": "ZUD-027",
+      "name": "Zudio Jackets 6",
+      "brandName": "Zudio",
+      "category": "jackets",
+      "price": {
+        "mrp": 799,
+        "sellingPrice": 708
+      },
+      "specs": {
+        "size": "M",
+        "color": "Red"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Leather_jacket.jpg/500px-Leather_jacket.jpg"
+    },
+    {
+      "code": "ZUD-028",
+      "name": "Zudio Jackets 7",
+      "brandName": "Zudio",
+      "category": "jackets",
+      "price": {
+        "mrp": 1483,
+        "sellingPrice": 1343
+      },
+      "specs": {
+        "size": "XL",
+        "color": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Leather_jacket.jpg/500px-Leather_jacket.jpg"
+    },
+    {
+      "code": "ZUD-029",
+      "name": "Zudio Sneakers 1",
+      "brandName": "Zudio",
+      "category": "sneakers",
+      "price": {
+        "mrp": 377,
+        "sellingPrice": 255
+      },
+      "specs": {
+        "size": "L",
+        "color": "Blue"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Sneakers.jpg/500px-Sneakers.jpg"
+    },
+    {
+      "code": "ZUD-030",
+      "name": "Zudio Sneakers 2",
+      "brandName": "Zudio",
+      "category": "sneakers",
+      "price": {
+        "mrp": 425,
+        "sellingPrice": 289
+      },
+      "specs": {
+        "size": "M",
+        "color": "Blue"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Sneakers.jpg/500px-Sneakers.jpg"
+    },
+    {
+      "code": "ZUD-031",
+      "name": "Zudio Sneakers 3",
+      "brandName": "Zudio",
+      "category": "sneakers",
+      "price": {
+        "mrp": 754,
+        "sellingPrice": 461
+      },
+      "specs": {
+        "size": "M",
+        "color": "Red"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Sneakers.jpg/500px-Sneakers.jpg"
+    },
+    {
+      "code": "ZUD-032",
+      "name": "Zudio Sneakers 4",
+      "brandName": "Zudio",
+      "category": "sneakers",
+      "price": {
+        "mrp": 301,
+        "sellingPrice": 209
+      },
+      "specs": {
+        "size": "S",
+        "color": "Red"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Sneakers.jpg/500px-Sneakers.jpg"
+    },
+    {
+      "code": "ZUD-033",
+      "name": "Zudio Sneakers 5",
+      "brandName": "Zudio",
+      "category": "sneakers",
+      "price": {
+        "mrp": 1233,
+        "sellingPrice": 1129
+      },
+      "specs": {
+        "size": "M",
+        "color": "Blue"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Sneakers.jpg/500px-Sneakers.jpg"
+    },
+    {
+      "code": "ZUD-034",
+      "name": "Zudio Sneakers 6",
+      "brandName": "Zudio",
+      "category": "sneakers",
+      "price": {
+        "mrp": 551,
+        "sellingPrice": 364
+      },
+      "specs": {
+        "size": "L",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Sneakers.jpg/500px-Sneakers.jpg"
+    },
+    {
+      "code": "ZUD-035",
+      "name": "Zudio Sneakers 7",
+      "brandName": "Zudio",
+      "category": "sneakers",
+      "price": {
+        "mrp": 339,
+        "sellingPrice": 236
+      },
+      "specs": {
+        "size": "L",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Sneakers.jpg/500px-Sneakers.jpg"
+    },
+    {
+      "code": "ZUD-036",
+      "name": "Zudio Activewear 1",
+      "brandName": "Zudio",
+      "category": "activewear",
+      "price": {
+        "mrp": 1003,
+        "sellingPrice": 721
+      },
+      "specs": {
+        "size": "XL",
+        "color": "Blue"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Yoga_pants.jpg/500px-Yoga_pants.jpg"
+    },
+    {
+      "code": "ZUD-037",
+      "name": "Zudio Activewear 2",
+      "brandName": "Zudio",
+      "category": "activewear",
+      "price": {
+        "mrp": 540,
+        "sellingPrice": 398
+      },
+      "specs": {
+        "size": "S",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Yoga_pants.jpg/500px-Yoga_pants.jpg"
+    },
+    {
+      "code": "ZUD-038",
+      "name": "Zudio Activewear 3",
+      "brandName": "Zudio",
+      "category": "activewear",
+      "price": {
+        "mrp": 1021,
+        "sellingPrice": 730
+      },
+      "specs": {
+        "size": "S",
+        "color": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Yoga_pants.jpg/500px-Yoga_pants.jpg"
+    },
+    {
+      "code": "ZUD-039",
+      "name": "Zudio Activewear 4",
+      "brandName": "Zudio",
+      "category": "activewear",
+      "price": {
+        "mrp": 497,
+        "sellingPrice": 305
+      },
+      "specs": {
+        "size": "XL",
+        "color": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Yoga_pants.jpg/500px-Yoga_pants.jpg"
+    },
+    {
+      "code": "ZUD-040",
+      "name": "Zudio Activewear 5",
+      "brandName": "Zudio",
+      "category": "activewear",
+      "price": {
+        "mrp": 1295,
+        "sellingPrice": 1073
+      },
+      "specs": {
+        "size": "S",
+        "color": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Yoga_pants.jpg/500px-Yoga_pants.jpg"
+    },
+    {
+      "code": "ZUD-041",
+      "name": "Zudio Activewear 6",
+      "brandName": "Zudio",
+      "category": "activewear",
+      "price": {
+        "mrp": 326,
+        "sellingPrice": 215
+      },
+      "specs": {
+        "size": "S",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Yoga_pants.jpg/500px-Yoga_pants.jpg"
+    },
+    {
+      "code": "ZUD-042",
+      "name": "Zudio Activewear 7",
+      "brandName": "Zudio",
+      "category": "activewear",
+      "price": {
+        "mrp": 627,
+        "sellingPrice": 579
+      },
+      "specs": {
+        "size": "M",
+        "color": "Blue"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Yoga_pants.jpg/500px-Yoga_pants.jpg"
+    },
+    {
+      "code": "ZUD-043",
+      "name": "Zudio Loungewear 1",
+      "brandName": "Zudio",
+      "category": "loungewear",
+      "price": {
+        "mrp": 1136,
+        "sellingPrice": 808
+      },
+      "specs": {
+        "size": "L",
+        "color": "Red"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Pajamas.jpg/500px-Pajamas.jpg"
+    },
+    {
+      "code": "ZUD-044",
+      "name": "Zudio Loungewear 2",
+      "brandName": "Zudio",
+      "category": "loungewear",
+      "price": {
+        "mrp": 811,
+        "sellingPrice": 710
+      },
+      "specs": {
+        "size": "M",
+        "color": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Pajamas.jpg/500px-Pajamas.jpg"
+    },
+    {
+      "code": "ZUD-045",
+      "name": "Zudio Loungewear 3",
+      "brandName": "Zudio",
+      "category": "loungewear",
+      "price": {
+        "mrp": 516,
+        "sellingPrice": 334
+      },
+      "specs": {
+        "size": "M",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Pajamas.jpg/500px-Pajamas.jpg"
+    },
+    {
+      "code": "ZUD-046",
+      "name": "Zudio Loungewear 4",
+      "brandName": "Zudio",
+      "category": "loungewear",
+      "price": {
+        "mrp": 326,
+        "sellingPrice": 202
+      },
+      "specs": {
+        "size": "XL",
+        "color": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Pajamas.jpg/500px-Pajamas.jpg"
+    },
+    {
+      "code": "ZUD-047",
+      "name": "Zudio Loungewear 5",
+      "brandName": "Zudio",
+      "category": "loungewear",
+      "price": {
+        "mrp": 1187,
+        "sellingPrice": 1022
+      },
+      "specs": {
+        "size": "L",
+        "color": "Blue"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Pajamas.jpg/500px-Pajamas.jpg"
+    },
+    {
+      "code": "ZUD-048",
+      "name": "Zudio Loungewear 6",
+      "brandName": "Zudio",
+      "category": "loungewear",
+      "price": {
+        "mrp": 661,
+        "sellingPrice": 473
+      },
+      "specs": {
+        "size": "M",
+        "color": "Blue"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Pajamas.jpg/500px-Pajamas.jpg"
+    },
+    {
+      "code": "ZUD-049",
+      "name": "Zudio Loungewear 7",
+      "brandName": "Zudio",
+      "category": "loungewear",
+      "price": {
+        "mrp": 617,
+        "sellingPrice": 439
+      },
+      "specs": {
+        "size": "M",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Pajamas.jpg/500px-Pajamas.jpg"
+    },
+    {
+      "code": "ZUD-050",
+      "name": "Zudio Accessories 1",
+      "brandName": "Zudio",
+      "category": "accessories",
+      "price": {
+        "mrp": 1088,
+        "sellingPrice": 889
+      },
+      "specs": {
+        "size": "XL",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sunglasses.jpg/500px-Sunglasses.jpg"
+    },
+    {
+      "code": "ZUD-051",
+      "name": "Zudio Accessories 2",
+      "brandName": "Zudio",
+      "category": "accessories",
+      "price": {
+        "mrp": 1013,
+        "sellingPrice": 633
+      },
+      "specs": {
+        "size": "L",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sunglasses.jpg/500px-Sunglasses.jpg"
+    },
+    {
+      "code": "ZUD-052",
+      "name": "Zudio Accessories 3",
+      "brandName": "Zudio",
+      "category": "accessories",
+      "price": {
+        "mrp": 1480,
+        "sellingPrice": 1357
+      },
+      "specs": {
+        "size": "XL",
+        "color": "Blue"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sunglasses.jpg/500px-Sunglasses.jpg"
+    },
+    {
+      "code": "ZUD-053",
+      "name": "Zudio Accessories 4",
+      "brandName": "Zudio",
+      "category": "accessories",
+      "price": {
+        "mrp": 1368,
+        "sellingPrice": 1172
+      },
+      "specs": {
+        "size": "M",
+        "color": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sunglasses.jpg/500px-Sunglasses.jpg"
+    },
+    {
+      "code": "ZUD-054",
+      "name": "Zudio Accessories 5",
+      "brandName": "Zudio",
+      "category": "accessories",
+      "price": {
+        "mrp": 1042,
+        "sellingPrice": 954
+      },
+      "specs": {
+        "size": "XL",
+        "color": "Red"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sunglasses.jpg/500px-Sunglasses.jpg"
+    },
+    {
+      "code": "ZUD-055",
+      "name": "Zudio Accessories 6",
+      "brandName": "Zudio",
+      "category": "accessories",
+      "price": {
+        "mrp": 587,
+        "sellingPrice": 505
+      },
+      "specs": {
+        "size": "L",
+        "color": "Blue"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sunglasses.jpg/500px-Sunglasses.jpg"
+    },
+    {
+      "code": "ZUD-056",
+      "name": "Zudio Accessories 7",
+      "brandName": "Zudio",
+      "category": "accessories",
+      "price": {
+        "mrp": 484,
+        "sellingPrice": 427
+      },
+      "specs": {
+        "size": "L",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sunglasses.jpg/500px-Sunglasses.jpg"
+    },
+    {
+      "code": "ZUD-057",
+      "name": "Zudio Innerwear 1",
+      "brandName": "Zudio",
+      "category": "innerwear",
+      "price": {
+        "mrp": 461,
+        "sellingPrice": 298
+      },
+      "specs": {
+        "size": "M",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Underwear.jpg/500px-Underwear.jpg"
+    },
+    {
+      "code": "ZUD-058",
+      "name": "Zudio Innerwear 2",
+      "brandName": "Zudio",
+      "category": "innerwear",
+      "price": {
+        "mrp": 988,
+        "sellingPrice": 749
+      },
+      "specs": {
+        "size": "S",
+        "color": "Blue"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Underwear.jpg/500px-Underwear.jpg"
+    },
+    {
+      "code": "ZUD-059",
+      "name": "Zudio Innerwear 3",
+      "brandName": "Zudio",
+      "category": "innerwear",
+      "price": {
+        "mrp": 1296,
+        "sellingPrice": 1050
+      },
+      "specs": {
+        "size": "L",
+        "color": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Underwear.jpg/500px-Underwear.jpg"
+    },
+    {
+      "code": "ZUD-060",
+      "name": "Zudio Innerwear 4",
+      "brandName": "Zudio",
+      "category": "innerwear",
+      "price": {
+        "mrp": 597,
+        "sellingPrice": 517
+      },
+      "specs": {
+        "size": "L",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Underwear.jpg/500px-Underwear.jpg"
+    },
+    {
+      "code": "ZUD-061",
+      "name": "Zudio Innerwear 5",
+      "brandName": "Zudio",
+      "category": "innerwear",
+      "price": {
+        "mrp": 502,
+        "sellingPrice": 330
+      },
+      "specs": {
+        "size": "M",
+        "color": "Red"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Underwear.jpg/500px-Underwear.jpg"
+    },
+    {
+      "code": "ZUD-062",
+      "name": "Zudio Innerwear 6",
+      "brandName": "Zudio",
+      "category": "innerwear",
+      "price": {
+        "mrp": 1360,
+        "sellingPrice": 977
+      },
+      "specs": {
+        "size": "XL",
+        "color": "Red"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Underwear.jpg/500px-Underwear.jpg"
+    },
+    {
+      "code": "ZUD-063",
+      "name": "Zudio Innerwear 7",
+      "brandName": "Zudio",
+      "category": "innerwear",
+      "price": {
+        "mrp": 1259,
+        "sellingPrice": 758
+      },
+      "specs": {
+        "size": "M",
+        "color": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Underwear.jpg/500px-Underwear.jpg"
+    },
+    {
+      "code": "ZUD-064",
+      "name": "Zudio Winterwear 1",
+      "brandName": "Zudio",
+      "category": "winterwear",
+      "price": {
+        "mrp": 1004,
+        "sellingPrice": 804
+      },
+      "specs": {
+        "size": "L",
+        "color": "Red"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sweater.jpg/500px-Sweater.jpg"
+    },
+    {
+      "code": "ZUD-065",
+      "name": "Zudio Winterwear 2",
+      "brandName": "Zudio",
+      "category": "winterwear",
+      "price": {
+        "mrp": 1431,
+        "sellingPrice": 1154
+      },
+      "specs": {
+        "size": "L",
+        "color": "Red"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sweater.jpg/500px-Sweater.jpg"
+    },
+    {
+      "code": "ZUD-066",
+      "name": "Zudio Winterwear 3",
+      "brandName": "Zudio",
+      "category": "winterwear",
+      "price": {
+        "mrp": 747,
+        "sellingPrice": 607
+      },
+      "specs": {
+        "size": "XL",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sweater.jpg/500px-Sweater.jpg"
+    },
+    {
+      "code": "ZUD-067",
+      "name": "Zudio Winterwear 4",
+      "brandName": "Zudio",
+      "category": "winterwear",
+      "price": {
+        "mrp": 609,
+        "sellingPrice": 423
+      },
+      "specs": {
+        "size": "XL",
+        "color": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sweater.jpg/500px-Sweater.jpg"
+    },
+    {
+      "code": "ZUD-068",
+      "name": "Zudio Winterwear 5",
+      "brandName": "Zudio",
+      "category": "winterwear",
+      "price": {
+        "mrp": 771,
+        "sellingPrice": 669
+      },
+      "specs": {
+        "size": "S",
+        "color": "Red"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sweater.jpg/500px-Sweater.jpg"
+    },
+    {
+      "code": "ZUD-069",
+      "name": "Zudio Winterwear 6",
+      "brandName": "Zudio",
+      "category": "winterwear",
+      "price": {
+        "mrp": 491,
+        "sellingPrice": 338
+      },
+      "specs": {
+        "size": "S",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sweater.jpg/500px-Sweater.jpg"
+    },
+    {
+      "code": "ZUD-070",
+      "name": "Zudio Winterwear 7",
+      "brandName": "Zudio",
+      "category": "winterwear",
+      "price": {
+        "mrp": 584,
+        "sellingPrice": 422
+      },
+      "specs": {
+        "size": "XL",
+        "color": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sweater.jpg/500px-Sweater.jpg"
+    }
+  ]
+}

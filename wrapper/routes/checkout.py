@@ -5,6 +5,8 @@ for the full cart amount — the UPI step happens first via
 /ucp/v1/payment/initiate. No fallback: without Razorpay keys checkout fails
 loudly (503), matching the node's no-fallback rule.
 GET /ucp/v1/orders — the caller's past confirmations, newest first."""
+from __future__ import annotations
+
 import uuid
 
 from fastapi import APIRouter, Depends, HTTPException

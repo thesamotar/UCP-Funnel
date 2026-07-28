@@ -5,6 +5,8 @@ user_orders tables). The catalog cache — every item any search has returned,
 so cart ops can resolve ids without re-querying retailers — is global and
 survives restarts (catalog_cache table).
 """
+from __future__ import annotations
+
 from datetime import datetime, timezone
 
 from .db import db

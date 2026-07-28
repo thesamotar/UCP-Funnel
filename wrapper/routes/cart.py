@@ -4,6 +4,8 @@ Carts are per authenticated user and persist in Supabase. Adding lazily opens
 a native cart at the item's own retailer and adds the item there; the UCP cart
 mirrors it, so one UCP cart can hold open carts at several retailers at once.
 """
+from __future__ import annotations
+
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 

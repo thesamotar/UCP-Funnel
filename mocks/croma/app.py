@@ -10,6 +10,8 @@ Routes are split by operation into sibling modules (search, cart, order,
 payment); this module just assembles them into one app.
 Run: uvicorn mocks.croma.app:app --port 9002
 """
+from __future__ import annotations
+
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI

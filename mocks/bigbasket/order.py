@@ -1,4 +1,6 @@
 """BigBasket order operations: place an order from a cart, look one up."""
+from __future__ import annotations
+
 import uuid
 
 from fastapi import APIRouter

@@ -8,6 +8,8 @@ returns {text, toolCalls}. Tool *execution* stays in the browser — the tools
 hit this same node's UCP endpoints with the user's own JWT, which is what
 keeps carts and orders per-user.
 """
+from __future__ import annotations
+
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 
@@ -19,13 +21,13 @@ router = APIRouter()
 TOOL_DEFS = [
     {
         "name": "search_tata_catalog",
-        "description": "Search products across Tata retail brands (BigBasket groceries, Croma electronics). "
+        "description": "Search products across Tata retail brands (BigBasket, Croma, Zudio, Tata CLiQ, Tata 1mg, Titan). "
                        "The Tata node routes the query to the right retailer automatically. "
                        "Use for any shopping/product query.",
         "properties": {
             "query": {"type": "string",
                       "description": "Natural-language product query, keep the user's constraints in it, "
-                                     "e.g. 'refrigerator 200L+ capacity under 30000'"},
+                                     "e.g. 'refrigerator 200L+ capacity under 30000' or 'Zudio black t-shirt M'"},
             "max_price": {"type": "number", "description": "Maximum price in INR, if the user stated one"},
             "min_price": {"type": "number", "description": "Minimum price in INR, if stated"},
         },
@@ -59,10 +61,10 @@ TOOL_DEFS = [
 ]
 
 SYSTEM_CONNECTED = """You are a helpful assistant with the Tata Neu connector enabled. You can shop across
-Tata brands (BigBasket for groceries, Croma for electronics) via tools. For any product/shopping request, call
+Tata brands (BigBasket, Croma, Zudio, Tata CLiQ, Tata 1mg, Titan) via tools. For any product/shopping request, call
 search_tata_catalog. Present results conversationally and concisely — the UI already renders product
 cards, so summarize/recommend rather than listing every spec. Always use ₹ for prices. Refer to
-products by their id (e.g. CRM-301201) when adding to cart. When the user says their order is complete
+products by their id (e.g. CRM-301201 or ZUD-001) when adding to cart. When the user says their order is complete
 and they want to pay, confirm the cart total, then call initiate_payment — a UPI QR appears in the chat;
 tell the user to scan it with any UPI app (or open the payment link) and that the order will be placed
 automatically once the payment goes through. Do not claim the order is placed until you are told the

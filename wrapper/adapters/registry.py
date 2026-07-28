@@ -5,6 +5,8 @@ REGISTRY maps connector name -> RetailerAdapter instance. It is populated by
 load_registry() (called from the wrapper's FastAPI lifespan) and read by the
 pipeline and the cart/checkout routes.
 """
+from __future__ import annotations
+
 from importlib import import_module
 
 from ..db import db

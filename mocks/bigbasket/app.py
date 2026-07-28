@@ -9,6 +9,8 @@ Routes are split by operation into sibling modules (search, cart, order,
 payment); this module just assembles them into one app.
 Run: uvicorn mocks.bigbasket.app:app --port 9001
 """
+from __future__ import annotations
+
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI

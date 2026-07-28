@@ -13,6 +13,8 @@ respond   — everything is normalized into one UCP-shaped result envelope
 Each stage appends to a trace that is returned with the response for
 debugging/inspection (the demo UI no longer renders it).
 """
+from __future__ import annotations
+
 import json
 import time
 

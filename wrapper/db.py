@@ -5,6 +5,8 @@ connector registry — and by the mock retailers for their catalogs and native
 state. No fallbacks: if Supabase is unreachable or the env vars are missing,
 calls raise and surface as 5xx.
 """
+from __future__ import annotations
+
 import os
 
 from supabase import AsyncClient, acreate_client

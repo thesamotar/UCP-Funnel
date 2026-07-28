@@ -7,6 +7,8 @@ checkout where test-mode UPI can be completed via the simulated flow).
 GET /ucp/v1/payment/{plink_id} — current status, polled by the frontend
 until Razorpay reports `paid`, after which the frontend calls checkout.
 """
+from __future__ import annotations
+
 import uuid
 
 import segno

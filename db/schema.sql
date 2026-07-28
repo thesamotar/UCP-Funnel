@@ -106,3 +106,98 @@ create policy "catalog is public" on bigbasket_products
 drop policy if exists "catalog is public" on croma_products;
 create policy "catalog is public" on croma_products
   for select to anon, authenticated using (true);
+
+-- zudio
+create table if not exists zudio_products (
+  id         text primary key,
+  native     jsonb not null,
+  image_url  text,
+  updated_at timestamptz not null default now()
+);
+create table if not exists zudio_carts (
+  id         text primary key,
+  payload    jsonb not null,
+  updated_at timestamptz not null default now()
+);
+create table if not exists zudio_orders (
+  id         text primary key,
+  payload    jsonb not null,
+  updated_at timestamptz not null default now()
+);
+
+-- cliq
+create table if not exists cliq_products (
+  id         text primary key,
+  native     jsonb not null,
+  image_url  text,
+  updated_at timestamptz not null default now()
+);
+create table if not exists cliq_carts (
+  id         text primary key,
+  payload    jsonb not null,
+  updated_at timestamptz not null default now()
+);
+create table if not exists cliq_orders (
+  id         text primary key,
+  payload    jsonb not null,
+  updated_at timestamptz not null default now()
+);
+
+-- onemg
+create table if not exists onemg_products (
+  id         text primary key,
+  native     jsonb not null,
+  image_url  text,
+  updated_at timestamptz not null default now()
+);
+create table if not exists onemg_carts (
+  id         text primary key,
+  payload    jsonb not null,
+  updated_at timestamptz not null default now()
+);
+create table if not exists onemg_orders (
+  id         text primary key,
+  payload    jsonb not null,
+  updated_at timestamptz not null default now()
+);
+
+-- titan
+create table if not exists titan_products (
+  id         text primary key,
+  native     jsonb not null,
+  image_url  text,
+  updated_at timestamptz not null default now()
+);
+create table if not exists titan_carts (
+  id         text primary key,
+  payload    jsonb not null,
+  updated_at timestamptz not null default now()
+);
+create table if not exists titan_orders (
+  id         text primary key,
+  payload    jsonb not null,
+  updated_at timestamptz not null default now()
+);
+
+-- RLS
+alter table zudio_products enable row level security;
+alter table zudio_carts enable row level security;
+alter table zudio_orders enable row level security;
+alter table cliq_products enable row level security;
+alter table cliq_carts enable row level security;
+alter table cliq_orders enable row level security;
+alter table onemg_products enable row level security;
+alter table onemg_carts enable row level security;
+alter table onemg_orders enable row level security;
+alter table titan_products enable row level security;
+alter table titan_carts enable row level security;
+alter table titan_orders enable row level security;
+
+drop policy if exists "catalog is public" on zudio_products;
+create policy "catalog is public" on zudio_products for select to anon, authenticated using (true);
+drop policy if exists "catalog is public" on cliq_products;
+create policy "catalog is public" on cliq_products for select to anon, authenticated using (true);
+drop policy if exists "catalog is public" on onemg_products;
+create policy "catalog is public" on onemg_products for select to anon, authenticated using (true);
+drop policy if exists "catalog is public" on titan_products;
+create policy "catalog is public" on titan_products for select to anon, authenticated using (true);

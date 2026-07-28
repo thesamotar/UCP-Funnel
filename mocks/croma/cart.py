@@ -1,4 +1,6 @@
 """Croma cart operations: create, add entry, get (REST style)."""
+from __future__ import annotations
+
 import uuid
 
 from fastapi import APIRouter

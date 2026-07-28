@@ -1,4 +1,6 @@
 """Croma adapter — speaks the mock's RESTful, camelCase dialect."""
+from __future__ import annotations
+
 from .base import RetailerAdapter, RetailerError
 
 

@@ -1,0 +1,1124 @@
+{
+  "products": [
+    {
+      "code": "1MG-001",
+      "name": "1mg Medicines 1",
+      "brandName": "1mg",
+      "category": "medicines",
+      "price": {
+        "mrp": 949,
+        "sellingPrice": 831
+      },
+      "specs": {
+        "prescription_required": true,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pills.jpg/500px-Pills.jpg"
+    },
+    {
+      "code": "1MG-002",
+      "name": "1mg Medicines 2",
+      "brandName": "1mg",
+      "category": "medicines",
+      "price": {
+        "mrp": 979,
+        "sellingPrice": 737
+      },
+      "specs": {
+        "prescription_required": true,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pills.jpg/500px-Pills.jpg"
+    },
+    {
+      "code": "1MG-003",
+      "name": "1mg Medicines 3",
+      "brandName": "1mg",
+      "category": "medicines",
+      "price": {
+        "mrp": 1416,
+        "sellingPrice": 903
+      },
+      "specs": {
+        "prescription_required": true,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pills.jpg/500px-Pills.jpg"
+    },
+    {
+      "code": "1MG-004",
+      "name": "1mg Medicines 4",
+      "brandName": "1mg",
+      "category": "medicines",
+      "price": {
+        "mrp": 466,
+        "sellingPrice": 288
+      },
+      "specs": {
+        "prescription_required": true,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pills.jpg/500px-Pills.jpg"
+    },
+    {
+      "code": "1MG-005",
+      "name": "1mg Medicines 5",
+      "brandName": "1mg",
+      "category": "medicines",
+      "price": {
+        "mrp": 1198,
+        "sellingPrice": 859
+      },
+      "specs": {
+        "prescription_required": true,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pills.jpg/500px-Pills.jpg"
+    },
+    {
+      "code": "1MG-006",
+      "name": "1mg Medicines 6",
+      "brandName": "1mg",
+      "category": "medicines",
+      "price": {
+        "mrp": 253,
+        "sellingPrice": 212
+      },
+      "specs": {
+        "prescription_required": true,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pills.jpg/500px-Pills.jpg"
+    },
+    {
+      "code": "1MG-007",
+      "name": "1mg Medicines 7",
+      "brandName": "1mg",
+      "category": "medicines",
+      "price": {
+        "mrp": 256,
+        "sellingPrice": 153
+      },
+      "specs": {
+        "prescription_required": true,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pills.jpg/500px-Pills.jpg"
+    },
+    {
+      "code": "1MG-008",
+      "name": "Dabur Supplements 1",
+      "brandName": "Dabur",
+      "category": "supplements",
+      "price": {
+        "mrp": 911,
+        "sellingPrice": 631
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Vitamins.jpg/500px-Vitamins.jpg"
+    },
+    {
+      "code": "1MG-009",
+      "name": "Dabur Supplements 2",
+      "brandName": "Dabur",
+      "category": "supplements",
+      "price": {
+        "mrp": 629,
+        "sellingPrice": 497
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Vitamins.jpg/500px-Vitamins.jpg"
+    },
+    {
+      "code": "1MG-010",
+      "name": "Dabur Supplements 3",
+      "brandName": "Dabur",
+      "category": "supplements",
+      "price": {
+        "mrp": 1772,
+        "sellingPrice": 1539
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Vitamins.jpg/500px-Vitamins.jpg"
+    },
+    {
+      "code": "1MG-011",
+      "name": "Dabur Supplements 4",
+      "brandName": "Dabur",
+      "category": "supplements",
+      "price": {
+        "mrp": 1832,
+        "sellingPrice": 1147
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Vitamins.jpg/500px-Vitamins.jpg"
+    },
+    {
+      "code": "1MG-012",
+      "name": "Dabur Supplements 5",
+      "brandName": "Dabur",
+      "category": "supplements",
+      "price": {
+        "mrp": 776,
+        "sellingPrice": 528
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Vitamins.jpg/500px-Vitamins.jpg"
+    },
+    {
+      "code": "1MG-013",
+      "name": "Dabur Supplements 6",
+      "brandName": "Dabur",
+      "category": "supplements",
+      "price": {
+        "mrp": 1320,
+        "sellingPrice": 867
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Vitamins.jpg/500px-Vitamins.jpg"
+    },
+    {
+      "code": "1MG-014",
+      "name": "Dabur Supplements 7",
+      "brandName": "Dabur",
+      "category": "supplements",
+      "price": {
+        "mrp": 453,
+        "sellingPrice": 304
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Vitamins.jpg/500px-Vitamins.jpg"
+    },
+    {
+      "code": "1MG-015",
+      "name": "Himalaya Vitamins 1",
+      "brandName": "Himalaya",
+      "category": "vitamins",
+      "price": {
+        "mrp": 1333,
+        "sellingPrice": 1187
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Vitamins.jpg/500px-Vitamins.jpg"
+    },
+    {
+      "code": "1MG-016",
+      "name": "Himalaya Vitamins 2",
+      "brandName": "Himalaya",
+      "category": "vitamins",
+      "price": {
+        "mrp": 743,
+        "sellingPrice": 664
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Vitamins.jpg/500px-Vitamins.jpg"
+    },
+    {
+      "code": "1MG-017",
+      "name": "Himalaya Vitamins 3",
+      "brandName": "Himalaya",
+      "category": "vitamins",
+      "price": {
+        "mrp": 1862,
+        "sellingPrice": 1168
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Vitamins.jpg/500px-Vitamins.jpg"
+    },
+    {
+      "code": "1MG-018",
+      "name": "Himalaya Vitamins 4",
+      "brandName": "Himalaya",
+      "category": "vitamins",
+      "price": {
+        "mrp": 1954,
+        "sellingPrice": 1825
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Vitamins.jpg/500px-Vitamins.jpg"
+    },
+    {
+      "code": "1MG-019",
+      "name": "Himalaya Vitamins 5",
+      "brandName": "Himalaya",
+      "category": "vitamins",
+      "price": {
+        "mrp": 402,
+        "sellingPrice": 364
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Vitamins.jpg/500px-Vitamins.jpg"
+    },
+    {
+      "code": "1MG-020",
+      "name": "Himalaya Vitamins 6",
+      "brandName": "Himalaya",
+      "category": "vitamins",
+      "price": {
+        "mrp": 773,
+        "sellingPrice": 483
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Vitamins.jpg/500px-Vitamins.jpg"
+    },
+    {
+      "code": "1MG-021",
+      "name": "Himalaya Vitamins 7",
+      "brandName": "Himalaya",
+      "category": "vitamins",
+      "price": {
+        "mrp": 1117,
+        "sellingPrice": 928
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Vitamins.jpg/500px-Vitamins.jpg"
+    },
+    {
+      "code": "1MG-022",
+      "name": "1mg Ayurveda 1",
+      "brandName": "1mg",
+      "category": "ayurveda",
+      "price": {
+        "mrp": 1710,
+        "sellingPrice": 1212
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Ayurveda_herbs.jpg/500px-Ayurveda_herbs.jpg"
+    },
+    {
+      "code": "1MG-023",
+      "name": "1mg Ayurveda 2",
+      "brandName": "1mg",
+      "category": "ayurveda",
+      "price": {
+        "mrp": 651,
+        "sellingPrice": 409
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Ayurveda_herbs.jpg/500px-Ayurveda_herbs.jpg"
+    },
+    {
+      "code": "1MG-024",
+      "name": "1mg Ayurveda 3",
+      "brandName": "1mg",
+      "category": "ayurveda",
+      "price": {
+        "mrp": 1620,
+        "sellingPrice": 1372
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Ayurveda_herbs.jpg/500px-Ayurveda_herbs.jpg"
+    },
+    {
+      "code": "1MG-025",
+      "name": "1mg Ayurveda 4",
+      "brandName": "1mg",
+      "category": "ayurveda",
+      "price": {
+        "mrp": 466,
+        "sellingPrice": 352
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Ayurveda_herbs.jpg/500px-Ayurveda_herbs.jpg"
+    },
+    {
+      "code": "1MG-026",
+      "name": "1mg Ayurveda 5",
+      "brandName": "1mg",
+      "category": "ayurveda",
+      "price": {
+        "mrp": 666,
+        "sellingPrice": 575
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Ayurveda_herbs.jpg/500px-Ayurveda_herbs.jpg"
+    },
+    {
+      "code": "1MG-027",
+      "name": "1mg Ayurveda 6",
+      "brandName": "1mg",
+      "category": "ayurveda",
+      "price": {
+        "mrp": 610,
+        "sellingPrice": 524
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Ayurveda_herbs.jpg/500px-Ayurveda_herbs.jpg"
+    },
+    {
+      "code": "1MG-028",
+      "name": "1mg Ayurveda 7",
+      "brandName": "1mg",
+      "category": "ayurveda",
+      "price": {
+        "mrp": 995,
+        "sellingPrice": 718
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Ayurveda_herbs.jpg/500px-Ayurveda_herbs.jpg"
+    },
+    {
+      "code": "1MG-029",
+      "name": "Dabur Devices 1",
+      "brandName": "Dabur",
+      "category": "devices",
+      "price": {
+        "mrp": 1300,
+        "sellingPrice": 1200
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Thermometer.jpg/500px-Thermometer.jpg"
+    },
+    {
+      "code": "1MG-030",
+      "name": "Dabur Devices 2",
+      "brandName": "Dabur",
+      "category": "devices",
+      "price": {
+        "mrp": 505,
+        "sellingPrice": 391
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Thermometer.jpg/500px-Thermometer.jpg"
+    },
+    {
+      "code": "1MG-031",
+      "name": "Dabur Devices 3",
+      "brandName": "Dabur",
+      "category": "devices",
+      "price": {
+        "mrp": 1065,
+        "sellingPrice": 827
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Thermometer.jpg/500px-Thermometer.jpg"
+    },
+    {
+      "code": "1MG-032",
+      "name": "Dabur Devices 4",
+      "brandName": "Dabur",
+      "category": "devices",
+      "price": {
+        "mrp": 547,
+        "sellingPrice": 497
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Thermometer.jpg/500px-Thermometer.jpg"
+    },
+    {
+      "code": "1MG-033",
+      "name": "Dabur Devices 5",
+      "brandName": "Dabur",
+      "category": "devices",
+      "price": {
+        "mrp": 1374,
+        "sellingPrice": 866
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Thermometer.jpg/500px-Thermometer.jpg"
+    },
+    {
+      "code": "1MG-034",
+      "name": "Dabur Devices 6",
+      "brandName": "Dabur",
+      "category": "devices",
+      "price": {
+        "mrp": 1838,
+        "sellingPrice": 1489
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Thermometer.jpg/500px-Thermometer.jpg"
+    },
+    {
+      "code": "1MG-035",
+      "name": "Dabur Devices 7",
+      "brandName": "Dabur",
+      "category": "devices",
+      "price": {
+        "mrp": 840,
+        "sellingPrice": 534
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Thermometer.jpg/500px-Thermometer.jpg"
+    },
+    {
+      "code": "1MG-036",
+      "name": "Himalaya Personal_care 1",
+      "brandName": "Himalaya",
+      "category": "personal_care",
+      "price": {
+        "mrp": 1931,
+        "sellingPrice": 1744
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Soap.jpg/500px-Soap.jpg"
+    },
+    {
+      "code": "1MG-037",
+      "name": "Himalaya Personal_care 2",
+      "brandName": "Himalaya",
+      "category": "personal_care",
+      "price": {
+        "mrp": 1654,
+        "sellingPrice": 1222
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Soap.jpg/500px-Soap.jpg"
+    },
+    {
+      "code": "1MG-038",
+      "name": "Himalaya Personal_care 3",
+      "brandName": "Himalaya",
+      "category": "personal_care",
+      "price": {
+        "mrp": 1624,
+        "sellingPrice": 1302
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Soap.jpg/500px-Soap.jpg"
+    },
+    {
+      "code": "1MG-039",
+      "name": "Himalaya Personal_care 4",
+      "brandName": "Himalaya",
+      "category": "personal_care",
+      "price": {
+        "mrp": 574,
+        "sellingPrice": 479
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Soap.jpg/500px-Soap.jpg"
+    },
+    {
+      "code": "1MG-040",
+      "name": "Himalaya Personal_care 5",
+      "brandName": "Himalaya",
+      "category": "personal_care",
+      "price": {
+        "mrp": 90,
+        "sellingPrice": 77
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Soap.jpg/500px-Soap.jpg"
+    },
+    {
+      "code": "1MG-041",
+      "name": "Himalaya Personal_care 6",
+      "brandName": "Himalaya",
+      "category": "personal_care",
+      "price": {
+        "mrp": 1902,
+        "sellingPrice": 1375
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Soap.jpg/500px-Soap.jpg"
+    },
+    {
+      "code": "1MG-042",
+      "name": "Himalaya Personal_care 7",
+      "brandName": "Himalaya",
+      "category": "personal_care",
+      "price": {
+        "mrp": 1716,
+        "sellingPrice": 1266
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Soap.jpg/500px-Soap.jpg"
+    },
+    {
+      "code": "1MG-043",
+      "name": "1mg Baby_care 1",
+      "brandName": "1mg",
+      "category": "baby_care",
+      "price": {
+        "mrp": 267,
+        "sellingPrice": 216
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Baby_bottle.jpg/500px-Baby_bottle.jpg"
+    },
+    {
+      "code": "1MG-044",
+      "name": "1mg Baby_care 2",
+      "brandName": "1mg",
+      "category": "baby_care",
+      "price": {
+        "mrp": 128,
+        "sellingPrice": 92
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Baby_bottle.jpg/500px-Baby_bottle.jpg"
+    },
+    {
+      "code": "1MG-045",
+      "name": "1mg Baby_care 3",
+      "brandName": "1mg",
+      "category": "baby_care",
+      "price": {
+        "mrp": 1264,
+        "sellingPrice": 996
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Baby_bottle.jpg/500px-Baby_bottle.jpg"
+    },
+    {
+      "code": "1MG-046",
+      "name": "1mg Baby_care 4",
+      "brandName": "1mg",
+      "category": "baby_care",
+      "price": {
+        "mrp": 553,
+        "sellingPrice": 446
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Baby_bottle.jpg/500px-Baby_bottle.jpg"
+    },
+    {
+      "code": "1MG-047",
+      "name": "1mg Baby_care 5",
+      "brandName": "1mg",
+      "category": "baby_care",
+      "price": {
+        "mrp": 245,
+        "sellingPrice": 227
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Baby_bottle.jpg/500px-Baby_bottle.jpg"
+    },
+    {
+      "code": "1MG-048",
+      "name": "1mg Baby_care 6",
+      "brandName": "1mg",
+      "category": "baby_care",
+      "price": {
+        "mrp": 1875,
+        "sellingPrice": 1300
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Baby_bottle.jpg/500px-Baby_bottle.jpg"
+    },
+    {
+      "code": "1MG-049",
+      "name": "1mg Baby_care 7",
+      "brandName": "1mg",
+      "category": "baby_care",
+      "price": {
+        "mrp": 701,
+        "sellingPrice": 503
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Baby_bottle.jpg/500px-Baby_bottle.jpg"
+    },
+    {
+      "code": "1MG-050",
+      "name": "Dabur Homeopathy 1",
+      "brandName": "Dabur",
+      "category": "homeopathy",
+      "price": {
+        "mrp": 245,
+        "sellingPrice": 166
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pills.jpg/500px-Pills.jpg"
+    },
+    {
+      "code": "1MG-051",
+      "name": "Dabur Homeopathy 2",
+      "brandName": "Dabur",
+      "category": "homeopathy",
+      "price": {
+        "mrp": 1282,
+        "sellingPrice": 923
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pills.jpg/500px-Pills.jpg"
+    },
+    {
+      "code": "1MG-052",
+      "name": "Dabur Homeopathy 3",
+      "brandName": "Dabur",
+      "category": "homeopathy",
+      "price": {
+        "mrp": 1108,
+        "sellingPrice": 810
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pills.jpg/500px-Pills.jpg"
+    },
+    {
+      "code": "1MG-053",
+      "name": "Dabur Homeopathy 4",
+      "brandName": "Dabur",
+      "category": "homeopathy",
+      "price": {
+        "mrp": 118,
+        "sellingPrice": 87
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pills.jpg/500px-Pills.jpg"
+    },
+    {
+      "code": "1MG-054",
+      "name": "Dabur Homeopathy 5",
+      "brandName": "Dabur",
+      "category": "homeopathy",
+      "price": {
+        "mrp": 1041,
+        "sellingPrice": 752
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pills.jpg/500px-Pills.jpg"
+    },
+    {
+      "code": "1MG-055",
+      "name": "Dabur Homeopathy 6",
+      "brandName": "Dabur",
+      "category": "homeopathy",
+      "price": {
+        "mrp": 307,
+        "sellingPrice": 225
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pills.jpg/500px-Pills.jpg"
+    },
+    {
+      "code": "1MG-056",
+      "name": "Dabur Homeopathy 7",
+      "brandName": "Dabur",
+      "category": "homeopathy",
+      "price": {
+        "mrp": 1625,
+        "sellingPrice": 1065
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pills.jpg/500px-Pills.jpg"
+    },
+    {
+      "code": "1MG-057",
+      "name": "Himalaya Nutrition 1",
+      "brandName": "Himalaya",
+      "category": "nutrition",
+      "price": {
+        "mrp": 1820,
+        "sellingPrice": 1318
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Protein_powder.jpg/500px-Protein_powder.jpg"
+    },
+    {
+      "code": "1MG-058",
+      "name": "Himalaya Nutrition 2",
+      "brandName": "Himalaya",
+      "category": "nutrition",
+      "price": {
+        "mrp": 720,
+        "sellingPrice": 646
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Protein_powder.jpg/500px-Protein_powder.jpg"
+    },
+    {
+      "code": "1MG-059",
+      "name": "Himalaya Nutrition 3",
+      "brandName": "Himalaya",
+      "category": "nutrition",
+      "price": {
+        "mrp": 378,
+        "sellingPrice": 316
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Protein_powder.jpg/500px-Protein_powder.jpg"
+    },
+    {
+      "code": "1MG-060",
+      "name": "Himalaya Nutrition 4",
+      "brandName": "Himalaya",
+      "category": "nutrition",
+      "price": {
+        "mrp": 1490,
+        "sellingPrice": 994
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Protein_powder.jpg/500px-Protein_powder.jpg"
+    },
+    {
+      "code": "1MG-061",
+      "name": "Himalaya Nutrition 5",
+      "brandName": "Himalaya",
+      "category": "nutrition",
+      "price": {
+        "mrp": 166,
+        "sellingPrice": 126
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Protein_powder.jpg/500px-Protein_powder.jpg"
+    },
+    {
+      "code": "1MG-062",
+      "name": "Himalaya Nutrition 6",
+      "brandName": "Himalaya",
+      "category": "nutrition",
+      "price": {
+        "mrp": 497,
+        "sellingPrice": 417
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Protein_powder.jpg/500px-Protein_powder.jpg"
+    },
+    {
+      "code": "1MG-063",
+      "name": "Himalaya Nutrition 7",
+      "brandName": "Himalaya",
+      "category": "nutrition",
+      "price": {
+        "mrp": 149,
+        "sellingPrice": 91
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Protein_powder.jpg/500px-Protein_powder.jpg"
+    },
+    {
+      "code": "1MG-064",
+      "name": "1mg Sexual_wellness 1",
+      "brandName": "1mg",
+      "category": "sexual_wellness",
+      "price": {
+        "mrp": 685,
+        "sellingPrice": 573
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Condom.jpg/500px-Condom.jpg"
+    },
+    {
+      "code": "1MG-065",
+      "name": "1mg Sexual_wellness 2",
+      "brandName": "1mg",
+      "category": "sexual_wellness",
+      "price": {
+        "mrp": 1364,
+        "sellingPrice": 1191
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Condom.jpg/500px-Condom.jpg"
+    },
+    {
+      "code": "1MG-066",
+      "name": "1mg Sexual_wellness 3",
+      "brandName": "1mg",
+      "category": "sexual_wellness",
+      "price": {
+        "mrp": 1432,
+        "sellingPrice": 1074
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Condom.jpg/500px-Condom.jpg"
+    },
+    {
+      "code": "1MG-067",
+      "name": "1mg Sexual_wellness 4",
+      "brandName": "1mg",
+      "category": "sexual_wellness",
+      "price": {
+        "mrp": 1012,
+        "sellingPrice": 670
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Condom.jpg/500px-Condom.jpg"
+    },
+    {
+      "code": "1MG-068",
+      "name": "1mg Sexual_wellness 5",
+      "brandName": "1mg",
+      "category": "sexual_wellness",
+      "price": {
+        "mrp": 1312,
+        "sellingPrice": 1233
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "1 unit"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Condom.jpg/500px-Condom.jpg"
+    },
+    {
+      "code": "1MG-069",
+      "name": "1mg Sexual_wellness 6",
+      "brandName": "1mg",
+      "category": "sexual_wellness",
+      "price": {
+        "mrp": 728,
+        "sellingPrice": 595
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Condom.jpg/500px-Condom.jpg"
+    },
+    {
+      "code": "1MG-070",
+      "name": "1mg Sexual_wellness 7",
+      "brandName": "1mg",
+      "category": "sexual_wellness",
+      "price": {
+        "mrp": 1427,
+        "sellingPrice": 905
+      },
+      "specs": {
+        "prescription_required": false,
+        "pack_size": "10 tabs"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Condom.jpg/500px-Condom.jpg"
+    }
+  ]
+}

@@ -1,0 +1,1124 @@
+{
+  "products": [
+    {
+      "code": "TTN-001",
+      "name": "Titan Analog_watches 1",
+      "brandName": "Titan",
+      "category": "analog_watches",
+      "price": {
+        "mrp": 29620,
+        "sellingPrice": 23776
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Watch.jpg/500px-Watch.jpg"
+    },
+    {
+      "code": "TTN-002",
+      "name": "Titan Analog_watches 2",
+      "brandName": "Titan",
+      "category": "analog_watches",
+      "price": {
+        "mrp": 20801,
+        "sellingPrice": 19368
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Watch.jpg/500px-Watch.jpg"
+    },
+    {
+      "code": "TTN-003",
+      "name": "Titan Analog_watches 3",
+      "brandName": "Titan",
+      "category": "analog_watches",
+      "price": {
+        "mrp": 31946,
+        "sellingPrice": 25548
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Watch.jpg/500px-Watch.jpg"
+    },
+    {
+      "code": "TTN-004",
+      "name": "Titan Analog_watches 4",
+      "brandName": "Titan",
+      "category": "analog_watches",
+      "price": {
+        "mrp": 2750,
+        "sellingPrice": 2396
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Watch.jpg/500px-Watch.jpg"
+    },
+    {
+      "code": "TTN-005",
+      "name": "Titan Analog_watches 5",
+      "brandName": "Titan",
+      "category": "analog_watches",
+      "price": {
+        "mrp": 38920,
+        "sellingPrice": 27828
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Watch.jpg/500px-Watch.jpg"
+    },
+    {
+      "code": "TTN-006",
+      "name": "Titan Analog_watches 6",
+      "brandName": "Titan",
+      "category": "analog_watches",
+      "price": {
+        "mrp": 42073,
+        "sellingPrice": 31672
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Watch.jpg/500px-Watch.jpg"
+    },
+    {
+      "code": "TTN-007",
+      "name": "Titan Analog_watches 7",
+      "brandName": "Titan",
+      "category": "analog_watches",
+      "price": {
+        "mrp": 10299,
+        "sellingPrice": 6799
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Watch.jpg/500px-Watch.jpg"
+    },
+    {
+      "code": "TTN-008",
+      "name": "Fastrack Smartwatches 1",
+      "brandName": "Fastrack",
+      "category": "smartwatches",
+      "price": {
+        "mrp": 41530,
+        "sellingPrice": 39133
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Smartwatch.jpg/500px-Smartwatch.jpg"
+    },
+    {
+      "code": "TTN-009",
+      "name": "Fastrack Smartwatches 2",
+      "brandName": "Fastrack",
+      "category": "smartwatches",
+      "price": {
+        "mrp": 15163,
+        "sellingPrice": 9478
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Smartwatch.jpg/500px-Smartwatch.jpg"
+    },
+    {
+      "code": "TTN-010",
+      "name": "Fastrack Smartwatches 3",
+      "brandName": "Fastrack",
+      "category": "smartwatches",
+      "price": {
+        "mrp": 38043,
+        "sellingPrice": 29897
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Smartwatch.jpg/500px-Smartwatch.jpg"
+    },
+    {
+      "code": "TTN-011",
+      "name": "Fastrack Smartwatches 4",
+      "brandName": "Fastrack",
+      "category": "smartwatches",
+      "price": {
+        "mrp": 27070,
+        "sellingPrice": 17609
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Smartwatch.jpg/500px-Smartwatch.jpg"
+    },
+    {
+      "code": "TTN-012",
+      "name": "Fastrack Smartwatches 5",
+      "brandName": "Fastrack",
+      "category": "smartwatches",
+      "price": {
+        "mrp": 41928,
+        "sellingPrice": 39243
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Smartwatch.jpg/500px-Smartwatch.jpg"
+    },
+    {
+      "code": "TTN-013",
+      "name": "Fastrack Smartwatches 6",
+      "brandName": "Fastrack",
+      "category": "smartwatches",
+      "price": {
+        "mrp": 44014,
+        "sellingPrice": 37383
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Smartwatch.jpg/500px-Smartwatch.jpg"
+    },
+    {
+      "code": "TTN-014",
+      "name": "Fastrack Smartwatches 7",
+      "brandName": "Fastrack",
+      "category": "smartwatches",
+      "price": {
+        "mrp": 41444,
+        "sellingPrice": 35410
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Smartwatch.jpg/500px-Smartwatch.jpg"
+    },
+    {
+      "code": "TTN-015",
+      "name": "Tanishq Gold_jewelry 1",
+      "brandName": "Tanishq",
+      "category": "gold_jewelry",
+      "price": {
+        "mrp": 9333,
+        "sellingPrice": 8030
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Gold_necklace.jpg/500px-Gold_necklace.jpg"
+    },
+    {
+      "code": "TTN-016",
+      "name": "Tanishq Gold_jewelry 2",
+      "brandName": "Tanishq",
+      "category": "gold_jewelry",
+      "price": {
+        "mrp": 42799,
+        "sellingPrice": 33956
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Gold_necklace.jpg/500px-Gold_necklace.jpg"
+    },
+    {
+      "code": "TTN-017",
+      "name": "Tanishq Gold_jewelry 3",
+      "brandName": "Tanishq",
+      "category": "gold_jewelry",
+      "price": {
+        "mrp": 36678,
+        "sellingPrice": 24893
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Gold_necklace.jpg/500px-Gold_necklace.jpg"
+    },
+    {
+      "code": "TTN-018",
+      "name": "Tanishq Gold_jewelry 4",
+      "brandName": "Tanishq",
+      "category": "gold_jewelry",
+      "price": {
+        "mrp": 32151,
+        "sellingPrice": 25021
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Gold_necklace.jpg/500px-Gold_necklace.jpg"
+    },
+    {
+      "code": "TTN-019",
+      "name": "Tanishq Gold_jewelry 5",
+      "brandName": "Tanishq",
+      "category": "gold_jewelry",
+      "price": {
+        "mrp": 17142,
+        "sellingPrice": 12169
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Gold_necklace.jpg/500px-Gold_necklace.jpg"
+    },
+    {
+      "code": "TTN-020",
+      "name": "Tanishq Gold_jewelry 6",
+      "brandName": "Tanishq",
+      "category": "gold_jewelry",
+      "price": {
+        "mrp": 29964,
+        "sellingPrice": 20938
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Gold_necklace.jpg/500px-Gold_necklace.jpg"
+    },
+    {
+      "code": "TTN-021",
+      "name": "Tanishq Gold_jewelry 7",
+      "brandName": "Tanishq",
+      "category": "gold_jewelry",
+      "price": {
+        "mrp": 7289,
+        "sellingPrice": 5603
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Gold_necklace.jpg/500px-Gold_necklace.jpg"
+    },
+    {
+      "code": "TTN-022",
+      "name": "Titan Diamond_jewelry 1",
+      "brandName": "Titan",
+      "category": "diamond_jewelry",
+      "price": {
+        "mrp": 27692,
+        "sellingPrice": 24738
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Diamond_ring.jpg/500px-Diamond_ring.jpg"
+    },
+    {
+      "code": "TTN-023",
+      "name": "Titan Diamond_jewelry 2",
+      "brandName": "Titan",
+      "category": "diamond_jewelry",
+      "price": {
+        "mrp": 36956,
+        "sellingPrice": 34060
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Diamond_ring.jpg/500px-Diamond_ring.jpg"
+    },
+    {
+      "code": "TTN-024",
+      "name": "Titan Diamond_jewelry 3",
+      "brandName": "Titan",
+      "category": "diamond_jewelry",
+      "price": {
+        "mrp": 7079,
+        "sellingPrice": 5464
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Diamond_ring.jpg/500px-Diamond_ring.jpg"
+    },
+    {
+      "code": "TTN-025",
+      "name": "Titan Diamond_jewelry 4",
+      "brandName": "Titan",
+      "category": "diamond_jewelry",
+      "price": {
+        "mrp": 27675,
+        "sellingPrice": 20083
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Diamond_ring.jpg/500px-Diamond_ring.jpg"
+    },
+    {
+      "code": "TTN-026",
+      "name": "Titan Diamond_jewelry 5",
+      "brandName": "Titan",
+      "category": "diamond_jewelry",
+      "price": {
+        "mrp": 28393,
+        "sellingPrice": 24363
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Diamond_ring.jpg/500px-Diamond_ring.jpg"
+    },
+    {
+      "code": "TTN-027",
+      "name": "Titan Diamond_jewelry 6",
+      "brandName": "Titan",
+      "category": "diamond_jewelry",
+      "price": {
+        "mrp": 8536,
+        "sellingPrice": 7752
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Diamond_ring.jpg/500px-Diamond_ring.jpg"
+    },
+    {
+      "code": "TTN-028",
+      "name": "Titan Diamond_jewelry 7",
+      "brandName": "Titan",
+      "category": "diamond_jewelry",
+      "price": {
+        "mrp": 1965,
+        "sellingPrice": 1609
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Diamond_ring.jpg/500px-Diamond_ring.jpg"
+    },
+    {
+      "code": "TTN-029",
+      "name": "Fastrack Sunglasses 1",
+      "brandName": "Fastrack",
+      "category": "sunglasses",
+      "price": {
+        "mrp": 41002,
+        "sellingPrice": 24945
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sunglasses.jpg/500px-Sunglasses.jpg"
+    },
+    {
+      "code": "TTN-030",
+      "name": "Fastrack Sunglasses 2",
+      "brandName": "Fastrack",
+      "category": "sunglasses",
+      "price": {
+        "mrp": 38106,
+        "sellingPrice": 30860
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sunglasses.jpg/500px-Sunglasses.jpg"
+    },
+    {
+      "code": "TTN-031",
+      "name": "Fastrack Sunglasses 3",
+      "brandName": "Fastrack",
+      "category": "sunglasses",
+      "price": {
+        "mrp": 23417,
+        "sellingPrice": 21608
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sunglasses.jpg/500px-Sunglasses.jpg"
+    },
+    {
+      "code": "TTN-032",
+      "name": "Fastrack Sunglasses 4",
+      "brandName": "Fastrack",
+      "category": "sunglasses",
+      "price": {
+        "mrp": 41574,
+        "sellingPrice": 30412
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sunglasses.jpg/500px-Sunglasses.jpg"
+    },
+    {
+      "code": "TTN-033",
+      "name": "Fastrack Sunglasses 5",
+      "brandName": "Fastrack",
+      "category": "sunglasses",
+      "price": {
+        "mrp": 4750,
+        "sellingPrice": 4086
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sunglasses.jpg/500px-Sunglasses.jpg"
+    },
+    {
+      "code": "TTN-034",
+      "name": "Fastrack Sunglasses 6",
+      "brandName": "Fastrack",
+      "category": "sunglasses",
+      "price": {
+        "mrp": 35432,
+        "sellingPrice": 24625
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sunglasses.jpg/500px-Sunglasses.jpg"
+    },
+    {
+      "code": "TTN-035",
+      "name": "Fastrack Sunglasses 7",
+      "brandName": "Fastrack",
+      "category": "sunglasses",
+      "price": {
+        "mrp": 44857,
+        "sellingPrice": 40818
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sunglasses.jpg/500px-Sunglasses.jpg"
+    },
+    {
+      "code": "TTN-036",
+      "name": "Tanishq Eyeglasses 1",
+      "brandName": "Tanishq",
+      "category": "eyeglasses",
+      "price": {
+        "mrp": 24624,
+        "sellingPrice": 17804
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Glasses.jpg/500px-Glasses.jpg"
+    },
+    {
+      "code": "TTN-037",
+      "name": "Tanishq Eyeglasses 2",
+      "brandName": "Tanishq",
+      "category": "eyeglasses",
+      "price": {
+        "mrp": 37067,
+        "sellingPrice": 35203
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Glasses.jpg/500px-Glasses.jpg"
+    },
+    {
+      "code": "TTN-038",
+      "name": "Tanishq Eyeglasses 3",
+      "brandName": "Tanishq",
+      "category": "eyeglasses",
+      "price": {
+        "mrp": 34569,
+        "sellingPrice": 22661
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Glasses.jpg/500px-Glasses.jpg"
+    },
+    {
+      "code": "TTN-039",
+      "name": "Tanishq Eyeglasses 4",
+      "brandName": "Tanishq",
+      "category": "eyeglasses",
+      "price": {
+        "mrp": 6356,
+        "sellingPrice": 4247
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Glasses.jpg/500px-Glasses.jpg"
+    },
+    {
+      "code": "TTN-040",
+      "name": "Tanishq Eyeglasses 5",
+      "brandName": "Tanishq",
+      "category": "eyeglasses",
+      "price": {
+        "mrp": 44193,
+        "sellingPrice": 34444
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Glasses.jpg/500px-Glasses.jpg"
+    },
+    {
+      "code": "TTN-041",
+      "name": "Tanishq Eyeglasses 6",
+      "brandName": "Tanishq",
+      "category": "eyeglasses",
+      "price": {
+        "mrp": 29600,
+        "sellingPrice": 21106
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Glasses.jpg/500px-Glasses.jpg"
+    },
+    {
+      "code": "TTN-042",
+      "name": "Tanishq Eyeglasses 7",
+      "brandName": "Tanishq",
+      "category": "eyeglasses",
+      "price": {
+        "mrp": 41660,
+        "sellingPrice": 26415
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Glasses.jpg/500px-Glasses.jpg"
+    },
+    {
+      "code": "TTN-043",
+      "name": "Titan Perfumes 1",
+      "brandName": "Titan",
+      "category": "perfumes",
+      "price": {
+        "mrp": 33560,
+        "sellingPrice": 30027
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Perfume_bottle.jpg/500px-Perfume_bottle.jpg"
+    },
+    {
+      "code": "TTN-044",
+      "name": "Titan Perfumes 2",
+      "brandName": "Titan",
+      "category": "perfumes",
+      "price": {
+        "mrp": 16013,
+        "sellingPrice": 13151
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Perfume_bottle.jpg/500px-Perfume_bottle.jpg"
+    },
+    {
+      "code": "TTN-045",
+      "name": "Titan Perfumes 3",
+      "brandName": "Titan",
+      "category": "perfumes",
+      "price": {
+        "mrp": 5454,
+        "sellingPrice": 4773
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Perfume_bottle.jpg/500px-Perfume_bottle.jpg"
+    },
+    {
+      "code": "TTN-046",
+      "name": "Titan Perfumes 4",
+      "brandName": "Titan",
+      "category": "perfumes",
+      "price": {
+        "mrp": 40487,
+        "sellingPrice": 34515
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Perfume_bottle.jpg/500px-Perfume_bottle.jpg"
+    },
+    {
+      "code": "TTN-047",
+      "name": "Titan Perfumes 5",
+      "brandName": "Titan",
+      "category": "perfumes",
+      "price": {
+        "mrp": 27605,
+        "sellingPrice": 24004
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Perfume_bottle.jpg/500px-Perfume_bottle.jpg"
+    },
+    {
+      "code": "TTN-048",
+      "name": "Titan Perfumes 6",
+      "brandName": "Titan",
+      "category": "perfumes",
+      "price": {
+        "mrp": 40537,
+        "sellingPrice": 29686
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Perfume_bottle.jpg/500px-Perfume_bottle.jpg"
+    },
+    {
+      "code": "TTN-049",
+      "name": "Titan Perfumes 7",
+      "brandName": "Titan",
+      "category": "perfumes",
+      "price": {
+        "mrp": 26069,
+        "sellingPrice": 19685
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Perfume_bottle.jpg/500px-Perfume_bottle.jpg"
+    },
+    {
+      "code": "TTN-050",
+      "name": "Fastrack Wall_clocks 1",
+      "brandName": "Fastrack",
+      "category": "wall_clocks",
+      "price": {
+        "mrp": 2745,
+        "sellingPrice": 2107
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Wall_clock.jpg/500px-Wall_clock.jpg"
+    },
+    {
+      "code": "TTN-051",
+      "name": "Fastrack Wall_clocks 2",
+      "brandName": "Fastrack",
+      "category": "wall_clocks",
+      "price": {
+        "mrp": 25579,
+        "sellingPrice": 15833
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Wall_clock.jpg/500px-Wall_clock.jpg"
+    },
+    {
+      "code": "TTN-052",
+      "name": "Fastrack Wall_clocks 3",
+      "brandName": "Fastrack",
+      "category": "wall_clocks",
+      "price": {
+        "mrp": 8162,
+        "sellingPrice": 5671
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Wall_clock.jpg/500px-Wall_clock.jpg"
+    },
+    {
+      "code": "TTN-053",
+      "name": "Fastrack Wall_clocks 4",
+      "brandName": "Fastrack",
+      "category": "wall_clocks",
+      "price": {
+        "mrp": 2329,
+        "sellingPrice": 1952
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Wall_clock.jpg/500px-Wall_clock.jpg"
+    },
+    {
+      "code": "TTN-054",
+      "name": "Fastrack Wall_clocks 5",
+      "brandName": "Fastrack",
+      "category": "wall_clocks",
+      "price": {
+        "mrp": 2468,
+        "sellingPrice": 1815
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Wall_clock.jpg/500px-Wall_clock.jpg"
+    },
+    {
+      "code": "TTN-055",
+      "name": "Fastrack Wall_clocks 6",
+      "brandName": "Fastrack",
+      "category": "wall_clocks",
+      "price": {
+        "mrp": 9894,
+        "sellingPrice": 8805
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Wall_clock.jpg/500px-Wall_clock.jpg"
+    },
+    {
+      "code": "TTN-056",
+      "name": "Fastrack Wall_clocks 7",
+      "brandName": "Fastrack",
+      "category": "wall_clocks",
+      "price": {
+        "mrp": 22997,
+        "sellingPrice": 15678
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Wall_clock.jpg/500px-Wall_clock.jpg"
+    },
+    {
+      "code": "TTN-057",
+      "name": "Tanishq Belts 1",
+      "brandName": "Tanishq",
+      "category": "belts",
+      "price": {
+        "mrp": 2944,
+        "sellingPrice": 1981
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Leather_belt.jpg/500px-Leather_belt.jpg"
+    },
+    {
+      "code": "TTN-058",
+      "name": "Tanishq Belts 2",
+      "brandName": "Tanishq",
+      "category": "belts",
+      "price": {
+        "mrp": 28153,
+        "sellingPrice": 26473
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Leather_belt.jpg/500px-Leather_belt.jpg"
+    },
+    {
+      "code": "TTN-059",
+      "name": "Tanishq Belts 3",
+      "brandName": "Tanishq",
+      "category": "belts",
+      "price": {
+        "mrp": 7763,
+        "sellingPrice": 4696
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Leather_belt.jpg/500px-Leather_belt.jpg"
+    },
+    {
+      "code": "TTN-060",
+      "name": "Tanishq Belts 4",
+      "brandName": "Tanishq",
+      "category": "belts",
+      "price": {
+        "mrp": 19988,
+        "sellingPrice": 15070
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Leather_belt.jpg/500px-Leather_belt.jpg"
+    },
+    {
+      "code": "TTN-061",
+      "name": "Tanishq Belts 5",
+      "brandName": "Tanishq",
+      "category": "belts",
+      "price": {
+        "mrp": 10466,
+        "sellingPrice": 9651
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Leather_belt.jpg/500px-Leather_belt.jpg"
+    },
+    {
+      "code": "TTN-062",
+      "name": "Tanishq Belts 6",
+      "brandName": "Tanishq",
+      "category": "belts",
+      "price": {
+        "mrp": 44069,
+        "sellingPrice": 35339
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Leather_belt.jpg/500px-Leather_belt.jpg"
+    },
+    {
+      "code": "TTN-063",
+      "name": "Tanishq Belts 7",
+      "brandName": "Tanishq",
+      "category": "belts",
+      "price": {
+        "mrp": 16525,
+        "sellingPrice": 14002
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Leather_belt.jpg/500px-Leather_belt.jpg"
+    },
+    {
+      "code": "TTN-064",
+      "name": "Titan Wallets 1",
+      "brandName": "Titan",
+      "category": "wallets",
+      "price": {
+        "mrp": 23029,
+        "sellingPrice": 14851
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Wallet.jpg/500px-Wallet.jpg"
+    },
+    {
+      "code": "TTN-065",
+      "name": "Titan Wallets 2",
+      "brandName": "Titan",
+      "category": "wallets",
+      "price": {
+        "mrp": 22382,
+        "sellingPrice": 18827
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Wallet.jpg/500px-Wallet.jpg"
+    },
+    {
+      "code": "TTN-066",
+      "name": "Titan Wallets 3",
+      "brandName": "Titan",
+      "category": "wallets",
+      "price": {
+        "mrp": 21227,
+        "sellingPrice": 13750
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Wallet.jpg/500px-Wallet.jpg"
+    },
+    {
+      "code": "TTN-067",
+      "name": "Titan Wallets 4",
+      "brandName": "Titan",
+      "category": "wallets",
+      "price": {
+        "mrp": 38873,
+        "sellingPrice": 25234
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Wallet.jpg/500px-Wallet.jpg"
+    },
+    {
+      "code": "TTN-068",
+      "name": "Titan Wallets 5",
+      "brandName": "Titan",
+      "category": "wallets",
+      "price": {
+        "mrp": 25180,
+        "sellingPrice": 16068
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Wallet.jpg/500px-Wallet.jpg"
+    },
+    {
+      "code": "TTN-069",
+      "name": "Titan Wallets 6",
+      "brandName": "Titan",
+      "category": "wallets",
+      "price": {
+        "mrp": 40714,
+        "sellingPrice": 36762
+      },
+      "specs": {
+        "strapMaterial": "Leather",
+        "dialColor": "White"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Wallet.jpg/500px-Wallet.jpg"
+    },
+    {
+      "code": "TTN-070",
+      "name": "Titan Wallets 7",
+      "brandName": "Titan",
+      "category": "wallets",
+      "price": {
+        "mrp": 5223,
+        "sellingPrice": 3272
+      },
+      "specs": {
+        "strapMaterial": "Metal",
+        "dialColor": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Wallet.jpg/500px-Wallet.jpg"
+    }
+  ]
+}

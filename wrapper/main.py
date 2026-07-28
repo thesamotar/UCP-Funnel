@@ -7,6 +7,8 @@ checkout), with shared in-memory state in wrapper/state.py; this module just
 assembles them and mounts the frontend.
 Run: uvicorn wrapper.main:app --port 8000
 """
+from __future__ import annotations
+
 from contextlib import asynccontextmanager
 from pathlib import Path
 

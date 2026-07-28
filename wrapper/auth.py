@@ -9,6 +9,8 @@ Verification key: prefer the project's legacy HS256 secret (SUPABASE_JWT_SECRET)
 when set; otherwise fetch the project's JWKS once and verify the asymmetric
 signature (new Supabase projects sign with ES256/RS256 by default).
 """
+from __future__ import annotations
+
 import os
 from functools import lru_cache
 

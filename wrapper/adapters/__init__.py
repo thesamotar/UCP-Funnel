@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from .base import RetailerAdapter, RetailerError, Unsupported
 from .registry import REGISTRY, load_registry
 

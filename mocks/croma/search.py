@@ -1,4 +1,6 @@
 """Croma product search + detail (REST style: GET /products/search)."""
+from __future__ import annotations
+
 import re
 
 from fastapi import APIRouter

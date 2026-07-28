@@ -6,6 +6,8 @@ startup into module-level structures the routers share; every cart/order
 mutation is written through to Supabase so native state survives free-tier
 cold starts.
 """
+from __future__ import annotations
+
 from datetime import datetime, timezone
 
 from wrapper.db import db

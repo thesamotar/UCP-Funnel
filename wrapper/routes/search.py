@@ -4,6 +4,8 @@ returned items so later cart ops can resolve ids without re-querying.
 Guardrail: the whole pipeline runs under one deadline (SEARCH_DEADLINE_S,
 default 100s — enough for an LLM web-search enhance pass, never infinite).
 """
+from __future__ import annotations
+
 import asyncio
 import os
 

@@ -10,6 +10,8 @@ Attaching a new API to the node (digieca, ashiyana, ...) means:
 Search-only backends (e.g. a listings API) are legal: leave the commerce
 methods unimplemented and the cart routes return 501 for their items.
 """
+from __future__ import annotations
+
 import os
 
 import httpx

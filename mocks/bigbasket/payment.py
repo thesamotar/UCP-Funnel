@@ -1,4 +1,6 @@
 """BigBasket payment: charge a placed order and confirm it."""
+from __future__ import annotations
+
 import uuid
 
 from fastapi import APIRouter

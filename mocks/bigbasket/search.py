@@ -1,4 +1,6 @@
 """BigBasket product search + detail (RPC style: POST product.search)."""
+from __future__ import annotations
+
 from fastapi import APIRouter
 from pydantic import BaseModel
 

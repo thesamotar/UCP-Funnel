@@ -4,6 +4,8 @@ Hands the browser the Supabase project URL + anon (publishable) key so
 supabase-js can run login, and the model name for the header chip. No LLM
 keys ever leave the server — chat goes through POST /api/chat.
 """
+from __future__ import annotations
+
 import os
 
 from fastapi import APIRouter

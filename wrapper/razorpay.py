@@ -6,6 +6,8 @@ total; the frontend renders it as a UPI QR and polls until Razorpay reports
 never commit live keys). No webhooks: status is polled via GET, which works
 locally without a public URL.
 """
+from __future__ import annotations
+
 import asyncio
 import base64
 import os

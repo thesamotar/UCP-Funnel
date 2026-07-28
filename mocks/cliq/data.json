@@ -1,0 +1,1124 @@
+{
+  "products": [
+    {
+      "code": "CLQ-001",
+      "name": "Apple Smartphones 1",
+      "brandName": "Apple",
+      "category": "smartphones",
+      "price": {
+        "mrp": 29892,
+        "sellingPrice": 26035
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Blackview_A60_Smartphone_Android_mobile_phone_front_face_logged_in_screen.jpg/500px-Blackview_A60_Smartphone_Android_mobile_phone_front_face_logged_in_screen.jpg"
+    },
+    {
+      "code": "CLQ-002",
+      "name": "Apple Smartphones 2",
+      "brandName": "Apple",
+      "category": "smartphones",
+      "price": {
+        "mrp": 13025,
+        "sellingPrice": 11908
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Blackview_A60_Smartphone_Android_mobile_phone_front_face_logged_in_screen.jpg/500px-Blackview_A60_Smartphone_Android_mobile_phone_front_face_logged_in_screen.jpg"
+    },
+    {
+      "code": "CLQ-003",
+      "name": "Apple Smartphones 3",
+      "brandName": "Apple",
+      "category": "smartphones",
+      "price": {
+        "mrp": 47027,
+        "sellingPrice": 32643
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Blackview_A60_Smartphone_Android_mobile_phone_front_face_logged_in_screen.jpg/500px-Blackview_A60_Smartphone_Android_mobile_phone_front_face_logged_in_screen.jpg"
+    },
+    {
+      "code": "CLQ-004",
+      "name": "Apple Smartphones 4",
+      "brandName": "Apple",
+      "category": "smartphones",
+      "price": {
+        "mrp": 23185,
+        "sellingPrice": 20096
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Blackview_A60_Smartphone_Android_mobile_phone_front_face_logged_in_screen.jpg/500px-Blackview_A60_Smartphone_Android_mobile_phone_front_face_logged_in_screen.jpg"
+    },
+    {
+      "code": "CLQ-005",
+      "name": "Apple Smartphones 5",
+      "brandName": "Apple",
+      "category": "smartphones",
+      "price": {
+        "mrp": 29018,
+        "sellingPrice": 20130
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Blackview_A60_Smartphone_Android_mobile_phone_front_face_logged_in_screen.jpg/500px-Blackview_A60_Smartphone_Android_mobile_phone_front_face_logged_in_screen.jpg"
+    },
+    {
+      "code": "CLQ-006",
+      "name": "Apple Smartphones 6",
+      "brandName": "Apple",
+      "category": "smartphones",
+      "price": {
+        "mrp": 37761,
+        "sellingPrice": 35509
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Blackview_A60_Smartphone_Android_mobile_phone_front_face_logged_in_screen.jpg/500px-Blackview_A60_Smartphone_Android_mobile_phone_front_face_logged_in_screen.jpg"
+    },
+    {
+      "code": "CLQ-007",
+      "name": "Apple Smartphones 7",
+      "brandName": "Apple",
+      "category": "smartphones",
+      "price": {
+        "mrp": 49841,
+        "sellingPrice": 47191
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Blackview_A60_Smartphone_Android_mobile_phone_front_face_logged_in_screen.jpg/500px-Blackview_A60_Smartphone_Android_mobile_phone_front_face_logged_in_screen.jpg"
+    },
+    {
+      "code": "CLQ-008",
+      "name": "Samsung Laptops 1",
+      "brandName": "Samsung",
+      "category": "laptops",
+      "price": {
+        "mrp": 42142,
+        "sellingPrice": 33522
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/IBM_Thinkpad_R51.jpg/500px-IBM_Thinkpad_R51.jpg"
+    },
+    {
+      "code": "CLQ-009",
+      "name": "Samsung Laptops 2",
+      "brandName": "Samsung",
+      "category": "laptops",
+      "price": {
+        "mrp": 8034,
+        "sellingPrice": 6389
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/IBM_Thinkpad_R51.jpg/500px-IBM_Thinkpad_R51.jpg"
+    },
+    {
+      "code": "CLQ-010",
+      "name": "Samsung Laptops 3",
+      "brandName": "Samsung",
+      "category": "laptops",
+      "price": {
+        "mrp": 7844,
+        "sellingPrice": 6687
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/IBM_Thinkpad_R51.jpg/500px-IBM_Thinkpad_R51.jpg"
+    },
+    {
+      "code": "CLQ-011",
+      "name": "Samsung Laptops 4",
+      "brandName": "Samsung",
+      "category": "laptops",
+      "price": {
+        "mrp": 32184,
+        "sellingPrice": 26443
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/IBM_Thinkpad_R51.jpg/500px-IBM_Thinkpad_R51.jpg"
+    },
+    {
+      "code": "CLQ-012",
+      "name": "Samsung Laptops 5",
+      "brandName": "Samsung",
+      "category": "laptops",
+      "price": {
+        "mrp": 17328,
+        "sellingPrice": 13960
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/IBM_Thinkpad_R51.jpg/500px-IBM_Thinkpad_R51.jpg"
+    },
+    {
+      "code": "CLQ-013",
+      "name": "Samsung Laptops 6",
+      "brandName": "Samsung",
+      "category": "laptops",
+      "price": {
+        "mrp": 49241,
+        "sellingPrice": 39656
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/IBM_Thinkpad_R51.jpg/500px-IBM_Thinkpad_R51.jpg"
+    },
+    {
+      "code": "CLQ-014",
+      "name": "Samsung Laptops 7",
+      "brandName": "Samsung",
+      "category": "laptops",
+      "price": {
+        "mrp": 46817,
+        "sellingPrice": 39268
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/IBM_Thinkpad_R51.jpg/500px-IBM_Thinkpad_R51.jpg"
+    },
+    {
+      "code": "CLQ-015",
+      "name": "Versace Watches 1",
+      "brandName": "Versace",
+      "category": "watches",
+      "price": {
+        "mrp": 11570,
+        "sellingPrice": 8322
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Watch.jpg/500px-Watch.jpg"
+    },
+    {
+      "code": "CLQ-016",
+      "name": "Versace Watches 2",
+      "brandName": "Versace",
+      "category": "watches",
+      "price": {
+        "mrp": 46537,
+        "sellingPrice": 36135
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Watch.jpg/500px-Watch.jpg"
+    },
+    {
+      "code": "CLQ-017",
+      "name": "Versace Watches 3",
+      "brandName": "Versace",
+      "category": "watches",
+      "price": {
+        "mrp": 28394,
+        "sellingPrice": 18671
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Watch.jpg/500px-Watch.jpg"
+    },
+    {
+      "code": "CLQ-018",
+      "name": "Versace Watches 4",
+      "brandName": "Versace",
+      "category": "watches",
+      "price": {
+        "mrp": 4092,
+        "sellingPrice": 3637
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Watch.jpg/500px-Watch.jpg"
+    },
+    {
+      "code": "CLQ-019",
+      "name": "Versace Watches 5",
+      "brandName": "Versace",
+      "category": "watches",
+      "price": {
+        "mrp": 23588,
+        "sellingPrice": 19895
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Watch.jpg/500px-Watch.jpg"
+    },
+    {
+      "code": "CLQ-020",
+      "name": "Versace Watches 6",
+      "brandName": "Versace",
+      "category": "watches",
+      "price": {
+        "mrp": 7758,
+        "sellingPrice": 5699
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Watch.jpg/500px-Watch.jpg"
+    },
+    {
+      "code": "CLQ-021",
+      "name": "Versace Watches 7",
+      "brandName": "Versace",
+      "category": "watches",
+      "price": {
+        "mrp": 3672,
+        "sellingPrice": 2706
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Watch.jpg/500px-Watch.jpg"
+    },
+    {
+      "code": "CLQ-022",
+      "name": "Biba Shoes 1",
+      "brandName": "Biba",
+      "category": "shoes",
+      "price": {
+        "mrp": 38865,
+        "sellingPrice": 33337
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Shoes.jpg/500px-Shoes.jpg"
+    },
+    {
+      "code": "CLQ-023",
+      "name": "Biba Shoes 2",
+      "brandName": "Biba",
+      "category": "shoes",
+      "price": {
+        "mrp": 38881,
+        "sellingPrice": 36743
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Shoes.jpg/500px-Shoes.jpg"
+    },
+    {
+      "code": "CLQ-024",
+      "name": "Biba Shoes 3",
+      "brandName": "Biba",
+      "category": "shoes",
+      "price": {
+        "mrp": 19765,
+        "sellingPrice": 12244
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Shoes.jpg/500px-Shoes.jpg"
+    },
+    {
+      "code": "CLQ-025",
+      "name": "Biba Shoes 4",
+      "brandName": "Biba",
+      "category": "shoes",
+      "price": {
+        "mrp": 44728,
+        "sellingPrice": 27608
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Shoes.jpg/500px-Shoes.jpg"
+    },
+    {
+      "code": "CLQ-026",
+      "name": "Biba Shoes 5",
+      "brandName": "Biba",
+      "category": "shoes",
+      "price": {
+        "mrp": 20970,
+        "sellingPrice": 18230
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Shoes.jpg/500px-Shoes.jpg"
+    },
+    {
+      "code": "CLQ-027",
+      "name": "Biba Shoes 6",
+      "brandName": "Biba",
+      "category": "shoes",
+      "price": {
+        "mrp": 28887,
+        "sellingPrice": 25462
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Shoes.jpg/500px-Shoes.jpg"
+    },
+    {
+      "code": "CLQ-028",
+      "name": "Biba Shoes 7",
+      "brandName": "Biba",
+      "category": "shoes",
+      "price": {
+        "mrp": 22422,
+        "sellingPrice": 18747
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Shoes.jpg/500px-Shoes.jpg"
+    },
+    {
+      "code": "CLQ-029",
+      "name": "Levis Fragrances 1",
+      "brandName": "Levis",
+      "category": "fragrances",
+      "price": {
+        "mrp": 3369,
+        "sellingPrice": 2841
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Perfume_bottle.jpg/500px-Perfume_bottle.jpg"
+    },
+    {
+      "code": "CLQ-030",
+      "name": "Levis Fragrances 2",
+      "brandName": "Levis",
+      "category": "fragrances",
+      "price": {
+        "mrp": 28670,
+        "sellingPrice": 24481
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Perfume_bottle.jpg/500px-Perfume_bottle.jpg"
+    },
+    {
+      "code": "CLQ-031",
+      "name": "Levis Fragrances 3",
+      "brandName": "Levis",
+      "category": "fragrances",
+      "price": {
+        "mrp": 14672,
+        "sellingPrice": 11323
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Perfume_bottle.jpg/500px-Perfume_bottle.jpg"
+    },
+    {
+      "code": "CLQ-032",
+      "name": "Levis Fragrances 4",
+      "brandName": "Levis",
+      "category": "fragrances",
+      "price": {
+        "mrp": 28133,
+        "sellingPrice": 22373
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Perfume_bottle.jpg/500px-Perfume_bottle.jpg"
+    },
+    {
+      "code": "CLQ-033",
+      "name": "Levis Fragrances 5",
+      "brandName": "Levis",
+      "category": "fragrances",
+      "price": {
+        "mrp": 25903,
+        "sellingPrice": 17350
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Perfume_bottle.jpg/500px-Perfume_bottle.jpg"
+    },
+    {
+      "code": "CLQ-034",
+      "name": "Levis Fragrances 6",
+      "brandName": "Levis",
+      "category": "fragrances",
+      "price": {
+        "mrp": 32560,
+        "sellingPrice": 25718
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Perfume_bottle.jpg/500px-Perfume_bottle.jpg"
+    },
+    {
+      "code": "CLQ-035",
+      "name": "Levis Fragrances 7",
+      "brandName": "Levis",
+      "category": "fragrances",
+      "price": {
+        "mrp": 28059,
+        "sellingPrice": 21807
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Perfume_bottle.jpg/500px-Perfume_bottle.jpg"
+    },
+    {
+      "code": "CLQ-036",
+      "name": "Apple Handbags 1",
+      "brandName": "Apple",
+      "category": "handbags",
+      "price": {
+        "mrp": 10136,
+        "sellingPrice": 6653
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Handbag.jpg/500px-Handbag.jpg"
+    },
+    {
+      "code": "CLQ-037",
+      "name": "Apple Handbags 2",
+      "brandName": "Apple",
+      "category": "handbags",
+      "price": {
+        "mrp": 48932,
+        "sellingPrice": 34411
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Handbag.jpg/500px-Handbag.jpg"
+    },
+    {
+      "code": "CLQ-038",
+      "name": "Apple Handbags 3",
+      "brandName": "Apple",
+      "category": "handbags",
+      "price": {
+        "mrp": 7720,
+        "sellingPrice": 5308
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Handbag.jpg/500px-Handbag.jpg"
+    },
+    {
+      "code": "CLQ-039",
+      "name": "Apple Handbags 4",
+      "brandName": "Apple",
+      "category": "handbags",
+      "price": {
+        "mrp": 32538,
+        "sellingPrice": 26352
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Handbag.jpg/500px-Handbag.jpg"
+    },
+    {
+      "code": "CLQ-040",
+      "name": "Apple Handbags 5",
+      "brandName": "Apple",
+      "category": "handbags",
+      "price": {
+        "mrp": 21847,
+        "sellingPrice": 13243
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Handbag.jpg/500px-Handbag.jpg"
+    },
+    {
+      "code": "CLQ-041",
+      "name": "Apple Handbags 6",
+      "brandName": "Apple",
+      "category": "handbags",
+      "price": {
+        "mrp": 34350,
+        "sellingPrice": 24159
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Handbag.jpg/500px-Handbag.jpg"
+    },
+    {
+      "code": "CLQ-042",
+      "name": "Apple Handbags 7",
+      "brandName": "Apple",
+      "category": "handbags",
+      "price": {
+        "mrp": 32129,
+        "sellingPrice": 25593
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Handbag.jpg/500px-Handbag.jpg"
+    },
+    {
+      "code": "CLQ-043",
+      "name": "Samsung Sunglasses 1",
+      "brandName": "Samsung",
+      "category": "sunglasses",
+      "price": {
+        "mrp": 41041,
+        "sellingPrice": 26625
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sunglasses.jpg/500px-Sunglasses.jpg"
+    },
+    {
+      "code": "CLQ-044",
+      "name": "Samsung Sunglasses 2",
+      "brandName": "Samsung",
+      "category": "sunglasses",
+      "price": {
+        "mrp": 27622,
+        "sellingPrice": 21185
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sunglasses.jpg/500px-Sunglasses.jpg"
+    },
+    {
+      "code": "CLQ-045",
+      "name": "Samsung Sunglasses 3",
+      "brandName": "Samsung",
+      "category": "sunglasses",
+      "price": {
+        "mrp": 2166,
+        "sellingPrice": 1581
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sunglasses.jpg/500px-Sunglasses.jpg"
+    },
+    {
+      "code": "CLQ-046",
+      "name": "Samsung Sunglasses 4",
+      "brandName": "Samsung",
+      "category": "sunglasses",
+      "price": {
+        "mrp": 41865,
+        "sellingPrice": 33870
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sunglasses.jpg/500px-Sunglasses.jpg"
+    },
+    {
+      "code": "CLQ-047",
+      "name": "Samsung Sunglasses 5",
+      "brandName": "Samsung",
+      "category": "sunglasses",
+      "price": {
+        "mrp": 19354,
+        "sellingPrice": 17459
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sunglasses.jpg/500px-Sunglasses.jpg"
+    },
+    {
+      "code": "CLQ-048",
+      "name": "Samsung Sunglasses 6",
+      "brandName": "Samsung",
+      "category": "sunglasses",
+      "price": {
+        "mrp": 31235,
+        "sellingPrice": 19226
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sunglasses.jpg/500px-Sunglasses.jpg"
+    },
+    {
+      "code": "CLQ-049",
+      "name": "Samsung Sunglasses 7",
+      "brandName": "Samsung",
+      "category": "sunglasses",
+      "price": {
+        "mrp": 24576,
+        "sellingPrice": 15530
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sunglasses.jpg/500px-Sunglasses.jpg"
+    },
+    {
+      "code": "CLQ-050",
+      "name": "Versace Grooming 1",
+      "brandName": "Versace",
+      "category": "grooming",
+      "price": {
+        "mrp": 39243,
+        "sellingPrice": 35382
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Shaving_brush.jpg/500px-Shaving_brush.jpg"
+    },
+    {
+      "code": "CLQ-051",
+      "name": "Versace Grooming 2",
+      "brandName": "Versace",
+      "category": "grooming",
+      "price": {
+        "mrp": 3957,
+        "sellingPrice": 3188
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Shaving_brush.jpg/500px-Shaving_brush.jpg"
+    },
+    {
+      "code": "CLQ-052",
+      "name": "Versace Grooming 3",
+      "brandName": "Versace",
+      "category": "grooming",
+      "price": {
+        "mrp": 35401,
+        "sellingPrice": 26248
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Shaving_brush.jpg/500px-Shaving_brush.jpg"
+    },
+    {
+      "code": "CLQ-053",
+      "name": "Versace Grooming 4",
+      "brandName": "Versace",
+      "category": "grooming",
+      "price": {
+        "mrp": 28844,
+        "sellingPrice": 26971
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Shaving_brush.jpg/500px-Shaving_brush.jpg"
+    },
+    {
+      "code": "CLQ-054",
+      "name": "Versace Grooming 5",
+      "brandName": "Versace",
+      "category": "grooming",
+      "price": {
+        "mrp": 44304,
+        "sellingPrice": 36535
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Shaving_brush.jpg/500px-Shaving_brush.jpg"
+    },
+    {
+      "code": "CLQ-055",
+      "name": "Versace Grooming 6",
+      "brandName": "Versace",
+      "category": "grooming",
+      "price": {
+        "mrp": 18512,
+        "sellingPrice": 14147
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Shaving_brush.jpg/500px-Shaving_brush.jpg"
+    },
+    {
+      "code": "CLQ-056",
+      "name": "Versace Grooming 7",
+      "brandName": "Versace",
+      "category": "grooming",
+      "price": {
+        "mrp": 5990,
+        "sellingPrice": 5652
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Shaving_brush.jpg/500px-Shaving_brush.jpg"
+    },
+    {
+      "code": "CLQ-057",
+      "name": "Biba Ethnicwear 1",
+      "brandName": "Biba",
+      "category": "ethnicwear",
+      "price": {
+        "mrp": 37798,
+        "sellingPrice": 31162
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Saree.jpg/500px-Saree.jpg"
+    },
+    {
+      "code": "CLQ-058",
+      "name": "Biba Ethnicwear 2",
+      "brandName": "Biba",
+      "category": "ethnicwear",
+      "price": {
+        "mrp": 34378,
+        "sellingPrice": 28081
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Saree.jpg/500px-Saree.jpg"
+    },
+    {
+      "code": "CLQ-059",
+      "name": "Biba Ethnicwear 3",
+      "brandName": "Biba",
+      "category": "ethnicwear",
+      "price": {
+        "mrp": 27991,
+        "sellingPrice": 19770
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Saree.jpg/500px-Saree.jpg"
+    },
+    {
+      "code": "CLQ-060",
+      "name": "Biba Ethnicwear 4",
+      "brandName": "Biba",
+      "category": "ethnicwear",
+      "price": {
+        "mrp": 47851,
+        "sellingPrice": 39607
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Saree.jpg/500px-Saree.jpg"
+    },
+    {
+      "code": "CLQ-061",
+      "name": "Biba Ethnicwear 5",
+      "brandName": "Biba",
+      "category": "ethnicwear",
+      "price": {
+        "mrp": 11903,
+        "sellingPrice": 8496
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Saree.jpg/500px-Saree.jpg"
+    },
+    {
+      "code": "CLQ-062",
+      "name": "Biba Ethnicwear 6",
+      "brandName": "Biba",
+      "category": "ethnicwear",
+      "price": {
+        "mrp": 29358,
+        "sellingPrice": 23683
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Saree.jpg/500px-Saree.jpg"
+    },
+    {
+      "code": "CLQ-063",
+      "name": "Biba Ethnicwear 7",
+      "brandName": "Biba",
+      "category": "ethnicwear",
+      "price": {
+        "mrp": 27936,
+        "sellingPrice": 17101
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Saree.jpg/500px-Saree.jpg"
+    },
+    {
+      "code": "CLQ-064",
+      "name": "Levis Westernwear 1",
+      "brandName": "Levis",
+      "category": "westernwear",
+      "price": {
+        "mrp": 19112,
+        "sellingPrice": 11915
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blue_Tshirt.jpg/500px-Blue_Tshirt.jpg"
+    },
+    {
+      "code": "CLQ-065",
+      "name": "Levis Westernwear 2",
+      "brandName": "Levis",
+      "category": "westernwear",
+      "price": {
+        "mrp": 44287,
+        "sellingPrice": 32555
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blue_Tshirt.jpg/500px-Blue_Tshirt.jpg"
+    },
+    {
+      "code": "CLQ-066",
+      "name": "Levis Westernwear 3",
+      "brandName": "Levis",
+      "category": "westernwear",
+      "price": {
+        "mrp": 26753,
+        "sellingPrice": 21061
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Gold"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blue_Tshirt.jpg/500px-Blue_Tshirt.jpg"
+    },
+    {
+      "code": "CLQ-067",
+      "name": "Levis Westernwear 4",
+      "brandName": "Levis",
+      "category": "westernwear",
+      "price": {
+        "mrp": 2655,
+        "sellingPrice": 2497
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blue_Tshirt.jpg/500px-Blue_Tshirt.jpg"
+    },
+    {
+      "code": "CLQ-068",
+      "name": "Levis Westernwear 5",
+      "brandName": "Levis",
+      "category": "westernwear",
+      "price": {
+        "mrp": 20930,
+        "sellingPrice": 12599
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Silver"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blue_Tshirt.jpg/500px-Blue_Tshirt.jpg"
+    },
+    {
+      "code": "CLQ-069",
+      "name": "Levis Westernwear 6",
+      "brandName": "Levis",
+      "category": "westernwear",
+      "price": {
+        "mrp": 18616,
+        "sellingPrice": 15457
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blue_Tshirt.jpg/500px-Blue_Tshirt.jpg"
+    },
+    {
+      "code": "CLQ-070",
+      "name": "Levis Westernwear 7",
+      "brandName": "Levis",
+      "category": "westernwear",
+      "price": {
+        "mrp": 38411,
+        "sellingPrice": 30441
+      },
+      "specs": {
+        "material": "Premium",
+        "color": "Black"
+      },
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blue_Tshirt.jpg/500px-Blue_Tshirt.jpg"
+    }
+  ]
+}
