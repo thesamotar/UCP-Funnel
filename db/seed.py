@@ -159,7 +159,7 @@ def main() -> None:
     for table, path, id_field, cat_field in CATALOGS:
         products = json.loads((ROOT / path).read_text())["products"]
         rows = [{"id": p[id_field], "native": p,
-                 "image_url": CATEGORY_IMAGES.get(p[cat_field])} for p in products]
+                 "image_url": p.get("imageUrl") or p.get("img") or CATEGORY_IMAGES.get(p[cat_field])} for p in products]
         client.table(table).upsert(rows).execute()
         print(f"upserted {len(rows)} rows into {table}")
 
