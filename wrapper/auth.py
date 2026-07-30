@@ -13,7 +13,7 @@ import os
 from functools import lru_cache
 
 import jwt
-from fastapi import Header, HTTPException
+from fastapi import Depends, Header, HTTPException
 
 
 @lru_cache(maxsize=1)
@@ -30,8 +30,8 @@ def _decode(token: str) -> dict:
     return jwt.decode(token, key, algorithms=["ES256", "RS256"], audience="authenticated")
 
 
-async def current_user(authorization: str = Header(default="")) -> str:
-    """FastAPI dependency: returns the authenticated Supabase user id (uuid)."""
+async def current_claims(authorization: str = Header(default="")) -> dict:
+    """FastAPI dependency: returns the verified JWT claims (sub, email, …)."""
     scheme, _, token = authorization.partition(" ")
     if scheme.lower() != "bearer" or not token.strip():
         raise HTTPException(status_code=401, detail="missing bearer token — sign in first")
@@ -39,7 +39,11 @@ async def current_user(authorization: str = Header(default="")) -> str:
         claims = _decode(token.strip())
     except jwt.PyJWTError as exc:
         raise HTTPException(status_code=401, detail=f"invalid token: {exc}")
-    user_id = claims.get("sub")
-    if not user_id:
+    if not claims.get("sub"):
         raise HTTPException(status_code=401, detail="token has no subject")
-    return user_id
+    return claims
+
+
+async def current_user(claims: dict = Depends(current_claims)) -> str:
+    """FastAPI dependency: returns the authenticated Supabase user id (uuid)."""
+    return claims["sub"]

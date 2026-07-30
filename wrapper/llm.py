@@ -132,6 +132,41 @@ async def generate(prompt: str, use_search: bool = False, timeout: float | None 
 # Tool defs are neutral too: {name, description, properties, required}.
 
 
+def _repair_tool_pairs(messages: list[dict]) -> list[dict]:
+    """Guarantee every assistant tool_use is immediately followed by a user
+    tool_result for each of its ids. If a browser-side tool threw before its
+    result was recorded, the dangling tool_use makes Anthropic reject the whole
+    request (400: "tool_use ids without tool_result"), bricking the chat. Here
+    we backfill an error result so an old/corrupted history still goes through."""
+    repaired: list[dict] = []
+    for i, msg in enumerate(messages):
+        repaired.append(msg)
+        if msg["role"] != "assistant" or not isinstance(msg["content"], list):
+            continue
+        tool_ids = [b["id"] for b in msg["content"]
+                    if isinstance(b, dict) and b.get("type") == "tool_use"]
+        if not tool_ids:
+            continue
+        nxt = messages[i + 1] if i + 1 < len(messages) else None
+        covered = set()
+        if nxt and nxt["role"] == "user" and isinstance(nxt["content"], list):
+            covered = {b.get("tool_use_id") for b in nxt["content"]
+                       if isinstance(b, dict) and b.get("type") == "tool_result"}
+        stub = [{"type": "tool_result", "tool_use_id": tid,
+                 "content": json.dumps({"error": "tool result missing"})}
+                for tid in tool_ids if tid not in covered]
+        if not stub:
+            continue
+        if nxt and nxt["role"] == "user":
+            existing = nxt["content"]
+            if isinstance(existing, str):
+                existing = [{"type": "text", "text": existing}] if existing else []
+            nxt["content"] = stub + existing  # tool_result blocks must lead the turn
+        else:
+            repaired.append({"role": "user", "content": stub})
+    return repaired
+
+
 async def _chat_anthropic(history: list[dict], system: str | None,
                           tools: list[dict] | None, timeout: float) -> dict:
     from anthropic import AsyncAnthropic
@@ -155,6 +190,7 @@ async def _chat_anthropic(history: list[dict], system: str | None,
                 for r in turn["toolResults"]
             ]})
 
+    messages = _repair_tool_pairs(messages)
     kwargs: dict = {"model": ANTHROPIC_MODEL, "max_tokens": 8192, "messages": messages}
     if system:
         kwargs["system"] = system

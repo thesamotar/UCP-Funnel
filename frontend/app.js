@@ -364,9 +364,15 @@ async function placeOrderAfterPayment(pay) {
   for (const ro of data.retailer_orders || []) {
     note(`↳ ${ro.retailer} order <b>${ro.order_id}</b> · ₹${ro.amount.toLocaleString("en-IN")} · payment <b>${ro.payment.status}</b> (${ro.payment.payment_id} via ${ro.payment.method})`);
   }
+  const mail = data.confirmation_email || {};
+  if (mail.status === "sent") note(`📧 Confirmation email sent to <b>${mail.to}</b>`);
+  else if (mail.status === "failed") note(`📧 Confirmation email to ${mail.to} failed: ${mail.detail}`);
+  const mailNote = mail.status === "sent"
+    ? `A confirmation email was sent to ${mail.to} — mention it. `
+    : "No confirmation email was sent — do not claim one was. ";
   modelFollowup(`[payment update] The UPI payment of ₹${pay.amount} succeeded and order ${data.order_id} `
     + `was placed (${(data.retailer_orders || []).length} retailer order(s), ${data.neu_coins_earned} NeuCoins earned, `
-    + `delivery ${data.estimated_delivery}). Give the user a short, warm order confirmation.`);
+    + `delivery ${data.estimated_delivery}). ${mailNote}Give the user a short, warm order confirmation.`);
 }
 
 // ---------- the node's LLM proxy ----------
@@ -425,7 +431,16 @@ async function runChatLoop() {
       const results = [];
       for (const call of toolCalls) {
         setLoader(pending, call.name);
-        const result = await executeTool(call.name, call.args);
+        let result;
+        try {
+          result = await executeTool(call.name, call.args);
+        } catch (err) {
+          // A tool that throws (timeout, network, signed-out) must still yield
+          // a result: an unanswered tool_use permanently breaks the Anthropic
+          // conversation ("tool_use ids without tool_result"). Report the
+          // failure back to the model instead of letting it escape the loop.
+          result = { error: err.name === "TimeoutError" ? "the tool timed out" : (err.message || String(err)) };
+        }
         results.push({ id: call.id, name: call.name, result });
         $("messages").appendChild(pending); // keep the loader below the cards/notes
       }

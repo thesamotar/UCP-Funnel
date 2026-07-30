@@ -21,19 +21,30 @@ class SearchRequest(BaseModel):
 
 
 def _matches(product: dict, req: SearchRequest) -> int:
-    """Score a product against the search term; 0 = no match."""
-    terms = [t for t in req.search_term.lower().split() if len(t) > 1]
-    haystack = f"{product['desc']} {product['brand']} {product['cat']}".lower()
-    score = sum(2 if t in product["desc"].lower() else 1 for t in terms if t in haystack)
+    """Score a product against the search term; 0 = no match.
+
+    Price is a hard constraint. Category and brand are LLM-guessed hints: a
+    matching hint boosts ranking, but a wrong guess must never zero out a
+    product the search term already matched. (Treating category as a hard
+    filter made every grocery search except 'dairy' — the category primed as
+    the routing example — come back empty.)"""
     f = req.filters
     if f.price_max is not None and product["sp"] > f.price_max:
         return 0
     if f.price_min is not None and product["sp"] < f.price_min:
         return 0
-    if f.brand and f.brand.lower() not in product["brand"].lower():
+
+    desc = product["desc"].lower()
+    haystack = f"{product['desc']} {product['brand']} {product['cat']}".lower()
+    terms = [t for t in req.search_term.lower().split() if len(t) > 1]
+    score = sum(2 if t in desc else 1 for t in terms if t in haystack)
+    if score == 0:
         return 0
-    if f.category and f.category.lower() not in product["cat"].lower():
-        return 0
+    if f.category and any(w in product["cat"].lower()
+                          for w in f.category.lower().split() if len(w) > 1):
+        score += 3
+    if f.brand and f.brand.lower() in product["brand"].lower():
+        score += 2
     return score
 
 

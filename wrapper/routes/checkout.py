@@ -10,8 +10,9 @@ import uuid
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 
+from .. import mailer
 from ..adapters import REGISTRY, RetailerError
-from ..auth import current_user
+from ..auth import current_claims, current_user
 from ..razorpay import RazorpayError, configured, get_payment_link
 from ..state import add_order, cart_view, get_cart, list_orders, save_cart
 
@@ -52,8 +53,29 @@ async def _verify_paid(payment_link_id: str | None, total_inr: float) -> dict:
     }
 
 
+async def _email_confirmation(email: str | None, order: dict) -> dict:
+    """Best-effort confirmation email — the money has already moved, so email
+    problems are reported in the order rather than failing the checkout."""
+    if not mailer.enabled():
+        print("[checkout] confirmation email disabled — set EMAIL_ENABLED=true in .env to turn on")
+        return {"status": "skipped", "detail": "email is disabled on this node"}
+    if not email:
+        return {"status": "skipped", "detail": "signed-in user has no email address"}
+    if not mailer.configured():
+        print("[checkout] confirmation email skipped — SMTP_* not set in .env")
+        return {"status": "skipped", "detail": "email is not configured on this node"}
+    try:
+        await mailer.send_order_confirmation(email, order)
+    except mailer.MailerError as exc:
+        print(f"[checkout] confirmation email to {email} FAILED: {exc}")
+        return {"to": email, "status": "failed", "detail": str(exc)}
+    print(f"[checkout] confirmation email sent to {email}")
+    return {"to": email, "status": "sent"}
+
+
 @router.post("/ucp/v1/checkout")
-async def checkout(body: CheckoutBody | None = None, user_id: str = Depends(current_user)):
+async def checkout(body: CheckoutBody | None = None, claims: dict = Depends(current_claims)):
+    user_id = claims["sub"]
     cart = await get_cart(user_id)
     if not cart["items"]:
         raise HTTPException(status_code=400, detail="cart is empty")
@@ -83,6 +105,7 @@ async def checkout(body: CheckoutBody | None = None, user_id: str = Depends(curr
         "neu_coins_earned": int(view["total"]["amount"] * 0.05),
         "estimated_delivery": "2-4 days",
     }
+    order["confirmation_email"] = await _email_confirmation(claims.get("email"), order)
     await add_order(user_id, order)
     await save_cart(user_id, {"items": [], "native_carts": {}})
     return order
