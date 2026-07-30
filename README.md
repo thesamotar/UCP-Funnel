@@ -126,6 +126,15 @@ Razorpay-verified payment matching the cart total; there is no mock fallback.
 In test mode, complete the payment via Razorpay's simulated checkout (e.g.
 Netbanking → demo bank → **Success**); no real money moves.
 
+**Order-confirmation email.** After a paid checkout places the retailer orders,
+the node emails the signed-in user (recipient taken from the JWT's `email`
+claim) an itemised receipt over SMTP. It's opt-in and best-effort: email only
+sends when `EMAIL_ENABLED=true` and `SMTP_*` are set in `.env` (a Gmail App
+Password works), and — since the money has already moved by then — a mail
+failure never fails the checkout. The outcome is recorded on the order as a
+`confirmation_email` block (`sent` / `failed` / `skipped`), surfaced in the
+chat, so the assistant only claims a mail was sent when one actually was.
+
 ### Demo script (the 60-second walkthrough)
 
 1. Open http://localhost:8000 and sign in (or create an account).
@@ -153,7 +162,8 @@ Netbanking → demo bank → **Success**); no real money moves.
 | `wrapper/main.py` | Assembles the UCP node: loads the connector registry at startup, includes the action routers, mounts the frontend |
 | `wrapper/routes/` | One module per action exposing an `APIRouter`: `config.py`, `chat.py` (LLM proxy), `search.py`, `cart.py`, `payment.py` (UPI QR + status polling), `checkout.py` |
 | `wrapper/state.py` | Per-user node state in Supabase (carts, orders) + the global catalog cache and cart-view helper |
-| `wrapper/auth.py` | `current_user` dependency — verifies the Supabase JWT on every UCP/chat call |
+| `wrapper/auth.py` | JWT verification — `current_claims` (full Supabase claims: `sub`, `email`) and `current_user` (the id) dependencies, run on every UCP/chat call |
+| `wrapper/mailer.py` | Order-confirmation email over SMTP (STARTTLS, stdlib `smtplib` in a thread): opt-in via `EMAIL_ENABLED`, best-effort after a paid checkout |
 | `wrapper/db.py` | Shared async Supabase client (service-role key) |
 | `wrapper/pipeline.py` | The 4-stage search pipeline (receive → translate → enhance → respond), registry-driven, with per-stage trace |
 | `wrapper/adapters/` | `base.py` (the `RetailerAdapter` contract), one adapter class per backend (`bigbasket.py`, `croma.py`), `registry.py` (loads enabled connectors from the DB). **Attaching an API = one adapter file + one `connectors` row** |
@@ -471,6 +481,33 @@ real gateway plumbing with no actual money moving.
   appears once the account is activated) — the QR/link/poll flow is identical
   either way.
 
+### v1.2 — Order-confirmation email (2026-07-18)
+
+**In plain terms:** once you've paid and the order is placed, the node emails
+you a receipt — the items, the total you paid over UPI, NeuCoins earned, and the
+delivery estimate — so there's a confirmation in your inbox, not just in the chat.
+
+**What landed, technically:**
+- **`wrapper/mailer.py`** — builds a plain-text + HTML receipt and sends it over
+  plain STARTTLS SMTP (stdlib `smtplib`, run in a thread under a 15s wall-clock
+  timeout so it can't stall the request). Config via `.env`:
+  `SMTP_HOST`/`SMTP_PORT`/`SMTP_USER`/`SMTP_PASS`/`SMTP_FROM` (a Gmail App
+  Password works), gated by a master `EMAIL_ENABLED` switch.
+- **Recipient from the JWT** — `wrapper/auth.py` now exposes `current_claims`
+  (the full verified Supabase claims, including `email`), with `current_user`
+  layered on top, so no endpoint signature elsewhere had to change.
+- **Best-effort, after the money moves** — the mail is sent inside
+  `POST /ucp/v1/checkout` only *after* payment is verified and the retailer
+  orders are placed, so an SMTP failure never fails the checkout. The outcome is
+  recorded on the order as a `confirmation_email` block
+  (`sent` / `failed` / `skipped` + detail) and persisted with the order.
+- **Frontend** (`frontend/app.js`) shows a 📧 note in the chat and tells the
+  follow-up model turn whether a mail actually went out — so the assistant's
+  confirmation never claims an email was sent when it wasn't. Assets at `?v=11`.
+- Verified: mailer message build, the reworked auth path (live server), and the
+  disabled / no-email / SMTP-unreachable branches — each returns the right
+  status without breaking checkout.
+
 ---
 
 ## Demo-grade shortcuts (deliberate)
@@ -501,7 +538,7 @@ on container-private ports; only the node binds the public `$PORT`).
 4. Fill the secrets when prompted: `ANTHROPIC_API_KEY` (or `GEMINI_API_KEY`),
    `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`,
    `RAZORPAY_KEY_ID` + `RAZORPAY_KEY_SECRET` (test keys), and optionally
-   `SUPABASE_JWT_SECRET`.
+   `SUPABASE_JWT_SECRET` and the email vars (`EMAIL_ENABLED` + `SMTP_*`).
 5. Open `https://tata-node.onrender.com` (or whatever name Render assigns) and
    create an account.
 
