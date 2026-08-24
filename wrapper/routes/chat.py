@@ -58,6 +58,44 @@ TOOL_DEFS = [
         "properties": {},
         "required": [],
     },
+    {
+        "name": "remove_from_cart",
+        "description": "Remove an item from the Tata Neu cart. Use this when the user asks to remove an item they previously added.",
+        "properties": {
+            "item_id": {"type": "string", "description": "Product id of the item to remove, e.g. 'CRM-301201'"}
+        },
+        "required": ["item_id"],
+    },
+    {
+        "name": "create_cart",
+        "description": "Create a new Tata Neu cart with a specific name and set it as active (e.g., 'Goa Trip Cart', 'Diwali Party Cart'). Do this if the user wants to start planning a new trip or event without mixing items with their current cart.",
+        "properties": {
+            "name": {"type": "string", "description": "Name of the new cart"}
+        },
+        "required": ["name"],
+    },
+    {
+        "name": "list_carts",
+        "description": "List all the user's carts.",
+        "properties": {},
+        "required": [],
+    },
+    {
+        "name": "switch_cart",
+        "description": "Switch the active cart to a different one. You must provide the cart_id (obtained from list_carts).",
+        "properties": {
+            "cart_id": {"type": "string", "description": "The ID of the cart to switch to"}
+        },
+        "required": ["cart_id"],
+    },
+    {
+        "name": "delete_cart",
+        "description": "Delete a cart completely. You must provide the cart_id (obtained from list_carts). If the deleted cart was the active one, the system will automatically fall back to another cart.",
+        "properties": {
+            "cart_id": {"type": "string", "description": "The ID of the cart to delete"}
+        },
+        "required": ["cart_id"],
+    },
 ]
 
 SYSTEM_CONNECTED = """You are a highly intelligent, proactive planner and shopping assistant with the Tata Neu connector enabled. You can shop across
@@ -65,9 +103,10 @@ Tata brands (BigBasket, Croma, Zudio, Tata CLiQ, Tata 1mg, Titan, IHCL, Air Indi
 
 When a user mentions a high-level goal, like a trip (e.g. to Goa) or a party, do NOT just wait for them to ask for specific items. Instead:
 1. Break down their goal into logical needs (e.g. for travel: flights -> hotels -> apparel -> essentials/sunscreen. For a party: snacks -> drinks -> decor).
-2. Sequentially ask them about each need and offer to search for it using your tools.
-3. Proactively call the `search_tata_catalog` tool to present curated options for that specific step. Wait for their choice, add it to their cart, and then move to the next logical step in the plan.
-4. Keep the conversation engaging and highly intelligent, guiding the user to seamlessly plan everything A-Z.
+2. You can manage MULTIPLE CARTS. If the user is starting a completely new plan (like a Goa Trip), proactively ask if they want you to create a new dedicated cart for it (using `create_cart`), so it doesn't mix with their groceries or previous plans. You can use `list_carts` and `switch_cart` to juggle between different lists!
+3. Sequentially ask them about each need and offer to search for it using your tools.
+4. Proactively call the `search_tata_catalog` tool to present curated options for that specific step. Wait for their choice, add it to their cart, and then move to the next logical step in the plan.
+5. Keep the conversation engaging and highly intelligent, guiding the user to seamlessly plan everything A-Z.
 
 For any product/shopping request, call `search_tata_catalog`. Present results conversationally and concisely — the UI already renders product
 cards, so summarize/recommend rather than listing every spec. Always use ₹ for prices. Refer to

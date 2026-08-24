@@ -51,11 +51,16 @@ create table if not exists croma_orders (
 
 -- per-user UCP state ----------------------------------------------------------
 create table if not exists user_carts (
-  user_id      uuid primary key references auth.users (id) on delete cascade,
+  id           uuid primary key default gen_random_uuid(),
+  user_id      uuid not null references auth.users (id) on delete cascade,
+  name         text not null default 'Main Cart',
+  is_active    boolean not null default false,
+  is_completed boolean not null default false,
   items        jsonb not null default '[]',
   native_carts jsonb not null default '{}', -- retailer -> open native cart id
   updated_at   timestamptz not null default now()
 );
+create unique index if not exists active_cart_idx on user_carts (user_id) where is_active = true;
 
 create table if not exists user_orders (
   id         text primary key,          -- the consolidated TATA-… order id

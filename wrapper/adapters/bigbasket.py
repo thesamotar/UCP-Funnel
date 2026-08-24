@@ -5,7 +5,7 @@ from .base import RetailerAdapter, RetailerError
 
 
 def _ok(data: dict) -> dict:
-    if data.get("status") != "success":
+    if data.get("status") not in ("success", 200):
         raise RetailerError(f"bigbasket: {data.get('message', 'unknown error')}")
     return data
 
@@ -46,6 +46,11 @@ class BigBasketAdapter(RetailerAdapter):
         async with self.client() as client:
             resp = await client.post("/bb/api/v1/cart.create")
             return _ok(resp.json())["cart_id"]
+
+    async def cart_remove(self, cart_id: str, native_id: str) -> dict:
+        async with self.client() as client:
+            resp = await client.delete(f"/bigbasket/api/v2/cart/{cart_id}/entries/{native_id}")
+            return _ok(resp.json())["cart"]
 
     async def cart_add(self, cart_id: str, native_id: str, qty: int) -> dict:
         async with self.client() as client:

@@ -11,7 +11,7 @@ from pydantic import BaseModel
 
 from ..adapters import REGISTRY, RetailerError
 from ..auth import current_user
-from ..state import cart_view, get_cart, resolve_item, save_cart
+from ..state import cart_view, get_cart, resolve_item, save_cart, list_carts, create_cart, set_active_cart
 
 router = APIRouter()
 
@@ -55,3 +55,53 @@ async def add_to_cart(body: CartItemBody, user_id: str = Depends(current_user)):
 @router.get("/ucp/v1/cart")
 async def view_cart(user_id: str = Depends(current_user)):
     return cart_view(await get_cart(user_id))
+
+@router.post("/ucp/v1/cart/items/remove")
+async def remove_from_cart(body: CartItemBody, user_id: str = Depends(current_user)):
+    item = await resolve_item(body.item_id)
+    if not item:
+        raise HTTPException(status_code=404, detail=f"unknown item_id {body.item_id!r}")
+    
+    retailer = item["source"]["retailer"]
+    adapter = REGISTRY.get(retailer)
+    cart = await get_cart(user_id)
+    
+    try:
+        if retailer in cart["native_carts"]:
+            print(f"[cart_remove] calling {retailer} cart_remove with native_id={item['source']['native_id']}")
+            await adapter.cart_remove(cart["native_carts"][retailer], item["source"]["native_id"])
+            print(f"[cart_remove] success")
+    except RetailerError as exc:
+        print(f"[cart_remove] RetailerError: {exc}")
+        raise HTTPException(status_code=502, detail=str(exc))
+    except Exception as exc:
+        print(f"[cart_remove] Exception: {exc}")
+        raise
+    cart["items"] = [line for line in cart["items"] if line["item"]["id"] != body.item_id]
+    await save_cart(user_id, cart)
+    return cart_view(cart)
+
+class CreateCartBody(BaseModel):
+    name: str
+
+@router.post("/ucp/v1/carts")
+async def handle_create_cart(body: CreateCartBody, user_id: str = Depends(current_user)):
+    return cart_view(await create_cart(user_id, body.name))
+
+@router.get("/ucp/v1/carts")
+async def handle_list_carts(user_id: str = Depends(current_user)):
+    carts = await list_carts(user_id)
+    return [cart_view(c) for c in carts]
+
+@router.put("/ucp/v1/carts/{cart_id}/active")
+async def handle_set_active_cart(cart_id: str, user_id: str = Depends(current_user)):
+    cart = await set_active_cart(user_id, cart_id)
+    if not cart:
+        raise HTTPException(status_code=404, detail="cart not found")
+    return cart_view(cart)
+
+@router.delete("/ucp/v1/carts/{cart_id}")
+async def handle_delete_cart(cart_id: str, user_id: str = Depends(current_user)):
+    from ..state import delete_cart
+    await delete_cart(user_id, cart_id)
+    return {"status": "success"}

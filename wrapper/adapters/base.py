@@ -85,6 +85,9 @@ class RetailerAdapter:
     async def cart_add(self, cart_id: str, native_id: str, qty: int) -> dict:
         raise Unsupported(f"{self.name} does not support carts")
 
+    async def cart_remove(self, cart_id: str, native_id: str) -> dict:
+        raise Unsupported(f"{self.name} does not support carts")
+
     async def place_order(self, cart_id: str) -> dict:
         """Returns {"order_id", "amount"}."""
         raise Unsupported(f"{self.name} does not support orders")

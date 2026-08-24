@@ -84,8 +84,11 @@ async def checkout(body: CheckoutBody | None = None, claims: dict = Depends(curr
     view = cart_view(cart)
     upi_payment = await _verify_paid(body.payment_link_id if body else None, view["total"]["amount"])
     # place one native order + payment per retailer that has items
+    active_retailers = {line["item"]["source"]["retailer"] for line in cart["items"]}
     retailer_orders = []
     for retailer, native_cart_id in cart["native_carts"].items():
+        if retailer not in active_retailers:
+            continue
         adapter = REGISTRY.get(retailer)
         if not adapter:
             raise HTTPException(status_code=502, detail=f"retailer {retailer!r} is no longer attached to the node")
@@ -109,7 +112,9 @@ async def checkout(body: CheckoutBody | None = None, claims: dict = Depends(curr
     }
     order["confirmation_email"] = await _email_confirmation(claims.get("email"), order)
     await add_order(user_id, order)
-    await save_cart(user_id, {"items": [], "native_carts": {}})
+    cart["is_completed"] = True
+    cart["is_active"] = False
+    await save_cart(user_id, cart)
     return order
 
 

@@ -198,6 +198,10 @@ const LOADER_TEXTS = {
     "Almost there…",
   ],
   add_to_cart: ["Adding to your cart…"],
+  remove_from_cart: ["Removing from your cart…"],
+  create_cart: ["Creating new cart…"],
+  list_carts: ["Fetching your carts…"],
+  switch_cart: ["Switching active cart…"],
   view_cart: ["Fetching your cart…"],
   initiate_payment: ["Totalling your cart…", "Generating your UPI payment QR…"],
 };
@@ -267,6 +271,13 @@ async function executeTool(name, args) {
     signal: AbortSignal.timeout(NODE_TIMEOUT_MS),
   }).then(async (r) => ({ ok: r.ok, data: await r.json() }));
 
+  const put = (url, body) => fetch(url, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json", ...headers },
+    body: body ? JSON.stringify(body) : undefined,
+    signal: AbortSignal.timeout(NODE_TIMEOUT_MS),
+  }).then(async (r) => ({ ok: r.ok, data: await r.json() }));
+
   if (name === "search_tata_catalog") {
     const constraints = {};
     if (args.max_price != null) constraints.max_price = args.max_price;
@@ -280,6 +291,33 @@ async function executeTool(name, args) {
   if (name === "add_to_cart") {
     const { ok, data } = await post("/ucp/v1/cart/items", { item_id: args.item_id, quantity: args.quantity || 1 });
     note(ok ? `Added <b>${args.item_id}</b> to Tata Neu cart · total ₹${data.total.amount.toLocaleString("en-IN")}` : `add_to_cart failed: ${data.detail}`);
+    return data;
+  }
+  if (name === "remove_from_cart") {
+    const { ok, data } = await post("/ucp/v1/cart/items/remove", { item_id: args.item_id });
+    note(ok ? `Removed <b>${args.item_id}</b> from cart` : `remove_from_cart failed: ${data.detail}`);
+    return data;
+  }
+  if (name === "create_cart") {
+    const { ok, data } = await post("/ucp/v1/carts", { name: args.name });
+    note(ok ? `Created and switched to cart: <b>${args.name}</b>` : `create_cart failed: ${data.detail}`);
+    return data;
+  }
+  if (name === "list_carts") {
+    return (await fetch("/ucp/v1/carts", { headers, signal: AbortSignal.timeout(NODE_TIMEOUT_MS) })).json();
+  }
+  if (name === "switch_cart") {
+    const { ok, data } = await put(`/ucp/v1/carts/${args.cart_id}/active`);
+    note(ok ? `Switched to cart: <b>${data.name}</b>` : `switch_cart failed: ${data.detail}`);
+    return data;
+  }
+  if (name === "delete_cart") {
+    const { ok, data } = await fetch(`/ucp/v1/carts/${args.cart_id}`, {
+      method: "DELETE",
+      headers: await authHeaders(),
+      signal: AbortSignal.timeout(NODE_TIMEOUT_MS)
+    }).then(async (r) => ({ ok: r.ok, data: await r.json() }));
+    note(ok ? `Deleted cart successfully` : `delete_cart failed: ${data.detail}`);
     return data;
   }
   if (name === "view_cart") {

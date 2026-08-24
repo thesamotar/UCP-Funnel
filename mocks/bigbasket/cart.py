@@ -58,3 +58,27 @@ def cart_get(req: CartGetRequest):
     if not cart:
         return {"status": "error", "message": "cart not found"}
     return {"status": "success", "cart": cart_summary(cart)}
+
+
+@router.delete("/bigbasket/api/v2/cart/{cart_id}/entries/{product_code}")
+async def remove_entry_v2(cart_id: str, product_code: str):
+    cart = CARTS.get(cart_id)
+    if not cart:
+        return {"cart": None, "status": 404, "message": "cart not found"}
+    
+    # filter out productCode and sku_id to be safe across different mock schemas
+    cart_items_key = "entries" if "entries" in cart else "items"
+    cart[cart_items_key] = [
+        e for e in cart[cart_items_key] 
+        if e.get("productCode") != product_code and e.get("sku_id") != product_code
+    ]
+    
+    await persist_cart(cart)
+    # Different mocks use different view functions (cart_summary or cart_view)
+    if "cart_view" in globals():
+        view = globals()["cart_view"](cart)
+    elif "cart_summary" in globals():
+        view = globals()["cart_summary"](cart)
+    else:
+        view = cart
+    return {"cart": view, "status": 200}

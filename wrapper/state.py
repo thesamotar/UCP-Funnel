@@ -18,28 +18,80 @@ def _now() -> str:
 
 # --- per-user cart -----------------------------------------------------------
 
-async def get_cart(user_id: str) -> dict:
-    resp = await (await db()).table("user_carts") \
-        .select("items,native_carts").eq("user_id", user_id).limit(1).execute()
+async def get_cart(user_id: str, cart_id: str = None) -> dict:
+    if cart_id:
+        resp = await (await db()).table("user_carts") \
+            .select("id,name,is_active,is_completed,items,native_carts").eq("id", cart_id).eq("user_id", user_id).limit(1).execute()
+    else:
+        resp = await (await db()).table("user_carts") \
+            .select("id,name,is_active,is_completed,items,native_carts").eq("user_id", user_id).eq("is_active", True).limit(1).execute()
+    
     if resp.data:
-        return {"items": resp.data[0]["items"], "native_carts": resp.data[0]["native_carts"]}
-    return {"items": [], "native_carts": {}}
+        return resp.data[0]
+        
+    # If no active cart, create a default Main Cart
+    new_cart = {
+        "user_id": user_id,
+        "name": "Main Cart",
+        "is_active": True,
+        "is_completed": False,
+        "items": [],
+        "native_carts": {}
+    }
+    resp = await (await db()).table("user_carts").insert(new_cart).execute()
+    return resp.data[0]
+
+async def list_carts(user_id: str, include_completed: bool = False) -> list[dict]:
+    query = (await db()).table("user_carts").select("id,name,is_active,is_completed,items,native_carts").eq("user_id", user_id)
+    if not include_completed:
+        query = query.eq("is_completed", False)
+    resp = await query.order("updated_at", desc=True).execute()
+    return resp.data or []
+
+async def create_cart(user_id: str, name: str) -> dict:
+    # Set others inactive
+    await (await db()).table("user_carts").update({"is_active": False}).eq("user_id", user_id).execute()
+    new_cart = {
+        "user_id": user_id,
+        "name": name,
+        "is_active": True,
+        "is_completed": False,
+        "items": [],
+        "native_carts": {}
+    }
+    resp = await (await db()).table("user_carts").insert(new_cart).execute()
+    return resp.data[0]
+
+async def set_active_cart(user_id: str, cart_id: str) -> dict:
+    await (await db()).table("user_carts").update({"is_active": False}).eq("user_id", user_id).execute()
+    resp = await (await db()).table("user_carts").update({"is_active": True}).eq("id", cart_id).eq("user_id", user_id).execute()
+    return resp.data[0] if resp.data else None
+
+async def delete_cart(user_id: str, cart_id: str) -> None:
+    await (await db()).table("user_carts").delete().eq("id", cart_id).eq("user_id", user_id).execute()
 
 
 async def save_cart(user_id: str, cart: dict) -> None:
-    await (await db()).table("user_carts").upsert({
-        "user_id": user_id, "items": cart["items"],
-        "native_carts": cart["native_carts"], "updated_at": _now(),
-    }).execute()
+    await (await db()).table("user_carts").update({
+        "items": cart["items"],
+        "native_carts": cart["native_carts"], 
+        "is_active": cart.get("is_active", True),
+        "is_completed": cart.get("is_completed", False),
+        "updated_at": _now(),
+    }).eq("id", cart["id"]).eq("user_id", user_id).execute()
 
 
 def cart_view(cart: dict) -> dict:
-    total = sum(line["item"]["price"]["amount"] * line["quantity"] for line in cart["items"])
+    total = sum(line["item"]["price"]["amount"] * line["quantity"] for line in cart.get("items", []))
     return {
         "ucp_version": "0.1",
         "type": "cart",
-        "items": cart["items"],
-        "native_carts": cart["native_carts"],
+        "id": cart.get("id"),
+        "name": cart.get("name"),
+        "is_active": cart.get("is_active"),
+        "is_completed": cart.get("is_completed"),
+        "items": cart.get("items", []),
+        "native_carts": cart.get("native_carts", {}),
         "total": {"amount": total, "currency": "INR"},
     }
 

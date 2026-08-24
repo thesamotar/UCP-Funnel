@@ -53,6 +53,11 @@ class TitanAdapter(RetailerAdapter):
             resp = await client.post(f"/titan/api/v2/cart")
             return _ok(resp.json())["cart"]["cartId"]
 
+    async def cart_remove(self, cart_id: str, native_id: str) -> dict:
+        async with self.client() as client:
+            resp = await client.delete(f"/titan/api/v2/cart/{cart_id}/entries/{native_id}")
+            return _ok(resp.json())["cart"]
+
     async def cart_add(self, cart_id: str, native_id: str, qty: int) -> dict:
         async with self.client() as client:
             resp = await client.post(f"/titan/api/v2/cart/{cart_id}/entries",

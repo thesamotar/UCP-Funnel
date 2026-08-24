@@ -12,6 +12,8 @@ import os
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 
+import httpx
+
 from ..auth import current_user
 from ..pipeline import PipelineError, run_search_pipeline
 from ..state import cache_items
@@ -34,6 +36,8 @@ async def ucp_search(body: SearchBody, user_id: str = Depends(current_user)):
         raise HTTPException(status_code=422, detail=str(exc))
     except PipelineError as exc:
         raise HTTPException(status_code=502, detail=str(exc))
+    except httpx.RequestError as exc:
+        raise HTTPException(status_code=502, detail=f"retailer connection error: {exc}")
     except asyncio.TimeoutError:
         raise HTTPException(
             status_code=504,
