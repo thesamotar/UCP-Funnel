@@ -134,6 +134,22 @@ CONNECTORS = [
         "description": "Titan — watches, jewelry, smartwatches, sunglasses, perfumes, gold",
         "enabled": True,
     },
+    {
+        "name": "ihcl",
+        "adapter_path": "wrapper.adapters.ihcl:IhclAdapter",
+        "base_url": "http://127.0.0.1:9007",
+        "auth": {},
+        "description": "IHCL — hotels, resorts, Taj, Vivanta, Ginger, rooms, hospitality",
+        "enabled": True,
+    },
+    {
+        "name": "airindia",
+        "adapter_path": "wrapper.adapters.airindia:AirIndiaAdapter",
+        "base_url": "http://127.0.0.1:9008",
+        "auth": {},
+        "description": "Air India — flights, economy, business class, travel, bookings",
+        "enabled": True,
+    },
 ]
 
 
@@ -146,6 +162,8 @@ CATALOGS = [
     ("cliq_products", "mocks/cliq/data.json", "code", "category"),
     ("onemg_products", "mocks/onemg/data.json", "code", "category"),
     ("titan_products", "mocks/titan/data.json", "code", "category"),
+    ("ihcl_products", "mocks/ihcl/data.json", "code", "category"),
+    ("airindia_products", "mocks/airindia/data.json", "code", "category"),
 ]
 
 

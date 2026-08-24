@@ -1,0 +1,3172 @@
+{
+  "products": [
+    {
+      "code": "IHCL-001",
+      "name": "Taj Exotica Resort & Spa",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 32000,
+      "state": "Goa",
+      "city": "Benaulim",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-002",
+      "name": "Taj Holiday Village Resort & Spa",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 28000,
+      "state": "Goa",
+      "city": "Candolim",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-003",
+      "name": "Taj Fort Aguada Resort & Spa",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 27000,
+      "state": "Goa",
+      "city": "Candolim",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-004",
+      "name": "Vivanta Goa",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 12000,
+      "state": "Goa",
+      "city": "Panaji",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-005",
+      "name": "Ginger Goa",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 4500,
+      "state": "Goa",
+      "city": "Panaji",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-006",
+      "name": "Taj Theog Resort & Spa",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 26000,
+      "state": "Himachal Pradesh",
+      "city": "Shimla",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-007",
+      "name": "Vivanta Dalhousie",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 13000,
+      "state": "Himachal Pradesh",
+      "city": "Dalhousie",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-008",
+      "name": "Baragarh Resort & Spa",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 16000,
+      "state": "Himachal Pradesh",
+      "city": "Manali",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-009",
+      "name": "Ginger Shimla",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 5500,
+      "state": "Himachal Pradesh",
+      "city": "Shimla",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-010",
+      "name": "am\u00e3 Stays & Trails New Delhi Inn",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 15100,
+      "state": "Delhi",
+      "city": "New Delhi",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-011",
+      "name": "Vivanta Panaji Center",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 10400,
+      "state": "Goa",
+      "city": "Panaji",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-012",
+      "name": "SeleQtions Mangaluru Resort",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 11700,
+      "state": "Karnataka",
+      "city": "Mangaluru",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-013",
+      "name": "am\u00e3 Stays & Trails Rishikesh Gateway",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 13200,
+      "state": "Uttarakhand",
+      "city": "Rishikesh",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-014",
+      "name": "am\u00e3 Stays & Trails Thiruvananthapuram Gateway",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 12000,
+      "state": "Kerala",
+      "city": "Thiruvananthapuram",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-015",
+      "name": "am\u00e3 Stays & Trails Pune Inn",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 15900,
+      "state": "Maharashtra",
+      "city": "Pune",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-016",
+      "name": "Vivanta Bengaluru Inn",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 11300,
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-017",
+      "name": "Taj Thiruvananthapuram Center",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 34000,
+      "state": "Kerala",
+      "city": "Thiruvananthapuram",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-018",
+      "name": "Taj New Delhi Resort",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 36500,
+      "state": "Delhi",
+      "city": "New Delhi",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-019",
+      "name": "SeleQtions Panaji Center",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 12300,
+      "state": "Goa",
+      "city": "Panaji",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-020",
+      "name": "Ginger Panaji Heights",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 4700,
+      "state": "Goa",
+      "city": "Panaji",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-021",
+      "name": "SeleQtions Chennai Heights",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 14200,
+      "state": "Tamil Nadu",
+      "city": "Chennai",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-022",
+      "name": "SeleQtions Ooty Inn",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 15800,
+      "state": "Tamil Nadu",
+      "city": "Ooty",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-023",
+      "name": "SeleQtions Kumarakom Gateway",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 19600,
+      "state": "Kerala",
+      "city": "Kumarakom",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-024",
+      "name": "Taj Chandigarh Resort",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 17000,
+      "state": "Punjab",
+      "city": "Chandigarh",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-025",
+      "name": "am\u00e3 Stays & Trails Ahmedabad Inn",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 24600,
+      "state": "Gujarat",
+      "city": "Ahmedabad",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-026",
+      "name": "am\u00e3 Stays & Trails Nashik Plaza",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 16600,
+      "state": "Maharashtra",
+      "city": "Nashik",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-027",
+      "name": "Vivanta Visakhapatnam Resort",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 11200,
+      "state": "Andhra Pradesh",
+      "city": "Visakhapatnam",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-028",
+      "name": "Taj Munnar Plaza",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 25000,
+      "state": "Kerala",
+      "city": "Munnar",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-029",
+      "name": "SeleQtions Rishikesh Resort",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 18200,
+      "state": "Uttarakhand",
+      "city": "Rishikesh",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-030",
+      "name": "Ginger Madurai Gateway",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 3900,
+      "state": "Tamil Nadu",
+      "city": "Madurai",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-031",
+      "name": "SeleQtions Mangaluru Center",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 18700,
+      "state": "Karnataka",
+      "city": "Mangaluru",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-032",
+      "name": "Taj Kolkata Inn",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 24900,
+      "state": "West Bengal",
+      "city": "Kolkata",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-033",
+      "name": "Ginger Kochi Gateway",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 7000,
+      "state": "Kerala",
+      "city": "Kochi",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-034",
+      "name": "Vivanta Darjeeling Gateway",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 13500,
+      "state": "West Bengal",
+      "city": "Darjeeling",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-035",
+      "name": "Ginger Amritsar Heights",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 3900,
+      "state": "Punjab",
+      "city": "Amritsar",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-036",
+      "name": "SeleQtions Nashik Inn",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 10100,
+      "state": "Maharashtra",
+      "city": "Nashik",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-037",
+      "name": "Vivanta Nainital Resort",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 10500,
+      "state": "Uttarakhand",
+      "city": "Nainital",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-038",
+      "name": "am\u00e3 Stays & Trails Mangaluru Plaza",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 22300,
+      "state": "Karnataka",
+      "city": "Mangaluru",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-039",
+      "name": "Taj New Delhi Gateway",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 39900,
+      "state": "Delhi",
+      "city": "New Delhi",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-040",
+      "name": "Taj Madurai Plaza",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 33700,
+      "state": "Tamil Nadu",
+      "city": "Madurai",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-041",
+      "name": "Vivanta Jaipur Center",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 12500,
+      "state": "Rajasthan",
+      "city": "Jaipur",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-042",
+      "name": "SeleQtions Siliguri Inn",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 17000,
+      "state": "West Bengal",
+      "city": "Siliguri",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-043",
+      "name": "Ginger Jaipur Resort",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 3700,
+      "state": "Rajasthan",
+      "city": "Jaipur",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-044",
+      "name": "am\u00e3 Stays & Trails Surat Gateway",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 17700,
+      "state": "Gujarat",
+      "city": "Surat",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-045",
+      "name": "Vivanta Bengaluru Gateway",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 8900,
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-046",
+      "name": "Ginger New Delhi Center",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 6500,
+      "state": "Delhi",
+      "city": "New Delhi",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-047",
+      "name": "Vivanta Kolkata Gateway",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 9800,
+      "state": "West Bengal",
+      "city": "Kolkata",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-048",
+      "name": "Ginger Kumarakom Heights",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 5200,
+      "state": "Kerala",
+      "city": "Kumarakom",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-049",
+      "name": "SeleQtions Agra Inn",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 10900,
+      "state": "Uttar Pradesh",
+      "city": "Agra",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-050",
+      "name": "am\u00e3 Stays & Trails Vijayawada Resort",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 19800,
+      "state": "Andhra Pradesh",
+      "city": "Vijayawada",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-051",
+      "name": "Taj Chandigarh Center",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 26700,
+      "state": "Punjab",
+      "city": "Chandigarh",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-052",
+      "name": "Taj Surat Plaza",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 31600,
+      "state": "Gujarat",
+      "city": "Surat",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-053",
+      "name": "Vivanta Mysuru Gateway",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 13800,
+      "state": "Karnataka",
+      "city": "Mysuru",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-054",
+      "name": "Vivanta Warangal Plaza",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 8100,
+      "state": "Telangana",
+      "city": "Warangal",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-055",
+      "name": "SeleQtions Vijayawada Gateway",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 17100,
+      "state": "Andhra Pradesh",
+      "city": "Vijayawada",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-056",
+      "name": "Vivanta Jodhpur Center",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 9700,
+      "state": "Rajasthan",
+      "city": "Jodhpur",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-057",
+      "name": "SeleQtions Mussoorie Inn",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 16700,
+      "state": "Uttarakhand",
+      "city": "Mussoorie",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-058",
+      "name": "Taj Siliguri Center",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 17400,
+      "state": "West Bengal",
+      "city": "Siliguri",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-059",
+      "name": "am\u00e3 Stays & Trails New Delhi Center",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 19900,
+      "state": "Delhi",
+      "city": "New Delhi",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-060",
+      "name": "am\u00e3 Stays & Trails Manali Gateway",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 12400,
+      "state": "Himachal Pradesh",
+      "city": "Manali",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-061",
+      "name": "SeleQtions Agra Gateway",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 12900,
+      "state": "Uttar Pradesh",
+      "city": "Agra",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-062",
+      "name": "am\u00e3 Stays & Trails Warangal Gateway",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 15300,
+      "state": "Telangana",
+      "city": "Warangal",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-063",
+      "name": "Vivanta Chandigarh Plaza",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 12700,
+      "state": "Punjab",
+      "city": "Chandigarh",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-064",
+      "name": "am\u00e3 Stays & Trails Mysuru Heights",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 18800,
+      "state": "Karnataka",
+      "city": "Mysuru",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-065",
+      "name": "SeleQtions Vijayawada Heights",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 16100,
+      "state": "Andhra Pradesh",
+      "city": "Vijayawada",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-066",
+      "name": "Ginger Ahmedabad Center",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 4200,
+      "state": "Gujarat",
+      "city": "Ahmedabad",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-067",
+      "name": "am\u00e3 Stays & Trails Rishikesh Inn",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 20300,
+      "state": "Uttarakhand",
+      "city": "Rishikesh",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-068",
+      "name": "Ginger Surat Center",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 5300,
+      "state": "Gujarat",
+      "city": "Surat",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-069",
+      "name": "am\u00e3 Stays & Trails Manali Heights",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 19400,
+      "state": "Himachal Pradesh",
+      "city": "Manali",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-070",
+      "name": "Vivanta Jaisalmer Inn",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 11200,
+      "state": "Rajasthan",
+      "city": "Jaisalmer",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-071",
+      "name": "Vivanta Mysuru Inn",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 12900,
+      "state": "Karnataka",
+      "city": "Mysuru",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-072",
+      "name": "am\u00e3 Stays & Trails Siliguri Center",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 15400,
+      "state": "West Bengal",
+      "city": "Siliguri",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-073",
+      "name": "Vivanta New Delhi Heights",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 10700,
+      "state": "Delhi",
+      "city": "New Delhi",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-074",
+      "name": "Taj Siliguri Resort",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 39300,
+      "state": "West Bengal",
+      "city": "Siliguri",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-075",
+      "name": "SeleQtions Vijayawada Center",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 14700,
+      "state": "Andhra Pradesh",
+      "city": "Vijayawada",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-076",
+      "name": "Ginger Darjeeling Center",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 6800,
+      "state": "West Bengal",
+      "city": "Darjeeling",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-077",
+      "name": "Ginger Kumarakom Gateway",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 4000,
+      "state": "Kerala",
+      "city": "Kumarakom",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-078",
+      "name": "am\u00e3 Stays & Trails Panaji Plaza",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 12400,
+      "state": "Goa",
+      "city": "Panaji",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-079",
+      "name": "Vivanta Varanasi Plaza",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 13500,
+      "state": "Uttar Pradesh",
+      "city": "Varanasi",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-080",
+      "name": "Taj Kumarakom Resort",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 16000,
+      "state": "Kerala",
+      "city": "Kumarakom",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-081",
+      "name": "Vivanta Nainital Heights",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 9800,
+      "state": "Uttarakhand",
+      "city": "Nainital",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-082",
+      "name": "Taj Mussoorie Center",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 33500,
+      "state": "Uttarakhand",
+      "city": "Mussoorie",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-083",
+      "name": "Ginger Vijayawada Heights",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 5800,
+      "state": "Andhra Pradesh",
+      "city": "Vijayawada",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-084",
+      "name": "Vivanta Hyderabad Inn",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 10900,
+      "state": "Telangana",
+      "city": "Hyderabad",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-085",
+      "name": "SeleQtions Mumbai Gateway",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 10100,
+      "state": "Maharashtra",
+      "city": "Mumbai",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-086",
+      "name": "Vivanta Thiruvananthapuram Resort",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 14600,
+      "state": "Kerala",
+      "city": "Thiruvananthapuram",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-087",
+      "name": "Taj Chandigarh Plaza",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 16500,
+      "state": "Punjab",
+      "city": "Chandigarh",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-088",
+      "name": "Vivanta Rajkot Resort",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 13300,
+      "state": "Gujarat",
+      "city": "Rajkot",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-089",
+      "name": "am\u00e3 Stays & Trails Varanasi Heights",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 23500,
+      "state": "Uttar Pradesh",
+      "city": "Varanasi",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-090",
+      "name": "am\u00e3 Stays & Trails Surat Gateway",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 20000,
+      "state": "Gujarat",
+      "city": "Surat",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-091",
+      "name": "am\u00e3 Stays & Trails Darjeeling Resort",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 24000,
+      "state": "West Bengal",
+      "city": "Darjeeling",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-092",
+      "name": "Ginger Jaisalmer Center",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 4200,
+      "state": "Rajasthan",
+      "city": "Jaisalmer",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-093",
+      "name": "Vivanta Hyderabad Inn",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 10100,
+      "state": "Telangana",
+      "city": "Hyderabad",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-094",
+      "name": "SeleQtions Dehradun Gateway",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 17900,
+      "state": "Uttarakhand",
+      "city": "Dehradun",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-095",
+      "name": "Ginger Jaisalmer Center",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 6200,
+      "state": "Rajasthan",
+      "city": "Jaisalmer",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-096",
+      "name": "am\u00e3 Stays & Trails Jodhpur Heights",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 16800,
+      "state": "Rajasthan",
+      "city": "Jodhpur",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-097",
+      "name": "Vivanta Rishikesh Inn",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 14400,
+      "state": "Uttarakhand",
+      "city": "Rishikesh",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-098",
+      "name": "Vivanta Darjeeling Resort",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 11400,
+      "state": "West Bengal",
+      "city": "Darjeeling",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-099",
+      "name": "Taj Warangal Plaza",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 29100,
+      "state": "Telangana",
+      "city": "Warangal",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-100",
+      "name": "Vivanta Vadodara Plaza",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 12400,
+      "state": "Gujarat",
+      "city": "Vadodara",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-101",
+      "name": "Taj Darjeeling Resort",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 23100,
+      "state": "West Bengal",
+      "city": "Darjeeling",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-102",
+      "name": "SeleQtions Kolkata Inn",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 16600,
+      "state": "West Bengal",
+      "city": "Kolkata",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-103",
+      "name": "am\u00e3 Stays & Trails Noida Center",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 23800,
+      "state": "Uttar Pradesh",
+      "city": "Noida",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-104",
+      "name": "SeleQtions Pune Gateway",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 16100,
+      "state": "Maharashtra",
+      "city": "Pune",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-105",
+      "name": "am\u00e3 Stays & Trails Kolkata Resort",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 18600,
+      "state": "West Bengal",
+      "city": "Kolkata",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-106",
+      "name": "Taj Shimla Inn",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 18200,
+      "state": "Himachal Pradesh",
+      "city": "Shimla",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-107",
+      "name": "Vivanta Siliguri Plaza",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 14000,
+      "state": "West Bengal",
+      "city": "Siliguri",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-108",
+      "name": "Vivanta Thiruvananthapuram Gateway",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 8700,
+      "state": "Kerala",
+      "city": "Thiruvananthapuram",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-109",
+      "name": "am\u00e3 Stays & Trails Mussoorie Inn",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 22900,
+      "state": "Uttarakhand",
+      "city": "Mussoorie",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-110",
+      "name": "am\u00e3 Stays & Trails Manali Center",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 14600,
+      "state": "Himachal Pradesh",
+      "city": "Manali",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-111",
+      "name": "SeleQtions Nagpur Resort",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 19500,
+      "state": "Maharashtra",
+      "city": "Nagpur",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-112",
+      "name": "am\u00e3 Stays & Trails Shimla Heights",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 20500,
+      "state": "Himachal Pradesh",
+      "city": "Shimla",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-113",
+      "name": "SeleQtions Mumbai Inn",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 13900,
+      "state": "Maharashtra",
+      "city": "Mumbai",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-114",
+      "name": "Vivanta Rishikesh Heights",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 12400,
+      "state": "Uttarakhand",
+      "city": "Rishikesh",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-115",
+      "name": "am\u00e3 Stays & Trails Margao Inn",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 24200,
+      "state": "Goa",
+      "city": "Margao",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-116",
+      "name": "Taj Amritsar Plaza",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 30800,
+      "state": "Punjab",
+      "city": "Amritsar",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-117",
+      "name": "SeleQtions Jaipur Center",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 17400,
+      "state": "Rajasthan",
+      "city": "Jaipur",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-118",
+      "name": "Taj Visakhapatnam Resort",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 21600,
+      "state": "Andhra Pradesh",
+      "city": "Visakhapatnam",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-119",
+      "name": "am\u00e3 Stays & Trails New Delhi Plaza",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 15300,
+      "state": "Delhi",
+      "city": "New Delhi",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-120",
+      "name": "Taj Bengaluru Center",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 28600,
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-121",
+      "name": "Taj Candolim Gateway",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 27900,
+      "state": "Goa",
+      "city": "Candolim",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-122",
+      "name": "Ginger Hyderabad Heights",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 6800,
+      "state": "Telangana",
+      "city": "Hyderabad",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-123",
+      "name": "SeleQtions Jaipur Gateway",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 18900,
+      "state": "Rajasthan",
+      "city": "Jaipur",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-124",
+      "name": "am\u00e3 Stays & Trails Benaulim Plaza",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 22100,
+      "state": "Goa",
+      "city": "Benaulim",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-125",
+      "name": "Ginger Mangaluru Plaza",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 5600,
+      "state": "Karnataka",
+      "city": "Mangaluru",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-126",
+      "name": "Ginger Margao Resort",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 5100,
+      "state": "Goa",
+      "city": "Margao",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-127",
+      "name": "Taj Mussoorie Plaza",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 22200,
+      "state": "Uttarakhand",
+      "city": "Mussoorie",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-128",
+      "name": "Ginger Lucknow Gateway",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 5200,
+      "state": "Uttar Pradesh",
+      "city": "Lucknow",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-129",
+      "name": "Taj Darjeeling Center",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 32200,
+      "state": "West Bengal",
+      "city": "Darjeeling",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-130",
+      "name": "am\u00e3 Stays & Trails Chandigarh Resort",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 22700,
+      "state": "Punjab",
+      "city": "Chandigarh",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-131",
+      "name": "SeleQtions Jaipur Gateway",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 18500,
+      "state": "Rajasthan",
+      "city": "Jaipur",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-132",
+      "name": "SeleQtions New Delhi Heights",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 11100,
+      "state": "Delhi",
+      "city": "New Delhi",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-133",
+      "name": "Taj Manali Resort",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 15200,
+      "state": "Himachal Pradesh",
+      "city": "Manali",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-134",
+      "name": "Vivanta Dehradun Heights",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 10700,
+      "state": "Uttarakhand",
+      "city": "Dehradun",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-135",
+      "name": "SeleQtions Nagpur Center",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 18700,
+      "state": "Maharashtra",
+      "city": "Nagpur",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-136",
+      "name": "Taj Warangal Inn",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 32000,
+      "state": "Telangana",
+      "city": "Warangal",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-137",
+      "name": "Ginger Lucknow Plaza",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 3000,
+      "state": "Uttar Pradesh",
+      "city": "Lucknow",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-138",
+      "name": "Taj Pune Heights",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 34900,
+      "state": "Maharashtra",
+      "city": "Pune",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-139",
+      "name": "Taj Jaipur Gateway",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 32500,
+      "state": "Rajasthan",
+      "city": "Jaipur",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-140",
+      "name": "am\u00e3 Stays & Trails Rishikesh Gateway",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 22300,
+      "state": "Uttarakhand",
+      "city": "Rishikesh",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-141",
+      "name": "am\u00e3 Stays & Trails Udaipur Heights",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 22500,
+      "state": "Rajasthan",
+      "city": "Udaipur",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-142",
+      "name": "am\u00e3 Stays & Trails Amritsar Gateway",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 19100,
+      "state": "Punjab",
+      "city": "Amritsar",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-143",
+      "name": "Taj Benaulim Gateway",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 18400,
+      "state": "Goa",
+      "city": "Benaulim",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-144",
+      "name": "Taj Benaulim Resort",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 20400,
+      "state": "Goa",
+      "city": "Benaulim",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-145",
+      "name": "Taj Nagpur Inn",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 29100,
+      "state": "Maharashtra",
+      "city": "Nagpur",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-146",
+      "name": "SeleQtions Kochi Plaza",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 10200,
+      "state": "Kerala",
+      "city": "Kochi",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-147",
+      "name": "Vivanta Pune Center",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 13600,
+      "state": "Maharashtra",
+      "city": "Pune",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-148",
+      "name": "am\u00e3 Stays & Trails Rajkot Gateway",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 17100,
+      "state": "Gujarat",
+      "city": "Rajkot",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-149",
+      "name": "SeleQtions Hyderabad Resort",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 16000,
+      "state": "Telangana",
+      "city": "Hyderabad",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-150",
+      "name": "am\u00e3 Stays & Trails Amritsar Plaza",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 14900,
+      "state": "Punjab",
+      "city": "Amritsar",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-151",
+      "name": "Vivanta Kumarakom Center",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 14700,
+      "state": "Kerala",
+      "city": "Kumarakom",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-152",
+      "name": "Taj Chennai Resort",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 23100,
+      "state": "Tamil Nadu",
+      "city": "Chennai",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-153",
+      "name": "Ginger Coorg Plaza",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 4000,
+      "state": "Karnataka",
+      "city": "Coorg",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-154",
+      "name": "am\u00e3 Stays & Trails Amritsar Heights",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 22300,
+      "state": "Punjab",
+      "city": "Amritsar",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-155",
+      "name": "SeleQtions Rajkot Resort",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 16500,
+      "state": "Gujarat",
+      "city": "Rajkot",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-156",
+      "name": "Taj Ahmedabad Resort",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 35500,
+      "state": "Gujarat",
+      "city": "Ahmedabad",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-157",
+      "name": "Taj Warangal Heights",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 16400,
+      "state": "Telangana",
+      "city": "Warangal",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-158",
+      "name": "SeleQtions Mumbai Center",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 16900,
+      "state": "Maharashtra",
+      "city": "Mumbai",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-159",
+      "name": "Vivanta Hyderabad Plaza",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 12800,
+      "state": "Telangana",
+      "city": "Hyderabad",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-160",
+      "name": "Ginger Warangal Gateway",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 4900,
+      "state": "Telangana",
+      "city": "Warangal",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-161",
+      "name": "Vivanta Benaulim Resort",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 12200,
+      "state": "Goa",
+      "city": "Benaulim",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-162",
+      "name": "Ginger Ahmedabad Inn",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 4400,
+      "state": "Gujarat",
+      "city": "Ahmedabad",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-163",
+      "name": "Taj Munnar Gateway",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 19900,
+      "state": "Kerala",
+      "city": "Munnar",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-164",
+      "name": "Vivanta Nainital Gateway",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 9800,
+      "state": "Uttarakhand",
+      "city": "Nainital",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-165",
+      "name": "SeleQtions Dharamshala Heights",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 16300,
+      "state": "Himachal Pradesh",
+      "city": "Dharamshala",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-166",
+      "name": "SeleQtions Amritsar Gateway",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 14400,
+      "state": "Punjab",
+      "city": "Amritsar",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-167",
+      "name": "Vivanta Agra Gateway",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 14900,
+      "state": "Uttar Pradesh",
+      "city": "Agra",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-168",
+      "name": "Taj Nainital Center",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 38200,
+      "state": "Uttarakhand",
+      "city": "Nainital",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-169",
+      "name": "Ginger Bengaluru Gateway",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 3300,
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-170",
+      "name": "Ginger Lucknow Inn",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 7000,
+      "state": "Uttar Pradesh",
+      "city": "Lucknow",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-171",
+      "name": "Vivanta Coimbatore Inn",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 8800,
+      "state": "Tamil Nadu",
+      "city": "Coimbatore",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-172",
+      "name": "am\u00e3 Stays & Trails Nagpur Center",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 23900,
+      "state": "Maharashtra",
+      "city": "Nagpur",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-173",
+      "name": "SeleQtions Rishikesh Resort",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 15600,
+      "state": "Uttarakhand",
+      "city": "Rishikesh",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-174",
+      "name": "Taj Kolkata Center",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 27500,
+      "state": "West Bengal",
+      "city": "Kolkata",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-175",
+      "name": "Taj Amritsar Inn",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 21100,
+      "state": "Punjab",
+      "city": "Amritsar",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-176",
+      "name": "Taj New Delhi Inn",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 30300,
+      "state": "Delhi",
+      "city": "New Delhi",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-177",
+      "name": "Ginger Chandigarh Gateway",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 6800,
+      "state": "Punjab",
+      "city": "Chandigarh",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-178",
+      "name": "am\u00e3 Stays & Trails Munnar Gateway",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 16100,
+      "state": "Kerala",
+      "city": "Munnar",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-179",
+      "name": "Vivanta Amritsar Inn",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 10600,
+      "state": "Punjab",
+      "city": "Amritsar",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-180",
+      "name": "Taj Darjeeling Inn",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 28800,
+      "state": "West Bengal",
+      "city": "Darjeeling",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-181",
+      "name": "Ginger Mangaluru Gateway",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 3700,
+      "state": "Karnataka",
+      "city": "Mangaluru",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-182",
+      "name": "Taj Panaji Inn",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 35200,
+      "state": "Goa",
+      "city": "Panaji",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-183",
+      "name": "am\u00e3 Stays & Trails Margao Inn",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 12300,
+      "state": "Goa",
+      "city": "Margao",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-184",
+      "name": "am\u00e3 Stays & Trails Visakhapatnam Inn",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 19500,
+      "state": "Andhra Pradesh",
+      "city": "Visakhapatnam",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-185",
+      "name": "Ginger Manali Gateway",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 5700,
+      "state": "Himachal Pradesh",
+      "city": "Manali",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-186",
+      "name": "am\u00e3 Stays & Trails Ooty Plaza",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 23100,
+      "state": "Tamil Nadu",
+      "city": "Ooty",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-187",
+      "name": "am\u00e3 Stays & Trails New Delhi Center",
+      "brand": "am\u00e3 Stays & Trails",
+      "category": "hotel",
+      "price": 24200,
+      "state": "Delhi",
+      "city": "New Delhi",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-188",
+      "name": "SeleQtions Mumbai Plaza",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 12900,
+      "state": "Maharashtra",
+      "city": "Mumbai",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-189",
+      "name": "Vivanta Siliguri Plaza",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 10000,
+      "state": "West Bengal",
+      "city": "Siliguri",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-190",
+      "name": "SeleQtions Pune Gateway",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 15400,
+      "state": "Maharashtra",
+      "city": "Pune",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-191",
+      "name": "Ginger Dharamshala Heights",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 4400,
+      "state": "Himachal Pradesh",
+      "city": "Dharamshala",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-192",
+      "name": "SeleQtions Candolim Gateway",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 10300,
+      "state": "Goa",
+      "city": "Candolim",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-193",
+      "name": "Taj Rishikesh Center",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 29800,
+      "state": "Uttarakhand",
+      "city": "Rishikesh",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-194",
+      "name": "Vivanta Mysuru Resort",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 13100,
+      "state": "Karnataka",
+      "city": "Mysuru",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-195",
+      "name": "Vivanta Agra Inn",
+      "brand": "Vivanta",
+      "category": "hotel",
+      "price": 11100,
+      "state": "Uttar Pradesh",
+      "city": "Agra",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-196",
+      "name": "Taj Coimbatore Inn",
+      "brand": "Taj",
+      "category": "hotel",
+      "price": 15900,
+      "state": "Tamil Nadu",
+      "city": "Coimbatore",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-197",
+      "name": "Ginger Kolkata Gateway",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 5300,
+      "state": "West Bengal",
+      "city": "Kolkata",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-198",
+      "name": "Ginger Mangaluru Heights",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 3200,
+      "state": "Karnataka",
+      "city": "Mangaluru",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    },
+    {
+      "code": "IHCL-199",
+      "name": "SeleQtions Ooty Gateway",
+      "brand": "SeleQtions",
+      "category": "hotel",
+      "price": 15000,
+      "state": "Tamil Nadu",
+      "city": "Ooty",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Pool",
+        "Restaurant",
+        "Spa"
+      ]
+    },
+    {
+      "code": "IHCL-200",
+      "name": "Ginger Visakhapatnam Center",
+      "brand": "Ginger",
+      "category": "hotel",
+      "price": 6900,
+      "state": "Andhra Pradesh",
+      "city": "Visakhapatnam",
+      "inStock": true,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Taj_Mahal_Palace_Hotel_-_Mumbai.jpg/500px-Taj_Mahal_Palace_Hotel_-_Mumbai.jpg",
+      "amenities": [
+        "WiFi",
+        "Restaurant"
+      ]
+    }
+  ]
+}

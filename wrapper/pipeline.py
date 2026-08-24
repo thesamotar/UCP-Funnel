@@ -119,13 +119,56 @@ Return ONLY a JSON object mapping each product id to an array of 1-3 values, e.g
     return filled
 
 
-def stage_respond(request: dict, intent: dict, native_req: dict, items: list[dict], trace: list) -> dict:
+async def stage_filter(request: dict, items: list[dict]) -> tuple[list[dict], str | None]:
+    """Filter items to strictly match user constraints, or provide close matches."""
+    if not items:
+        return [], None
+        
+    listing = "\n".join(f'- "{it["id"]}": {it["title"]} | Attributes: {json.dumps(it["attributes"])} | Price: {it["price"]["amount"]}' for it in items)
+    
+    prompt = f"""You are a strict filtering agent for Tata Neu. 
+The user searched for: "{request['query']}"
+Constraints: {json.dumps(request['constraints'])}
+
+The backend returned these items:
+{listing}
+
+Your job is to filter this list intelligently:
+1. If there are items that EXACTLY MATCH the user's specific constraints (e.g., specific size, capacity, color), return ONLY those exact matches.
+2. If there are NO exact matches, but there are CLOSE matches (e.g. asked for 32 inch, but we have 43 inch), return the close matches and explain this.
+3. If there are NO close matches either, return an empty array.
+4. For broad queries without specific constraints (e.g. "milk" or "black tshirts"), keep ALL relevant variations (all types of milk, all sizes of black tshirts). But do NOT keep completely irrelevant items (like red tshirts for a "black tshirt" query).
+
+Return ONLY a JSON object in this exact format:
+{{
+  "keep_ids": ["<id1>", "<id2>"],
+  "reasoning": "<Explanation for the chat AI to relay to the user. e.g. 'Found exact matches' or 'We don't have 32 inch TVs right now, but here are some close matches in 43 inch' or 'No items found matching the criteria.'>"
+}}
+"""
+    try:
+        result = await llm.generate_json(prompt)
+    except llm.LLMError as exc:
+        print(f"[pipeline] filter failed: {exc}")
+        return items, None
+        
+    if not isinstance(result, dict) or "keep_ids" not in result:
+        return items, None
+        
+    keep_ids = set(result["keep_ids"])
+    filtered_items = [it for it in items if it["id"] in keep_ids]
+    reasoning = result.get("reasoning")
+    
+    return filtered_items, reasoning
+
+
+def stage_respond(request: dict, intent: dict, native_req: dict, items: list[dict], trace: list, filter_reasoning: str | None = None) -> dict:
     return {
         "ucp_version": "0.1",
         "type": "search_result",
         "query": request["query"],
         "routed_to": intent["retailer"],
         "routing_reason": intent.get("reasoning"),
+        "filter_reasoning": filter_reasoning,
         "native_request": native_req,
         "count": len(items),
         "items": items,
@@ -156,4 +199,8 @@ async def run_search_pipeline(payload: dict) -> dict:
     enhanced = await stage_enhance(intent, items)
     mark("enhance", f"filled color_options for {len(enhanced)} items" if enhanced else "no gaps to fill", t)
 
-    return stage_respond(request, intent, native_req, items, trace)
+    t = time.monotonic()
+    filtered_items, filter_reasoning = await stage_filter(request, items)
+    mark("filter", f"kept {len(filtered_items)} of {len(items)} items", t)
+
+    return stage_respond(request, intent, native_req, filtered_items, trace, filter_reasoning)

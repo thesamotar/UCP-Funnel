@@ -201,3 +201,52 @@ drop policy if exists "catalog is public" on onemg_products;
 create policy "catalog is public" on onemg_products for select to anon, authenticated using (true);
 drop policy if exists "catalog is public" on titan_products;
 create policy "catalog is public" on titan_products for select to anon, authenticated using (true);
+
+-- ihcl
+create table if not exists ihcl_products (
+  id         text primary key,
+  native     jsonb not null,
+  image_url  text,
+  updated_at timestamptz not null default now()
+);
+create table if not exists ihcl_carts (
+  id         text primary key,
+  payload    jsonb not null,
+  updated_at timestamptz not null default now()
+);
+create table if not exists ihcl_orders (
+  id         text primary key,
+  payload    jsonb not null,
+  updated_at timestamptz not null default now()
+);
+
+-- airindia
+create table if not exists airindia_products (
+  id         text primary key,
+  native     jsonb not null,
+  image_url  text,
+  updated_at timestamptz not null default now()
+);
+create table if not exists airindia_carts (
+  id         text primary key,
+  payload    jsonb not null,
+  updated_at timestamptz not null default now()
+);
+create table if not exists airindia_orders (
+  id         text primary key,
+  payload    jsonb not null,
+  updated_at timestamptz not null default now()
+);
+
+-- RLS
+alter table ihcl_products enable row level security;
+alter table ihcl_carts enable row level security;
+alter table ihcl_orders enable row level security;
+alter table airindia_products enable row level security;
+alter table airindia_carts enable row level security;
+alter table airindia_orders enable row level security;
+
+drop policy if exists "catalog is public" on ihcl_products;
+create policy "catalog is public" on ihcl_products for select to anon, authenticated using (true);
+drop policy if exists "catalog is public" on airindia_products;
+create policy "catalog is public" on airindia_products for select to anon, authenticated using (true);

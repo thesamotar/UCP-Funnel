@@ -1,6 +1,39 @@
 {
   "products": [
     {
+      "sku_id": "BB-SUN-001",
+      "desc": "Nivea Sun Protect & Moisture SPF 50",
+      "brand": "Nivea",
+      "cat": "personal_care",
+      "pack_size": "125 ml",
+      "mrp": 450,
+      "sp": 399,
+      "availability": "A",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Soap.jpg/500px-Soap.jpg"
+    },
+    {
+      "sku_id": "BB-SUN-002",
+      "desc": "Neutrogena Ultra Sheer Dry-Touch Sunblock SPF 50+",
+      "brand": "Neutrogena",
+      "cat": "personal_care",
+      "pack_size": "88 ml",
+      "mrp": 675,
+      "sp": 540,
+      "availability": "A",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Soap.jpg/500px-Soap.jpg"
+    },
+    {
+      "sku_id": "BB-SUN-003",
+      "desc": "Lakme Sun Expert SPF 24 PA++ UV Lotion",
+      "brand": "Lakme",
+      "cat": "personal_care",
+      "pack_size": "120 ml",
+      "mrp": 320,
+      "sp": 280,
+      "availability": "A",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Soap.jpg/500px-Soap.jpg"
+    },
+    {
       "sku_id": "BB-40000111",
       "desc": "Amul Taaza Toned Milk",
       "brand": "Amul",
