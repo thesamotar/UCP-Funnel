@@ -1,0 +1,199 @@
+import re
+import json
+
+text = """OnePlus Nord Buds 3r TWS Earbuds with AI Call Noise Cancellation (IP55 Dust & Water Resistance, Dual Device Connection, Ash Black)
+Price: 1849 MRP: 1999
+Key Features
+Orientation Type: In Ear
+Connectivity: Bluetooth, Version 5.4
+Battery Life: 54 Hours
+Fast Charging: Yes
+Noise Cancellation: AI Call Noise Cancellation
+Voice Assistant: Alexa | Google | Siri
+USP: Google Fast Pair, Aqua Touch, Find My Earbuds
+Warranty: 12 Months Warranty
+https://www.croma.com/oneplus-nord-buds-3r-tws-earbuds-with-ai-call-noise-cancellation-ip55-dust-water-resistance-dual-device-connection-ash-black-/p/318486
+
+Croma IE165 TWS Earbuds with Passive Noise Cancellation (IPX4 Water & Sweat Resistant, Touch Control, Black)
+
+Price: ₹899.00
+MRP: ₹1,000.00
+
+Key Features
+Orientation Type: In Ear
+Connectivity: Bluetooth, Version 5.4
+Battery Life: 20 Hours
+Fast Charging: No
+Noise Cancellation: Passive Noise Cancellation
+Voice Assistant: Yes
+USP: 10 mm Driver, 2 Built-in Mic
+Warranty: 12 Months Warranty
+
+https://www.croma.com/croma-ie165-tws-earbuds-with-passive-noise-cancellation-ipx4-water-sweat-resistant-touch-control-black-/p/317354
+
+Croma IN 101 TWS Earbuds with Passive Noise Cancellation (IPX4 Water Resistant, 28 Hours Playback White)
+
+₹1,099.00
+(Incl. all Taxes)
+MRP: ₹1,400.00
+
+
+Key Features
+Orientation Type: In Ear
+Connectivity: Bluetooth Version 5.3
+Battery Life: 28Hours
+Fast Charging: Yes
+Noise Cancellation: Passive Noise Cancellation
+Voice Assistant: Supported Voice Assistant
+USP: IPX4 Water & Sweat Resistant, Sound Modes
+Warranty: 12 Months Warranty
+
+https://www.croma.com/croma-in-101-tws-earbuds-with-passive-noise-cancellation-ipx4-water-resistant-28-hours-playback-white-/p/275523
+
+Croma TWS Earbuds with Environmental Noise Cancellation (IPX4 Water Resistant, Quad Mic, Blue)
+
+₹1,399.00
+(Incl. all Taxes)
+MRP: ₹2,000.00
+
+Key Features
+Orientation Type: In Ear
+Connectivity: Bluetooth, Version 5.3
+Battery Life: 32 Hours
+Fast Charging: Yes
+Noise Cancellation: Environmental Noise Cancellation
+Voice Assistant: No
+USP: 10 mm Driver, Touch Control
+Warranty: 12 Months Warranty
+
+https://www.croma.com/croma-tws-earbuds-with-environmental-noise-cancellation-ipx4-water-resistant-quad-mic-blue-/p/312251
+
+OnePlus Nord Buds 4 E522A TWS Earbuds with Active Noise Cancellation (IP55 Water and Dust Resistant, AI Translate, Stellar Black)
+
+₹3,299.00
+MRP: ₹3,499.00
+
+Key Features
+Orientation Type: In Ear
+Connectivity: Bluetooth, Version 6.1
+Battery Life: 54 Hours
+Fast Charging: Yes
+Noise Cancellation: Active Noise Cancellation
+Voice Assistant: Google Gemini
+USP: Quick Pairing, Stereo Sound
+Warranty: 12 Months Warranty
+
+https://www.croma.com/oneplus-nord-buds-4-e522a-tws-earbuds-with-active-noise-cancellation-ip55-water-and-dust-resistant-ai-translate-stellar-black-/p/323631
+
+boAt Airdopes 800 TWS Earbuds with Environmental Noise Cancellation (IPX5 Water Resistant, ASAP Charge, Interstellar Blue)
+₹1,899.00
+(Incl. all Taxes)
+MRP: ₹6,490.00
+
+Key Features
+Orientation Type: In Ear
+Connectivity: Bluetooth Version 5.3
+Battery Life: 40 Hours
+Fast Charging: Yes
+Noise Cancellation: Environmental Noise Cancellation
+Voice Assistant: Yes
+USP: Adaptive EQ by Mimi, boAt Signature Sound Powered by Dolby Audio
+Warranty: 12 Months Warranty
+https://www.croma.com/boat-airdopes-800-tws-earbuds-with-environmental-noise-cancellation-ipx5-water-resistant-asap-charge-interstellar-blue-/p/306852
+
+boAt Nirvana Ion TWS Earbuds with Environmental Noise Cancellation (IPX4 Water Resistant, 120 Hours Playback, Charcoal Black)
+
+₹1,799.00
+(Incl. all Taxes)
+MRP: ₹7,990.00
+
+Key Features
+Orientation Type: In Ear
+Connectivity: Bluetooth, Version 5.2
+Battery Life: 120 Hours
+Fast Charging: No
+Noise Cancellation: Environmental Noise Cancellation
+Voice Assistant: Yes
+USP: Seamless In-Ear Detection, Crystal Bionic Sound
+Warranty: 12 Months Warranty
+
+https://www.croma.com/boat-nirvana-ion-tws-earbuds-with-environmental-noise-cancellation-ipx4-water-resistant-120-hours-playback-charcoal-black-/p/270439
+
+JBL Wave Beam 2 JBLWBEAM2BLU TWS Earbuds with Active Noise Cancellation (IP54 Water Resistant, Smart Ambient Technology, Blue)
+
+₹3,299.00
+MRP: ₹7,499.00
+
+Key Features
+Orientation Type: In Ear
+Connectivity: Bluetooth, Version 5.3
+Battery Life: 40 Hours
+Fast Charging: Yes
+Noise Cancellation: Active Noise Cancellation
+Voice Assistant: No
+USP: Multi-point Connection, Pure Bass sound, TalkThru
+Warranty: 12 Months Warranty
+
+https://www.croma.com/jbl-wave-beam-2-jblwbeam2blu-tws-earbuds-with-active-noise-cancellation-ip54-water-resistant-smart-ambient-technology-blue-/p/313285"""
+
+lines = [line.strip() for line in text.split("\n")]
+chunks = []
+curr = []
+for line in lines:
+    if line.startswith("https://"):
+        curr.append(line)
+        chunks.append(curr)
+        curr = []
+    elif line:
+        curr.append(line)
+
+new_products = []
+code_idx = 100
+for chunk in chunks:
+    if not chunk: continue
+    title = chunk[0]
+    brand = title.split(" ")[0]
+    
+    url = chunk[-1]
+    
+    price_str = " ".join(chunk[1:-1])
+    # Extract selling price
+    sp_match = re.search(r'(?:Price:\s*|₹)\s*([\d,]+(?:\.\d+)?)', price_str)
+    sp = float(sp_match.group(1).replace(",", "")) if sp_match else 0
+    
+    # Extract MRP
+    mrp_match = re.search(r'MRP:\s*₹?\s*([\d,]+(?:\.\d+)?)', price_str)
+    mrp = float(mrp_match.group(1).replace(",", "")) if mrp_match else sp
+    
+    # Specs
+    specs = {"marketplace": "Croma"}
+    for line in chunk:
+        if ":" in line and "Key Features" not in line and "Price" not in line and "MRP" not in line and "https://" not in line:
+            parts = line.split(":", 1)
+            specs[parts[0].strip()] = parts[1].strip()
+            
+    p = {
+        "code": f"CROM-{code_idx}",
+        "name": title,
+        "brandName": brand,
+        "category": "electronics",
+        "price": {
+            "mrp": int(mrp),
+            "sellingPrice": int(sp)
+        },
+        "specs": specs,
+        "inStock": True,
+        "imageUrl": url
+    }
+    new_products.append(p)
+    code_idx += 1
+
+with open("mocks/croma/data.json", "r") as f:
+    data = json.load(f)
+    
+data["products"].extend(new_products)
+
+with open("mocks/croma/data.json", "w") as f:
+    json.dump(data, f, indent=2)
+
+print(f"Added {len(new_products)} products.")

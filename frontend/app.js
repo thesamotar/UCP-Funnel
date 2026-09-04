@@ -151,7 +151,7 @@ function setConnector(on) {
   $("active-chip").classList.toggle("hidden", !on);
   $("prompt").placeholder = on ? "Ask Gemini · Tata Neu connected" : "Ask Gemini";
   note(on ? "Tata Neu connector enabled — shopping queries now route through the Tata UCP node"
-          : "Tata Neu connector disabled — back to plain chat");
+    : "Tata Neu connector disabled — back to plain chat");
 }
 
 // ---------- rendering ----------
@@ -159,10 +159,35 @@ function scroll() { $("chat").scrollTop = $("chat").scrollHeight; }
 
 function md(text) {
   const esc = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-  return esc
+  let html = esc
+    .replace(/^### (.*$)/gim, "<h3>$1</h3>")
+    .replace(/^## (.*$)/gim, "<h2>$1</h2>")
+    .replace(/^# (.*$)/gim, "<h1>$1</h1>")
     .replace(/\*\*(.+?)\*\*/g, "<b>$1</b>")
+    .replace(/\*([^\*]+)\*/g, "<i>$1</i>")
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>')
     .replace(/`([^`]+)`/g, "<code>$1</code>")
     .replace(/^\s*[*-]\s+/gm, "• ");
+
+  if (html.includes('|')) {
+    html = html.replace(/((?:^[ \t]*\|.*\|\r?\n?)+)/gm, function(match) {
+      let rows = match.trim().split(/\r?\n/);
+      if (rows.length < 2) return match;
+      let tableHtml = '<table class="md-table">';
+      rows.forEach((row, index) => {
+        if (row.match(/^[ \t]*\|(?:-+|:?-+:?|\||\s)+\|[ \t]*$/)) return;
+        let cols = row.split('|').slice(1, -1);
+        tableHtml += '<tr>';
+        cols.forEach(col => {
+          tableHtml += (index === 0) ? `<th>${col.trim()}</th>` : `<td>${col.trim()}</td>`;
+        });
+        tableHtml += '</tr>';
+      });
+      tableHtml += '</table>';
+      return tableHtml;
+    });
+  }
+  return html;
 }
 
 function addMsg(role, text, opts = {}) {
@@ -332,8 +357,10 @@ async function executeTool(name, args) {
     renderPaymentCard(data);
     pollPayment(data);
     // lean payload for the model — the QR itself stays in the UI
-    return { type: "payment_request", amount: data.amount, currency: data.currency,
-             short_url: data.short_url, status: "awaiting_payment" };
+    return {
+      type: "payment_request", amount: data.amount, currency: data.currency,
+      short_url: data.short_url, status: "awaiting_payment"
+    };
   }
   return { error: `unknown tool ${name}` };
 }

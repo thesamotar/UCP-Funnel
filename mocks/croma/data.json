@@ -52,7 +52,7 @@
         "defrostType": "Frost Free"
       },
       "inStock": true,
-      "imageUrl": "https://i.pinimg.com/736x/7c/a8/4c/7ca84ce699d16364d1171d6dd13860f6.jpg"
+      "imageUrl": "https://static.toiimg.com/thumb/resizemode-4%2Cmsid-71903152%2Cimgsize-200%2Cwidth-600%2Cimgv-1/71903152.jpg"
     },
     {
       "code": "CRM-301204",
@@ -196,7 +196,7 @@
         "os": "Android TV"
       },
       "inStock": false,
-      "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2024/5/418558875/ZZ/ER/QS/69654469/l43m8-a2in-xiaomi-43-inch-x-series-4k-ultra-hd-smart-google-tv-500x500.jpg"
+      "imageUrl": "https://i.gadgets360cdn.com/products/large/mi-40-inch-full-hd-tv-4a-horizon-edition-1251x800-1622534456.jpg"
     },
     {
       "code": "CRM-303101",
@@ -246,11 +246,11 @@
       "specs": {
         "capacity": "7.5 kg",
         "type": "Semi Automatic",
-        "color": "Blue",
+        "color": "White and Navy",
         "energyRating": "5 Star"
       },
       "inStock": true,
-      "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2025/11/563378950/CU/JQ/EH/254736673/whirlpool-ace-8-0-supersoak-coral-red-semi-auto-top-load-washing-machine-1000x1000.webp"
+      "imageUrl": "https://cdn1.smartprix.com/rx-i8hgOdo1R-w1200-h1200/8hgOdo1R.jpg"
     },
     {
       "code": "CRM-304101",
@@ -413,7 +413,7 @@
         "color": null
       },
       "inStock": true,
-      "imageUrl": "https://static.toiimg.com/thumb/resizemode-4,msid-118560727,width-1070,imgv-0/118560727.jpg"
+      "imageUrl": "https://tiimg.tistatic.com/fp/1/009/491/voltas-air-conditioner-split-417.jpg"
     },
     {
       "code": "CRM-307101",
@@ -450,6 +450,190 @@
       },
       "inStock": true,
       "imageUrl": "https://cdn.kalvo.com/uploads/img/gallery/68209-xiaomi-redmi-note-14-5g-global-6.jpg"
+    },
+    {
+      "code": "CROM-100",
+      "name": "OnePlus Nord Buds 3r TWS Earbuds with AI Call Noise Cancellation (IP55 Dust & Water Resistance, Dual Device Connection, Ash Black)",
+      "brandName": "OnePlus",
+      "category": "electronics",
+      "price": {
+        "mrp": 1999,
+        "sellingPrice": 1849
+      },
+      "specs": {
+        "marketplace": "Croma",
+        "Orientation Type": "In Ear",
+        "Connectivity": "Bluetooth, Version 5.4",
+        "Battery Life": "54 Hours",
+        "Fast Charging": "Yes",
+        "Noise Cancellation": "AI Call Noise Cancellation",
+        "Voice Assistant": "Alexa | Google | Siri",
+        "USP": "Google Fast Pair, Aqua Touch, Find My Earbuds",
+        "Warranty": "12 Months Warranty"
+      },
+      "inStock": true,
+      "imageUrl": "https://media-ik.croma.com/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/318486_0_A_bf0wbZR.png?updatedAt=1766430837037&tr=w-1000"
+    },
+    {
+      "code": "CROM-101",
+      "name": "Croma IE165 TWS Earbuds with Passive Noise Cancellation (IPX4 Water & Sweat Resistant, Touch Control, Black)",
+      "brandName": "Croma",
+      "category": "electronics",
+      "price": {
+        "mrp": 1000,
+        "sellingPrice": 899
+      },
+      "specs": {
+        "marketplace": "Croma",
+        "Orientation Type": "In Ear",
+        "Connectivity": "Bluetooth, Version 5.4",
+        "Battery Life": "20 Hours",
+        "Fast Charging": "No",
+        "Noise Cancellation": "Passive Noise Cancellation",
+        "Voice Assistant": "Yes",
+        "USP": "10 mm Driver, 2 Built-in Mic",
+        "Warranty": "12 Months Warranty"
+      },
+      "inStock": true,
+      "imageUrl": "https://media-ik.croma.com/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/317354_0_4i0TSnHSM.png?updatedAt=1771249945703&tr=w-1000"
+    },
+    {
+      "code": "CROM-102",
+      "name": "Croma IN 101 TWS Earbuds with Passive Noise Cancellation (IPX4 Water Resistant, 28 Hours Playback White)",
+      "brandName": "Croma",
+      "category": "electronics",
+      "price": {
+        "mrp": 1400,
+        "sellingPrice": 1099
+      },
+      "specs": {
+        "marketplace": "Croma",
+        "Orientation Type": "In Ear",
+        "Connectivity": "Bluetooth Version 5.3",
+        "Battery Life": "28Hours",
+        "Fast Charging": "Yes",
+        "Noise Cancellation": "Passive Noise Cancellation",
+        "Voice Assistant": "Supported Voice Assistant",
+        "USP": "IPX4 Water & Sweat Resistant, Sound Modes",
+        "Warranty": "12 Months Warranty"
+      },
+      "inStock": true,
+      "imageUrl": "https://media-ik.croma.com/Croma%20Assets/Entertainment/Wireless%20Earbuds/Images/275523_0_swloca.png?tr=w-1000"
+    },
+    {
+      "code": "CROM-103",
+      "name": "Croma TWS Earbuds with Environmental Noise Cancellation (IPX4 Water Resistant, Quad Mic, Blue)",
+      "brandName": "Croma",
+      "category": "electronics",
+      "price": {
+        "mrp": 2000,
+        "sellingPrice": 1399
+      },
+      "specs": {
+        "marketplace": "Croma",
+        "Orientation Type": "In Ear",
+        "Connectivity": "Bluetooth, Version 5.3",
+        "Battery Life": "32 Hours",
+        "Fast Charging": "Yes",
+        "Noise Cancellation": "Environmental Noise Cancellation",
+        "Voice Assistant": "No",
+        "USP": "10 mm Driver, Touch Control",
+        "Warranty": "12 Months Warranty"
+      },
+      "inStock": true,
+      "imageUrl": "https://media-ik.croma.com/312251_0_iogzho.png?tr=w-1000"
+    },
+    {
+      "code": "CROM-104",
+      "name": "OnePlus Nord Buds 4 E522A TWS Earbuds with Active Noise Cancellation (IP55 Water and Dust Resistant, AI Translate, Stellar Black)",
+      "brandName": "OnePlus",
+      "category": "electronics",
+      "price": {
+        "mrp": 3499,
+        "sellingPrice": 3299
+      },
+      "specs": {
+        "marketplace": "Croma",
+        "Orientation Type": "In Ear",
+        "Connectivity": "Bluetooth, Version 6.1",
+        "Battery Life": "54 Hours",
+        "Fast Charging": "Yes",
+        "Noise Cancellation": "Active Noise Cancellation",
+        "Voice Assistant": "Google Gemini",
+        "USP": "Quick Pairing, Stereo Sound",
+        "Warranty": "12 Months Warranty"
+      },
+      "inStock": true,
+      "imageUrl": "https://media-ik.croma.com/Croma%20Assets/Communication/Headphones%20and%20Earphones/Images/323631_0_MbAh1Od8M.png?updatedAt=1781528756840&tr=w-1000"
+    },
+    {
+      "code": "CROM-105",
+      "name": "boAt Airdopes 800 TWS Earbuds with Environmental Noise Cancellation (IPX5 Water Resistant, ASAP Charge, Interstellar Blue)",
+      "brandName": "boAt",
+      "category": "electronics",
+      "price": {
+        "mrp": 6490,
+        "sellingPrice": 1899
+      },
+      "specs": {
+        "marketplace": "Croma",
+        "Orientation Type": "In Ear",
+        "Connectivity": "Bluetooth Version 5.3",
+        "Battery Life": "40 Hours",
+        "Fast Charging": "Yes",
+        "Noise Cancellation": "Environmental Noise Cancellation",
+        "Voice Assistant": "Yes",
+        "USP": "Adaptive EQ by Mimi, boAt Signature Sound Powered by Dolby Audio",
+        "Warranty": "12 Months Warranty"
+      },
+      "inStock": true,
+      "imageUrl": "https://media-ik.croma.com/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/306852_0_tocjpv.png?tr=w-1000"
+    },
+    {
+      "code": "CROM-106",
+      "name": "boAt Nirvana Ion TWS Earbuds with Environmental Noise Cancellation (IPX4 Water Resistant, 120 Hours Playback, Charcoal Black)",
+      "brandName": "boAt",
+      "category": "electronics",
+      "price": {
+        "mrp": 7990,
+        "sellingPrice": 1799
+      },
+      "specs": {
+        "marketplace": "Croma",
+        "Orientation Type": "In Ear",
+        "Connectivity": "Bluetooth, Version 5.2",
+        "Battery Life": "120 Hours",
+        "Fast Charging": "No",
+        "Noise Cancellation": "Environmental Noise Cancellation",
+        "Voice Assistant": "Yes",
+        "USP": "Seamless In-Ear Detection, Crystal Bionic Sound",
+        "Warranty": "12 Months Warranty"
+      },
+      "inStock": true,
+      "imageUrl": "https://media-ik.croma.com/270439_0_vyzxyf.png?tr=w-1000"
+    },
+    {
+      "code": "CROM-107",
+      "name": "JBL Wave Beam 2 JBLWBEAM2BLU TWS Earbuds with Active Noise Cancellation (IP54 Water Resistant, Smart Ambient Technology, Blue)",
+      "brandName": "JBL",
+      "category": "electronics",
+      "price": {
+        "mrp": 7499,
+        "sellingPrice": 3299
+      },
+      "specs": {
+        "marketplace": "Croma",
+        "Orientation Type": "In Ear",
+        "Connectivity": "Bluetooth, Version 5.3",
+        "Battery Life": "40 Hours",
+        "Fast Charging": "Yes",
+        "Noise Cancellation": "Active Noise Cancellation",
+        "Voice Assistant": "No",
+        "USP": "Multi-point Connection, Pure Bass sound, TalkThru",
+        "Warranty": "12 Months Warranty"
+      },
+      "inStock": true,
+      "imageUrl": "https://media-ik.croma.com/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/313285_0_fYnuVCd_B.png?updatedAt=1770705524487&tr=w-1000"
     }
   ]
 }

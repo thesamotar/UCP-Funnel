@@ -2,7 +2,7 @@
   "products": [
     {
       "code": "TTN-001",
-      "name": "Titan Analog_watches 1",
+      "name": "Titan Analog Watch 9171SL01",
       "brandName": "Titan",
       "category": "analog_watches",
       "price": {
@@ -11,14 +11,16 @@
       },
       "specs": {
         "strapMaterial": "Leather",
-        "dialColor": "White"
+        "dialColor": "White",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
       "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw40deb065/images/Titan/Catalog/9171SL01_1.jpg?sw=800&sh=800"
     },
     {
       "code": "TTN-002",
-      "name": "Titan Analog_watches 2",
+      "name": "Titan Analog Watch 1806NM01",
       "brandName": "Titan",
       "category": "analog_watches",
       "price": {
@@ -27,14 +29,16 @@
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "Black"
+        "dialColor": "Black",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
       "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dwcfb00132/images/Titan/Catalog/1806NM01_1.jpg?sw=800&sh=800"
     },
     {
       "code": "TTN-003",
-      "name": "Titan Analog_watches 3",
+      "name": "Titan Analog Watch 1774YL01",
       "brandName": "Titan",
       "category": "analog_watches",
       "price": {
@@ -43,14 +47,16 @@
       },
       "specs": {
         "strapMaterial": "Leather",
-        "dialColor": "Black"
+        "dialColor": "Black",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw812eaddf/images/Titan/Catalog/1774YL01_2.jpg?sw=800&sh=800"
+      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw812eaddf/images/Titan/Catalog/1774YL01_1.jpg?sw=800&sh=800"
     },
     {
       "code": "TTN-004",
-      "name": "Titan Analog_watches 4",
+      "name": "Titan Analog Watch 9162YL01",
       "brandName": "Titan",
       "category": "analog_watches",
       "price": {
@@ -59,14 +65,16 @@
       },
       "specs": {
         "strapMaterial": "Leather",
-        "dialColor": "White"
+        "dialColor": "White",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw67b3ca77/images/Titan/Catalog/9162YL01_2.jpg"
+      "imageUrl": "https://www.titan.co.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw67b3ca77/images/Titan/Catalog/9162YL01_1.jpg"
     },
     {
       "code": "TTN-005",
-      "name": "Titan Analog_watches 5",
+      "name": "Titan Analog Watch 1638SL02",
       "brandName": "Titan",
       "category": "analog_watches",
       "price": {
@@ -75,14 +83,16 @@
       },
       "specs": {
         "strapMaterial": "Leather",
-        "dialColor": "Black"
+        "dialColor": "Black",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw95e53bce/images/Titan/Catalog/1638SL02_2.jpg?sw=800&sh=800"
+      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw95e53bce/images/Titan/Catalog/1638SL02_1.jpg?sw=800&sh=800"
     },
     {
       "code": "TTN-006",
-      "name": "Titan Analog_watches 6",
+      "name": "Titan Analog Watch TITAN-006",
       "brandName": "Titan",
       "category": "analog_watches",
       "price": {
@@ -91,14 +101,16 @@
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "Black"
+        "dialColor": "Black",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
       "imageUrl": "https://m.media-amazon.com/images/I/71DSA+AvbVL._AC_.jpg"
     },
     {
       "code": "TTN-007",
-      "name": "Titan Analog_watches 7",
+      "name": "Titan Analog Watch 9234SL02",
       "brandName": "Titan",
       "category": "analog_watches",
       "price": {
@@ -107,14 +119,16 @@
       },
       "specs": {
         "strapMaterial": "Leather",
-        "dialColor": "White"
+        "dialColor": "White",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw67b3ca77/images/Titan/Catalog/9162YL01_2.jpg"
+      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw32fca5cf/images/Titan/Catalog/9234SL02_1.jpg?sw=800&sh=800"
     },
     {
       "code": "TTN-008",
-      "name": "Fastrack Smartwatches 1",
+      "name": "Fastrack Smartwatch 38148NM01",
       "brandName": "Fastrack",
       "category": "smartwatches",
       "price": {
@@ -123,110 +137,124 @@
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "Black"
+        "displayColor": "Black",
+        "displayType": "Digital",
+        "connectivity": "Bluetooth"
       },
       "inStock": true,
       "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw1813686d/images/Fastrack/Catalog/38148NM01_1.jpg"
     },
     {
       "code": "TTN-009",
-      "name": "Fastrack Smartwatches 2",
+      "name": "Fastrack Analog Watch 3278SM04",
       "brandName": "Fastrack",
-      "category": "smartwatches",
+      "category": "analog_watches",
       "price": {
         "mrp": 15163,
         "sellingPrice": 9478
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "White"
+        "dialColor": "White",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw52c49841/images/Fastrack/Catalog/3278SM04_3.jpg"
+      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw52c49841/images/Fastrack/Catalog/3278SM04_1.jpg"
     },
     {
       "code": "TTN-010",
-      "name": "Fastrack Smartwatches 3",
+      "name": "Fastrack Analog Watch 3084NL04",
       "brandName": "Fastrack",
-      "category": "smartwatches",
+      "category": "analog_watches",
       "price": {
         "mrp": 38043,
         "sellingPrice": 29897
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "Black"
+        "dialColor": "Black",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw1813686d/images/Fastrack/Catalog/38148NM01_1.jpg"
+      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw56af57af/images/Fastrack/Catalog/3084NL04_1.jpg"
     },
     {
       "code": "TTN-011",
-      "name": "Fastrack Smartwatches 4",
+      "name": "Fastrack Analog Watch 3272NL01",
       "brandName": "Fastrack",
-      "category": "smartwatches",
+      "category": "analog_watches",
       "price": {
         "mrp": 27070,
         "sellingPrice": 17609
       },
       "specs": {
         "strapMaterial": "Leather",
-        "dialColor": "White"
+        "dialColor": "White",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw56af57af/images/Fastrack/Catalog/3084NL04_1.jpg"
+      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dwc211f084/images/Fastrack/Catalog/3272NL01_1.jpg?sw=800&sh=800"
     },
     {
       "code": "TTN-012",
-      "name": "Fastrack Smartwatches 5",
+      "name": "Fastrack Analog Watch 6152SM07",
       "brandName": "Fastrack",
-      "category": "smartwatches",
+      "category": "analog_watches",
       "price": {
         "mrp": 41928,
         "sellingPrice": 39243
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "Black"
+        "dialColor": "Black",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw1813686d/images/Fastrack/Catalog/38148NM01_1.jpg"
+      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dwd59bf1ea/images/Fastrack/Catalog/6152SM07_1.jpg"
     },
     {
       "code": "TTN-013",
-      "name": "Fastrack Smartwatches 6",
+      "name": "Fastrack Analog Watch 3016AL02",
       "brandName": "Fastrack",
-      "category": "smartwatches",
+      "category": "analog_watches",
       "price": {
         "mrp": 44014,
         "sellingPrice": 37383
       },
       "specs": {
         "strapMaterial": "Leather",
-        "dialColor": "White"
+        "dialColor": "White",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw56af57af/images/Fastrack/Catalog/3084NL04_1.jpg"
+      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw6eb6279e/images/Fastrack/Catalog/3016AL02_1.jpg"
     },
     {
       "code": "TTN-014",
-      "name": "Fastrack Smartwatches 7",
+      "name": "Fastrack Analog Watch 3292NL01",
       "brandName": "Fastrack",
-      "category": "smartwatches",
+      "category": "analog_watches",
       "price": {
         "mrp": 41444,
         "sellingPrice": 35410
       },
       "specs": {
         "strapMaterial": "Leather",
-        "dialColor": "Black"
+        "dialColor": "Black",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dwc211f084/images/Fastrack/Catalog/3272NL01_4.jpg?sw=800&sh=800"
+      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw28a3265a/images/Fastrack/Catalog/3292NL01_1.jpg?sw=800&sh=800"
     },
     {
       "code": "TTN-015",
-      "name": "Tanishq Gold_jewelry 1",
+      "name": "Tanishq 22K Gold Jewellery 513219BQEAA00",
       "brandName": "Tanishq",
       "category": "gold_jewelry",
       "price": {
@@ -234,15 +262,16 @@
         "sellingPrice": 8030
       },
       "specs": {
-        "strapMaterial": "Leather",
-        "dialColor": "Black"
+        "metal": "Gold",
+        "purity": "22K",
+        "jewelryType": "Pendant"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw3e10e985/images/Titan/Catalog/5033DL01_6.jpg"
+      "imageUrl": "https://www.tanishq.com/on/demandware.static/-/Sites-Tanishq-site-catalog/default/dwfe4308a2/images/hi-res/513219BQEAA00_1.jpg"
     },
     {
       "code": "TTN-016",
-      "name": "Tanishq Gold_jewelry 2",
+      "name": "Tanishq 22K Gold Jewellery 51W2KPWCIAA88",
       "brandName": "Tanishq",
       "category": "gold_jewelry",
       "price": {
@@ -250,15 +279,16 @@
         "sellingPrice": 33956
       },
       "specs": {
-        "strapMaterial": "Leather",
-        "dialColor": "Black"
+        "metal": "Gold",
+        "purity": "22K",
+        "jewelryType": "Ring"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw3e10e985/images/Titan/Catalog/5065DL01_1.jpg"
+      "imageUrl": "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwcfbf242b/images/hi-res/51W2KPWCIAA88_1.jpg"
     },
     {
       "code": "TTN-017",
-      "name": "Tanishq Gold_jewelry 3",
+      "name": "Tanishq 22K Gold Jewellery 511882WKBAA88",
       "brandName": "Tanishq",
       "category": "gold_jewelry",
       "price": {
@@ -266,15 +296,16 @@
         "sellingPrice": 24893
       },
       "specs": {
-        "strapMaterial": "Metal",
-        "dialColor": "Black"
+        "metal": "Gold",
+        "purity": "22K",
+        "jewelryType": "Earrings"
       },
       "inStock": true,
-      "imageUrl": "https://www.tanishq.com/on/demandware.static/-/Sites-Tanishq-site-catalog/default/dwfe4308a2/images/hi-res/513219BQEAA00_1.jpg"
+      "imageUrl": "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwcfbf242b/images/hi-res/511882WKBAA88_1.jpg?sw=640&sh=640"
     },
     {
       "code": "TTN-018",
-      "name": "Tanishq Gold_jewelry 4",
+      "name": "Tanishq 22K Gold Jewellery UPW2KPWEJAA88",
       "brandName": "Tanishq",
       "category": "gold_jewelry",
       "price": {
@@ -282,15 +313,16 @@
         "sellingPrice": 25021
       },
       "specs": {
-        "strapMaterial": "Leather",
-        "dialColor": "Black"
+        "metal": "Gold",
+        "purity": "22K",
+        "jewelryType": "Bracelet"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw3e10e985/images/Titan/Catalog/5033DL01_6.jpg"
+      "imageUrl": "https://www.tanishq.com/on/demandware.static/-/Sites-Tanishq-site-catalog/default/dw16b7f9a5/images/hi-res/UPW2KPWEJAA88_1.jpg"
     },
     {
       "code": "TTN-019",
-      "name": "Tanishq Gold_jewelry 5",
+      "name": "Tanishq 22K Gold Jewellery 513219BQEAA00",
       "brandName": "Tanishq",
       "category": "gold_jewelry",
       "price": {
@@ -298,15 +330,16 @@
         "sellingPrice": 12169
       },
       "specs": {
-        "strapMaterial": "Leather",
-        "dialColor": "Black"
+        "metal": "Gold",
+        "purity": "22K",
+        "jewelryType": "Necklace"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw3e10e985/images/Titan/Catalog/5033DL01_6.jpg"
+      "imageUrl": "https://www.tanishq.com/on/demandware.static/-/Sites-Tanishq-site-catalog/default/dwfe4308a2/images/hi-res/513219BQEAA00_2.jpg"
     },
     {
       "code": "TTN-020",
-      "name": "Tanishq Gold_jewelry 6",
+      "name": "Tanishq 22K Gold Jewellery 51W2KPWCIAA88",
       "brandName": "Tanishq",
       "category": "gold_jewelry",
       "price": {
@@ -314,15 +347,16 @@
         "sellingPrice": 20938
       },
       "specs": {
-        "strapMaterial": "Leather",
-        "dialColor": "Black"
+        "metal": "Gold",
+        "purity": "22K",
+        "jewelryType": "Bangle"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw3e10e985/images/Titan/Catalog/5033DL01_6.jpg"
+      "imageUrl": "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwcfbf242b/images/hi-res/51W2KPWCIAA88_2.jpg"
     },
     {
       "code": "TTN-021",
-      "name": "Tanishq Gold_jewelry 7",
+      "name": "Tanishq 22K Gold Jewellery 511882WKBAA88",
       "brandName": "Tanishq",
       "category": "gold_jewelry",
       "price": {
@@ -330,795 +364,1057 @@
         "sellingPrice": 5603
       },
       "specs": {
-        "strapMaterial": "Metal",
-        "dialColor": "White"
+        "metal": "Gold",
+        "purity": "22K",
+        "jewelryType": "Pendant"
       },
       "inStock": true,
-      "imageUrl": "https://www.thejewelrymagazine.com/wp-content/uploads/2023/11/Tanishq-opens-first-flagship-store-in-Singapore.jpeg"
+      "imageUrl": "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwcfbf242b/images/hi-res/511882WKBAA88_2.jpg?sw=640&sh=640"
     },
     {
       "code": "TTN-022",
-      "name": "Titan Diamond_jewelry 1",
+      "name": "Titan Analog Watch 2464SM02",
       "brandName": "Titan",
-      "category": "diamond_jewelry",
+      "category": "analog_watches",
       "price": {
         "mrp": 27692,
         "sellingPrice": 24738
       },
       "specs": {
         "strapMaterial": "Leather",
-        "dialColor": "White"
+        "dialColor": "White",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "http://watchfactory.in/cdn/shop/files/90102WL01_1_2c89247c-0de4-4205-8202-0fda72da17ba.jpg?v=1741791741"
+      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw5b3eb176/images/Titan/Catalog/2464SM02_1.jpg?sw=800&sh=800"
     },
     {
       "code": "TTN-023",
-      "name": "Titan Diamond_jewelry 2",
+      "name": "Titan Analog Watch 95370KM01",
       "brandName": "Titan",
-      "category": "diamond_jewelry",
+      "category": "analog_watches",
       "price": {
         "mrp": 36956,
         "sellingPrice": 34060
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "Black"
+        "dialColor": "Black",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "http://titanworld.com/cdn/shop/files/1789KM02.jpg?v=1706539975"
+      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw7ec14726/images/Titan/Catalog/95370KM01_1.jpg?sw=800&sh=800"
     },
     {
       "code": "TTN-024",
-      "name": "Titan Diamond_jewelry 3",
+      "name": "Titan Analog Watch 1789KM02",
       "brandName": "Titan",
-      "category": "diamond_jewelry",
+      "category": "analog_watches",
       "price": {
         "mrp": 7079,
         "sellingPrice": 5464
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "Black"
+        "dialColor": "Black",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "http://www.titanwatches.ae/cdn/shop/files/1805NM01_1.jpg?v=1725456879"
+      "imageUrl": "https://titanworld.com/cdn/shop/files/1789KM02.jpg?v=1706539975"
     },
     {
       "code": "TTN-025",
-      "name": "Titan Diamond_jewelry 4",
+      "name": "Titan Analog Watch 1843WL01",
       "brandName": "Titan",
-      "category": "diamond_jewelry",
+      "category": "analog_watches",
       "price": {
         "mrp": 27675,
         "sellingPrice": 20083
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "Black"
+        "dialColor": "Black",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "http://www.titanwatches.ae/cdn/shop/files/1805NM01_1.jpg?v=1725456879"
+      "imageUrl": "https://titanworld.com/cdn/shop/files/1843WL01_1.jpg?v=1706540316&width=1445"
     },
     {
       "code": "TTN-026",
-      "name": "Titan Diamond_jewelry 5",
+      "name": "Titan Analog Watch 2590BM01",
       "brandName": "Titan",
-      "category": "diamond_jewelry",
+      "category": "analog_watches",
       "price": {
         "mrp": 28393,
         "sellingPrice": 24363
       },
       "specs": {
         "strapMaterial": "Leather",
-        "dialColor": "Black"
+        "dialColor": "Black",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw32fca5cf/images/Titan/Catalog/9234SL02_1.jpg?sw=800&sh=800"
+      "imageUrl": "https://titanworld.com/cdn/shop/files/2590BM01.jpg?v=1706539741"
     },
     {
       "code": "TTN-027",
-      "name": "Titan Diamond_jewelry 6",
+      "name": "Titan Analog Watch 90102WL01_1_2c89247c-0de4-4205-8202-0fda72da17ba",
       "brandName": "Titan",
-      "category": "diamond_jewelry",
+      "category": "analog_watches",
       "price": {
         "mrp": 8536,
         "sellingPrice": 7752
       },
       "specs": {
         "strapMaterial": "Leather",
-        "dialColor": "White"
+        "dialColor": "White",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
       "imageUrl": "http://watchfactory.in/cdn/shop/files/90102WL01_1_2c89247c-0de4-4205-8202-0fda72da17ba.jpg?v=1741791741"
     },
     {
       "code": "TTN-028",
-      "name": "Titan Diamond_jewelry 7",
+      "name": "Titan Analog Watch 1805NM01",
       "brandName": "Titan",
-      "category": "diamond_jewelry",
+      "category": "analog_watches",
       "price": {
         "mrp": 1965,
         "sellingPrice": 1609
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "Black"
+        "dialColor": "Black",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw5b3eb176/images/Titan/Catalog/2464SM02_1.jpg?sw=800&sh=800"
+      "imageUrl": "http://www.titanwatches.ae/cdn/shop/files/1805NM01_1.jpg?v=1725456879"
     },
     {
       "code": "TTN-029",
-      "name": "Fastrack Sunglasses 1",
+      "name": "Fastrack Analog Watch 3182KL39",
       "brandName": "Fastrack",
-      "category": "sunglasses",
+      "category": "analog_watches",
       "price": {
         "mrp": 41002,
         "sellingPrice": 24945
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "White"
+        "dialColor": "White",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dwd59bf1ea/images/Fastrack/Catalog/6152SM07_3.jpg"
+      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw547dec46/images/Fastrack/Catalog/3182KL39_1.jpg?sw=800&sh=800"
     },
     {
       "code": "TTN-030",
-      "name": "Fastrack Sunglasses 2",
+      "name": "Fastrack Analog Watch 3321QM01",
       "brandName": "Fastrack",
-      "category": "sunglasses",
+      "category": "analog_watches",
       "price": {
         "mrp": 38106,
         "sellingPrice": 30860
       },
       "specs": {
         "strapMaterial": "Leather",
-        "dialColor": "Black"
+        "dialColor": "Black",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw6eb6279e/images/Fastrack/Catalog/3016AL02_3.jpg"
+      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw25b3ec58/images/Fastrack/Catalog/3321QM01_1.jpg"
     },
     {
       "code": "TTN-031",
-      "name": "Fastrack Sunglasses 3",
+      "name": "Fastrack Analog Watch 3287SM01",
       "brandName": "Fastrack",
-      "category": "sunglasses",
+      "category": "analog_watches",
       "price": {
         "mrp": 23417,
         "sellingPrice": 21608
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "Black"
+        "dialColor": "Black",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://smartdeal.com.bd/public/uploads/all/2x95r2BWpFKEo2oIzLx4buyYMVKeAaVGwGNegeny.webp"
+      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw31be4f81/images/Fastrack/Catalog/3287SM01_1.jpg?sw=600&sh=600"
     },
     {
       "code": "TTN-032",
-      "name": "Fastrack Sunglasses 4",
+      "name": "Fastrack Analog Watch 3278SM05",
       "brandName": "Fastrack",
-      "category": "sunglasses",
+      "category": "analog_watches",
       "price": {
         "mrp": 41574,
         "sellingPrice": 30412
       },
       "specs": {
         "strapMaterial": "Leather",
-        "dialColor": "Black"
+        "dialColor": "Black",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw28a3265a/images/Fastrack/Catalog/3292NL01_3.jpg?sw=800&sh=800"
+      "imageUrl": "https://www.titan.co.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw6b779680/images/Fastrack/Catalog/3278SM05_1.jpg"
     },
     {
       "code": "TTN-033",
-      "name": "Fastrack Sunglasses 5",
+      "name": "Fastrack Analog Watch 3321QM01",
       "brandName": "Fastrack",
-      "category": "sunglasses",
+      "category": "analog_watches",
       "price": {
         "mrp": 4750,
         "sellingPrice": 4086
       },
       "specs": {
         "strapMaterial": "Leather",
-        "dialColor": "White"
+        "dialColor": "White",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw547dec46/images/Fastrack/Catalog/3182KL39_1.jpg?sw=800&sh=800"
+      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dwca11d1d6/images/Fastrack/Catalog/3321QM01_1.jpg"
     },
     {
       "code": "TTN-034",
-      "name": "Fastrack Sunglasses 6",
+      "name": "Fastrack Analog Watch 3287KL02",
       "brandName": "Fastrack",
-      "category": "sunglasses",
+      "category": "analog_watches",
       "price": {
         "mrp": 35432,
         "sellingPrice": 24625
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "Black"
+        "dialColor": "Black",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw25b3ec58/images/Fastrack/Catalog/3321QM01_2.jpg"
+      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dwa61ca4f3/images/Fastrack/Catalog/3287KL02_1.jpg?sw=600&sh=600"
     },
     {
       "code": "TTN-035",
-      "name": "Fastrack Sunglasses 7",
+      "name": "Fastrack Analog Watch 3287KL02",
       "brandName": "Fastrack",
-      "category": "sunglasses",
+      "category": "analog_watches",
       "price": {
         "mrp": 44857,
         "sellingPrice": 40818
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "White"
+        "dialColor": "White",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw52c49841/images/Fastrack/Catalog/3278SM04_3.jpg"
+      "imageUrl": "https://www.titan.co.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw5a6dba0d/images/Fastrack/Catalog/3287KL02_1.jpg"
     },
     {
       "code": "TTN-036",
-      "name": "Tanishq Eyeglasses 1",
+      "name": "Tanishq 22K Gold Jewellery UPW2KPWEJAA88",
       "brandName": "Tanishq",
-      "category": "eyeglasses",
+      "category": "gold_jewelry",
       "price": {
         "mrp": 24624,
         "sellingPrice": 17804
       },
       "specs": {
-        "strapMaterial": "Metal",
-        "dialColor": "White"
+        "metal": "Gold",
+        "purity": "22K",
+        "jewelryType": "Pendant"
       },
       "inStock": true,
-      "imageUrl": "https://media.fashionnetwork.com/cdn-cgi/image/fit=contain,width=1000,height=1000,format=auto/m/69b4/cccc/db83/ff28/8fef/d21f/0462/8955/0328/22e7/22e7.jpeg"
+      "imageUrl": "https://www.tanishq.com/on/demandware.static/-/Sites-Tanishq-site-catalog/default/dw16b7f9a5/images/hi-res/UPW2KPWEJAA88_2.jpg"
     },
     {
       "code": "TTN-037",
-      "name": "Tanishq Eyeglasses 2",
+      "name": "Tanishq 22K Gold Jewellery 513219BQEAA00",
       "brandName": "Tanishq",
-      "category": "eyeglasses",
+      "category": "gold_jewelry",
       "price": {
         "mrp": 37067,
         "sellingPrice": 35203
       },
       "specs": {
-        "strapMaterial": "Leather",
-        "dialColor": "White"
+        "metal": "Gold",
+        "purity": "22K",
+        "jewelryType": "Ring"
       },
       "inStock": true,
-      "imageUrl": "https://uploads.nationaljeweler.com/uploads/e55ff8799bc681f5bf8e5573d4045678.jpg"
+      "imageUrl": "https://www.tanishq.com/on/demandware.static/-/Sites-Tanishq-site-catalog/default/dwfe4308a2/images/hi-res/513219BQEAA00_3.jpg"
     },
     {
       "code": "TTN-038",
-      "name": "Tanishq Eyeglasses 3",
+      "name": "Tanishq 22K Gold Jewellery 51W2KPWCIAA88",
       "brandName": "Tanishq",
-      "category": "eyeglasses",
+      "category": "gold_jewelry",
       "price": {
         "mrp": 34569,
         "sellingPrice": 22661
       },
       "specs": {
-        "strapMaterial": "Leather",
-        "dialColor": "White"
+        "metal": "Gold",
+        "purity": "22K",
+        "jewelryType": "Earrings"
       },
       "inStock": true,
-      "imageUrl": "https://media.fashionnetwork.com/cdn-cgi/image/fit=contain,width=1000,height=1000,format=auto/m/69b4/cccc/db83/ff28/8fef/d21f/0462/8955/0328/22e7/22e7.jpeg"
+      "imageUrl": "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwcfbf242b/images/hi-res/51W2KPWCIAA88_3.jpg"
     },
     {
       "code": "TTN-039",
-      "name": "Tanishq Eyeglasses 4",
+      "name": "Tanishq 22K Gold Jewellery 511882WKBAA88",
       "brandName": "Tanishq",
-      "category": "eyeglasses",
+      "category": "gold_jewelry",
       "price": {
         "mrp": 6356,
         "sellingPrice": 4247
       },
       "specs": {
-        "strapMaterial": "Metal",
-        "dialColor": "White"
+        "metal": "Gold",
+        "purity": "22K",
+        "jewelryType": "Bracelet"
       },
       "inStock": true,
-      "imageUrl": "https://media.fashionnetwork.com/cdn-cgi/image/fit=contain,width=1000,height=1000,format=auto/m/69b4/cccc/db83/ff28/8fef/d21f/0462/8955/0328/22e7/22e7.jpeg"
+      "imageUrl": "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwcfbf242b/images/hi-res/511882WKBAA88_3.jpg?sw=640&sh=640"
     },
     {
       "code": "TTN-040",
-      "name": "Tanishq Eyeglasses 5",
+      "name": "Tanishq 22K Gold Jewellery UPW2KPWEJAA88",
       "brandName": "Tanishq",
-      "category": "eyeglasses",
+      "category": "gold_jewelry",
       "price": {
         "mrp": 44193,
         "sellingPrice": 34444
       },
       "specs": {
-        "strapMaterial": "Metal",
-        "dialColor": "White"
+        "metal": "Gold",
+        "purity": "22K",
+        "jewelryType": "Necklace"
       },
       "inStock": true,
-      "imageUrl": "https://media.fashionnetwork.com/cdn-cgi/image/fit=contain,width=1000,height=1000,format=auto/m/69b4/cccc/db83/ff28/8fef/d21f/0462/8955/0328/22e7/22e7.jpeg"
+      "imageUrl": "https://www.tanishq.com/on/demandware.static/-/Sites-Tanishq-site-catalog/default/dw16b7f9a5/images/hi-res/UPW2KPWEJAA88_3.jpg"
     },
     {
       "code": "TTN-041",
-      "name": "Tanishq Eyeglasses 6",
+      "name": "Tanishq 22K Gold Jewellery 513219BQEAA00",
       "brandName": "Tanishq",
-      "category": "eyeglasses",
+      "category": "gold_jewelry",
       "price": {
         "mrp": 29600,
         "sellingPrice": 21106
       },
       "specs": {
-        "strapMaterial": "Metal",
-        "dialColor": "White"
+        "metal": "Gold",
+        "purity": "22K",
+        "jewelryType": "Bangle"
       },
       "inStock": true,
-      "imageUrl": "https://media.fashionnetwork.com/cdn-cgi/image/fit=contain,width=1000,height=1000,format=auto/m/69b4/cccc/db83/ff28/8fef/d21f/0462/8955/0328/22e7/22e7.jpeg"
+      "imageUrl": "https://www.tanishq.com/on/demandware.static/-/Sites-Tanishq-site-catalog/default/dwfe4308a2/images/hi-res/513219BQEAA00_4.jpg"
     },
     {
       "code": "TTN-042",
-      "name": "Tanishq Eyeglasses 7",
+      "name": "Tanishq 22K Gold Jewellery 51W2KPWCIAA88",
       "brandName": "Tanishq",
-      "category": "eyeglasses",
+      "category": "gold_jewelry",
       "price": {
         "mrp": 41660,
         "sellingPrice": 26415
       },
       "specs": {
-        "strapMaterial": "Metal",
-        "dialColor": "White"
+        "metal": "Gold",
+        "purity": "22K",
+        "jewelryType": "Pendant"
       },
       "inStock": true,
-      "imageUrl": "https://media.fashionnetwork.com/cdn-cgi/image/fit=contain,width=1000,height=1000,format=auto/m/69b4/cccc/db83/ff28/8fef/d21f/0462/8955/0328/22e7/22e7.jpeg"
+      "imageUrl": "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwcfbf242b/images/hi-res/51W2KPWCIAA88_4.jpg"
     },
     {
       "code": "TTN-043",
-      "name": "Titan Perfumes 1",
-      "brandName": "Titan",
+      "name": "Skinn by Titan Raw 100 ML Perfume for Men EDP",
+      "brandName": "SKINN by Titan",
       "category": "perfumes",
       "price": {
         "mrp": 33560,
         "sellingPrice": 30027
       },
       "specs": {
-        "strapMaterial": "Leather",
-        "dialColor": "White"
+        "fragranceType": "EDP",
+        "gender": "Men",
+        "volume": "100 ML",
+        "topNotes": "Bergamot, Watery Fruits, Mandarin"
       },
       "inStock": true,
-      "imageUrl": "http://watchfactory.in/cdn/shop/files/90102WL01_1_2c89247c-0de4-4205-8202-0fda72da17ba.jpg?v=1741791741"
+      "imageUrl": "https://www.aarfragrances.com/public/uploads/all/i5uTUosYRtpO4H5TTKxfUELFGEcVmpuaQXaESiqL.jpg"
     },
     {
       "code": "TTN-044",
-      "name": "Titan Perfumes 2",
-      "brandName": "Titan",
+      "name": "Skinn by Titan Celeste 100 ML Perfume for Women EDP",
+      "brandName": "SKINN by Titan",
       "category": "perfumes",
       "price": {
         "mrp": 16013,
         "sellingPrice": 13151
       },
       "specs": {
-        "strapMaterial": "Metal",
-        "dialColor": "Black"
+        "fragranceType": "EDP",
+        "gender": "Women",
+        "volume": "100 ML",
+        "fragranceFamily": "Floral"
       },
       "inStock": true,
-      "imageUrl": "http://www.titanwatches.ae/cdn/shop/files/1805NM01_1.jpg?v=1725456879"
+      "imageUrl": "https://route2fashion.com/cdn/shop/products/titanskinnceleste100mledp.jpg?v=1675082721&width=1946"
     },
     {
       "code": "TTN-045",
-      "name": "Titan Perfumes 3",
-      "brandName": "Titan",
+      "name": "Skinn by Titan Nude 100 ML Perfume for Women EDP",
+      "brandName": "SKINN by Titan",
       "category": "perfumes",
       "price": {
         "mrp": 5454,
         "sellingPrice": 4773
       },
       "specs": {
-        "strapMaterial": "Leather",
-        "dialColor": "White"
+        "fragranceType": "EDP",
+        "gender": "Women",
+        "volume": "100 ML",
+        "topNotes": "Lychee, Bergamot, Raspberry"
       },
       "inStock": true,
-      "imageUrl": "http://watchfactory.in/cdn/shop/files/90102WL01_1_2c89247c-0de4-4205-8202-0fda72da17ba.jpg?v=1741791741"
+      "imageUrl": "https://cdn.fcglcdn.com/brainbees/images/products/zoom/skinn-by-titan-nude-long-lasting-everyday-floral-scent-eau-de-parfum-spray-for-women-100-ml-19718859zzsq.webp"
     },
     {
       "code": "TTN-046",
-      "name": "Titan Perfumes 4",
-      "brandName": "Titan",
+      "name": "Skinn by Titan Sheer 100 ML Perfume for Women EDP",
+      "brandName": "SKINN by Titan",
       "category": "perfumes",
       "price": {
         "mrp": 40487,
         "sellingPrice": 34515
       },
       "specs": {
-        "strapMaterial": "Leather",
-        "dialColor": "Black"
+        "fragranceType": "EDP",
+        "gender": "Women",
+        "volume": "100 ML",
+        "topNotes": "Green Pear Accord, Clementine Oil, Pink Pepper"
       },
       "inStock": true,
-      "imageUrl": "https://www.watchoutbd.com/public/uploads/all/Cul4ZiuSUaITmN74wmmUqMlRmCTkYbpLCw3jhkgs.jpg"
+      "imageUrl": "https://www.aarfragrances.com/public/uploads/all/8ZOIQVQ4UceG75pt6qruEJOJRw7UUYZHJOTdRgW9.jpg"
     },
     {
       "code": "TTN-047",
-      "name": "Titan Perfumes 5",
-      "brandName": "Titan",
+      "name": "Skinn by Titan Pristine 100 ML Perfume for Women EDP",
+      "brandName": "SKINN by Titan",
       "category": "perfumes",
       "price": {
         "mrp": 27605,
         "sellingPrice": 24004
       },
       "specs": {
-        "strapMaterial": "Metal",
-        "dialColor": "White"
+        "fragranceType": "EDP",
+        "gender": "Women",
+        "volume": "100 ML",
+        "fragranceFamily": "Fresh Woody"
       },
       "inStock": true,
-      "imageUrl": "https://titanworld.com/cdn/shop/files/2590BM01.jpg?v=1706539741"
+      "imageUrl": "https://bf1af2.akinoncloudcdn.com/products/2024/09/05/27315/c438ae9b-9648-4acf-ad6b-73651b5891a8_size3840_cropCenter.jpg"
     },
     {
       "code": "TTN-048",
-      "name": "Titan Perfumes 6",
-      "brandName": "Titan",
+      "name": "SKINN Noura Floret Eau De Parfum for Women 100 ML",
+      "brandName": "SKINN by Titan",
       "category": "perfumes",
       "price": {
         "mrp": 40537,
         "sellingPrice": 29686
       },
       "specs": {
-        "strapMaterial": "Leather",
-        "dialColor": "White"
+        "fragranceType": "EDP",
+        "gender": "Women",
+        "volume": "100 ML",
+        "topNotes": "Grapefruit, Pineapple, Tangerine"
       },
       "inStock": true,
-      "imageUrl": "http://watchfactory.in/cdn/shop/files/90102WL01_1_2c89247c-0de4-4205-8202-0fda72da17ba.jpg?v=1741791741"
+      "imageUrl": "https://piimages.parfumo.de/3/2/201999_e9f00299b3eeb062b600df0fee756d0a_noura-floret.jpg"
     },
     {
       "code": "TTN-049",
-      "name": "Titan Perfumes 7",
-      "brandName": "Titan",
+      "name": "Skinn by Titan Celeste Beyond 100 ML Perfume for Women EDP",
+      "brandName": "SKINN by Titan",
       "category": "perfumes",
       "price": {
         "mrp": 26069,
         "sellingPrice": 19685
       },
       "specs": {
-        "strapMaterial": "Metal",
-        "dialColor": "White"
+        "fragranceType": "EDP",
+        "gender": "Women",
+        "volume": "100 ML",
+        "topNotes": "Bergamot, Mandarin, Guava, Quince"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw7ec14726/images/Titan/Catalog/95370KM01_1.jpg?sw=800&sh=800"
+      "imageUrl": "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/original/-zwQ6zTsns5-1164076_1.jpg"
     },
     {
       "code": "TTN-050",
-      "name": "Fastrack Wall_clocks 1",
+      "name": "Fastrack Smartwatch 38148NM01",
       "brandName": "Fastrack",
-      "category": "wall_clocks",
+      "category": "smartwatches",
       "price": {
         "mrp": 2745,
         "sellingPrice": 2107
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "White"
+        "displayColor": "White",
+        "displayType": "Digital",
+        "connectivity": "Bluetooth"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw31be4f81/images/Fastrack/Catalog/3287SM01_1.jpg?sw=600&sh=600"
+      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw1813686d/images/Fastrack/Catalog/38148NM01_2.jpg"
     },
     {
       "code": "TTN-051",
-      "name": "Fastrack Wall_clocks 2",
+      "name": "Fastrack Analog Watch 3278SM04",
       "brandName": "Fastrack",
-      "category": "wall_clocks",
+      "category": "analog_watches",
       "price": {
         "mrp": 25579,
         "sellingPrice": 15833
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "Black"
+        "dialColor": "Black",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw6b779680/images/Fastrack/Catalog/3278SM05_3.jpg"
+      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw52c49841/images/Fastrack/Catalog/3278SM04_2.jpg"
     },
     {
       "code": "TTN-052",
-      "name": "Fastrack Wall_clocks 3",
+      "name": "Fastrack Analog Watch 3084NL04",
       "brandName": "Fastrack",
-      "category": "wall_clocks",
+      "category": "analog_watches",
       "price": {
         "mrp": 8162,
         "sellingPrice": 5671
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "Black"
+        "dialColor": "Black",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dwca11d1d6/images/Fastrack/Catalog/3321QM01_4.jpg"
+      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw56af57af/images/Fastrack/Catalog/3084NL04_2.jpg"
     },
     {
       "code": "TTN-053",
-      "name": "Fastrack Wall_clocks 4",
+      "name": "Fastrack Analog Watch 3272NL01",
       "brandName": "Fastrack",
-      "category": "wall_clocks",
+      "category": "analog_watches",
       "price": {
         "mrp": 2329,
         "sellingPrice": 1952
       },
       "specs": {
         "strapMaterial": "Leather",
-        "dialColor": "White"
+        "dialColor": "White",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dwa61ca4f3/images/Fastrack/Catalog/3287KL02_2.jpg?sw=600&sh=600"
+      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dwc211f084/images/Fastrack/Catalog/3272NL01_2.jpg?sw=800&sh=800"
     },
     {
       "code": "TTN-054",
-      "name": "Fastrack Wall_clocks 5",
+      "name": "Fastrack Analog Watch 6152SM07",
       "brandName": "Fastrack",
-      "category": "wall_clocks",
+      "category": "analog_watches",
       "price": {
         "mrp": 2468,
         "sellingPrice": 1815
       },
       "specs": {
         "strapMaterial": "Leather",
-        "dialColor": "White"
+        "dialColor": "White",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw5a6dba0d/images/Fastrack/Catalog/3287KL02_1.jpg"
+      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dwd59bf1ea/images/Fastrack/Catalog/6152SM07_2.jpg"
     },
     {
       "code": "TTN-055",
-      "name": "Fastrack Wall_clocks 6",
+      "name": "Fastrack Analog Watch 3016AL02",
       "brandName": "Fastrack",
-      "category": "wall_clocks",
+      "category": "analog_watches",
       "price": {
         "mrp": 9894,
         "sellingPrice": 8805
       },
       "specs": {
         "strapMaterial": "Leather",
-        "dialColor": "White"
+        "dialColor": "White",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw5a6dba0d/images/Fastrack/Catalog/3287KL02_1.jpg"
+      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw6eb6279e/images/Fastrack/Catalog/3016AL02_2.jpg"
     },
     {
       "code": "TTN-056",
-      "name": "Fastrack Wall_clocks 7",
+      "name": "Fastrack Analog Watch 3292NL01",
       "brandName": "Fastrack",
-      "category": "wall_clocks",
+      "category": "analog_watches",
       "price": {
         "mrp": 22997,
         "sellingPrice": 15678
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "White"
+        "dialColor": "White",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.fastrack.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw52c49841/images/Fastrack/Catalog/3278SM04_3.jpg"
+      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw28a3265a/images/Fastrack/Catalog/3292NL01_2.jpg?sw=800&sh=800"
     },
     {
       "code": "TTN-057",
-      "name": "Tanishq Belts 1",
+      "name": "Tanishq 22K Gold Jewellery 511882WKBAA88",
       "brandName": "Tanishq",
-      "category": "belts",
+      "category": "gold_jewelry",
       "price": {
         "mrp": 2944,
         "sellingPrice": 1981
       },
       "specs": {
-        "strapMaterial": "Metal",
-        "dialColor": "White"
-      },
-      "inStock": true,
-      "imageUrl": "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwcfbf242b/images/hi-res/51W2KPWCIAA88_1.jpg"
-    },
-    {
-      "code": "TTN-058",
-      "name": "Tanishq Belts 2",
-      "brandName": "Tanishq",
-      "category": "belts",
-      "price": {
-        "mrp": 28153,
-        "sellingPrice": 26473
-      },
-      "specs": {
-        "strapMaterial": "Metal",
-        "dialColor": "Black"
-      },
-      "inStock": true,
-      "imageUrl": "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwcfbf242b/images/hi-res/51W2KPWCIAA88_1.jpg"
-    },
-    {
-      "code": "TTN-059",
-      "name": "Tanishq Belts 3",
-      "brandName": "Tanishq",
-      "category": "belts",
-      "price": {
-        "mrp": 7763,
-        "sellingPrice": 4696
-      },
-      "specs": {
-        "strapMaterial": "Metal",
-        "dialColor": "White"
-      },
-      "inStock": true,
-      "imageUrl": "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwcfbf242b/images/hi-res/511882WKBAA88_3.jpg?sw=640&sh=640"
-    },
-    {
-      "code": "TTN-060",
-      "name": "Tanishq Belts 4",
-      "brandName": "Tanishq",
-      "category": "belts",
-      "price": {
-        "mrp": 19988,
-        "sellingPrice": 15070
-      },
-      "specs": {
-        "strapMaterial": "Metal",
-        "dialColor": "White"
+        "metal": "Gold",
+        "purity": "22K",
+        "jewelryType": "Pendant"
       },
       "inStock": true,
       "imageUrl": "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwcfbf242b/images/hi-res/511882WKBAA88_4.jpg?sw=640&sh=640"
     },
     {
-      "code": "TTN-061",
-      "name": "Tanishq Belts 5",
+      "code": "TTN-058",
+      "name": "Tanishq 22K Gold Jewellery UPW2KPWEJAA88",
       "brandName": "Tanishq",
-      "category": "belts",
+      "category": "gold_jewelry",
+      "price": {
+        "mrp": 28153,
+        "sellingPrice": 26473
+      },
+      "specs": {
+        "metal": "Gold",
+        "purity": "22K",
+        "jewelryType": "Ring"
+      },
+      "inStock": true,
+      "imageUrl": "https://www.tanishq.com/on/demandware.static/-/Sites-Tanishq-site-catalog/default/dw16b7f9a5/images/hi-res/UPW2KPWEJAA88_4.jpg"
+    },
+    {
+      "code": "TTN-059",
+      "name": "Tanishq 22K Gold Jewellery 513219BQEAA00",
+      "brandName": "Tanishq",
+      "category": "gold_jewelry",
+      "price": {
+        "mrp": 7763,
+        "sellingPrice": 4696
+      },
+      "specs": {
+        "metal": "Gold",
+        "purity": "22K",
+        "jewelryType": "Earrings"
+      },
+      "inStock": true,
+      "imageUrl": "https://www.tanishq.com/on/demandware.static/-/Sites-Tanishq-site-catalog/default/dwfe4308a2/images/hi-res/513219BQEAA00_5.jpg"
+    },
+    {
+      "code": "TTN-060",
+      "name": "Tanishq 22K Gold Jewellery 51W2KPWCIAA88",
+      "brandName": "Tanishq",
+      "category": "gold_jewelry",
+      "price": {
+        "mrp": 19988,
+        "sellingPrice": 15070
+      },
+      "specs": {
+        "metal": "Gold",
+        "purity": "22K",
+        "jewelryType": "Bracelet"
+      },
+      "inStock": true,
+      "imageUrl": "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwcfbf242b/images/hi-res/51W2KPWCIAA88_5.jpg"
+    },
+    {
+      "code": "TTN-061",
+      "name": "Tanishq 22K Gold Jewellery 511882WKBAA88",
+      "brandName": "Tanishq",
+      "category": "gold_jewelry",
       "price": {
         "mrp": 10466,
         "sellingPrice": 9651
       },
       "specs": {
-        "strapMaterial": "Leather",
-        "dialColor": "White"
+        "metal": "Gold",
+        "purity": "22K",
+        "jewelryType": "Necklace"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw3e10e985/images/Titan/Catalog/5065DL01_1.jpg"
+      "imageUrl": "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwcfbf242b/images/hi-res/511882WKBAA88_5.jpg?sw=640&sh=640"
     },
     {
       "code": "TTN-062",
-      "name": "Tanishq Belts 6",
+      "name": "Tanishq 22K Gold Jewellery UPW2KPWEJAA88",
       "brandName": "Tanishq",
-      "category": "belts",
+      "category": "gold_jewelry",
       "price": {
         "mrp": 44069,
         "sellingPrice": 35339
       },
       "specs": {
-        "strapMaterial": "Leather",
-        "dialColor": "White"
+        "metal": "Gold",
+        "purity": "22K",
+        "jewelryType": "Bangle"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw3e10e985/images/Titan/Catalog/5065DL01_1.jpg"
+      "imageUrl": "https://www.tanishq.com/on/demandware.static/-/Sites-Tanishq-site-catalog/default/dw16b7f9a5/images/hi-res/UPW2KPWEJAA88_5.jpg"
     },
     {
       "code": "TTN-063",
-      "name": "Tanishq Belts 7",
+      "name": "Tanishq 22K Gold Jewellery 513219BQEAA00",
       "brandName": "Tanishq",
-      "category": "belts",
+      "category": "gold_jewelry",
       "price": {
         "mrp": 16525,
         "sellingPrice": 14002
       },
       "specs": {
-        "strapMaterial": "Metal",
-        "dialColor": "White"
+        "metal": "Gold",
+        "purity": "22K",
+        "jewelryType": "Pendant"
       },
       "inStock": true,
-      "imageUrl": "https://www.tanishq.com/on/demandware.static/-/Sites-Tanishq-site-catalog/default/dw16b7f9a5/images/hi-res/UPW2KPWEJAA88_1.jpg"
+      "imageUrl": "https://www.tanishq.com/on/demandware.static/-/Sites-Tanishq-site-catalog/default/dwfe4308a2/images/hi-res/513219BQEAA00_1.jpg#catalog-21"
     },
     {
       "code": "TTN-064",
-      "name": "Titan Wallets 1",
+      "name": "Titan Analog Watch 9234SL02",
       "brandName": "Titan",
-      "category": "wallets",
+      "category": "analog_watches",
       "price": {
         "mrp": 23029,
         "sellingPrice": 14851
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "White"
+        "dialColor": "White",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw4fdfe0d4/images/Titan/Catalog/9308BM01_1.jpg?sw=800&sh=800"
+      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw32fca5cf/images/Titan/Catalog/9234SL02_2.jpg?sw=800&sh=800"
     },
     {
       "code": "TTN-065",
-      "name": "Titan Wallets 2",
+      "name": "Titan Analog Watch 2464SM02",
       "brandName": "Titan",
-      "category": "wallets",
+      "category": "analog_watches",
       "price": {
         "mrp": 22382,
         "sellingPrice": 18827
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "White"
+        "dialColor": "White",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw4fdfe0d4/images/Titan/Catalog/9308BM01_1.jpg?sw=800&sh=800"
+      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw5b3eb176/images/Titan/Catalog/2464SM02_2.jpg?sw=800&sh=800"
     },
     {
       "code": "TTN-066",
-      "name": "Titan Wallets 3",
+      "name": "Titan Analog Watch 95370KM01",
       "brandName": "Titan",
-      "category": "wallets",
+      "category": "analog_watches",
       "price": {
         "mrp": 21227,
         "sellingPrice": 13750
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "Black"
+        "dialColor": "Black",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://titanworld.com/cdn/shop/files/1789KM02.jpg?v=1706539975"
+      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw7ec14726/images/Titan/Catalog/95370KM01_2.jpg?sw=800&sh=800"
     },
     {
       "code": "TTN-067",
-      "name": "Titan Wallets 4",
+      "name": "Titan Analog Watch 1843WL01",
       "brandName": "Titan",
-      "category": "wallets",
+      "category": "analog_watches",
       "price": {
         "mrp": 38873,
         "sellingPrice": 25234
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "Black"
+        "dialColor": "Black",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://titanworld.com/cdn/shop/files/1789KM02.jpg?v=1706539975"
+      "imageUrl": "https://titanworld.com/cdn/shop/files/1843WL01_2.jpg?v=1706540316&width=1445"
     },
     {
       "code": "TTN-068",
-      "name": "Titan Wallets 5",
+      "name": "Titan Analog Watch 1805NM01",
       "brandName": "Titan",
-      "category": "wallets",
+      "category": "analog_watches",
       "price": {
         "mrp": 25180,
         "sellingPrice": 16068
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "White"
+        "dialColor": "White",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://www.titan.co.in/on/demandware.static/-/Sites-titan-master-catalog/default/dw440f862b/images/Titan/Catalog/9264SM01_1.jpg"
+      "imageUrl": "http://www.titanwatches.ae/cdn/shop/files/1805NM01_2.jpg?v=1725456879"
     },
     {
       "code": "TTN-069",
-      "name": "Titan Wallets 6",
+      "name": "Titan Analog Watch W0129PA01",
       "brandName": "Titan",
-      "category": "wallets",
+      "category": "analog_watches",
       "price": {
         "mrp": 40714,
         "sellingPrice": 36762
       },
       "specs": {
         "strapMaterial": "Leather",
-        "dialColor": "White"
+        "dialColor": "White",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://titanworld.com/cdn/shop/files/1843WL01_1.jpg?v=1706540316&width=1445"
+      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw433633fd/images/Titan/Catalog/W0129PA01_2.jpg?sh=600&sw=600"
     },
     {
       "code": "TTN-070",
-      "name": "Titan Wallets 7",
+      "name": "Titan Analog Watch 9171SL01",
       "brandName": "Titan",
-      "category": "wallets",
+      "category": "analog_watches",
       "price": {
         "mrp": 5223,
         "sellingPrice": 3272
       },
       "specs": {
         "strapMaterial": "Metal",
-        "dialColor": "Black"
+        "dialColor": "Black",
+        "movement": "Quartz",
+        "displayType": "Analog"
       },
       "inStock": true,
-      "imageUrl": "https://titanworld.com/cdn/shop/files/1789KM02.jpg?v=1706539975"
+      "imageUrl": "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw40deb065/images/Titan/Catalog/9171SL01_3.jpg?sw=800&sh=800"
+    },
+    {
+      "code": "TTN-071",
+      "name": "Fastrack Grey Geometric Sunglasses P508GY5V",
+      "brandName": "Fastrack",
+      "category": "sunglasses",
+      "price": {
+        "mrp": 1350,
+        "sellingPrice": 1250
+      },
+      "specs": {
+        "gender": "Unisex",
+        "size": "Medium",
+        "lensColor": "Grey",
+        "frameShape": "Geometric",
+        "frameMaterial": "Stainless Steel",
+        "lensType": "Gradient",
+        "rimDetails": "Rimmed",
+        "lensWidth": "54 mm",
+        "bridgeWidth": "19 mm",
+        "templeLength": "141 mm"
+      },
+      "inStock": true,
+      "imageUrl": "https://images-static.nykaa.com/media/catalog/product/f/9/f982a65P508GY5V_1.jpg"
+    },
+    {
+      "code": "TTN-072",
+      "name": "Fastrack Grey Aviator Sunglasses P516GY4V",
+      "brandName": "Fastrack",
+      "category": "sunglasses",
+      "price": {
+        "mrp": 1400,
+        "sellingPrice": 1250
+      },
+      "specs": {
+        "gender": "Unisex",
+        "size": "Medium",
+        "lensColor": "Grey",
+        "frameShape": "Aviator",
+        "frameMaterial": "Stainless Steel",
+        "lensType": "Gradient",
+        "rimDetails": "Rimmed",
+        "lensWidth": "60 mm",
+        "bridgeWidth": "16 mm",
+        "templeLength": "136 mm"
+      },
+      "inStock": true,
+      "imageUrl": "https://images-static.nykaa.com/media/catalog/product/f/9/f982a65P516GY4V_1.jpg"
+    },
+    {
+      "code": "TTN-073",
+      "name": "Fastrack Green Rectangle Sunglasses P515GR2PV",
+      "brandName": "Fastrack",
+      "category": "sunglasses",
+      "price": {
+        "mrp": 1250,
+        "sellingPrice": 1250
+      },
+      "specs": {
+        "gender": "Unisex",
+        "size": "55 mm",
+        "lensColor": "Green",
+        "frameShape": "Rectangle"
+      },
+      "inStock": true,
+      "imageUrl": "https://images-static.nykaa.com/media/catalog/product/f/9/f982a65P515GR2PV_1.jpg"
+    },
+    {
+      "code": "TTN-074",
+      "name": "Fastrack Black Sports Sunglasses P419GR1V",
+      "brandName": "Fastrack",
+      "category": "sunglasses",
+      "price": {
+        "mrp": 1300,
+        "sellingPrice": 1099
+      },
+      "specs": {
+        "gender": "Men",
+        "size": "Large",
+        "frameShape": "Sports"
+      },
+      "inStock": true,
+      "imageUrl": "https://images-static.nykaa.com/media/catalog/product/b/a/ba148b2P419GR1_1.jpg"
+    },
+    {
+      "code": "TTN-075",
+      "name": "Fastrack Black Cateye Rimmed Eyeglasses FT1503WFP6MBKV",
+      "brandName": "Fastrack",
+      "category": "eyeglasses",
+      "price": {
+        "mrp": 1000,
+        "sellingPrice": 900
+      },
+      "specs": {
+        "gender": "Women",
+        "frameColor": "Black",
+        "frameShape": "Cateye",
+        "frameMaterial": "Acetate",
+        "rimDetails": "Rimmed",
+        "lensType": "Prescription Compatible"
+      },
+      "inStock": true,
+      "imageUrl": "https://api.titaneyeplus.com/media/catalog/product/F/T/FT1503WFP6MBKV_1_lar.jpg"
+    },
+    {
+      "code": "TTN-076",
+      "name": "Fastrack Grey Square Rimmed Eyeglasses FT1253UFP5MGYV",
+      "brandName": "Fastrack",
+      "category": "eyeglasses",
+      "price": {
+        "mrp": 1700,
+        "sellingPrice": 1550
+      },
+      "specs": {
+        "gender": "Unisex",
+        "frameColor": "Grey",
+        "frameShape": "Square",
+        "frameMaterial": "Acetate",
+        "rimDetails": "Rimmed",
+        "lensWidth": "52 mm",
+        "bridgeWidth": "20 mm",
+        "templeLength": "135 mm",
+        "lensType": "Prescription Compatible"
+      },
+      "inStock": true,
+      "imageUrl": "https://www.titaneyeplus.ae/cdn/shop/files/FT1253UFP5MGYV_1.jpg?v=1713933162"
+    },
+    {
+      "code": "TTN-077",
+      "name": "Fastrack Black Geometric Eyeglasses FT1623MFP3MBKV",
+      "brandName": "Fastrack",
+      "category": "eyeglasses",
+      "price": {
+        "mrp": 1700,
+        "sellingPrice": 1700
+      },
+      "specs": {
+        "gender": "Men",
+        "frameColor": "Black",
+        "templeColor": "Black",
+        "frameShape": "Geometric",
+        "frameMaterial": "Plastic",
+        "rimDetails": "Rimmed",
+        "lensWidth": "50 mm",
+        "bridgeWidth": "21 mm",
+        "templeLength": "145 mm",
+        "lensHeight": "21 mm",
+        "lensType": "Prescription Compatible"
+      },
+      "inStock": true,
+      "imageUrl": "https://api.titaneyeplus.com/media/catalog/product/F/T/FT1623MFP3MBKV_1_lar.jpg"
+    },
+    {
+      "code": "TTN-078",
+      "name": "Fastrack Grey Round Rimmed Eyeglasses FT1482UFP4SGYV",
+      "brandName": "Fastrack",
+      "category": "eyeglasses",
+      "price": {
+        "mrp": 1700,
+        "sellingPrice": 1700
+      },
+      "specs": {
+        "gender": "Unisex",
+        "size": "Small",
+        "frameColor": "Grey",
+        "templeColor": "Black",
+        "frameShape": "Round",
+        "frameMaterial": "Castor",
+        "rimDetails": "Rimmed",
+        "lensWidth": "49 mm",
+        "bridgeWidth": "17 mm",
+        "templeLength": "135 mm",
+        "lensHeight": "40 mm",
+        "lensType": "Prescription Compatible"
+      },
+      "inStock": true,
+      "imageUrl": "https://api.titaneyeplus.com/media/catalog/product/F/T/FT1482UFP4SGYV_1_lar.jpg"
     }
   ]
 }

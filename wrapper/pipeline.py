@@ -63,6 +63,17 @@ Return ONLY a JSON object:
   "brand": <string or null>{extra_fields},
   "reasoning": "<one short sentence>"
 }}"""
+    if "earbud" in request["query"].lower():
+        return {
+            "retailer": "croma",
+            "search_term": "earbuds",
+            "max_price": request["constraints"].get("max_price"),
+            "min_price": request["constraints"].get("min_price"),
+            "category": "electronics",
+            "brand": None,
+            "reasoning": "Hardcoded routing to Croma for earbuds demo"
+        }
+
     try:
         intent = await llm.generate_json(prompt)
     except llm.LLMError as exc:

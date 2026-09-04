@@ -2,8 +2,8 @@
   "products": [
     {
       "code": "ZUD-001",
-      "name": "Zudio T-shirts 1",
-      "brandName": "Zudio",
+      "name": "Kajaru Self Design Men Zip Neck Black Light Blue T Shirt",
+      "brandName": "KAJARU",
       "category": "t-shirts",
       "price": {
         "mrp": 543,
@@ -11,15 +11,20 @@
       },
       "specs": {
         "size": "L",
-        "color": "Black"
+        "color": "Black, Light Blue",
+        "marketplace": "Zudio",
+        "productType": "t-shirts",
+        "gender": "Men",
+        "material": "Polyester",
+        "style": "Self Design, Zip Neck"
       },
       "inStock": true,
-      "imageUrl": "https://img0.junaroad.com/uiproducts/15092322/zoom_0-1709818465.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/2/r/j/l-polo-8016-kajaru-original-imahhv3bpgyf7mcm.jpeg?q=70"
     },
     {
       "code": "ZUD-002",
-      "name": "Zudio T-shirts 2",
-      "brandName": "Zudio",
+      "name": "Maha Solid Men Round Neck Multicolor T Shirt",
+      "brandName": "MAHA",
       "category": "t-shirts",
       "price": {
         "mrp": 1198,
@@ -27,15 +32,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "Black"
+        "color": "Multicolor",
+        "marketplace": "Zudio",
+        "productType": "t-shirts",
+        "gender": "Men",
+        "material": "Cotton Blend",
+        "style": "Solid, Round Neck"
       },
       "inStock": true,
-      "imageUrl": "https://img0.junaroad.com/uiproducts/15092322/zoom_0-1709818465.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/shopsy-t-shirt/3/o/z/s-sh-m-sol-p3-grn-blk-nvy-maha-original-imahmzhhztzryafj.jpeg?q=70"
     },
     {
       "code": "ZUD-003",
-      "name": "Zudio T-shirts 3",
-      "brandName": "Zudio",
+      "name": "Vebnor Solid Men Polo Neck Light Green T Shirt",
+      "brandName": "VeBNoR",
       "category": "t-shirts",
       "price": {
         "mrp": 1186,
@@ -43,15 +53,20 @@
       },
       "specs": {
         "size": "S",
-        "color": "White"
+        "color": "Light Green",
+        "marketplace": "Zudio",
+        "productType": "t-shirts",
+        "gender": "Men",
+        "material": "Polyester",
+        "style": "Solid, Polo Neck"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/0jdtuTd2gbg/oardefault.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLApYY0b4r4-tGjLrOJYe03O7I_VXQ"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/r/s/s/s-ts125-vebnor-original-imahpr3wxcyrnphc.jpeg?q=70"
     },
     {
       "code": "ZUD-004",
-      "name": "Zudio T-shirts 4",
-      "brandName": "Zudio",
+      "name": "Heradawn Self Design Men Henley Neck Black T Shirt",
+      "brandName": "HeraDawn",
       "category": "t-shirts",
       "price": {
         "mrp": 954,
@@ -59,15 +74,20 @@
       },
       "specs": {
         "size": "XL",
-        "color": "Red"
+        "color": "Black",
+        "marketplace": "Zudio",
+        "productType": "t-shirts",
+        "gender": "Men",
+        "material": "Polyester",
+        "style": "Self Design, Henley Neck"
       },
       "inStock": true,
-      "imageUrl": "https://imgs.justfreeup.com/fit-in/800x1000/filters:upscale()/fd23aade3f690e204f0299921f8d7f37.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/z/v/i/s-5b-black-s-heradawn-original-imahpf8mh5fv7zjf.jpeg?q=70"
     },
     {
       "code": "ZUD-005",
-      "name": "Zudio T-shirts 5",
-      "brandName": "Zudio",
+      "name": "Tripr Graphic Print Men Round Neck Black Beige T Shirt",
+      "brandName": "TRIPR",
       "category": "t-shirts",
       "price": {
         "mrp": 1038,
@@ -75,15 +95,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "Red"
+        "color": "Black, Beige",
+        "marketplace": "Zudio",
+        "productType": "t-shirts",
+        "gender": "Men",
+        "material": "Cotton Blend",
+        "style": "Graphic Print, Round Neck"
       },
       "inStock": true,
-      "imageUrl": "https://img.ricardostatic.ch/images/d8730df7-2621-400a-972c-e652ef7b22fc/t_1000x750/red-zudio-t-shirt-size-m-100-cotton"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/e/q/3/m-tbld211-nop-bbgrnos-z140-tripr-original-imahm9s5gwwbpdfz.jpeg?q=70"
     },
     {
       "code": "ZUD-006",
-      "name": "Zudio T-shirts 6",
-      "brandName": "Zudio",
+      "name": "Kajaru Self Design Men Zip Neck Brown Grey T Shirt",
+      "brandName": "KAJARU",
       "category": "t-shirts",
       "price": {
         "mrp": 794,
@@ -91,15 +116,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "Black"
+        "color": "Brown, Grey",
+        "marketplace": "Zudio",
+        "productType": "t-shirts",
+        "gender": "Men",
+        "material": "Polyester",
+        "style": "Self Design, Zip Neck"
       },
       "inStock": true,
-      "imageUrl": "https://img0.junaroad.com/uiproducts/15092322/zoom_0-1709818465.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/r/m/4/m-polo-8014-kajaru-original-imahk55zdre9jvgz.jpeg?q=70"
     },
     {
       "code": "ZUD-007",
-      "name": "Zudio T-shirts 7",
-      "brandName": "Zudio",
+      "name": "Sahal Solid Men Round Neck Pink T Shirt",
+      "brandName": "SAHAL",
       "category": "t-shirts",
       "price": {
         "mrp": 1038,
@@ -107,15 +137,20 @@
       },
       "specs": {
         "size": "S",
-        "color": "White"
+        "color": "Pink",
+        "marketplace": "Zudio",
+        "productType": "t-shirts",
+        "gender": "Men",
+        "material": "Cotton Blend",
+        "style": "Solid, Round Neck"
       },
       "inStock": true,
-      "imageUrl": "https://media.karousell.com/media/photos/products/2023/12/11/zudio_new_york_shirt_1702305952_c976d303_progressive.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/p/z/l/m-grls-30-sara-original-imahzdgg5rdybfzy.jpeg?q=70"
     },
     {
       "code": "ZUD-008",
-      "name": "Zudio Jeans 1",
-      "brandName": "Zudio",
+      "name": "Levi S Loose Fit Men Black Jeans",
+      "brandName": "LEVI'S",
       "category": "jeans",
       "price": {
         "mrp": 496,
@@ -123,15 +158,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "Blue"
+        "color": "Black",
+        "marketplace": "Zudio",
+        "productType": "jeans",
+        "gender": "Men",
+        "material": "Denim",
+        "style": "Loose Fit"
       },
       "inStock": true,
-      "imageUrl": "https://5.imimg.com/data5/US/PW/AG/NSDMERP-78777766/men-jeans-1575689981927-500x500.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/jean/q/k/q/36-00bhh-0000-levi-s-original-imahq5zakf6fwsqz.jpeg?q=70"
     },
     {
       "code": "ZUD-009",
-      "name": "Zudio Jeans 2",
-      "brandName": "Zudio",
+      "name": "Rare Rabbit Slim Men Black Jeans",
+      "brandName": "RARE RABBIT",
       "category": "jeans",
       "price": {
         "mrp": 728,
@@ -139,15 +179,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "Blue"
+        "color": "Black",
+        "marketplace": "Zudio",
+        "productType": "jeans",
+        "gender": "Men",
+        "material": "Denim",
+        "style": "Not specified"
       },
       "inStock": true,
-      "imageUrl": "https://img.freeup.app/fit-in/800x1000/filters:upscale()/588c65f7917c522145b5944300ffa753.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/jean/e/d/t/-original-imahq5ubqbgm82hk.jpeg?q=70"
     },
     {
       "code": "ZUD-010",
-      "name": "Zudio Jeans 3",
-      "brandName": "Zudio",
+      "name": "Zaysh Loose Fit Men Light Blue Jeans",
+      "brandName": "ZAYSH",
       "category": "jeans",
       "price": {
         "mrp": 696,
@@ -155,15 +200,20 @@
       },
       "specs": {
         "size": "L",
-        "color": "Red"
+        "color": "Light Blue",
+        "marketplace": "Zudio",
+        "productType": "jeans",
+        "gender": "Men",
+        "material": "Denim",
+        "style": "Loose Fit"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/4aOON3j_WGE/oardefault.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLD8-aksfnrb4TeOwpzlirzbWr3lQA"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/jean/u/l/t/32-z5-mjrp-baggy-divit-fashion-original-imahgq3frsuqd9f4.jpeg?q=70"
     },
     {
       "code": "ZUD-011",
-      "name": "Zudio Jeans 4",
-      "brandName": "Zudio",
+      "name": "Mahir Clothe Loose Fit Men Beige Jeans",
+      "brandName": "Mahir Clothe",
       "category": "jeans",
       "price": {
         "mrp": 1330,
@@ -171,15 +221,20 @@
       },
       "specs": {
         "size": "L",
-        "color": "Black"
+        "color": "Beige",
+        "marketplace": "Zudio",
+        "productType": "jeans",
+        "gender": "Men",
+        "material": "Denim",
+        "style": "Loose Fit"
       },
       "inStock": true,
-      "imageUrl": "https://imgs3.freeup.app/300x300/be9cfc7f518bad533054200a7d287061.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/jean/u/0/5/36-am-man-bg-cr-36-aman-boyes-clothe-original-imahpg2sejpthzph.jpeg?q=70"
     },
     {
       "code": "ZUD-012",
-      "name": "Zudio Jeans 5",
-      "brandName": "Zudio",
+      "name": "Mukku Jogger Fit Men Grey Jeans",
+      "brandName": "MUKKU",
       "category": "jeans",
       "price": {
         "mrp": 1053,
@@ -187,15 +242,20 @@
       },
       "specs": {
         "size": "S",
-        "color": "Red"
+        "color": "Grey",
+        "marketplace": "Zudio",
+        "productType": "jeans",
+        "gender": "Men",
+        "material": "Denim",
+        "style": "Jogger Fit"
       },
       "inStock": true,
-      "imageUrl": "https://5.imimg.com/data5/US/PW/AG/NSDMERP-78777766/men-jeans-1575689981927-500x500.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/jean/7/w/g/m-rfd-brown-mukku-original-imahm2y8f4erbgz2.jpeg?q=70"
     },
     {
       "code": "ZUD-013",
-      "name": "Zudio Jeans 6",
-      "brandName": "Zudio",
+      "name": "Kadls Straight Fit Men Black Jeans",
+      "brandName": "KADLS",
       "category": "jeans",
       "price": {
         "mrp": 663,
@@ -203,15 +263,20 @@
       },
       "specs": {
         "size": "XL",
-        "color": "Blue"
+        "color": "Black",
+        "marketplace": "Zudio",
+        "productType": "jeans",
+        "gender": "Men",
+        "material": "Denim",
+        "style": "Straight Fit"
       },
       "inStock": true,
-      "imageUrl": "https://5.imimg.com/data5/US/PW/AG/NSDMERP-78777766/men-jeans-1575689981927-500x500.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/jean/x/3/7/l-kdlmenjogger1-kadls-original-imahm6ggszzhdk4v.jpeg?q=70"
     },
     {
       "code": "ZUD-014",
-      "name": "Zudio Jeans 7",
-      "brandName": "Zudio",
+      "name": "Cabrrr Regular Men Beige Jeans",
+      "brandName": "CABRRR",
       "category": "jeans",
       "price": {
         "mrp": 806,
@@ -219,15 +284,20 @@
       },
       "specs": {
         "size": "XL",
-        "color": "Black"
+        "color": "Beige",
+        "marketplace": "Zudio",
+        "productType": "jeans",
+        "gender": "Men",
+        "material": "Denim",
+        "style": "Not specified"
       },
       "inStock": true,
-      "imageUrl": "https://imgs3.freeup.app/fit-in/800x1000/filters:upscale()/9e901187b456f80910ead275e83c887c.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/jean/o/s/d/30-men-s-beige-regular-fit-jeans-bp09-cabrrr-original-imahpgnhqmbya7zb.jpeg?q=70"
     },
     {
       "code": "ZUD-015",
-      "name": "Zudio Dresses 1",
-      "brandName": "Zudio",
+      "name": "Orang Women Empire Waist Purple Pink Below Knee Dress",
+      "brandName": "ORANG",
       "category": "dresses",
       "price": {
         "mrp": 336,
@@ -235,15 +305,20 @@
       },
       "specs": {
         "size": "XL",
-        "color": "Black"
+        "color": "Pink, Purple",
+        "marketplace": "Zudio",
+        "productType": "dresses",
+        "gender": "Women",
+        "material": "Not specified",
+        "style": "Empire Waist"
       },
       "inStock": true,
-      "imageUrl": "https://imgs.justfreeup.com/fit-in/800x1000/filters:upscale()/7ce653852ac6a8ec35c182bdca108e28.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/dress/7/f/n/xl-maternity-wear-orang-original-imahq4s5gzhkudzu.jpeg?q=70"
     },
     {
       "code": "ZUD-016",
-      "name": "Zudio Dresses 2",
-      "brandName": "Zudio",
+      "name": "Doria Lifestyle Women Fit Flare Purple Maxi Full Length Dress",
+      "brandName": "Doria Lifestyle",
       "category": "dresses",
       "price": {
         "mrp": 1445,
@@ -251,15 +326,20 @@
       },
       "specs": {
         "size": "XL",
-        "color": "Red"
+        "color": "Purple",
+        "marketplace": "Zudio",
+        "productType": "dresses",
+        "gender": "Women",
+        "material": "Not specified",
+        "style": "Fit And Flare"
       },
       "inStock": true,
-      "imageUrl": "https://di2ponv0v5otw.cloudfront.net/posts/2024/11/15/673842fbce70654472d873d6/m_6738431e2839bca3aeac17f3.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/dress/l/r/s/xl-dm5010-xl-doria-lifestyle-original-imahz3ycvqcffdgk.jpeg?q=70"
     },
     {
       "code": "ZUD-017",
-      "name": "Zudio Dresses 3",
-      "brandName": "Zudio",
+      "name": "Freyal Enterprise Women Fit Flare Purple Ankle Length Dress",
+      "brandName": "Freyal Enterprise",
       "category": "dresses",
       "price": {
         "mrp": 406,
@@ -267,15 +347,20 @@
       },
       "specs": {
         "size": "L",
-        "color": "Black"
+        "color": "Purple",
+        "marketplace": "Zudio",
+        "productType": "dresses",
+        "gender": "Women",
+        "material": "Not specified",
+        "style": "Fit And Flare"
       },
       "inStock": true,
-      "imageUrl": "https://imgs.justfreeup.com/fit-in/800x1000/filters:upscale()/7ce653852ac6a8ec35c182bdca108e28.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/dress/s/o/w/xl-purvel2-freyal-enterprise-resized-original-imahjag9tjnk5jb6.jpeg?q=70"
     },
     {
       "code": "ZUD-018",
-      "name": "Zudio Dresses 4",
-      "brandName": "Zudio",
+      "name": "Pranjaya Women Fit Flare Black Maxi Full Length Dress",
+      "brandName": "PRANJAYA",
       "category": "dresses",
       "price": {
         "mrp": 1160,
@@ -283,15 +368,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "Black"
+        "color": "Black",
+        "marketplace": "Zudio",
+        "productType": "dresses",
+        "gender": "Women",
+        "material": "Not specified",
+        "style": "Fit And Flare"
       },
       "inStock": true,
-      "imageUrl": "https://imgs.justfreeup.com/fit-in/800x1000/filters:upscale()/7ce653852ac6a8ec35c182bdca108e28.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/m/x/a/s-p7-blue-white-anarkali-vaszia-original-imahpp84rsdu5jmc.jpeg?q=70"
     },
     {
       "code": "ZUD-019",
-      "name": "Zudio Dresses 5",
-      "brandName": "Zudio",
+      "name": "London Belly Women Bodycon Black Midi Calf Length Dress",
+      "brandName": "london belly",
       "category": "dresses",
       "price": {
         "mrp": 1065,
@@ -299,15 +389,20 @@
       },
       "specs": {
         "size": "S",
-        "color": "Blue"
+        "color": "Black",
+        "marketplace": "Zudio",
+        "productType": "dresses",
+        "gender": "Women",
+        "material": "Not specified",
+        "style": "Bodycon"
       },
       "inStock": true,
-      "imageUrl": "https://imgs4.freeup.app/fit-in/800x1000/filters:upscale()/a57e4554bcfec692f0e7c46b07bfe9e4.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/dress/n/a/f/-resized-original-imaheqk7r7xzuf99.jpeg?q=70"
     },
     {
       "code": "ZUD-020",
-      "name": "Zudio Dresses 6",
-      "brandName": "Zudio",
+      "name": "London Belly Women Bodycon Maroon Knee Length Dress",
+      "brandName": "london belly",
       "category": "dresses",
       "price": {
         "mrp": 1280,
@@ -315,15 +410,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "Red"
+        "color": "Maroon",
+        "marketplace": "Zudio",
+        "productType": "dresses",
+        "gender": "Women",
+        "material": "Not specified",
+        "style": "Bodycon"
       },
       "inStock": true,
-      "imageUrl": "https://di2ponv0v5otw.cloudfront.net/posts/2024/11/15/673842fbce70654472d873d6/m_6738431e2839bca3aeac17f3.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/dress/h/1/x/s-western-01-london-belly-original-imahhvh3ba7c5fxh.jpeg?q=70"
     },
     {
       "code": "ZUD-021",
-      "name": "Zudio Dresses 7",
-      "brandName": "Zudio",
+      "name": "Sanibstyle Women Fit Flare Blue Maxi Full Length Dress",
+      "brandName": "SANIBSTYLE",
       "category": "dresses",
       "price": {
         "mrp": 336,
@@ -331,15 +431,20 @@
       },
       "specs": {
         "size": "L",
-        "color": "Blue"
+        "color": "Blue",
+        "marketplace": "Zudio",
+        "productType": "dresses",
+        "gender": "Women",
+        "material": "Not specified",
+        "style": "Fit And Flare"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/PGFKhCdIYcg/oar2.jpg?sqp=-oaymwEYCJwEEMAHSFqQAgHyq4qpAwcIARUAAIhC&rs=AOn4CLDH39vSV9SiR0yDznykaHXdu1_77g"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/gown/n/b/z/na-s-short-sleeve-stitched-blue-star-9-may-sanib-na-original-imahzaztwzh756gr.jpeg?q=70"
     },
     {
       "code": "ZUD-022",
-      "name": "Zudio Jackets 1",
-      "brandName": "Zudio",
+      "name": "Zeppi Full Sleeve Printed Men Jacket",
+      "brandName": "ZEPPI",
       "category": "jackets",
       "price": {
         "mrp": 692,
@@ -347,15 +452,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "White"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "jackets",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Printed"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/kqoIi_vS3V8/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/3/x/0/xl-1-no-mens-new-york-jacket-grey-hemlock-original-imahzbgccxjmhrzv.jpeg?q=70"
     },
     {
       "code": "ZUD-023",
-      "name": "Zudio Jackets 2",
-      "brandName": "Zudio",
+      "name": "Poshax Full Sleeve Solid Men Jacket",
+      "brandName": "POSHAX",
       "category": "jackets",
       "price": {
         "mrp": 678,
@@ -363,15 +473,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "Black"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "jackets",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Solid"
       },
       "inStock": true,
-      "imageUrl": "https://imgmedia.lbb.in/media/2019/11/5ddbb55edbe3c4337117d36f_1574679902375.jpeg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/q/w/o/3xl-1-no-p-j-04-khakhi-poshax-resized-original-imahjgx7bzkwpaz7.jpeg?q=70"
     },
     {
       "code": "ZUD-024",
-      "name": "Zudio Jackets 3",
-      "brandName": "Zudio",
+      "name": "Avolt Full Sleeve Solid Men Jacket",
+      "brandName": "AVOLT",
       "category": "jackets",
       "price": {
         "mrp": 1047,
@@ -379,15 +494,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "Red"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "jackets",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Solid"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/hntmY_rPyus/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/r/e/6/xl-1-no-avj001a-avolt-original-imahhtn7vd7j7uwg.jpeg?q=70"
     },
     {
       "code": "ZUD-025",
-      "name": "Zudio Jackets 4",
-      "brandName": "Zudio",
+      "name": "Adro Full Sleeve Solid Men Jacket",
+      "brandName": "ADRO",
       "category": "jackets",
       "price": {
         "mrp": 377,
@@ -395,15 +515,20 @@
       },
       "specs": {
         "size": "L",
-        "color": "Black"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "jackets",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Solid"
       },
       "inStock": true,
-      "imageUrl": "https://imgmedia.lbb.in/media/2019/11/5ddbb55edbe3c4337117d36f_1574679902375.jpeg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/h/r/f/xxl-1-no-ssjk-pln-gr-adro-original-imahm9mkfzdgbyzm.jpeg?q=70"
     },
     {
       "code": "ZUD-026",
-      "name": "Zudio Jackets 5",
-      "brandName": "Zudio",
+      "name": "Poshax Full Sleeve Solid Men Jacket",
+      "brandName": "POSHAX",
       "category": "jackets",
       "price": {
         "mrp": 833,
@@ -411,15 +536,20 @@
       },
       "specs": {
         "size": "XL",
-        "color": "Red"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "jackets",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Solid"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/hntmY_rPyus/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/o/o/v/s-1-no-1-j-13-beige-poshax-original-imahpbw75rfjz9bp.jpeg?q=70"
     },
     {
       "code": "ZUD-027",
-      "name": "Zudio Jackets 6",
-      "brandName": "Zudio",
+      "name": "Poshax Full Sleeve Solid Men Jacket",
+      "brandName": "POSHAX",
       "category": "jackets",
       "price": {
         "mrp": 799,
@@ -427,15 +557,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "Red"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "jackets",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Solid"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/hntmY_rPyus/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/v/7/o/l-1-no-p-j-05-black-poshax-resized-original-imahjfcfrhsafbea.jpeg?q=70"
     },
     {
       "code": "ZUD-028",
-      "name": "Zudio Jackets 7",
-      "brandName": "Zudio",
+      "name": "Dia Full Sleeve Self Design Men Jacket",
+      "brandName": "Dia A Dia",
       "category": "jackets",
       "price": {
         "mrp": 1483,
@@ -443,15 +578,20 @@
       },
       "specs": {
         "size": "XL",
-        "color": "White"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "jackets",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Self Design, Bomber"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/Ghav_t9e3wU/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/g/y/t/m-1-no-jac-18-dia-a-dia-original-imahgqzsnsfcgdtt.jpeg?q=70"
     },
     {
       "code": "ZUD-029",
-      "name": "Zudio Sneakers 1",
-      "brandName": "Zudio",
+      "name": "Woodland High Top Casual Wear Stylish Comfortable Sneakers Men",
+      "brandName": "WOODLAND",
       "category": "sneakers",
       "price": {
         "mrp": 377,
@@ -459,15 +599,20 @@
       },
       "specs": {
         "size": "L",
-        "color": "Blue"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "sneakers",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Not specified"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/qtZ6JTUB1PQ/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/b/h/w/-watermarked-original-imahbxg5aeh6ufka.jpeg?q=70"
     },
     {
       "code": "ZUD-030",
-      "name": "Zudio Sneakers 2",
-      "brandName": "Zudio",
+      "name": "Woodland Casual Daily Wear Lightweight Breathable Comfortable Sneakers Men",
+      "brandName": "WOODLAND",
       "category": "sneakers",
       "price": {
         "mrp": 425,
@@ -475,15 +620,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "Blue"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "sneakers",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Not specified"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/qtZ6JTUB1PQ/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/l/n/m/-original-imahbxfwhzaagdbn.jpeg?q=70"
     },
     {
       "code": "ZUD-031",
-      "name": "Zudio Sneakers 3",
-      "brandName": "Zudio",
+      "name": "New Balance 720 Sneakers Men",
+      "brandName": "New Balance",
       "category": "sneakers",
       "price": {
         "mrp": 754,
@@ -491,15 +641,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "Red"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "sneakers",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Not specified"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/xePsxYJk6U0/hqdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/p/t/z/-original-imahq9byhhavppvm.jpeg?q=70"
     },
     {
       "code": "ZUD-032",
-      "name": "Zudio Sneakers 4",
-      "brandName": "Zudio",
+      "name": "Pocy Shoes Casual Sneakers Men",
+      "brandName": "Pocy Shoes",
       "category": "sneakers",
       "price": {
         "mrp": 301,
@@ -507,15 +662,20 @@
       },
       "specs": {
         "size": "S",
-        "color": "Red"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "sneakers",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Not specified"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/qtZ6JTUB1PQ/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/w/e/c/10-38wat-sneakers-010-10-0-pocy-shoes-white-original-imahzc42zh3pzxwf.jpeg?q=70"
     },
     {
       "code": "ZUD-033",
-      "name": "Zudio Sneakers 5",
-      "brandName": "Zudio",
+      "name": "Woodland Casual Daily Wear Lightweight Breathable Comfortable Sneakers Men",
+      "brandName": "WOODLAND",
       "category": "sneakers",
       "price": {
         "mrp": 1233,
@@ -523,15 +683,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "Blue"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "sneakers",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Not specified"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/qtZ6JTUB1PQ/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/q/p/g/-original-imah9fqhbyuczxha.jpeg?q=70"
     },
     {
       "code": "ZUD-034",
-      "name": "Zudio Sneakers 6",
-      "brandName": "Zudio",
+      "name": "Woodland Casual Daily Wear Lightweight Breathable Comfortable Sneakers Men",
+      "brandName": "WOODLAND",
       "category": "sneakers",
       "price": {
         "mrp": 551,
@@ -539,15 +704,20 @@
       },
       "specs": {
         "size": "L",
-        "color": "Black"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "sneakers",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Not specified"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/eimRUE2ELi8/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/z/l/e/6-osnk-4473022-40-woodland-black-watermarked-original-imagtabxztf2fvgf.jpeg?q=70"
     },
     {
       "code": "ZUD-035",
-      "name": "Zudio Sneakers 7",
-      "brandName": "Zudio",
+      "name": "Zorza Mens Running Shoes Cushioned Comfort Sole Outdoors Men",
+      "brandName": "Zorza",
       "category": "sneakers",
       "price": {
         "mrp": 339,
@@ -555,15 +725,20 @@
       },
       "specs": {
         "size": "L",
-        "color": "Black"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "sneakers",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Not specified"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/eimRUE2ELi8/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/a/n/c/6-talto0-40-0-zorza-grey-original-imahzgp8dprthbhw.jpeg?q=70"
     },
     {
       "code": "ZUD-036",
-      "name": "Zudio Activewear 1",
-      "brandName": "Zudio",
+      "name": "Kyk Solid Men Round Neck Black T Shirt",
+      "brandName": "Kyk",
       "category": "activewear",
       "price": {
         "mrp": 1003,
@@ -571,15 +746,20 @@
       },
       "specs": {
         "size": "XL",
-        "color": "Blue"
+        "color": "Black",
+        "marketplace": "Zudio",
+        "productType": "activewear",
+        "gender": "Men",
+        "material": "Polyester",
+        "style": "Solid, Round Neck"
       },
       "inStock": true,
-      "imageUrl": "https://genuinemaal.com/cdn/shop/files/IMG_6810.jpg?v=1760516692&width=1024"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/4/g/g/xl-compression-tights-half-sleeves-dry-fit-t-shirts-for-high-resized-original-imahhddqqdnygmrx.jpeg?q=70"
     },
     {
       "code": "ZUD-037",
-      "name": "Zudio Activewear 2",
-      "brandName": "Zudio",
+      "name": "Ex Collection Solid Graphic Print Men Black Grey Gym Shorts",
+      "brandName": "Ex Collection",
       "category": "activewear",
       "price": {
         "mrp": 540,
@@ -587,15 +767,20 @@
       },
       "specs": {
         "size": "S",
-        "color": "Black"
+        "color": "Black, Grey",
+        "marketplace": "Zudio",
+        "productType": "activewear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Graphic Print, Solid"
       },
       "inStock": true,
-      "imageUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/a94bc2187650993.659d24f053a87.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/short/v/y/d/xl-men-s-cotton-lycra-shorts-rounak-original-imahkywnsbhvc8hh.jpeg?q=70"
     },
     {
       "code": "ZUD-038",
-      "name": "Zudio Activewear 3",
-      "brandName": "Zudio",
+      "name": "Coastal Clother Printed Men Multicolor Gym Shorts Sports Running Shorts",
+      "brandName": "coastal clother",
       "category": "activewear",
       "price": {
         "mrp": 1021,
@@ -603,15 +788,20 @@
       },
       "specs": {
         "size": "S",
-        "color": "White"
+        "color": "Multicolor",
+        "marketplace": "Zudio",
+        "productType": "activewear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Printed"
       },
       "inStock": true,
-      "imageUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/a94bc2187650993.659d24f053a87.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/short/v/t/3/xxl-techt-shorts-coastal-clother-original-imahzfthv3bejpya.jpeg?q=70"
     },
     {
       "code": "ZUD-039",
-      "name": "Zudio Activewear 4",
-      "brandName": "Zudio",
+      "name": "Insanitee Graphic Print Men Black Grey Sports Shorts",
+      "brandName": "insanitee",
       "category": "activewear",
       "price": {
         "mrp": 497,
@@ -619,15 +809,20 @@
       },
       "specs": {
         "size": "XL",
-        "color": "White"
+        "color": "Black, Grey",
+        "marketplace": "Zudio",
+        "productType": "activewear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Graphic Print"
       },
       "inStock": true,
-      "imageUrl": "https://img.freeup.app/fit-in/800x1000/filters:upscale()/40f69ebba1eb610ee9dc4bcb4646abd1.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/short/o/h/t/28-shortsmen-4dash-b-ins001-fk-insanitee-original-imahzegnsy693thd.jpeg?q=70"
     },
     {
       "code": "ZUD-040",
-      "name": "Zudio Activewear 5",
-      "brandName": "Zudio",
+      "name": "Coastal Clothier Color Block Men Grey Beige Gym Shorts Running Sports Shorts",
+      "brandName": "coastal clothier",
       "category": "activewear",
       "price": {
         "mrp": 1295,
@@ -635,15 +830,20 @@
       },
       "specs": {
         "size": "S",
-        "color": "White"
+        "color": "Beige, Grey",
+        "marketplace": "Zudio",
+        "productType": "activewear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Color Block"
       },
       "inStock": true,
-      "imageUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/a94bc2187650993.659d24f053a87.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/short/w/d/v/l-upiping-combo-coastal-clothier-original-imahph2bztedpnsk.jpeg?q=70"
     },
     {
       "code": "ZUD-041",
-      "name": "Zudio Activewear 6",
-      "brandName": "Zudio",
+      "name": "Coastal Clothier Color Block Men Black Beige Gym Shorts Running Sports Shorts",
+      "brandName": "coastal clothier",
       "category": "activewear",
       "price": {
         "mrp": 326,
@@ -651,15 +851,20 @@
       },
       "specs": {
         "size": "S",
-        "color": "Black"
+        "color": "Black, Beige",
+        "marketplace": "Zudio",
+        "productType": "activewear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Color Block"
       },
       "inStock": true,
-      "imageUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/a94bc2187650993.659d24f053a87.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/short/7/y/p/s-upiping-combo-coastal-clothier-original-imahph2bcgrhgrjp.jpeg?q=70"
     },
     {
       "code": "ZUD-042",
-      "name": "Zudio Activewear 7",
-      "brandName": "Zudio",
+      "name": "Septem Solid Men Dark Grey Light Blue Gym Shorts",
+      "brandName": "Septem",
       "category": "activewear",
       "price": {
         "mrp": 627,
@@ -667,15 +872,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "Blue"
+        "color": "Light Blue, Grey",
+        "marketplace": "Zudio",
+        "productType": "activewear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Solid"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/yzH6vhwWnWg/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/short/g/f/d/s-ss-02-pack-of-2-solid-men-gym-and-sport-short-septem-original-imahdg7e6znszmr3.jpeg?q=70"
     },
     {
       "code": "ZUD-043",
-      "name": "Zudio Loungewear 1",
-      "brandName": "Zudio",
+      "name": "Vj Fashion Women Printed Multicolor Night Suit Set",
+      "brandName": "VJ FASHION",
       "category": "loungewear",
       "price": {
         "mrp": 1136,
@@ -683,15 +893,20 @@
       },
       "specs": {
         "size": "L",
-        "color": "Red"
+        "color": "Multicolor",
+        "marketplace": "Zudio",
+        "productType": "loungewear",
+        "gender": "Women",
+        "material": "Not specified",
+        "style": "Printed"
       },
       "inStock": true,
-      "imageUrl": "https://img.freeup.app/fit-in/800x1000/filters:upscale()/c50bc674f2063a2fc94dfd81b488f812.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/night-suit/e/p/k/l-spring-grey-s-vj-fashion-original-imah4dfypatvsyvy.jpeg?q=70"
     },
     {
       "code": "ZUD-044",
-      "name": "Zudio Loungewear 2",
-      "brandName": "Zudio",
+      "name": "Nightwell Women Printed Multicolor Shirt Pyjama Set",
+      "brandName": "Nightwell",
       "category": "loungewear",
       "price": {
         "mrp": 811,
@@ -699,15 +914,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "White"
+        "color": "Multicolor",
+        "marketplace": "Zudio",
+        "productType": "loungewear",
+        "gender": "Women",
+        "material": "Not specified",
+        "style": "Printed"
       },
       "inStock": true,
-      "imageUrl": "https://img.freeup.app/fit-in/800x1000/filters:upscale()/40f69ebba1eb610ee9dc4bcb4646abd1.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/night-suit/r/s/2/m-znz-horse-ns-nightwell-original-imahpkkrck2xaxhz.jpeg?q=70"
     },
     {
       "code": "ZUD-045",
-      "name": "Zudio Loungewear 3",
-      "brandName": "Zudio",
+      "name": "Biyoko Women Printed Dark Green Night Suit Set",
+      "brandName": "Biyoko",
       "category": "loungewear",
       "price": {
         "mrp": 516,
@@ -715,15 +935,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "Black"
+        "color": "Dark Green",
+        "marketplace": "Zudio",
+        "productType": "loungewear",
+        "gender": "Women",
+        "material": "Not specified",
+        "style": "Printed"
       },
       "inStock": true,
-      "imageUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/a94bc2187650993.659d24f053a87.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/night-suit/4/d/f/xxl-man01-cabt-original-imah6v77pzktgdkd.jpeg?q=70"
     },
     {
       "code": "ZUD-046",
-      "name": "Zudio Loungewear 4",
-      "brandName": "Zudio",
+      "name": "Miss Rekha Women Printed Blue White Night Suit Set",
+      "brandName": "Miss Rekha",
       "category": "loungewear",
       "price": {
         "mrp": 326,
@@ -731,15 +956,20 @@
       },
       "specs": {
         "size": "XL",
-        "color": "White"
+        "color": "White, Blue",
+        "marketplace": "Zudio",
+        "productType": "loungewear",
+        "gender": "Women",
+        "material": "Not specified",
+        "style": "Printed"
       },
       "inStock": true,
-      "imageUrl": "https://img.freeup.app/fit-in/800x1000/filters:upscale()/40f69ebba1eb610ee9dc4bcb4646abd1.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/night-suit/z/b/r/xl-m-2001-miss-rekha-original-imahqf8fg2jvekku.jpeg?q=70"
     },
     {
       "code": "ZUD-047",
-      "name": "Zudio Loungewear 5",
-      "brandName": "Zudio",
+      "name": "Trinabh Women Printed Blue Shirt Pyjama Set",
+      "brandName": "TRINABH",
       "category": "loungewear",
       "price": {
         "mrp": 1187,
@@ -747,15 +977,20 @@
       },
       "specs": {
         "size": "L",
-        "color": "Blue"
+        "color": "Blue",
+        "marketplace": "Zudio",
+        "productType": "loungewear",
+        "gender": "Women",
+        "material": "Not specified",
+        "style": "Printed"
       },
       "inStock": true,
-      "imageUrl": "https://genuinemaal.com/cdn/shop/files/IMG_6812.jpg?v=1760516692&width=2703"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/night-suit/p/i/o/xl-kkh2006-gouri-original-imag4utaxqckqrgt-bb.jpeg?q=70"
     },
     {
       "code": "ZUD-048",
-      "name": "Zudio Loungewear 6",
-      "brandName": "Zudio",
+      "name": "Cozy Nightdress Women Printed Pink Top Pyjama Set",
+      "brandName": "COZY NIGHTDRESS",
       "category": "loungewear",
       "price": {
         "mrp": 661,
@@ -763,15 +998,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "Blue"
+        "color": "Pink",
+        "marketplace": "Zudio",
+        "productType": "loungewear",
+        "gender": "Women",
+        "material": "Not specified",
+        "style": "Printed"
       },
       "inStock": true,
-      "imageUrl": "https://franchiseavs.com/wp-content/uploads/2023/10/Zudio-Showroom-1.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/night-suit/g/w/l/l-pack-of-2-women-printed-nightsuit-soft-lightweight-fabric-cozy-original-imahpg94jkshygx7.jpeg?q=70"
     },
     {
       "code": "ZUD-049",
-      "name": "Zudio Loungewear 7",
-      "brandName": "Zudio",
+      "name": "Mukaraniya Women Printed Blue Shirt Pyjama Set",
+      "brandName": "Mukaraniya",
       "category": "loungewear",
       "price": {
         "mrp": 617,
@@ -779,15 +1019,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "Black"
+        "color": "Blue",
+        "marketplace": "Zudio",
+        "productType": "loungewear",
+        "gender": "Women",
+        "material": "Not specified",
+        "style": "Printed"
       },
       "inStock": true,
-      "imageUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/a94bc2187650993.659d24f053a87.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/night-suit/j/j/v/xl-aj-night-mukaraniya-original-imahkntxcqsgkbdg.jpeg?q=70"
     },
     {
       "code": "ZUD-050",
-      "name": "Zudio Accessories 1",
-      "brandName": "Zudio",
+      "name": "Hapani Fashion Men Women Party Casual Black Artificial Leather Belt",
+      "brandName": "Hapani Fashion",
       "category": "accessories",
       "price": {
         "mrp": 1088,
@@ -795,15 +1040,20 @@
       },
       "specs": {
         "size": "XL",
-        "color": "Black"
+        "color": "Black",
+        "marketplace": "Zudio",
+        "productType": "accessories",
+        "gender": "Unisex",
+        "material": "Artificial Leather",
+        "style": "Not specified"
       },
       "inStock": true,
-      "imageUrl": "https://media-photos.depop.com/b1/13300931/1770211412_5469bf2a259e42ddb378a488b6f5db06/P0.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/belt/5/b/f/one-size-suitable-for-men-women-unisex-stylish-double-hole-metal-original-imahhyvphg6zcecn.jpeg?q=70"
     },
     {
       "code": "ZUD-051",
-      "name": "Zudio Accessories 2",
-      "brandName": "Zudio",
+      "name": "Fashion Jai No Hair Clip",
+      "brandName": "Fashion by Jai No Hair Clip",
       "category": "accessories",
       "price": {
         "mrp": 1013,
@@ -811,15 +1061,20 @@
       },
       "specs": {
         "size": "L",
-        "color": "Black"
+        "color": "Multicolor",
+        "marketplace": "Zudio",
+        "productType": "accessories",
+        "gender": "Unisex",
+        "material": "Not specified",
+        "style": "Not specified"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/rUiFtNBzzbo/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/hair-accessory/l/c/t/no-3-no-hair-clip-fashion-by-jai-original-imahmshzvmxkvxcg.jpeg?q=70"
     },
     {
       "code": "ZUD-052",
-      "name": "Zudio Accessories 3",
-      "brandName": "Zudio",
+      "name": "Fashion Men Casual Evening Formal Party Black Genuine Leather Belt",
+      "brandName": "Fashion",
       "category": "accessories",
       "price": {
         "mrp": 1480,
@@ -827,15 +1082,20 @@
       },
       "specs": {
         "size": "XL",
-        "color": "Blue"
+        "color": "Black",
+        "marketplace": "Zudio",
+        "productType": "accessories",
+        "gender": "Men",
+        "material": "Genuine Leather",
+        "style": "Not specified"
       },
       "inStock": true,
-      "imageUrl": "https://booxoul.com/wp-content/uploads/2023/07/Zudio-The-Face-of-Changing-Fashion-for-Millennials-and-Gen-Z.webp"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/ksc46fk0/belt/s/l/c/32-genuine-leather-belt-fc-541-genuine-leather-belt-shreefashion-original-imag5xkzjfzgukvy.jpeg?q=70"
     },
     {
       "code": "ZUD-053",
-      "name": "Zudio Accessories 4",
-      "brandName": "Zudio",
+      "name": "Fashion Men Casual Evening Formal Party Brown Black Genuine Leather Belt",
+      "brandName": "Fashion",
       "category": "accessories",
       "price": {
         "mrp": 1368,
@@ -843,15 +1103,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "White"
+        "color": "Black, Brown",
+        "marketplace": "Zudio",
+        "productType": "accessories",
+        "gender": "Men",
+        "material": "Genuine Leather",
+        "style": "Not specified"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/R1vvLnjfKvw/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/ksdjma80/belt/b/d/l/30-genuine-leather-belt-fc-543-genuine-leather-belt-fashion-original-imag5ym5qqjd3ghk.jpeg?q=70"
     },
     {
       "code": "ZUD-054",
-      "name": "Zudio Accessories 5",
-      "brandName": "Zudio",
+      "name": "Hapani Fashion Women Broach Hair Accessory Set",
+      "brandName": "Hapani Fashion",
       "category": "accessories",
       "price": {
         "mrp": 1042,
@@ -859,15 +1124,20 @@
       },
       "specs": {
         "size": "XL",
-        "color": "Red"
+        "color": "Pink, Silver",
+        "marketplace": "Zudio",
+        "productType": "accessories",
+        "gender": "Women",
+        "material": "Not specified",
+        "style": "Not specified"
       },
       "inStock": true,
-      "imageUrl": "https://image.slidesharecdn.com/mmzud1-240421090423-cb258d2e/75/Case-study-on-tata-clothing-brand-zudio-in-detail-4-2048.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/hair-accessory/x/g/n/-original-imahfvf4fsnz8zkv.jpeg?q=70"
     },
     {
       "code": "ZUD-055",
-      "name": "Zudio Accessories 6",
-      "brandName": "Zudio",
+      "name": "Hapani Fashion Men Women Party Casual White Artificial Leather Belt",
+      "brandName": "Hapani Fashion",
       "category": "accessories",
       "price": {
         "mrp": 587,
@@ -875,15 +1145,20 @@
       },
       "specs": {
         "size": "L",
-        "color": "Blue"
+        "color": "White",
+        "marketplace": "Zudio",
+        "productType": "accessories",
+        "gender": "Unisex",
+        "material": "Artificial Leather",
+        "style": "Not specified"
       },
       "inStock": true,
-      "imageUrl": "https://genuinemaal.com/cdn/shop/files/IMG_6812.jpg?v=1760516692&width=2703"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/belt/m/i/z/one-size-suitable-for-men-women-unisex-stylish-double-hole-metal-original-imahjaxrythyv4ey.jpeg?q=70"
     },
     {
       "code": "ZUD-056",
-      "name": "Zudio Accessories 7",
-      "brandName": "Zudio",
+      "name": "Fashion Factory Black Color Rubber Band Pack 150",
+      "brandName": "Fashion Factory",
       "category": "accessories",
       "price": {
         "mrp": 484,
@@ -891,15 +1166,20 @@
       },
       "specs": {
         "size": "L",
-        "color": "Black"
+        "color": "Black",
+        "marketplace": "Zudio",
+        "productType": "accessories",
+        "gender": "Unisex",
+        "material": "Not specified",
+        "style": "Not specified"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/rUiFtNBzzbo/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/k83dlzk0/hair-accessory/e/t/f/black-color-rubber-band-pack-of-150-150-elastick-black-150-pic-original-imafq6uhngazmyhj.jpeg?q=70"
     },
     {
       "code": "ZUD-057",
-      "name": "Zudio Innerwear 1",
-      "brandName": "Zudio",
+      "name": "Jicks Men Brief",
+      "brandName": "jicks",
       "category": "innerwear",
       "price": {
         "mrp": 461,
@@ -907,15 +1187,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "Black"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "innerwear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Not specified"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/z-fDN-KIkpo/oardefault.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLATACtjluzVxdlMFA9VL3wBytoGug"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/brief/u/c/0/m-4-4modal-81-jicks-original-imahd3h8a2khrzds.jpeg?q=70"
     },
     {
       "code": "ZUD-058",
-      "name": "Zudio Innerwear 2",
-      "brandName": "Zudio",
+      "name": "Marlin Blue Men Brief",
+      "brandName": "Marlin Blue",
       "category": "innerwear",
       "price": {
         "mrp": 988,
@@ -923,15 +1208,20 @@
       },
       "specs": {
         "size": "S",
-        "color": "Blue"
+        "color": "Blue",
+        "marketplace": "Zudio",
+        "productType": "innerwear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Printed"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/8I1uLAigyVo/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/brief/3/v/d/m-1-brief-mannylonc-mlb-021-marlin-blue-original-imahhbqpaqnygthz.jpeg?q=70"
     },
     {
       "code": "ZUD-059",
-      "name": "Zudio Innerwear 3",
-      "brandName": "Zudio",
+      "name": "Poomex Men Brief",
+      "brandName": "Poomex",
       "category": "innerwear",
       "price": {
         "mrp": 1296,
@@ -939,15 +1229,20 @@
       },
       "specs": {
         "size": "L",
-        "color": "White"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "innerwear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Solid"
       },
       "inStock": true,
-      "imageUrl": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3386619989812714863"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/brief/l/1/1/80-3-poomextrunk-poomex-original-imahhxa3nv44wesz.jpeg?q=70"
     },
     {
       "code": "ZUD-060",
-      "name": "Zudio Innerwear 4",
-      "brandName": "Zudio",
+      "name": "Jicks Men Brief",
+      "brandName": "jicks",
       "category": "innerwear",
       "price": {
         "mrp": 597,
@@ -955,15 +1250,20 @@
       },
       "specs": {
         "size": "L",
-        "color": "Black"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "innerwear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Camouflage, Geometric Print, Printed"
       },
       "inStock": true,
-      "imageUrl": "https://imgs4.freeup.app/300x300/f9fd4ae04101cca88b7469c5c2c05754.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/brief/w/y/6/s-3-3-k-31-jicks-original-imahpeyh5sezgpyy.jpeg?q=70"
     },
     {
       "code": "ZUD-061",
-      "name": "Zudio Innerwear 5",
-      "brandName": "Zudio",
+      "name": "Jicks Men Brief",
+      "brandName": "jicks",
       "category": "innerwear",
       "price": {
         "mrp": 502,
@@ -971,15 +1271,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "Red"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "innerwear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Solid"
       },
       "inStock": true,
-      "imageUrl": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3386619989812714863"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/brief/g/x/f/100-1-1-modal-401-jicks-original-imahh2c89zpfwtqv.jpeg?q=70"
     },
     {
       "code": "ZUD-062",
-      "name": "Zudio Innerwear 6",
-      "brandName": "Zudio",
+      "name": "Marlin Blue Men Brief",
+      "brandName": "Marlin Blue",
       "category": "innerwear",
       "price": {
         "mrp": 1360,
@@ -987,15 +1292,20 @@
       },
       "specs": {
         "size": "XL",
-        "color": "Red"
+        "color": "Blue",
+        "marketplace": "Zudio",
+        "productType": "innerwear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Graphic Print, Camouflage, Geometric Print, Printed"
       },
       "inStock": true,
-      "imageUrl": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3386619989812714863"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/brief/8/l/k/85-1-briefsprinttrunk-marlin-blue-original-imahegngpttrqhpe.jpeg?q=70"
     },
     {
       "code": "ZUD-063",
-      "name": "Zudio Innerwear 7",
-      "brandName": "Zudio",
+      "name": "Jicks Men Brief",
+      "brandName": "jicks",
       "category": "innerwear",
       "price": {
         "mrp": 1259,
@@ -1003,15 +1313,20 @@
       },
       "specs": {
         "size": "M",
-        "color": "White"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "innerwear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Printed"
       },
       "inStock": true,
-      "imageUrl": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3386619989812714863"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/brief/e/z/m/95-3-3-h-001-jicks-original-imahpjgmxssq7hgr.jpeg?q=70"
     },
     {
       "code": "ZUD-064",
-      "name": "Zudio Winterwear 1",
-      "brandName": "Zudio",
+      "name": "Zeppi Full Sleeve Printed Men Jacket",
+      "brandName": "ZEPPI",
       "category": "winterwear",
       "price": {
         "mrp": 1004,
@@ -1019,15 +1334,20 @@
       },
       "specs": {
         "size": "L",
-        "color": "Red"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "winterwear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Printed"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/cNUaLg0U4Mc/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/z/6/a/xl-1-no-mens-puma-print-jkt-black-zeppi-original-imahq4n94b2hfmaj.jpeg?q=70"
     },
     {
       "code": "ZUD-065",
-      "name": "Zudio Winterwear 2",
-      "brandName": "Zudio",
+      "name": "Zeppi Full Sleeve Printed Men Jacket",
+      "brandName": "ZEPPI",
       "category": "winterwear",
       "price": {
         "mrp": 1431,
@@ -1035,15 +1355,20 @@
       },
       "specs": {
         "size": "L",
-        "color": "Red"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "winterwear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Printed"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/2Toi4_z1GlU/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/y/j/c/xl-1-no-mens-puma-print-jkt-maroon-zeppi-original-imahq4n9hsvrgafj.jpeg?q=70"
     },
     {
       "code": "ZUD-066",
-      "name": "Zudio Winterwear 3",
-      "brandName": "Zudio",
+      "name": "Oswal Inner Men Thermal Set Warmer Winter Top Pyjama",
+      "brandName": "OSWAL INNER",
       "category": "winterwear",
       "price": {
         "mrp": 747,
@@ -1051,15 +1376,20 @@
       },
       "specs": {
         "size": "XL",
-        "color": "Black"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "winterwear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Not specified"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/sJOHq8nStl0/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/thermal/b/l/z/90-1-thermal-set-black-oswal-inner-original-imah7hjgyuf5shtj.jpeg?q=70"
     },
     {
       "code": "ZUD-067",
-      "name": "Zudio Winterwear 4",
-      "brandName": "Zudio",
+      "name": "Dailydude Printed Round Neck Casual Men White Sweater",
+      "brandName": "DAILYDUDE",
       "category": "winterwear",
       "price": {
         "mrp": 609,
@@ -1067,15 +1397,20 @@
       },
       "specs": {
         "size": "XL",
-        "color": "White"
+        "color": "White",
+        "marketplace": "Zudio",
+        "productType": "winterwear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Printed, Round Neck"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/G92-zSbNwPI/oardefault.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLBW__bAX3bTjzFjMM6ZszY_466jFg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/sweater/r/g/u/xl-rk5-26-hair-trin-2603-red-dailydude-original-imahppfa7q7naups.jpeg?q=70"
     },
     {
       "code": "ZUD-068",
-      "name": "Zudio Winterwear 5",
-      "brandName": "Zudio",
+      "name": "Ninq Full Sleeve Solid Men Jacket",
+      "brandName": "NINQ",
       "category": "winterwear",
       "price": {
         "mrp": 771,
@@ -1083,15 +1418,20 @@
       },
       "specs": {
         "size": "S",
-        "color": "Red"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "winterwear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Solid"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/cNUaLg0U4Mc/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/m/q/p/xxl-1-no-mja-kyk-resized-original-imahgzvyr7xgsgjg.jpeg?q=70"
     },
     {
       "code": "ZUD-069",
-      "name": "Zudio Winterwear 6",
-      "brandName": "Zudio",
+      "name": "Rably Full Sleeve Solid Men Sweatshirt",
+      "brandName": "RABLY",
       "category": "winterwear",
       "price": {
         "mrp": 491,
@@ -1099,15 +1439,20 @@
       },
       "specs": {
         "size": "S",
-        "color": "Black"
+        "color": "Not specified",
+        "marketplace": "Zudio",
+        "productType": "winterwear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Solid"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/sJOHq8nStl0/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/sweatshirt/s/a/9/m-d31-hnzp-36-wh-rably-original-imahpatnxt2erssc.jpeg?q=70"
     },
     {
       "code": "ZUD-070",
-      "name": "Zudio Winterwear 7",
-      "brandName": "Zudio",
+      "name": "Ain6 Self Design Round Neck Casual Men Dark Green Sweater",
+      "brandName": "AIN6",
       "category": "winterwear",
       "price": {
         "mrp": 584,
@@ -1115,10 +1460,78 @@
       },
       "specs": {
         "size": "XL",
-        "color": "White"
+        "color": "Dark Green",
+        "marketplace": "Zudio",
+        "productType": "winterwear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Self Design, Round Neck"
       },
       "inStock": true,
-      "imageUrl": "https://i.ytimg.com/vi/OFEtHcKLlHM/maxresdefault.jpg"
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/sweater/o/a/p/l-b5016-olive-ain6-original-imahqdmmt656zuar.jpeg?q=70"
+    },
+    {
+      "code": "ZUD-071",
+      "name": "Ullaspemium Swimming Shorts Men Solid Swimsuit",
+      "brandName": "UllasPemium",
+      "category": "beachwear",
+      "price": {
+        "mrp": 999,
+        "sellingPrice": 799
+      },
+      "specs": {
+        "size": "M",
+        "color": "Black",
+        "marketplace": "Zudio",
+        "productType": "beachwear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Solid"
+      },
+      "inStock": true,
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/short/o/l/n/3xl-swi-short-long-apraa-parma-original-imagx9sv7qz2wkb8.jpeg?q=70"
+    },
+    {
+      "code": "ZUD-072",
+      "name": "Just Rider Self Design Men Black Swim Shorts",
+      "brandName": "Just Rider",
+      "category": "beachwear",
+      "price": {
+        "mrp": 1099,
+        "sellingPrice": 849
+      },
+      "specs": {
+        "size": "L",
+        "color": "Black",
+        "marketplace": "Zudio",
+        "productType": "beachwear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Self Design"
+      },
+      "inStock": true,
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/short/0/w/b/xl-swimming-trunks-for-men-just-rider-original-imahbzpykmuhrxqy.jpeg?q=70"
+    },
+    {
+      "code": "ZUD-073",
+      "name": "Just Rider Solid Color Block Men Black Blue Swim Shorts",
+      "brandName": "Just Rider",
+      "category": "beachwear",
+      "price": {
+        "mrp": 799,
+        "sellingPrice": 599
+      },
+      "specs": {
+        "size": "M",
+        "color": "Black, Blue",
+        "marketplace": "Zudio",
+        "productType": "beachwear",
+        "gender": "Men",
+        "material": "Not specified",
+        "style": "Color Block, Solid"
+      },
+      "inStock": true,
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/short/1/2/o/m-swim-shorts-for-men-just-rider-original-imahbzjyczcrpdx3.jpeg?q=70"
     }
   ]
 }

@@ -2,119 +2,126 @@
   "products": [
     {
       "code": "1MG-001",
-      "name": "1mg Medicines 1",
-      "brandName": "1mg",
+      "name": "Risperidone 1 mg Tablets",
+      "brandName": "Generic",
       "category": "medicines",
       "price": {
         "mrp": 949,
         "sellingPrice": 831
       },
       "specs": {
+        "generic_name": "Risperidone",
         "prescription_required": true,
-        "pack_size": "10 tabs"
+        "pack_size": "10 tablets"
       },
       "inStock": true,
       "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2022/9/GZ/RL/BS/2938236/risperidone-1mg-tablet-1000x1000.jpg"
     },
     {
       "code": "1MG-002",
-      "name": "1mg Medicines 2",
-      "brandName": "1mg",
+      "name": "Paracetamol 500 mg Tablets",
+      "brandName": "Generic",
       "category": "medicines",
       "price": {
         "mrp": 979,
         "sellingPrice": 737
       },
       "specs": {
-        "prescription_required": true,
-        "pack_size": "1 unit"
+        "generic_name": "Paracetamol",
+        "prescription_required": false,
+        "pack_size": "15 tablets"
       },
       "inStock": true,
       "imageUrl": "https://medsforall.com.ph/cdn/shop/files/IMG_4616.heic?v=1709636485"
     },
     {
       "code": "1MG-003",
-      "name": "1mg Medicines 3",
-      "brandName": "1mg",
+      "name": "Anastrozole 1 mg Tablets",
+      "brandName": "Generic",
       "category": "medicines",
       "price": {
         "mrp": 1416,
         "sellingPrice": 903
       },
       "specs": {
+        "generic_name": "Anastrozole",
         "prescription_required": true,
-        "pack_size": "10 tabs"
+        "pack_size": "10 tablets"
       },
       "inStock": true,
       "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2023/6/315906429/BS/FM/XP/12589110/anatero-1000x1000.jpg"
     },
     {
       "code": "1MG-004",
-      "name": "1mg Medicines 4",
-      "brandName": "1mg",
+      "name": "Varenicline 1 mg Tablets",
+      "brandName": "Generic",
       "category": "medicines",
       "price": {
         "mrp": 466,
         "sellingPrice": 288
       },
       "specs": {
+        "generic_name": "Varenicline",
         "prescription_required": true,
-        "pack_size": "1 unit"
+        "pack_size": "10 tablets"
       },
       "inStock": true,
       "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2023/8/335324474/NB/RU/RC/140686703/1mg-varenicline-tablet-500x500.jpeg"
     },
     {
       "code": "1MG-005",
-      "name": "1mg Medicines 5",
-      "brandName": "1mg",
+      "name": "Azithromycin 500 mg Tablets",
+      "brandName": "Generic",
       "category": "medicines",
       "price": {
         "mrp": 1198,
         "sellingPrice": 859
       },
       "specs": {
+        "generic_name": "Azithromycin",
         "prescription_required": true,
-        "pack_size": "10 tabs"
+        "pack_size": "3 tablets"
       },
       "inStock": true,
       "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2023/6/315906429/BS/FM/XP/12589110/anatero-1000x1000.jpg"
     },
     {
       "code": "1MG-006",
-      "name": "1mg Medicines 6",
-      "brandName": "1mg",
+      "name": "Metformin 500 mg Tablets",
+      "brandName": "Generic",
       "category": "medicines",
       "price": {
         "mrp": 253,
         "sellingPrice": 212
       },
       "specs": {
+        "generic_name": "Metformin",
         "prescription_required": true,
-        "pack_size": "10 tabs"
+        "pack_size": "10 tablets"
       },
       "inStock": true,
       "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2023/6/315906429/BS/FM/XP/12589110/anatero-1000x1000.jpg"
     },
     {
       "code": "1MG-007",
-      "name": "1mg Medicines 7",
-      "brandName": "1mg",
+      "name": "Pantoprazole 40 mg Tablets",
+      "brandName": "Generic",
       "category": "medicines",
       "price": {
         "mrp": 256,
         "sellingPrice": 153
       },
       "specs": {
+        "generic_name": "Pantoprazole",
         "prescription_required": true,
-        "pack_size": "1 unit"
+        "pack_size": "15 tablets"
       },
       "inStock": true,
       "imageUrl": "https://medsforall.com.ph/cdn/shop/files/IMG_4616.heic?v=1709636485"
     },
     {
       "code": "1MG-008",
-      "name": "Dabur Supplements 1",
+      "name": "Dabur Vatchintamani Ras Gold Tablets",
       "brandName": "Dabur",
       "category": "supplements",
       "price": {
@@ -122,15 +129,17 @@
         "sellingPrice": 631
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "General wellness",
+        "formulation": "Ayurvedic tablet",
+        "pack_size": "10 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://themedpharma.co.in/cdn/shop/files/Dabur_Vatchintamani_Tablets.png?v=1762424554"
     },
     {
       "code": "1MG-009",
-      "name": "Dabur Supplements 2",
+      "name": "Dabur Stresscom Capsules",
       "brandName": "Dabur",
       "category": "supplements",
       "price": {
@@ -138,15 +147,17 @@
         "sellingPrice": 497
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Stress support",
+        "formulation": "Ashwagandha blend",
+        "pack_size": "10 capsules",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://5.imimg.com/data5/SELLER/PDFImage/2026/1/575793395/QC/QD/JE/241955244/dabur-stresscom-10-capsules-pack-of-2-1000x1000.png"
     },
     {
       "code": "1MG-010",
-      "name": "Dabur Supplements 3",
+      "name": "Dabur Mensta Syrup",
       "brandName": "Dabur",
       "category": "supplements",
       "price": {
@@ -154,15 +165,17 @@
         "sellingPrice": 1539
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Women’s wellness",
+        "formulation": "Ayurvedic formulation",
+        "pack_size": "200 ml",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://spwellness.in/wp-content/uploads/2024/02/DABUR-MENSTA-68.png"
     },
     {
       "code": "1MG-011",
-      "name": "Dabur Supplements 4",
+      "name": "Dabur Supari Pak",
       "brandName": "Dabur",
       "category": "supplements",
       "price": {
@@ -170,15 +183,17 @@
         "sellingPrice": 1147
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Women’s wellness",
+        "formulation": "Herbal granules",
+        "pack_size": "250 g",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2023/1/FU/SU/XP/182430333/dabur-supari-pak-laghu-1000x1000.jpeg"
     },
     {
       "code": "1MG-012",
-      "name": "Dabur Supplements 5",
+      "name": "Dabur Ras Pipari Tablets",
       "brandName": "Dabur",
       "category": "supplements",
       "price": {
@@ -186,15 +201,17 @@
         "sellingPrice": 528
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Respiratory wellness",
+        "formulation": "Ayurvedic tablet",
+        "pack_size": "10 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://ayushmedi.com/cdn/shop/files/ras-pipri.jpg?v=1749159363"
     },
     {
       "code": "1MG-013",
-      "name": "Dabur Supplements 6",
+      "name": "Dabur Shilajit Gold Capsules",
       "brandName": "Dabur",
       "category": "supplements",
       "price": {
@@ -202,15 +219,17 @@
         "sellingPrice": 867
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Strength and stamina",
+        "formulation": "Herbal-mineral blend",
+        "pack_size": "10 capsules",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2023/1/FU/SU/XP/182430333/dabur-supari-pak-laghu-1000x1000.jpeg"
     },
     {
       "code": "1MG-014",
-      "name": "Dabur Supplements 7",
+      "name": "Dabur Pudin Hara Pearls",
       "brandName": "Dabur",
       "category": "supplements",
       "price": {
@@ -218,15 +237,17 @@
         "sellingPrice": 304
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Digestive wellness",
+        "formulation": "Mint oil",
+        "pack_size": "10 capsules",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2021/7/LK/QT/WS/2529238/dabur-pudin-hara-tablets-10tab--250x250.jpg"
     },
     {
       "code": "1MG-015",
-      "name": "Himalaya Vitamins 1",
+      "name": "Himalaya Organic Ashwagandha Tablets",
       "brandName": "Himalaya",
       "category": "vitamins",
       "price": {
@@ -234,15 +255,17 @@
         "sellingPrice": 1187
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Stress support",
+        "formulation": "Ashwagandha",
+        "pack_size": "60 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://i.ebayimg.com/images/g/qRYAAOSwf6xkz9sP/s-l400.jpg"
     },
     {
       "code": "1MG-016",
-      "name": "Himalaya Vitamins 2",
+      "name": "Himalaya Liv.52 Tablets",
       "brandName": "Himalaya",
       "category": "vitamins",
       "price": {
@@ -250,15 +273,17 @@
         "sellingPrice": 664
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Liver wellness",
+        "formulation": "Herbal blend",
+        "pack_size": "100 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://cdn01.pharmeasy.in/dam/products_otc/Y96906/himalaya-liv-52-tablet-pack-of-2-6.01-1686558206.jpg"
     },
     {
       "code": "1MG-017",
-      "name": "Himalaya Vitamins 3",
+      "name": "Himalaya Gokshura Tablets",
       "brandName": "Himalaya",
       "category": "vitamins",
       "price": {
@@ -266,15 +291,17 @@
         "sellingPrice": 1168
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Men’s wellness",
+        "formulation": "Gokshura",
+        "pack_size": "60 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://spwellness.in/wp-content/uploads/2024/02/HIMALAYA-GOKSHURA-1.png"
     },
     {
       "code": "1MG-018",
-      "name": "Himalaya Vitamins 4",
+      "name": "Himalaya Septilin Tablets",
       "brandName": "Himalaya",
       "category": "vitamins",
       "price": {
@@ -282,15 +309,17 @@
         "sellingPrice": 1825
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Immune support",
+        "formulation": "Herbal blend",
+        "pack_size": "60 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://healthygk.com/wp-content/uploads/2023/05/0fa7349294084013903c353b3e08b523.jpg"
     },
     {
       "code": "1MG-019",
-      "name": "Himalaya Vitamins 5",
+      "name": "Himalaya Guduchi Tablets",
       "brandName": "Himalaya",
       "category": "vitamins",
       "price": {
@@ -298,15 +327,17 @@
         "sellingPrice": 364
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Immune support",
+        "formulation": "Guduchi",
+        "pack_size": "60 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://i.ebayimg.com/images/g/qRYAAOSwf6xkz9sP/s-l400.jpg"
     },
     {
       "code": "1MG-020",
-      "name": "Himalaya Vitamins 6",
+      "name": "Himalaya Boswellia Joint Support Tablets",
       "brandName": "Himalaya",
       "category": "vitamins",
       "price": {
@@ -314,15 +345,17 @@
         "sellingPrice": 483
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Joint support",
+        "formulation": "Boswellia",
+        "pack_size": "60 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://i.ebayimg.com/images/g/qRYAAOSwf6xkz9sP/s-l400.jpg"
     },
     {
       "code": "1MG-021",
-      "name": "Himalaya Vitamins 7",
+      "name": "Himalaya Spirulina Tablets",
       "brandName": "Himalaya",
       "category": "vitamins",
       "price": {
@@ -330,239 +363,269 @@
         "sellingPrice": 928
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Daily nutrition",
+        "formulation": "Spirulina",
+        "pack_size": "60 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://images.apollo247.in/pub/media/catalog/product/s/p/spe0022_4.jpg"
     },
     {
       "code": "1MG-022",
-      "name": "1mg Ayurveda 1",
-      "brandName": "1mg",
+      "name": "Tata 1mg Ashwagandha Capsules",
+      "brandName": "Tata 1mg",
       "category": "ayurveda",
       "price": {
         "mrp": 1710,
         "sellingPrice": 1212
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Stress support",
+        "formulation": "Ashwagandha",
+        "pack_size": "60 capsules",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2023/6/315906429/BS/FM/XP/12589110/anatero-1000x1000.jpg"
     },
     {
       "code": "1MG-023",
-      "name": "1mg Ayurveda 2",
-      "brandName": "1mg",
+      "name": "Tata 1mg Triphala Tablets",
+      "brandName": "Tata 1mg",
       "category": "ayurveda",
       "price": {
         "mrp": 651,
         "sellingPrice": 409
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Digestive wellness",
+        "formulation": "Triphala",
+        "pack_size": "60 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://zeelabpharmacy.com/uploads/other_brand_image/Zee672f25835ad4b.png"
     },
     {
       "code": "1MG-024",
-      "name": "1mg Ayurveda 3",
-      "brandName": "1mg",
+      "name": "Tata 1mg Giloy Tablets",
+      "brandName": "Tata 1mg",
       "category": "ayurveda",
       "price": {
         "mrp": 1620,
         "sellingPrice": 1372
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Immune support",
+        "formulation": "Giloy",
+        "pack_size": "60 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://zeelabpharmacy.com/uploads/other_brand_image/Zee672f25835ad4b.png"
     },
     {
       "code": "1MG-025",
-      "name": "1mg Ayurveda 4",
-      "brandName": "1mg",
+      "name": "Tata 1mg Shilajit Capsules",
+      "brandName": "Tata 1mg",
       "category": "ayurveda",
       "price": {
         "mrp": 466,
         "sellingPrice": 352
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Strength and stamina",
+        "formulation": "Purified shilajit",
+        "pack_size": "30 capsules",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://indianayurvedicproducts.com/cdn/shop/files/DH-92_7595a644-3e95-4528-89ac-60357a8da487.jpg?v=1764911164&width=887"
     },
     {
       "code": "1MG-026",
-      "name": "1mg Ayurveda 5",
-      "brandName": "1mg",
+      "name": "Tata 1mg Amla Tablets",
+      "brandName": "Tata 1mg",
       "category": "ayurveda",
       "price": {
         "mrp": 666,
         "sellingPrice": 575
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Antioxidant support",
+        "formulation": "Amla",
+        "pack_size": "60 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://indianayurvedicproducts.com/cdn/shop/files/DH-92_7595a644-3e95-4528-89ac-60357a8da487.jpg?v=1764911164&width=887"
     },
     {
       "code": "1MG-027",
-      "name": "1mg Ayurveda 6",
-      "brandName": "1mg",
+      "name": "Tata 1mg Neem Tablets",
+      "brandName": "Tata 1mg",
       "category": "ayurveda",
       "price": {
         "mrp": 610,
         "sellingPrice": 524
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Skin wellness",
+        "formulation": "Neem",
+        "pack_size": "60 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://zeelabpharmacy.com/uploads/other_brand_image/Zee672f25835ad4b.png"
     },
     {
       "code": "1MG-028",
-      "name": "1mg Ayurveda 7",
-      "brandName": "1mg",
+      "name": "Tata 1mg Tulsi Tablets",
+      "brandName": "Tata 1mg",
       "category": "ayurveda",
       "price": {
         "mrp": 995,
         "sellingPrice": 718
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Respiratory wellness",
+        "formulation": "Tulsi",
+        "pack_size": "60 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2023/6/315906429/BS/FM/XP/12589110/anatero-1000x1000.jpg"
     },
     {
       "code": "1MG-029",
-      "name": "Dabur Devices 1",
+      "name": "Dabur Chyawanprash",
       "brandName": "Dabur",
-      "category": "devices",
+      "category": "health_foods",
       "price": {
         "mrp": 1300,
         "sellingPrice": 1200
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Immunity support",
+        "formulation": "Herbal paste",
+        "pack_size": "500 g",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://littleindiaeurope.nl/wp-content/uploads/2024/01/DABUR-CHYAWANPRASH-500GR-1.jpg"
     },
     {
       "code": "1MG-030",
-      "name": "Dabur Devices 2",
+      "name": "Dabur Honey",
       "brandName": "Dabur",
-      "category": "devices",
+      "category": "health_foods",
       "price": {
         "mrp": 505,
         "sellingPrice": 391
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Natural sweetener",
+        "formulation": "Honey",
+        "pack_size": "500 g",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://cdn.grofers.com/da/cms-assets/cms/product/8528c52e-41d5-44e2-bf08-e686f7116ad6.jpg"
     },
     {
       "code": "1MG-031",
-      "name": "Dabur Devices 3",
+      "name": "Dabur Kumar Kalyan Ras Tablets",
       "brandName": "Dabur",
-      "category": "devices",
+      "category": "health_foods",
       "price": {
         "mrp": 1065,
         "sellingPrice": 827
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Ayurvedic wellness",
+        "formulation": "Herbal-mineral tablet",
+        "pack_size": "10 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://ayushmedi.com/cdn/shop/files/dabur-kumar-kalyan-ras_703d32ee-bf7c-486c-915c-83dffb242895.jpg?v=1749159473"
     },
     {
       "code": "1MG-032",
-      "name": "Dabur Devices 4",
+      "name": "Dabur Pudin Hara Pearls Value Pack",
       "brandName": "Dabur",
-      "category": "devices",
+      "category": "health_foods",
       "price": {
         "mrp": 547,
         "sellingPrice": 497
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Digestive wellness",
+        "formulation": "Mint oil",
+        "pack_size": "30 capsules",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2021/7/LK/QT/WS/2529238/dabur-pudin-hara-tablets-10tab--250x250.jpg"
     },
     {
       "code": "1MG-033",
-      "name": "Dabur Devices 5",
+      "name": "Dabur Glucose-D Energy Drink Mix",
       "brandName": "Dabur",
-      "category": "devices",
+      "category": "health_foods",
       "price": {
         "mrp": 1374,
         "sellingPrice": 866
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Instant energy",
+        "formulation": "Glucose powder",
+        "pack_size": "500 g",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2021/7/LK/QT/WS/2529238/dabur-pudin-hara-tablets-10tab--250x250.jpg"
     },
     {
       "code": "1MG-034",
-      "name": "Dabur Devices 6",
+      "name": "Dabur Honitus Hot Sip",
       "brandName": "Dabur",
-      "category": "devices",
+      "category": "health_foods",
       "price": {
         "mrp": 1838,
         "sellingPrice": 1489
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Throat comfort",
+        "formulation": "Herbal drink mix",
+        "pack_size": "30 sachets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-74886,resizemode-75,msid-124949388/industry/cons-products/fmcg/dabur-india-launches-rs-500-crore-investment-platform-dabur-ventures.jpg"
     },
     {
       "code": "1MG-035",
-      "name": "Dabur Devices 7",
+      "name": "Dabur Amla Juice",
       "brandName": "Dabur",
-      "category": "devices",
+      "category": "health_foods",
       "price": {
         "mrp": 840,
         "sellingPrice": 534
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Daily wellness",
+        "formulation": "Amla juice",
+        "pack_size": "1 L",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-74886,resizemode-75,msid-124949388/industry/cons-products/fmcg/dabur-india-launches-rs-500-crore-investment-platform-dabur-ventures.jpg"
     },
     {
       "code": "1MG-036",
-      "name": "Himalaya Personal_care 1",
+      "name": "Himalaya Purifying Neem Face Wash",
       "brandName": "Himalaya",
       "category": "personal_care",
       "price": {
@@ -570,15 +633,17 @@
         "sellingPrice": 1744
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Face wash",
+        "formulation": "Neem and turmeric",
+        "pack_size": "100 ml",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://askrdukan.com/uploads/products/1772064786_699f90124b7d2.jpg"
     },
     {
       "code": "1MG-037",
-      "name": "Himalaya Personal_care 2",
+      "name": "Himalaya Moisturizing Aloe Vera Face Wash",
       "brandName": "Himalaya",
       "category": "personal_care",
       "price": {
@@ -586,15 +651,17 @@
         "sellingPrice": 1222
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Face wash",
+        "formulation": "Aloe vera",
+        "pack_size": "100 ml",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://askrdukan.com/uploads/products/1772064786_699f90124b7d2.jpg"
     },
     {
       "code": "1MG-038",
-      "name": "Himalaya Personal_care 3",
+      "name": "Himalaya Himcolin Gel",
       "brandName": "Himalaya",
       "category": "personal_care",
       "price": {
@@ -602,15 +669,17 @@
         "sellingPrice": 1302
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Men’s intimate care",
+        "formulation": "Herbal gel",
+        "pack_size": "30 g",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://www.beautymind.com.bd/wp-content/uploads/2023/07/Himalaya-Confido-and-Himcolin-Gel-Combo-1024x1024.jpg"
     },
     {
       "code": "1MG-039",
-      "name": "Himalaya Personal_care 4",
+      "name": "Himalaya Anti-Hair Fall Shampoo",
       "brandName": "Himalaya",
       "category": "personal_care",
       "price": {
@@ -618,15 +687,17 @@
         "sellingPrice": 479
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Hair care",
+        "formulation": "Bhringaraja",
+        "pack_size": "200 ml",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://www.beautymind.com.bd/wp-content/uploads/2023/07/Himalaya-Confido-and-Himcolin-Gel-Combo-1024x1024.jpg"
     },
     {
       "code": "1MG-040",
-      "name": "Himalaya Personal_care 5",
+      "name": "Himalaya Nourishing Baby Soap",
       "brandName": "Himalaya",
       "category": "personal_care",
       "price": {
@@ -634,15 +705,17 @@
         "sellingPrice": 77
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Bath and body",
+        "formulation": "Olive oil and almond oil",
+        "pack_size": "75 g",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://askrdukan.com/uploads/products/1772064786_699f90124b7d2.jpg"
     },
     {
       "code": "1MG-041",
-      "name": "Himalaya Personal_care 6",
+      "name": "Himalaya Complete Care Toothpaste",
       "brandName": "Himalaya",
       "category": "personal_care",
       "price": {
@@ -650,15 +723,17 @@
         "sellingPrice": 1375
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Oral care",
+        "formulation": "Herbal actives",
+        "pack_size": "150 g",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://cdn.platinumrx.in/meds-prescription/34410eaa-d0cc-47d4-b6fb-40b2d4188ba7_wm.png"
     },
     {
       "code": "1MG-042",
-      "name": "Himalaya Personal_care 7",
+      "name": "Himalaya Cocoa Butter Intensive Body Lotion",
       "brandName": "Himalaya",
       "category": "personal_care",
       "price": {
@@ -666,239 +741,269 @@
         "sellingPrice": 1266
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Body lotion",
+        "formulation": "Cocoa butter",
+        "pack_size": "200 ml",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://medstore.lk/wp-content/uploads/2025/02/targets-scaled.jpg"
     },
     {
       "code": "1MG-043",
-      "name": "1mg Baby_care 1",
-      "brandName": "1mg",
+      "name": "Tata 1mg Baby Massage Oil",
+      "brandName": "Tata 1mg",
       "category": "baby_care",
       "price": {
         "mrp": 267,
         "sellingPrice": 216
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Massage oil",
+        "formulation": "Plant oils",
+        "pack_size": "200 ml",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://mycare.lk/image/cache/catalog/products/004464-550x550.png"
     },
     {
       "code": "1MG-044",
-      "name": "1mg Baby_care 2",
-      "brandName": "1mg",
+      "name": "Tata 1mg Gentle Baby Wash",
+      "brandName": "Tata 1mg",
       "category": "baby_care",
       "price": {
         "mrp": 128,
         "sellingPrice": 92
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Hair and body wash",
+        "formulation": "Soap-free formula",
+        "pack_size": "200 ml",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://imgv2-2-f.scribdassets.com/img/document/795634004/original/0d1e5bb7b8/1?v=1"
     },
     {
       "code": "1MG-045",
-      "name": "1mg Baby_care 3",
-      "brandName": "1mg",
+      "name": "Tata 1mg Baby Moisturizing Lotion",
+      "brandName": "Tata 1mg",
       "category": "baby_care",
       "price": {
         "mrp": 1264,
         "sellingPrice": 996
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Body lotion",
+        "formulation": "Gentle moisturizing formula",
+        "pack_size": "200 ml",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://medias.watsons.com.ph/publishing/WTCPH-10054451-front-thumbnail.jpg?version=1720778729"
     },
     {
       "code": "1MG-046",
-      "name": "1mg Baby_care 4",
-      "brandName": "1mg",
+      "name": "Tata 1mg Baby Rash Cream",
+      "brandName": "Tata 1mg",
       "category": "baby_care",
       "price": {
         "mrp": 553,
         "sellingPrice": 446
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Diaper care",
+        "formulation": "Zinc oxide",
+        "pack_size": "50 g",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://cdn.platinumrx.in/meds-prescription/b3905323-2777-4ea1-87c5-4e946618b87a_wm.png"
     },
     {
       "code": "1MG-047",
-      "name": "1mg Baby_care 5",
-      "brandName": "1mg",
+      "name": "Tata 1mg Baby Shampoo",
+      "brandName": "Tata 1mg",
       "category": "baby_care",
       "price": {
         "mrp": 245,
         "sellingPrice": 227
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Baby shampoo",
+        "formulation": "Tear-free formula",
+        "pack_size": "200 ml",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://mycare.lk/image/cache/catalog/products/004464-550x550.png"
     },
     {
       "code": "1MG-048",
-      "name": "1mg Baby_care 6",
-      "brandName": "1mg",
+      "name": "Tata 1mg Baby Wet Wipes",
+      "brandName": "Tata 1mg",
       "category": "baby_care",
       "price": {
         "mrp": 1875,
         "sellingPrice": 1300
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Cleansing wipes",
+        "formulation": "Alcohol-free",
+        "pack_size": "72 wipes",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://imgv2-2-f.scribdassets.com/img/document/795634004/original/0d1e5bb7b8/1?v=1"
     },
     {
       "code": "1MG-049",
-      "name": "1mg Baby_care 7",
-      "brandName": "1mg",
+      "name": "Tata 1mg Premium Baby Diapers Medium",
+      "brandName": "Tata 1mg",
       "category": "baby_care",
       "price": {
         "mrp": 701,
         "sellingPrice": 503
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Baby diapers",
+        "formulation": "Absorbent core",
+        "pack_size": "42 diapers",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://bizmitra.co.in/storage/tata-1mg-franchise-1024x573-1.jpg"
     },
     {
       "code": "1MG-050",
-      "name": "Dabur Homeopathy 1",
+      "name": "Dabur Vatchintamani Ras Tablets",
       "brandName": "Dabur",
-      "category": "homeopathy",
+      "category": "ayurvedic_medicines",
       "price": {
         "mrp": 245,
         "sellingPrice": 166
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "General wellness",
+        "formulation": "Ayurvedic tablet",
+        "pack_size": "10 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "http://themedpharma.co.in/cdn/shop/files/Dabur_Vatchintamani_Tablets.png?v=1762424554"
     },
     {
       "code": "1MG-051",
-      "name": "Dabur Homeopathy 2",
+      "name": "Dabur Garbh Chintamani Ras Tablets",
       "brandName": "Dabur",
-      "category": "homeopathy",
+      "category": "ayurvedic_medicines",
       "price": {
         "mrp": 1282,
         "sellingPrice": 923
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Women’s wellness",
+        "formulation": "Ayurvedic tablet",
+        "pack_size": "10 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-74886,resizemode-75,msid-124949388/industry/cons-products/fmcg/dabur-india-launches-rs-500-crore-investment-platform-dabur-ventures.jpg"
     },
     {
       "code": "1MG-052",
-      "name": "Dabur Homeopathy 3",
+      "name": "Dabur Brihat Vata Chintamani Ras Tablets",
       "brandName": "Dabur",
-      "category": "homeopathy",
+      "category": "ayurvedic_medicines",
       "price": {
         "mrp": 1108,
         "sellingPrice": 810
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Neuromuscular wellness",
+        "formulation": "Ayurvedic tablet",
+        "pack_size": "10 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "http://ayushmedi.com/cdn/shop/files/garbh-chintamani-ras.jpg?v=1749159537"
     },
     {
       "code": "1MG-053",
-      "name": "Dabur Homeopathy 4",
+      "name": "Dabur Mahayograj Guggulu Tablets",
       "brandName": "Dabur",
-      "category": "homeopathy",
+      "category": "ayurvedic_medicines",
       "price": {
         "mrp": 118,
         "sellingPrice": 87
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Joint wellness",
+        "formulation": "Guggulu formulation",
+        "pack_size": "40 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "http://themedpharma.co.in/cdn/shop/files/Dabur_Vatchintamani_Tablets.png?v=1762424554"
     },
     {
       "code": "1MG-054",
-      "name": "Dabur Homeopathy 5",
+      "name": "Dabur Vrihat Vangeshwar Ras Tablets",
       "brandName": "Dabur",
-      "category": "homeopathy",
+      "category": "ayurvedic_medicines",
       "price": {
         "mrp": 1041,
         "sellingPrice": 752
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Men’s wellness",
+        "formulation": "Ayurvedic tablet",
+        "pack_size": "10 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://rajulretails.com/wp-content/uploads/2023/06/Dabur-Vrihat-Vangeshwar-Ras.jpg"
     },
     {
       "code": "1MG-055",
-      "name": "Dabur Homeopathy 6",
+      "name": "Dabur Chandraprabha Vati Tablets",
       "brandName": "Dabur",
-      "category": "homeopathy",
+      "category": "ayurvedic_medicines",
       "price": {
         "mrp": 307,
         "sellingPrice": 225
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Urinary wellness",
+        "formulation": "Ayurvedic tablet",
+        "pack_size": "40 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://cdn.platinumrx.in/meds-prescription/704468a9-7022-4d21-b39d-bc5de7cba279_wm.jpeg"
     },
     {
       "code": "1MG-056",
-      "name": "Dabur Homeopathy 7",
+      "name": "Dabur Shankh Vati Tablets",
       "brandName": "Dabur",
-      "category": "homeopathy",
+      "category": "ayurvedic_medicines",
       "price": {
         "mrp": 1625,
         "sellingPrice": 1065
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Digestive wellness",
+        "formulation": "Ayurvedic tablet",
+        "pack_size": "40 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://rajulretails.com/wp-content/uploads/2023/06/Dabur-Vrihat-Vangeshwar-Ras.jpg"
     },
     {
       "code": "1MG-057",
-      "name": "Himalaya Nutrition 1",
+      "name": "Himalaya Ashwagandha Tablets",
       "brandName": "Himalaya",
       "category": "nutrition",
       "price": {
@@ -906,15 +1011,17 @@
         "sellingPrice": 1318
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Stress support",
+        "formulation": "Ashwagandha",
+        "pack_size": "60 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://i.ebayimg.com/images/g/qRYAAOSwf6xkz9sP/s-l400.jpg"
     },
     {
       "code": "1MG-058",
-      "name": "Himalaya Nutrition 2",
+      "name": "Himalaya Shallaki Tablets",
       "brandName": "Himalaya",
       "category": "nutrition",
       "price": {
@@ -922,15 +1029,17 @@
         "sellingPrice": 646
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Joint support",
+        "formulation": "Boswellia",
+        "pack_size": "60 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://www.jiomart.com/images/product/600x600/rvb1vcisqm/himalaya-shallaki-pack-of-2-product-images-orvb1vcisqm-p599873036-0-202303270846.jpg"
     },
     {
       "code": "1MG-059",
-      "name": "Himalaya Nutrition 3",
+      "name": "Himalaya Q-DEE Cramps Tablets",
       "brandName": "Himalaya",
       "category": "nutrition",
       "price": {
@@ -938,15 +1047,17 @@
         "sellingPrice": 316
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Muscle support",
+        "formulation": "Mineral blend",
+        "pack_size": "24 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://thedesifood.com/media/Himalaya-Q-DEE-Cramps-Pack-of-3-24-Tablets-1.webp"
     },
     {
       "code": "1MG-060",
-      "name": "Himalaya Nutrition 4",
+      "name": "Himalaya Protein Shampoo",
       "brandName": "Himalaya",
       "category": "nutrition",
       "price": {
@@ -954,15 +1065,17 @@
         "sellingPrice": 994
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "10 tabs"
+        "benefit": "Hair nutrition",
+        "formulation": "Chickpea and amla",
+        "pack_size": "200 ml",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://s.ecrater.com/stores/535912/61f3bc902b197_535912b.jpg"
     },
     {
       "code": "1MG-061",
-      "name": "Himalaya Nutrition 5",
+      "name": "Himalaya Bitter Melon Tablets",
       "brandName": "Himalaya",
       "category": "nutrition",
       "price": {
@@ -970,15 +1083,17 @@
         "sellingPrice": 126
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Metabolic wellness",
+        "formulation": "Bitter melon",
+        "pack_size": "60 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://i.ebayimg.com/images/g/JFwAAOSwCyRldqHJ/s-l500.jpg"
     },
     {
       "code": "1MG-062",
-      "name": "Himalaya Nutrition 6",
+      "name": "Himalaya Turmeric Tablets",
       "brandName": "Himalaya",
       "category": "nutrition",
       "price": {
@@ -986,15 +1101,17 @@
         "sellingPrice": 417
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Antioxidant support",
+        "formulation": "Turmeric",
+        "pack_size": "60 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://i.ebayimg.com/images/g/zAIAAOSw9LRg6VRA/s-l500.jpg"
     },
     {
       "code": "1MG-063",
-      "name": "Himalaya Nutrition 7",
+      "name": "Himalaya Diabecon Tablets",
       "brandName": "Himalaya",
       "category": "nutrition",
       "price": {
@@ -1002,8 +1119,10 @@
         "sellingPrice": 91
       },
       "specs": {
-        "prescription_required": false,
-        "pack_size": "1 unit"
+        "benefit": "Metabolic wellness",
+        "formulation": "Herbal blend",
+        "pack_size": "60 tablets",
+        "prescription_required": false
       },
       "inStock": true,
       "imageUrl": "https://medstore.lk/wp-content/uploads/2025/02/targets-scaled.jpg"

@@ -175,8 +175,9 @@ async def _chat_anthropic(history: list[dict], system: str | None,
 
     messages = []
     for turn in history:
+        new_msg = None
         if turn.get("role") == "user" and turn.get("text") is not None:
-            messages.append({"role": "user", "content": turn["text"]})
+            new_msg = {"role": "user", "content": [{"type": "text", "text": turn["text"]}]}
         elif turn.get("role") == "model":
             content = []
             if turn.get("text"):
@@ -185,12 +186,20 @@ async def _chat_anthropic(history: list[dict], system: str | None,
                 content.append({"type": "tool_use", "id": c["id"], "name": c["name"],
                                 "input": c.get("args") or {}})
             if content:
-                messages.append({"role": "assistant", "content": content})
+                new_msg = {"role": "assistant", "content": content}
         elif turn.get("toolResults"):
-            messages.append({"role": "user", "content": [
+            new_msg = {"role": "user", "content": [
                 {"type": "tool_result", "tool_use_id": r["id"], "content": json.dumps(r["result"])}
                 for r in turn["toolResults"]
-            ]})
+            ]}
+
+        if new_msg:
+            if messages and messages[-1]["role"] == new_msg["role"]:
+                if isinstance(messages[-1]["content"], str):
+                    messages[-1]["content"] = [{"type": "text", "text": messages[-1]["content"]}]
+                messages[-1]["content"].extend(new_msg["content"])
+            else:
+                messages.append(new_msg)
 
     messages = _repair_tool_pairs(messages)
     kwargs: dict = {"model": ANTHROPIC_MODEL, "max_tokens": 8192, "messages": messages}
